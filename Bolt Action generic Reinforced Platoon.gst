@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="dd1c28f5-7a1e-e616-4caa-87ff07e7d4f1" revision="3" battleScribeVersion="1.14b" name="Bolt Action generic Reinforced Platoon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="dd1c28f5-7a1e-e616-4caa-87ff07e7d4f1" revision="4" battleScribeVersion="1.14b" name="Bolt Action generic Reinforced Platoon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <forceTypes>
     <forceType id="ee766e00-0168-11be-e251-23243581de9e" name="Platoon" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
       <categories>
@@ -44,6 +44,9 @@
               <conditionGroups/>
             </modifier>
           </modifiers>
+        </category>
+        <category id="0fcbe145-b362-4be0-2491-dbf2db078475" name="Free Units" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
+          <modifiers/>
         </category>
       </categories>
       <forceTypes/>
