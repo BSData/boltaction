@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="dd1c28f5-7a1e-e616-4caa-87ff07e7d4f1" revision="5" battleScribeVersion="1.14b" name="Bolt Action generic Reinforced Platoon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="dd1c28f5-7a1e-e616-4caa-87ff07e7d4f1" revision="6" battleScribeVersion="1.14b" name="Bolt Action generic Reinforced Platoon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <forceTypes>
     <forceType id="ee766e00-0168-11be-e251-23243581de9e" name="Platoon" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
       <categories>
@@ -94,6 +94,7 @@
         <characteristic id="d527d332-6869-32b4-3a5a-13127d8e04c9" name="Range"/>
         <characteristic id="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef" name="Shots"/>
         <characteristic id="a46d52c2-b1b5-dd31-879a-e64572cd9dc8" name="Penetration"/>
+        <characteristic id="a20985c1-29eb-9dbc-db45-3d439b60eed7" name="Special Rules"/>
       </characteristics>
     </profileType>
   </profileTypes>
