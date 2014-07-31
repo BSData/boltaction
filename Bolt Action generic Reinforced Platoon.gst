@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="dd1c28f5-7a1e-e616-4caa-87ff07e7d4f1" revision="6" battleScribeVersion="1.14b" name="Bolt Action generic Reinforced Platoon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="dd1c28f5-7a1e-e616-4caa-87ff07e7d4f1" revision="7" battleScribeVersion="1.14b" name="Bolt Action generic Reinforced Platoon" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <forceTypes>
     <forceType id="ee766e00-0168-11be-e251-23243581de9e" name="Platoon" minSelections="0" maxSelections="-1" minPoints="0.0" maxPoints="-1.0" minPercentage="0" maxPercentage="-1" countTowardsParentMinSelections="false" countTowardsParentMaxSelections="false" countTowardsParentMinPoints="false" countTowardsParentMaxPoints="false" countTowardsParentMinPercentage="false" countTowardsParentMaxPercentage="false">
       <categories>
@@ -85,8 +85,9 @@
     <profileType id="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" name="Vehicle">
       <characteristics>
         <characteristic id="883e2c25-e5fe-0035-c00b-88687cd7255a" name="Type"/>
-        <characteristic id="5f771be9-cf71-bd5c-1374-ae612e649c84" name="Transport"/>
         <characteristic id="449784a0-465a-7126-6bff-16d562020e3f" name="Damage Value"/>
+        <characteristic id="91faad33-21cf-8fdb-c3e5-ba1f63642d86" name="Transport"/>
+        <characteristic id="9ab6259e-4164-c16c-f359-b48f300833cc" name="Tow"/>
       </characteristics>
     </profileType>
     <profileType id="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" name="Weapon">
@@ -95,6 +96,11 @@
         <characteristic id="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef" name="Shots"/>
         <characteristic id="a46d52c2-b1b5-dd31-879a-e64572cd9dc8" name="Penetration"/>
         <characteristic id="a20985c1-29eb-9dbc-db45-3d439b60eed7" name="Special Rules"/>
+      </characteristics>
+    </profileType>
+    <profileType id="2824ab73-d5bb-a968-a566-19371da1c5e4" name="Troop Quality">
+      <characteristics>
+        <characteristic id="cd18296c-c82a-5671-d4f4-db025626d4e9" name="Morale"/>
       </characteristics>
     </profileType>
   </profileTypes>
