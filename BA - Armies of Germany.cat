@@ -657,6 +657,16 @@
     <link id="1ad27434-b581-78a9-43ed-1b7732da0a27" targetId="92ffb6a8-6b5e-a333-df69-63dd7b9a847c" linkType="entry" categoryId="b3073f4b-f974-1603-e5ea-b2ec953e496a">
       <modifiers/>
     </link>
+    <link id="9db741a3-ff78-edbd-5e91-515e11c180fb" targetId="107dfb75-abd5-a061-2e71-8d78eec01108" linkType="rule">
+      <modifiers>
+        <modifier type="show" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="65adb98b-fe4f-d2c8-ef82-8b1876bedd1d" field="selections" type="instance of" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+    </link>
   </links>
   <sharedEntries>
     <entry id="52031baa-11a8-a3ec-69d4-421946c72e31" name="105mm LG40/1" points="0.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
@@ -2065,6 +2075,31 @@ Dice	Effect
           <modifiers/>
         </link>
         <link id="a4f300e3-6237-381a-9791-a9f66544854f" targetId="09225d6f-05cb-0031-8ba3-3aa381c04b28" linkType="rule">
+          <modifiers/>
+        </link>
+      </links>
+    </entry>
+    <entry id="2cff59c7-deb5-3d8d-3c28-65913bcd6453" name="Command Vehicle" points="25.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
+      <entries/>
+      <entryGroups/>
+      <modifiers>
+        <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions/>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition parentId="force type" childId="65adb98b-fe4f-d2c8-ef82-8b1876bedd1d" field="selections" type="instance of" value="0.0"/>
+                <condition parentId="category" childId="b3073f4b-f974-1603-e5ea-b2ec953e496a" field="selections" type="instance of" value="0.0"/>
+              </conditions>
+              <conditionGroups/>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <rules/>
+      <profiles/>
+      <links>
+        <link id="1eb2b342-a409-73ee-f69e-3d96b1e16e96" targetId="6d02f741-ba61-cfa5-c5df-3cb7684a5c0a" linkType="rule">
           <modifiers/>
         </link>
       </links>
@@ -9569,7 +9604,7 @@ Dice	Effect
         </link>
       </links>
     </entry>
-    <entry id="162fba20-ead4-f7b8-2873-b764fa64a85e" name="Platoon Commander" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="1" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+    <entry id="162fba20-ead4-f7b8-2873-b764fa64a85e" name="Platoon Commander" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
       <entries/>
       <entryGroups>
         <entryGroup id="7b1b1058-c566-c977-99ad-5b1d946d8c1d" name="Rank" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -10089,9 +10124,9 @@ Dice	Effect
         </entryGroup>
       </entryGroups>
       <modifiers>
-        <modifier type="set" field="maxInRoster" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="set" field="minInRoster" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
-            <condition parentId="force type" childId="65adb98b-fe4f-d2c8-ef82-8b1876bedd1d" field="selections" type="instance of" value="0.0"/>
+            <condition parentId="force type" childId="ee766e00-0168-11be-e251-23243581de9e" field="selections" type="instance of" value="0.0"/>
           </conditions>
           <conditionGroups/>
         </modifier>
@@ -14678,31 +14713,6 @@ Dice	Effect
         </link>
       </links>
     </entry>
-    <entry id="2cff59c7-deb5-3d8d-3c28-65913bcd6453" name="Command Vehicle" points="25.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="true">
-      <entries/>
-      <entryGroups/>
-      <modifiers>
-        <modifier type="show" field="minSelections" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
-          <conditions/>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition parentId="force type" childId="65adb98b-fe4f-d2c8-ef82-8b1876bedd1d" field="selections" type="instance of" value="0.0"/>
-                <condition parentId="category" childId="b3073f4b-f974-1603-e5ea-b2ec953e496a" field="selections" type="instance of" value="0.0"/>
-              </conditions>
-              <conditionGroups/>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <rules/>
-      <profiles/>
-      <links>
-        <link id="1eb2b342-a409-73ee-f69e-3d96b1e16e96" targetId="6d02f741-ba61-cfa5-c5df-3cb7684a5c0a" linkType="rule">
-          <modifiers/>
-        </link>
-      </links>
-    </entry>
   </sharedEntries>
   <sharedEntryGroups>
     <entryGroup id="5b0ab475-6ee3-eb87-c432-7db7316447bb" name="Additional Men" minSelections="0" maxSelections="2" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -15244,6 +15254,15 @@ Ignores the Gun Shield rule</description>
     <rule id="beccdf2b-9b45-3a52-66db-8c4e6dea64b3" name="Weak Side Armour" hidden="false" page="0">
       <description>Weak side armour means that all shots to the side oof the vehicle count as to the rear  with a +2 penetration modifier</description>
       <modifiers/>
+    </rule>
+    <rule id="107dfb75-abd5-a061-2e71-8d78eec01108" name="Armoured Platoon" hidden="false">
+      <description>The Armoured Platoon must include enough transport vehicles and/or tows (either soft-skin or armoured) to transport all models in the infantry and artillery units in the platoon, up to a maximum of one transport vehicle per unit of Infantry and /or Artillery.  The only units that are an exception to this, and which cannot have a transport vehicle are mounted cavalry units and units on motorcycles. </description>
+      <modifiers>
+        <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </rule>
   </sharedRules>
   <sharedProfiles>

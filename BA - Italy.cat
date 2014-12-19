@@ -220,6 +220,16 @@
     <link id="7a8edc97-2c3f-36e5-50e2-6d35609da89e" targetId="5d58b430-2ba4-cb2c-f66c-d3f1a72e3151" linkType="entry" categoryId="b3073f4b-f974-1603-e5ea-b2ec953e496a">
       <modifiers/>
     </link>
+    <link id="9e16eb1b-bf7e-2ca8-22bb-9081818abb67" targetId="3204d3d9-41b0-722b-addd-e483dbfe42f6" linkType="rule">
+      <modifiers>
+        <modifier type="show" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="65adb98b-fe4f-d2c8-ef82-8b1876bedd1d" field="selections" type="instance of" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+    </link>
   </links>
   <sharedEntries>
     <entry id="ad120821-5861-9712-6c62-77f23d6256fc" name="100/17 on Lancia 3Ro" points="0.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
@@ -6035,7 +6045,7 @@
         </entryGroup>
       </entryGroups>
       <modifiers>
-        <modifier type="set" field="minSelections" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+        <modifier type="set" field="minInRoster" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions>
             <condition parentId="force type" childId="ee766e00-0168-11be-e251-23243581de9e" field="selections" type="instance of" value="0.0"/>
           </conditions>
@@ -7554,6 +7564,15 @@ Ignores the Gun Shield rule</description>
     <rule id="beccdf2b-9b45-3a52-66db-8c4e6dea64b3" name="Weak Side Armour" hidden="false" page="0">
       <description>Weak side armour means that all shots to the side oof the vehicle count as to the rear  with a +2 penetration modifier</description>
       <modifiers/>
+    </rule>
+    <rule id="3204d3d9-41b0-722b-addd-e483dbfe42f6" name="Armoured Platoon" hidden="false">
+      <description>The Armoured Platoon must include enough transport vehicles and/or tows (either soft-skin or armoured) to transport all models in the infantry and artillery units in the platoon, up to a maximum of one transport vehicle per unit of Infantry and /or Artillery.  The only units that are an exception to this, and which cannot have a transport vehicle are mounted cavalry units and units on motorcycles. </description>
+      <modifiers>
+        <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </rule>
   </sharedRules>
   <sharedProfiles>

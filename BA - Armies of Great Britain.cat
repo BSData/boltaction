@@ -403,6 +403,19 @@
     <link id="9d6adada-d626-e009-4e4f-b19980b69197" targetId="f061829d-016b-84a8-e660-5a8a18341dd9" linkType="entry" categoryId="f2903219-8ebc-8034-37ec-78a7f9040c20">
       <modifiers/>
     </link>
+    <link id="a578b4ca-fb7b-5f0e-36ae-3cd00181c597" targetId="c4b5d8d8-d434-7d70-249a-684ff871d5b2" linkType="rule">
+      <modifiers>
+        <modifier type="show" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="65adb98b-fe4f-d2c8-ef82-8b1876bedd1d" field="selections" type="instance of" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+    </link>
+    <link id="ac32134c-d71d-15ff-6576-a6150c98b1e3" targetId="16267389-4429-5d04-8444-3e106612434a" linkType="entry" categoryId="(No Category)">
+      <modifiers/>
+    </link>
   </links>
   <sharedEntries>
     <entry id="36031014-cbab-56d7-af52-7fed23f8ede5" name="15CWT Truck" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
@@ -10787,7 +10800,7 @@
         </link>
       </links>
     </entry>
-    <entry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Platoon Commander" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="1" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+    <entry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Platoon Commander" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
       <entries/>
       <entryGroups>
         <entryGroup id="c976b356-c0b4-9e64-37e3-e50eb15ce5f4" name="Rank" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
@@ -11392,7 +11405,14 @@
           <links/>
         </entryGroup>
       </entryGroups>
-      <modifiers/>
+      <modifiers>
+        <modifier type="set" field="minInRoster" value="1.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="ee766e00-0168-11be-e251-23243581de9e" field="selections" type="instance of" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
       <rules/>
       <profiles/>
       <links/>
@@ -14856,6 +14876,15 @@
     <rule id="c1b7a00c-0601-30e7-cfc3-0f2bb186d970" name="Armoured Carrier" hidden="false" page="0">
       <description>Damage Value 7+</description>
       <modifiers/>
+    </rule>
+    <rule id="c4b5d8d8-d434-7d70-249a-684ff871d5b2" name="Armoured Platoon" hidden="false">
+      <description>The Armoured Platoon must include enough transport vehicles and/or tows (either soft-skin or armoured) to transport all models in the infantry and artillery units in the platoon, up to a maximum of one transport vehicle per unit of Infantry and /or Artillery.  The only units that are an exception to this, and which cannot have a transport vehicle are mounted cavalry units and units on motorcycles. </description>
+      <modifiers>
+        <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </rule>
     <rule id="4d1c26c6-31ad-a115-f155-b8e3ea29bced" name="Armoured Tractor" hidden="false" page="0">
       <description>DV 7+</description>
