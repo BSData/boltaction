@@ -251,6 +251,16 @@
         </modifier>
       </modifiers>
     </link>
+    <link id="34e39f93-ba09-6908-d53f-2e8d3ed33cf0" targetId="d287b038-f021-6ceb-a2b9-4da5b889bafe" linkType="rule">
+      <modifiers>
+        <modifier type="show" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="65adb98b-fe4f-d2c8-ef82-8b1876bedd1d" field="selections" type="instance of" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+    </link>
   </links>
   <sharedEntries>
     <entry id="feacdb79-578d-2122-d842-17745ed08649" name="2 turret-mounted MMG" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
@@ -1398,12 +1408,7 @@
         </entryGroup>
       </entryGroups>
       <modifiers/>
-      <rules>
-        <rule id="ac237768-08fd-580f-5c31-66816407e41a" name="Calvary Carbines" hidden="false" page="0">
-          <description>Count as pistols when used on horseback and rifles when used on foot. </description>
-          <modifiers/>
-        </rule>
-      </rules>
+      <rules/>
       <profiles/>
       <links/>
     </entry>
@@ -7953,6 +7958,15 @@
       <description>no modifiers apply for penetration when shooting at sides, rear or from above.</description>
       <modifiers/>
     </rule>
+    <rule id="2242d172-c325-d7db-2239-a5b9660049a2" name="Armoured Platoon" hidden="false">
+      <description>The Armoured Platoon must include enough transport vehicles and/or tows (either soft-skin or armoured) to transport all models in the infantry and artillery units in the platoon, up to a maximum of one transport vehicle per unit of Infantry and /or Artillery.  The only units that are an exception to this, and which cannot have a transport vehicle are mounted cavalry units and units on motorcycles. </description>
+      <modifiers>
+        <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
+    </rule>
     <rule id="93e93843-ca17-e1aa-668e-112cfbaf6627" name="Bicycles" hidden="false" page="0">
       <description>Bicycle mounted infantry follow the same rules as infantry, except when mving entirely on a road, in which case they double their Run move to 24&quot;.  (This move cannot be used to Assault). In addition, the first time they receive any order other than Run, or if they receive a pinning marker, they dismount and abandon their bycycles for the rest of the game - replace the models with models on foot. </description>
       <modifiers/>
@@ -8155,8 +8169,8 @@ Ignores the Gun Shield rule</description>
       <description>Weak side armour means that all shots to the side oof the vehicle count as to the rear  with a +2 penetration modifier</description>
       <modifiers/>
     </rule>
-    <rule id="2242d172-c325-d7db-2239-a5b9660049a2" name="Armoured Platoon" hidden="false">
-      <description>The Armoured Platoon must include enough transport vehicles and/or tows (either soft-skin or armoured) to transport all models in the infantry and artillery units in the platoon, up to a maximum of one transport vehicle per unit of Infantry and /or Artillery.  The only units that are an exception to this, and which cannot have a transport vehicle are mounted cavalry units and units on motorcycles. </description>
+    <rule id="d287b038-f021-6ceb-a2b9-4da5b889bafe" name="ARVs and Force Selection" hidden="false" book="Tank Wars" page="80">
+      <description>Yo may include up to one ARV in your army for every two non-ARV vehicles of damage value 8 or greater you have. </description>
       <modifiers>
         <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
           <conditions/>
