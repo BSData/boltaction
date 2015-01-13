@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="49f05393-294d-1013-a9bb-a7279fd20846" revision="11" gameSystemId="dd1c28f5-7a1e-e616-4caa-87ff07e7d4f1" gameSystemRevision="1" battleScribeVersion="1.15" name="Armies of the United States" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="49f05393-294d-1013-a9bb-a7279fd20846" revision="12" gameSystemId="dd1c28f5-7a1e-e616-4caa-87ff07e7d4f1" gameSystemRevision="1" battleScribeVersion="1.15" name="Armies of the United States" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries/>
   <rules>
     <rule id="89d97e79-cfe5-c413-05db-90a62f2dcb14" name="Gyro-stabilisers" hidden="false" page="0">
@@ -415,6 +415,16 @@
     </link>
     <link id="c2608623-79ad-139a-d651-4b4ccc945373" targetId="cb823a8e-c3bb-c792-96d4-43fa68179f4b" linkType="entry" categoryId="014468cf-931f-6d22-82c8-56acf4032768">
       <modifiers/>
+    </link>
+    <link id="7df4-8a10-73ff-1795" targetId="d277-dcd3-fc58-f112" linkType="rule">
+      <modifiers>
+        <modifier type="show" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions>
+            <condition parentId="force type" childId="65adb98b-fe4f-d2c8-ef82-8b1876bedd1d" field="selections" type="instance of" value="0.0"/>
+          </conditions>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </link>
   </links>
   <sharedEntries>
@@ -12071,6 +12081,15 @@ Ignores the Gun Shield rule</description>
     <rule id="beccdf2b-9b45-3a52-66db-8c4e6dea64b3" name="Weak Side Armour" hidden="false" page="0">
       <description>Weak side armour means that all shots to the side oof the vehicle count as to the rear  with a +2 penetration modifier</description>
       <modifiers/>
+    </rule>
+    <rule id="d277-dcd3-fc58-f112" name="ARVs and Force Selection" hidden="false" book="Tank Wars" page="80">
+      <description>Yo may include up to one ARV in your army for every two non-ARV vehicles of damage value 8 or greater you have. </description>
+      <modifiers>
+        <modifier type="hide" field="name" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+          <conditions/>
+          <conditionGroups/>
+        </modifier>
+      </modifiers>
     </rule>
   </sharedRules>
   <sharedProfiles>
