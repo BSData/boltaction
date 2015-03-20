@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7014295d-9867-d9bc-f92b-43bd75721bed" revision="13" gameSystemId="dd1c28f5-7a1e-e616-4caa-87ff07e7d4f1" gameSystemRevision="1" battleScribeVersion="1.15" name="Armies of Great Britain" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7014295d-9867-d9bc-f92b-43bd75721bed" revision="14" gameSystemId="dd1c28f5-7a1e-e616-4caa-87ff07e7d4f1" gameSystemRevision="1" battleScribeVersion="1.15" name="Armies of Great Britain" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entries/>
   <rules>
     <rule id="89d97e79-cfe5-c413-05db-90a62f2dcb14" name="Bombardment" hidden="false" page="0">
@@ -3243,7 +3243,7 @@
       <entries>
         <entry id="d342e906-70ec-992b-3fcf-fe05dddff911" name="Anti-tank Grenades" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
           <entries>
-            <entry id="e28f949c-6d87-ff56-924d-d1e779ef45a9" name="Anti-tank Grenades" points="3.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="e28f949c-6d87-ff56-924d-d1e779ef45a9" name="Anti-tank Grenades" points="2.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers>
@@ -3339,15 +3339,53 @@
               </links>
             </entry>
             <entry id="0f3d4c6f-9406-a6d2-b2b8-dda1dfcec759" name="Veteran Soldier with LMG" points="14.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-              <entries/>
+              <entries>
+                <entry id="0772-581f-c566-01ba" name="LMG" points="20.0" categoryId="(No Category)" type="upgrade" minSelections="1" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+                  <entries>
+                    <entry id="67e2-6c91-91e1-32d9" name="Vickers K Gun" points="5.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+                      <entries/>
+                      <entryGroups/>
+                      <modifiers/>
+                      <rules/>
+                      <profiles/>
+                      <links>
+                        <link id="793b-297f-4e18-0a8e" targetId="ed4eb877-f4da-b813-aef1-1e7b50232cbe" linkType="profile">
+                          <modifiers/>
+                        </link>
+                      </links>
+                    </entry>
+                  </entries>
+                  <entryGroups/>
+                  <modifiers/>
+                  <rules>
+                    <rule id="11d9-21d2-c4a5-e029" name="LMG Loader" hidden="false" page="0">
+                      <description>For every LMG purchased for the squad, another member becomes the loader. </description>
+                      <modifiers/>
+                    </rule>
+                  </rules>
+                  <profiles/>
+                  <links>
+                    <link id="b823-4f30-7950-76d5" targetId="7ee66867-b66c-5d46-8043-73765ad07f96" linkType="profile">
+                      <modifiers>
+                        <modifier type="hide" field="None" value="0.0" repeat="false" numRepeats="1" incrementParentId="roster" incrementChildId="no child" incrementField="selections" incrementValue="1.0">
+                          <conditions>
+                            <condition parentId="0772-581f-c566-01ba" childId="67e2-6c91-91e1-32d9" field="selections" type="greater than" value="0.0"/>
+                          </conditions>
+                          <conditionGroups/>
+                        </modifier>
+                      </modifiers>
+                    </link>
+                    <link id="d649-c987-cc89-1128" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" linkType="rule">
+                      <modifiers/>
+                    </link>
+                  </links>
+                </entry>
+              </entries>
               <entryGroups/>
               <modifiers/>
               <rules/>
               <profiles/>
               <links>
-                <link id="8c3fe954-92af-f60c-03ee-0b4195b70ce8" targetId="eb1c9b44-5e12-03b5-c5b6-4c5b045d5f4d" linkType="entry">
-                  <modifiers/>
-                </link>
                 <link id="0ec3f669-2294-d455-43b6-227c505ad7b4" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" linkType="profile">
                   <modifiers/>
                 </link>
@@ -6173,7 +6211,7 @@
       <entries>
         <entry id="52c79f7e-3265-4e02-0827-7a7f38730c07" name="Anti-tank Grenades" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
           <entries>
-            <entry id="184a27ae-f3aa-8bc8-3b54-9b1599781c78" name="Anti-tank Grenades" points="3.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="184a27ae-f3aa-8bc8-3b54-9b1599781c78" name="Anti-tank Grenades" points="2.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers>
@@ -6258,7 +6296,7 @@
       <entries>
         <entry id="a202ccda-de8c-79b4-4238-24b0a0f8ad3e" name="Anti-tank Grenades" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
           <entries>
-            <entry id="6dd2f478-3e77-22e9-caeb-deb5469a0995" name="Anti-tank Grenades" points="3.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="6dd2f478-3e77-22e9-caeb-deb5469a0995" name="Anti-tank Grenades" points="2.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers>
@@ -10679,7 +10717,7 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
       <entries>
         <entry id="ac98d4e5-dacd-4a07-29c0-7dc3d1b73a3a" name="Anti-tank Grenades" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
           <entries>
-            <entry id="cda34b1e-5499-d9d2-7e2f-5056656de3f5" name="Anti-tank Grenades" points="3.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="cda34b1e-5499-d9d2-7e2f-5056656de3f5" name="Anti-tank Grenades" points="2.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers>
@@ -12321,7 +12359,7 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
       <entries>
         <entry id="91e36a1b-f48f-fee0-f63e-9a270aab7ea7" name="Anti-tank Grenades" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
           <entries>
-            <entry id="6846dc3d-24e9-c9de-af36-24b5f910025b" name="Anti-tank Grenades" points="3.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="6846dc3d-24e9-c9de-af36-24b5f910025b" name="Anti-tank Grenades" points="2.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers>
@@ -12422,7 +12460,7 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
       <entries>
         <entry id="2bc098ef-29e2-2580-e0a7-5b668e06742a" name="Anti-tank Grenades" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
           <entries>
-            <entry id="6c8daa26-5e40-3aa1-f11f-0ccc9701c526" name="Anti-tank Grenades" points="3.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+            <entry id="6c8daa26-5e40-3aa1-f11f-0ccc9701c526" name="Anti-tank Grenades" points="2.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
               <entries/>
               <entryGroups/>
               <modifiers>
@@ -12666,18 +12704,31 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
     </entry>
     <entry id="86521027-a425-e7dc-5ff0-15e28e5b4439" name="SAS Infantry Section" points="0.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
       <entries>
-        <entry id="2aa653ab-1465-aba9-b6a3-94d0f7590d1f" name="Anti-tank Grenades" points="3.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
+        <entry id="434d-b2d4-6d54-82a0" name="Anti-tank Grenades" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+          <entries>
+            <entry id="8bed-e320-79c8-6bf8" name="Anti-tank Grenades" points="2.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers>
+                <modifier type="increment" field="minSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="86521027-a425-e7dc-5ff0-15e28e5b4439" incrementChildId="f2cb36e0-2774-6239-4d19-29d84e15136a" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <rules/>
+              <profiles/>
+              <links/>
+            </entry>
+          </entries>
           <entryGroups/>
-          <modifiers>
-            <modifier type="increment" field="minSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="86521027-a425-e7dc-5ff0-15e28e5b4439" incrementChildId="f2cb36e0-2774-6239-4d19-29d84e15136a" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
+          <modifiers/>
           <rules/>
           <profiles/>
-          <links/>
+          <links>
+            <link id="ce91-5b94-438a-17ce" targetId="8a586f8a-e228-4c31-1699-c8c837d2b0fd" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
         </entry>
       </entries>
       <entryGroups>
@@ -14379,18 +14430,31 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
     </entry>
     <entry id="d73c9ff4-0ca6-f6da-27f0-2467b9adb7a3" name="Veteran Infantry Section (Early /Mid-War)" points="0.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
       <entries>
-        <entry id="0694c267-286c-2c2d-eb13-721c861b9d2c" name="Anti-tank Grenades" points="3.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
+        <entry id="9296-4b10-91cb-8541" name="Anti-tank Grenades" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+          <entries>
+            <entry id="6d1a-75a5-9b38-bbb5" name="Anti-tank Grenades" points="2.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers>
+                <modifier type="increment" field="minSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="d73c9ff4-0ca6-f6da-27f0-2467b9adb7a3" incrementChildId="d0d7151e-4707-8521-755f-1172c24d4285" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <rules/>
+              <profiles/>
+              <links/>
+            </entry>
+          </entries>
           <entryGroups/>
-          <modifiers>
-            <modifier type="increment" field="minSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="d73c9ff4-0ca6-f6da-27f0-2467b9adb7a3" incrementChildId="d0d7151e-4707-8521-755f-1172c24d4285" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
+          <modifiers/>
           <rules/>
           <profiles/>
-          <links/>
+          <links>
+            <link id="d04e-00a9-c340-2f0d" targetId="8a586f8a-e228-4c31-1699-c8c837d2b0fd" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
         </entry>
       </entries>
       <entryGroups>
@@ -14494,18 +14558,31 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
     </entry>
     <entry id="719629a8-ebf4-40b9-733d-23e0662d5ef4" name="Veteran Infantry Section (Late-War)" points="0.0" categoryId="(No Category)" type="unit" minSelections="0" maxSelections="-1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
       <entries>
-        <entry id="d3a4e7b6-0218-c065-dd47-400ceb889ea5" name="Anti-tank Grenades" points="3.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
-          <entries/>
+        <entry id="f7f2-56a4-76e5-8302" name="Anti-tank Grenades" points="0.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="1" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false" page="0">
+          <entries>
+            <entry id="0107-4ac6-ad2c-563f" name="Anti-tank Grenades" points="2.0" categoryId="(No Category)" type="upgrade" minSelections="0" maxSelections="10" minInForce="0" maxInForce="-1" minInRoster="0" maxInRoster="-1" minPoints="0.0" maxPoints="-1.0" collective="false" hidden="false">
+              <entries/>
+              <entryGroups/>
+              <modifiers>
+                <modifier type="increment" field="minSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="719629a8-ebf4-40b9-733d-23e0662d5ef4" incrementChildId="a91f0341-f0fd-08ef-c22a-0a6cddd4c513" incrementField="selections" incrementValue="1.0">
+                  <conditions/>
+                  <conditionGroups/>
+                </modifier>
+              </modifiers>
+              <rules/>
+              <profiles/>
+              <links/>
+            </entry>
+          </entries>
           <entryGroups/>
-          <modifiers>
-            <modifier type="increment" field="minSelections" value="1.0" repeat="true" numRepeats="1" incrementParentId="719629a8-ebf4-40b9-733d-23e0662d5ef4" incrementChildId="a91f0341-f0fd-08ef-c22a-0a6cddd4c513" incrementField="selections" incrementValue="1.0">
-              <conditions/>
-              <conditionGroups/>
-            </modifier>
-          </modifiers>
+          <modifiers/>
           <rules/>
           <profiles/>
-          <links/>
+          <links>
+            <link id="b489-59ac-f231-4255" targetId="8a586f8a-e228-4c31-1699-c8c837d2b0fd" linkType="rule">
+              <modifiers/>
+            </link>
+          </links>
         </entry>
       </entries>
       <entryGroups>
