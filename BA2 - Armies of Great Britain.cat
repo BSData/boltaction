@@ -73,64 +73,86 @@
         <categoryLink id="96c9-e49b-44f4-a03f" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="false"/>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="3a6d-3307-79b8-0aad" name="Generic Reinforced Platoon" hidden="false">
+    <forceEntry id="28e3-85af-a4ab-d09d" name="Generic Reinforced Platoon" hidden="false">
       <categoryLinks>
-        <categoryLink id="497d-c48b-2b60-3050" name="Free Units" hidden="false" targetId="0fcbe145-b362-4be0-2491-dbf2db078475" primary="false"/>
-        <categoryLink id="68a9-256a-1e24-c2a8" name="Headquarters" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
-        <categoryLink id="70da-1ec8-4fd3-5be4" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="false">
+        <categoryLink id="af90-2794-5fdd-4a10" name="Free Units" hidden="false" targetId="0fcbe145-b362-4be0-2491-dbf2db078475" primary="false"/>
+        <categoryLink id="1e99-70b0-1899-e161" name="Compulsory " hidden="false" targetId="f543-f483-48ce-9b05" primary="false">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7476-b3cf-71d5-7ffe" type="min"/>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="033e-a623-273f-8ce6" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b623-461b-c125-5bad" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8dca-40de-a699-d8f8" type="min"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="8afd-9f07-9c03-c3d5" name="Infantry Support" hidden="false" targetId="a01f5f58-334c-8442-d861-15099ebdf5e5" primary="false"/>
-        <categoryLink id="74f2-31e4-d812-dd3e" name="Artillery" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="506a-66d2-f603-feee" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="8e25-eaeb-15c8-959e" name="Transports" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="false">
+        <categoryLink id="3712-39c1-36e1-92da" name="Headquarters" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
+        <categoryLink id="32a7-0c99-3d58-1296" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="false">
           <modifiers>
-            <modifier type="increment" field="0a13-3282-1000-f36c" value="1">
+            <modifier type="set" field="42a0-f59e-4fc3-79e1" value="3.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="afcd-a068-7378-4f89" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dbaa-a52b-a269-8492" type="min"/>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="42a0-f59e-4fc3-79e1" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="9149-8082-d753-5975" name="Infantry Support" hidden="false" targetId="a01f5f58-334c-8442-d861-15099ebdf5e5" primary="false"/>
+        <categoryLink id="e789-9852-181c-6d73" name="Artillery" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="c244-20e0-d4ed-44d3" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="5d9a-55c1-06b8-a94f" name="Armoured Cars and Recce Vehicles" hidden="false" targetId="f2903219-8ebc-8034-37ec-78a7f9040c20" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="be70-08d3-6a5e-bd1f" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="2286-b67c-296d-b5fd" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23c2-47be-9195-d304" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="6a2c-0d99-2904-8425" name="Transports" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="false">
+          <modifiers>
+            <modifier type="increment" field="01a7-6b10-6184-a3b4" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="5c47879b-41d0-1383-5fe5-a5989615db89" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="0a13-3282-1000-f36c" value="1">
+            <modifier type="increment" field="01a7-6b10-6184-a3b4" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01f5f58-334c-8442-d861-15099ebdf5e5" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="0a13-3282-1000-f36c" value="1">
+            <modifier type="increment" field="01a7-6b10-6184-a3b4" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="481abf13-c03e-0dd0-d520-9f9837253cbe" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="increment" field="01a7-6b10-6184-a3b4" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="f543-f483-48ce-9b05" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="0a13-3282-1000-f36c" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="01a7-6b10-6184-a3b4" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="664c-c5a9-9d2a-bb8e" name="Tows" hidden="false" targetId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" primary="false">
+        <categoryLink id="5ba8-548c-1243-2fde" name="Tows" hidden="false" targetId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" primary="false">
           <modifiers>
-            <modifier type="increment" field="7472-b658-e69a-221f" value="1">
+            <modifier type="increment" field="63e9-a984-544e-2a37" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="7472-b658-e69a-221f" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="cdd4-2aee-d77d-d282" name="Armoured Cars  and Recce Vehicles" hidden="false" targetId="f2903219-8ebc-8034-37ec-78a7f9040c20" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="977e-1f31-02ca-6233" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="d761-3309-609a-07c1" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="901c-2362-87a7-59ed" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="63e9-a984-544e-2a37" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -2354,7 +2376,7 @@
     <rule id="069a0fff-b426-3887-c406-27fce07987c5" name="National Characteristic" page="0" hidden="false"/>
   </rules>
   <infoLinks>
-    <infoLink id="a578b4ca-fb7b-5f0e-36ae-3cd00181c597" hidden="false" targetId="c4b5d8d8-d434-7d70-249a-684ff871d5b2" type="rule">
+    <infoLink id="a578b4ca-fb7b-5f0e-36ae-3cd00181c597" name="Armoured Platoon" hidden="false" targetId="c4b5d8d8-d434-7d70-249a-684ff871d5b2" type="rule">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
@@ -11292,13 +11314,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
       </costs>
     </selectionEntry>
     <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Platoon Commander" page="0" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="minInForce" value="1">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3a6d-3307-79b8-0aad" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
