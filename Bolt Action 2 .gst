@@ -110,7 +110,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e941-f463-0b07-30ab" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="7ef2-7e29-8333-0f18" hidden="false" targetId="bb6e-2a72-519d-8cc7" type="profile"/>
+        <infoLink id="7ef2-7e29-8333-0f18" name="Assault Rifle" hidden="false" targetId="bb6e-2a72-519d-8cc7" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="5.0"/>
@@ -265,7 +265,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0998-c9de-8614-612c" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="3d85-085b-6706-b0b6" hidden="false" targetId="b6b8-46bc-6ff6-38f8" type="profile"/>
+        <infoLink id="3d85-085b-6706-b0b6" name="Medium AT Gun" hidden="false" targetId="b6b8-46bc-6ff6-38f8" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -638,7 +638,7 @@
       </rules>
       <infoLinks>
         <infoLink id="06f0-1035-0280-f104" hidden="false" targetId="7533-d12d-21e3-496b" type="profile"/>
-        <infoLink id="083d-93e0-f05a-3423" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
+        <infoLink id="083d-93e0-f05a-3423" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="20.0"/>
@@ -1280,27 +1280,54 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="548c-1420-8361-9361" name="Flamethrower (infantry)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2449-3092-131e-5820" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a9c8-7242-e914-6e51" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="5a6b-4d84-7f2a-a92f" name="Flamethrower (Infantry)" hidden="false" targetId="1020-e405-c2e5-1bde" type="profile"/>
+        <infoLink id="74b4-fb68-7c37-9e91" name="Flamethrower" hidden="false" targetId="0bda-9822-e9eb-f62b" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="20.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
-    <rule id="1243-e8b7-ed01-2010" name="Amphibious" page="0" hidden="false"/>
+    <rule id="1243-e8b7-ed01-2010" name="Amphibious" page="0" hidden="false">
+      <description>Vehicle can move on impassable water at at half speed by means of an Advance action.</description>
+    </rule>
     <rule id="b13a-05de-4473-34f1" name="Armoured all round" page="0" hidden="false">
-      <description>no modifiers apply for penetration when shooting at sides, rear or from above.</description>
+      <description>No modifiers apply for penetration when shooting at sides, rear or from above.</description>
     </rule>
     <rule id="8a7d-230c-d090-127b" name="Bicycles" page="0" hidden="false">
       <description>Bicycle mounted infantry follow the same rules as infantry, except when mving entirely on a road, in which case they double their Run move to 24&quot;.  (This move cannot be used to Assault). In addition, the first time they receive any order other than Run, or if they receive a pinning marker, they dismount and abandon their bycycles for the rest of the game - replace the models with models on foot. </description>
     </rule>
-    <rule id="525c-47c4-f59c-5c9a" name="Cavalry" page="0" hidden="false"/>
+    <rule id="525c-47c4-f59c-5c9a" name="Cavalry" page="0" hidden="false">
+      <description>Cavalry can dismount and fight on foot. A cavalry unit moves at 9” at an Advance and 18” at a Run. While mounted, cavalry units have the tough fighters. Cavalry are allowed to roll 2D6 when they make their regroup move </description>
+    </rule>
     <rule id="a216-de3b-eb7f-51f1" name="Co-axial Weapon" page="0" hidden="false">
       <description>A coa-axial can be fired instead of the vehicle&apos;s main weapon, but not at the same time - the player must choose either to fire the main gun or it&apos;s co-axial weapon.</description>
     </rule>
-    <rule id="f3b7-7c2b-d71f-b029" name="Command Vehicle" page="0" hidden="false"/>
-    <rule id="549b-7a6c-2710-5dfe" name="Crew" page="0" hidden="false"/>
+    <rule id="f3b7-7c2b-d71f-b029" name="Command Vehicle" page="0" hidden="false">
+      <description>Command vehicles are equipped with two-way radios that enable them to direct squadrons of tanks, tank
+destroyers and other armoured vehicles into battle. The command vehicle adds a morale bonus of +1 to
+itself and to any other friendly armoured vehicle within 12” (but no Snap to action extra dice).</description>
+    </rule>
+    <rule id="549b-7a6c-2710-5dfe" name="Crew" page="0" hidden="false">
+      <description>The unit is composed of various crewman.</description>
+    </rule>
     <rule id="6551-e6ac-18b0-6f1f" name="Crew Carried MMG" page="0" hidden="false">
       <description>360° arc of fire
 The crew can fire the LMG or the main gun, but not both at the same time</description>
     </rule>
-    <rule id="efb6-de6a-83a2-78d6" name="Dual Direction Steering" page="0" hidden="false"/>
-    <rule id="210a-fd8c-dd39-5e36" name="Fanatics" page="0" hidden="false"/>
+    <rule id="efb6-de6a-83a2-78d6" name="Dual Direction Steering" page="0" hidden="false">
+      <description>The vehicle can reverse at their Run rate.</description>
+    </rule>
+    <rule id="210a-fd8c-dd39-5e36" name="Fanatics" page="0" hidden="false">
+      <description>When a fanatic unit loses half of its numbers from enemy fire it does not take a morale check. In close quarters fighting continue fighting until the fanatic unit wins, is completely wiped out or is defeated.</description>
+    </rule>
     <rule id="eb72-b206-d3ef-e5bb" name="Fixed" page="0" hidden="false">
       <description>Cannot be fired under an advance order
 Can only target units at leat partially in their front arc</description>
@@ -1327,29 +1354,33 @@ on a roll of 5 or 6 the unit is immediately uprated to Regular for the rest of t
     <rule id="95d0-d47a-8684-c817" name="Gun Shield" page="0" hidden="false">
       <description>If fired at from the front, crew is 6+ to damage</description>
     </rule>
-    <rule id="69eb-2439-fb8f-71e0" name="HE (2D6)" page="0" hidden="false">
-      <description>Hits are multiplied by the modifier
+    <rule id="69eb-2439-fb8f-71e0" name="HE (1&quot;)" page="0" hidden="false">
+      <description>Use the appropriate template to determine how many
+models in the unit have been hit.
 Hits against infantry that reacts going Down are halved rounding down
 If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded
-2D6 Hits, D3 Pin Markers, +3 PEN</description>
+D2 Pin Markers, +1 PEN, Hits vs targets in buildings D3</description>
     </rule>
-    <rule id="e1e9-8856-911c-2f9d" name="HE (3D6)" page="0" hidden="false">
-      <description>Hits are multiplied by the modifier
+    <rule id="e1e9-8856-911c-2f9d" name="HE (2&quot;)" page="0" hidden="false">
+      <description>Use the appropriate template to determine how many
+models in the unit have been hit.
 Hits against infantry that reacts going Down are halved rounding down
 If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded
-3D6 Hits, D6 Pin Markers, +4 PEN</description>
+D3 Pin Markers, +2 PEN, Hits vs targets in buildings D6</description>
     </rule>
-    <rule id="5a66-e1c5-fdff-a987" name="HE (D3)" page="0" hidden="false">
-      <description>Hits are multiplied by the modifier
+    <rule id="5a66-e1c5-fdff-a987" name="HE (3&quot;)" page="0" hidden="false">
+      <description>Use the appropriate template to determine how many
+models in the unit have been hit.
 Hits against infantry that reacts going Down are halved rounding down
 If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded
-D3 Hits, 1 Pin Marker, +1 PEN</description>
+D3 Pin Markers, +3 PEN, Hits vs targets in buildings 2D6</description>
     </rule>
-    <rule id="0be9-1aa0-98b3-16a8" name="HE (D6)" page="0" hidden="false">
-      <description>Hits are multiplied by the modifier
+    <rule id="0be9-1aa0-98b3-16a8" name="HE (4&quot;)" page="0" hidden="false">
+      <description>Use the appropriate template to determine how many
+models in the unit have been hit.
 Hits against infantry that reacts going Down are halved rounding down
 If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded
-D6 Hits, D2 Pin Markers, +2 PEN</description>
+D6 Pin Markers, +4 PEN, Hits vs targets in buildings 3D6</description>
     </rule>
     <rule id="9277-5d46-b738-5ced" name="Heavy Frontal Armour" page="0" hidden="false">
       <description>All shots hitting the front of the vehicle counts it&apos;s damage value as +1</description>
@@ -1375,12 +1406,18 @@ Can fire Smoke Screens</description>
     <rule id="6873-b80a-5f2f-c8ac" name="Medical vehicle" page="0" hidden="false">
       <description>Being in proximity of an ambulance means that any wounded soldiers neaby hae a chance of being treated by a medic or stretcher bearer from amongst the crew of the ambulance. All infantry and artillery units within 6&quot; of the vehicle count as within 6&quot; of a medic.</description>
     </rule>
-    <rule id="a9e6-1bf4-b097-df12" name="Motorbikes" page="0" hidden="false"/>
+    <rule id="a9e6-1bf4-b097-df12" name="Motorbikes" page="0" hidden="false">
+      <description>A motorbike unit moves at 12” at an Advance and 24” at a Run. Bike riders can carry infantry small-arms but cannot shoot whilst moving. Can regroup with 2D6”.</description>
+    </rule>
     <rule id="1fd2-c465-d4c6-d2b6" name="Multiple Launcher" page="0" hidden="false">
       <description>A multiple launcher counts as a heavy mortar, but it&apos;s chance of hitting never gets any better than a 6.However, because of the extensive blast area all units (friend or foe) within 6&quot; of the nominated target and not entirely within the weapon&apos;s minimum range can be hit. Roll a die to hit for the target plus every unit within 6&quot; of it. Note that units that lie beyond the weapon&apos;s maximum range can also be hit in this way - although the target unit itself must be withiin range. </description>
     </rule>
-    <rule id="cd1a-40cd-89df-5e3e" name="One-man turret" page="0" hidden="false"/>
-    <rule id="5837-ccfe-055e-5733" name="One-Shot Weapon" page="0" hidden="false"/>
+    <rule id="cd1a-40cd-89df-5e3e" name="One-man turret" page="0" hidden="false">
+      <description>The vehicle needs to pass an order test when issued an Advance order.</description>
+    </rule>
+    <rule id="5837-ccfe-055e-5733" name="One-Shot Weapon" page="0" hidden="false">
+      <description>The weapon can be shoot only once per game and also at a different target than the rest of the unit.</description>
+    </rule>
     <rule id="1dd8-ce26-3022-96f5" name="Open Topped" page="0" hidden="false">
       <description>Can be Pinned by small arms fire
 If damaged by assaulting infantry, open topped vehicle are Destroyed automatically
@@ -1401,7 +1438,7 @@ Never suffer -1 penalty at penetration for firing at long range</description>
 When Pinned always count Pinned Markers as Double, ie one Pin Marker gives a -2 penalty, 2 is -4 etc.</description>
     </rule>
     <rule id="b6f6-40e0-0377-3e61" name="Slow" page="0" hidden="false">
-      <description>can only move 6&quot; when Advancing and 12&quot; when Running</description>
+      <description>Can only move 6&quot; when Advancing and 12&quot; when Running</description>
     </rule>
     <rule id="6bcb-f463-20a7-0b4a" name="Sniper" page="0" hidden="false">
       <description>When firing under Fire or Ambush orders only:
@@ -1434,9 +1471,15 @@ Ignores the Gun Shield rule</description>
     <rule id="237c-9f95-b56c-5449" name="ARVs and Force Selection" publicationId="d373-d979-pubN74158" page="80" hidden="true">
       <description>Yo may include up to one ARV in your army for every two non-ARV vehicles of damage value 8 or greater you have. </description>
     </rule>
-    <rule id="4347-c6e1-c5ab-9232" name="Stubborn" page="0" hidden="false"/>
-    <rule id="123f-ba11-633a-56ff" name="Tough Fighters" page="0" hidden="false"/>
-    <rule id="1227-52f8-24e9-51f9" name="Ski troops" page="0" hidden="false"/>
+    <rule id="4347-c6e1-c5ab-9232" name="Stubborn" page="0" hidden="false">
+      <description>If forced to take a morale check, they ignore negative morale modifiers from pin markers. Remember that order tests are not morale checks.</description>
+    </rule>
+    <rule id="123f-ba11-633a-56ff" name="Tough Fighters" page="0" hidden="false">
+      <description>When a model scores a casualty in close quarters against enemy infantry or artillery units, it can immediately make a second damage roll.</description>
+    </rule>
+    <rule id="1227-52f8-24e9-51f9" name="Ski troops" page="0" hidden="false">
+      <description>Ignore winter movement penality.</description>
+    </rule>
     <rule id="a52c-ff9f-bb1c-b2be" name="Vulnerable" page="0" hidden="false">
       <description>All shots to side and rear +1 penetration modifier.</description>
     </rule>
@@ -1452,7 +1495,7 @@ Ignores the Gun Shield rule</description>
     </profile>
     <profile id="bb6e-2a72-519d-8cc7" name="Assault Rifle" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">24&quot;</characteristic>
+        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">18&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">2</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">n/a</characteristic>
         <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Assault</characteristic>
@@ -1478,14 +1521,14 @@ Ignores the Gun Shield rule</description>
       <characteristics>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">6&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">D6</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+2</characteristic>
+        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+3</characteristic>
         <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Flamethrower</characteristic>
       </characteristics>
     </profile>
     <profile id="e9b4-d507-8fd2-3de4" name="Flamethrower (Vehicle)" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">18&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">2D6</characteristic>
+        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">12&quot;</characteristic>
+        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">D6+1</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+3</characteristic>
         <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Flamethrower</characteristic>
       </characteristics>
@@ -1495,7 +1538,7 @@ Ignores the Gun Shield rule</description>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">72&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+6</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (D3)</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (2&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile id="86db-62e8-b983-f6e6" name="Heavy automatic cannon" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
@@ -1503,7 +1546,7 @@ Ignores the Gun Shield rule</description>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">72&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">2</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+3</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (D2)</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (1&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile id="9a1c-d062-d869-b9f3" name="Heavy Howitzer" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
@@ -1511,7 +1554,7 @@ Ignores the Gun Shield rule</description>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">(0/24&quot;) - 72&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, Howitzer, HE (3D6)</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, Howitzer, HE (4&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile id="3d54-049f-3e22-7b5f" name="Heavy Machine Gun (HMG)" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
@@ -1527,7 +1570,7 @@ Ignores the Gun Shield rule</description>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">16&quot; - 72&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7"> Team, Fixed, Indirect fire, HE (2D6)</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7"> Team, Fixed, Indirect fire, HE (3&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile id="c068-012d-776f-2bb9" name="Inexperienced" page="0" hidden="false" typeId="2824ab73-d5bb-a968-a566-19371da1c5e4" typeName="Troop Quality">
@@ -1540,7 +1583,7 @@ Ignores the Gun Shield rule</description>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">48&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+4</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (D2)</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (1&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile id="3255-2dcb-9963-6c11" name="Light automatic cannon" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
@@ -1548,7 +1591,7 @@ Ignores the Gun Shield rule</description>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">48&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">2</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+2</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed,  HE (D2)</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed,  HE (1&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile id="d212-a1ee-dc9d-27c3" name="Light howitzer" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
@@ -1556,12 +1599,12 @@ Ignores the Gun Shield rule</description>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">(0/24&quot;) - 48&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, Howitzer, HE (D6)</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, Howitzer, HE (2&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile id="7533-d12d-21e3-496b" name="Light Machine Gun (LMG)" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">30&quot;</characteristic>
+        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">36&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">4</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">n/a</characteristic>
         <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team</characteristic>
@@ -1572,7 +1615,7 @@ Ignores the Gun Shield rule</description>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">12&quot;-24&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Indirect Fire, HE (D3)</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Indirect Fire, HE (1&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile id="b6b8-46bc-6ff6-38f8" name="Medium AT Gun" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
@@ -1580,7 +1623,7 @@ Ignores the Gun Shield rule</description>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">60&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+5</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (D2)</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (1&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile id="dfff-15d3-d1fd-bdec" name="Medium Howitzer" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
@@ -1588,7 +1631,7 @@ Ignores the Gun Shield rule</description>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">(0/24&quot;) - 60&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, Howitzer, HE (2D6)</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, Howitzer, HE (3&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile id="2f62-c9ad-30ac-07bb" name="Medium Machine Gun (MMG)" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
@@ -1604,13 +1647,13 @@ Ignores the Gun Shield rule</description>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">18&quot; - 60&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, Indirect fire, HE (D6)</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, Indirect fire, HE (2&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile id="e2bc-1c2a-46e7-d701" name="MMG" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">36&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">4</characteristic>
+        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">5</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">n/a</characteristic>
         <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7"/>
       </characteristics>
@@ -1673,7 +1716,7 @@ Ignores the Gun Shield rule</description>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">84&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+7</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE(D3)</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (3&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile id="d35f-04c2-a7f3-288f" name="Veteran" page="0" hidden="false" typeId="2824ab73-d5bb-a968-a566-19371da1c5e4" typeName="Troop Quality">
