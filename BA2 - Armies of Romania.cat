@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ff1c-a84a-e11d-ae29" name="Armies of Romania" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ff1c-a84a-e11d-ae29" name="Armies of Romania" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="ff1c-a84a-pubN88925" name="Tank War"/>
     <publication id="ff1c-a84a-pubN89864" name="Tank Wars"/>
@@ -72,62 +72,82 @@
         <categoryLink id="d9e6-0dc5-03c4-2fa7" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="false"/>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="a5dc-f938-7e74-6281" name="Generic Reinforced Platoon" hidden="false">
+    <forceEntry id="6168-399f-3500-0c3e" name="Generic Reinforced Platoon" hidden="false">
       <categoryLinks>
-        <categoryLink id="0e1e-ac35-b368-4f7d" name="Free Units" hidden="false" targetId="0fcbe145-b362-4be0-2491-dbf2db078475" primary="false"/>
-        <categoryLink id="c8a9-939c-5d57-d0c1" name="Headquarters" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
-        <categoryLink id="579b-990e-2a91-389d" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="false">
+        <categoryLink id="6771-32bc-6417-57e8" name="Free Units" hidden="false" targetId="0fcbe145-b362-4be0-2491-dbf2db078475" primary="false"/>
+        <categoryLink id="0005-0bb4-0038-acc2" name="Compulsory " hidden="false" targetId="f543-f483-48ce-9b05" primary="false">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4518-efff-e10f-9752" type="min"/>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="be77-b6d5-1d04-b2fb" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="129e-69d7-9245-495e" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a23-28b5-5698-82b2" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="38c2-4343-8b21-a494" name="Infantry Support" hidden="false" targetId="a01f5f58-334c-8442-d861-15099ebdf5e5" primary="false"/>
-        <categoryLink id="9e60-214c-1675-efc7" name="Artillery" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="f894-aef6-c60e-ce2a" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="8cc2-2af3-cad0-5d2a" name="Transports" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="false">
+        <categoryLink id="ced5-65ad-366a-7f16" name="Headquarters" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
+        <categoryLink id="0c9d-71c6-3dba-93e6" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="false">
           <modifiers>
-            <modifier type="increment" field="b5ec-9f51-94cb-d33e" value="1">
+            <modifier type="set" field="7ea1-ba10-ef75-79b9" value="3.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="7ea1-ba10-ef75-79b9" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="0aeb-72cd-536b-3570" name="Infantry Support" hidden="false" targetId="a01f5f58-334c-8442-d861-15099ebdf5e5" primary="false"/>
+        <categoryLink id="4900-8225-5ebc-c929" name="Artillery" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="8bab-69a4-490f-e845" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="9484-052d-3477-b0d7" name="Armoured Cars  and Recce Vehicles" hidden="false" targetId="f2903219-8ebc-8034-37ec-78a7f9040c20" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="edec-0846-0c7f-0388" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="d179-79e6-c7c3-6d98" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcab-b9c4-f7f4-af22" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="d750-2a74-538f-f689" name="Transports" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="false">
+          <modifiers>
+            <modifier type="increment" field="9d59-a7fc-3be2-b160" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="5c47879b-41d0-1383-5fe5-a5989615db89" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="b5ec-9f51-94cb-d33e" value="1">
+            <modifier type="increment" field="9d59-a7fc-3be2-b160" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01f5f58-334c-8442-d861-15099ebdf5e5" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="b5ec-9f51-94cb-d33e" value="1">
+            <modifier type="increment" field="9d59-a7fc-3be2-b160" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="481abf13-c03e-0dd0-d520-9f9837253cbe" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="b5ec-9f51-94cb-d33e" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="9d59-a7fc-3be2-b160" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="ac49-5fbd-ed15-2b8d" name="Tows" hidden="false" targetId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" primary="false">
+        <categoryLink id="34a8-d4dd-1eca-d710" name="Tows" hidden="false" targetId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" primary="false">
           <modifiers>
-            <modifier type="increment" field="80a0-fe5c-fa60-7123" value="1">
+            <modifier type="increment" field="0573-be61-76d4-5abc" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="80a0-fe5c-fa60-7123" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="0573-be61-76d4-5abc" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="f4cb-6c12-3eee-8b26" name="Armoured Cars  and Recce Vehicles" hidden="false" targetId="f2903219-8ebc-8034-37ec-78a7f9040c20" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="dd1e-b757-9cce-b765" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="c4ea-6cb0-5062-1950" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="false"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
@@ -162,13 +182,15 @@
         <categoryLink id="849865ee-c77e-ae2c-5a0d-a031cd5e2bc5-0fcbe145-b362-4be0-2491-dbf2db078475" hidden="false" targetId="0fcbe145-b362-4be0-2491-dbf2db078475" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="8e68137b-b953-35a7-d535-53672073db97" name="Cavalry Section (Regular)" hidden="true" collective="false" import="true" targetId="4d46ecca-8348-0633-6703-69b5c355ca39" type="selectionEntry">
+    <entryLink id="8e68137b-b953-35a7-d535-53672073db97" name="Cavalry Section" hidden="true" collective="false" import="true" targetId="4d46ecca-8348-0633-6703-69b5c355ca39" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -185,13 +207,14 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
-        <categoryLink id="3c32b37c-d7f6-be66-4191-47b4f37e1aa9-5c47879b-41d0-1383-5fe5-a5989615db89" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
+        <categoryLink id="b240-7e0b-3a92-d8de" name="Compulsory " hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="621d3201-71e7-55c9-bb1d-9cf443651e6a" name="Late War Infantry Section" hidden="true" collective="false" import="true" targetId="56cd9b98-b69a-3e20-0e08-1c01ef086fbc" type="selectionEntry">
@@ -205,9 +228,19 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <categoryLinks>
-        <categoryLink id="621d3201-71e7-55c9-bb1d-9cf443651e6a-5c47879b-41d0-1383-5fe5-a5989615db89" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
+        <categoryLink id="fea6-2090-69e9-4dd2" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="042d463d-2c80-d3f8-5a90-1a64dea5431d" name="Motorized Infantry Section" hidden="true" collective="false" import="true" targetId="0876bd40-9d8e-bacb-aeb9-dc3b97d2a1e5" type="selectionEntry">
@@ -217,13 +250,15 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
-        <categoryLink id="042d463d-2c80-d3f8-5a90-1a64dea5431d-5c47879b-41d0-1383-5fe5-a5989615db89" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
+        <categoryLink id="dabd-d3d2-c2fc-71c1" name="Compulsory " hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="69779731-f752-f237-9ab6-0d649422a919" name="Tank Recovery Tractor" hidden="true" collective="false" import="true" targetId="1fcc1cec-784f-2888-4372-fe03b49b4fdc" type="selectionEntry">
@@ -248,7 +283,9 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -264,7 +301,9 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -281,6 +320,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -296,7 +336,9 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -313,6 +355,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -329,6 +373,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -344,7 +389,9 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -354,29 +401,15 @@
         <categoryLink id="fd975ec4-d0f4-310c-bcca-670a169e269e-72807c5d-e370-9ddf-c2b7-de5d2797f24d" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="34c25b30-00bf-15f7-9ed1-74fa1fa765be" name="Heavy Anti-tank Gun" hidden="true" collective="false" import="true" targetId="30b4a76a-a84e-c668-6ee2-2ff3d44ca4b4" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="34c25b30-00bf-15f7-9ed1-74fa1fa765be-72807c5d-e370-9ddf-c2b7-de5d2797f24d" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="true"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink id="191826bb-4327-f06d-be7c-e48a0b66c411" name="Heavy Artillery" hidden="true" collective="false" import="true" targetId="89f926e8-58c7-949f-ec7e-e31fa71fe153" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -393,6 +426,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -408,7 +442,9 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -424,7 +460,9 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -434,29 +472,15 @@
         <categoryLink id="096663c0-5522-01b7-c107-971a2cd0af0c-72807c5d-e370-9ddf-c2b7-de5d2797f24d" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="05baf166-ebb2-ed24-a374-9aa351ac5755" name="Renault R35 or R40" hidden="true" collective="false" import="true" targetId="87d4dc08-4f69-099e-da1f-dc07294b8e56" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="d32e-5f7a-d066-0330" name="New CategoryLink" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink id="5c9c0caa-f2e6-5fee-688c-04b040b10400" name="TACAM Tank Destroyer" hidden="true" collective="false" import="true" targetId="13f741c1-a642-c256-4ecd-bea23bfc34b5" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -472,7 +496,9 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -488,7 +514,9 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -504,7 +532,9 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -521,7 +551,9 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -538,7 +570,9 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -547,6 +581,233 @@
       <categoryLinks>
         <categoryLink id="8028-dceb-0cb0-7bbd" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
         <categoryLink id="aeb4-8976-f3e6-da86" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="9b00-b1dd-7136-ab08" name="Platoon Commander" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="cd01-177b-5f7c-e712" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="6338-fa42-33e7-7b6b" name="SdKfz 222 Light Armoured Car" hidden="true" collective="false" import="true" targetId="2afd-6910-b69c-bd63" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="a48e-fde2-a5df-ea61" name="Armoured Cars and Recce Vehicles" hidden="false" targetId="f2903219-8ebc-8034-37ec-78a7f9040c20" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="b8dc-0208-9d27-37d0" name="Renault R35 or R40" hidden="true" collective="false" import="true" targetId="87d4dc08-4f69-099e-da1f-dc07294b8e56" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3111-3692-afdf-418c" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="638c-4b32-46f8-da18" name="Panzer 35(T)" hidden="true" collective="false" import="true" targetId="0578-f5f1-6eb1-add1" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="f652-366a-1a12-e6e5" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="85e8-cac1-fd45-dd77" name="Panzer 38(T)" hidden="true" collective="false" import="true" targetId="618c-1c19-2be7-2778" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="f1f3-0004-8f60-8aad" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="5bfd-c994-2f87-9f77" name="Panzer III Ausf N" hidden="true" collective="false" import="true" targetId="5f98-51ae-c46b-3216" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="0f9c-265c-1c6d-a0d7" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="7dfd-a8c8-621a-e7fb" name="Panzer IV AUSF B, C, D, E, F" hidden="true" collective="false" import="true" targetId="28dc-d6fc-83d3-6d1b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="d48f-bba5-b98d-7da4" name="New CategoryLink" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="7273-145f-3e79-4ec1" name="Panzer IV AUSF G, H, J" hidden="true" collective="false" import="true" targetId="43ba-b55b-4337-d9b5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="bc85-3d42-3d9d-5fda" name="New CategoryLink" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="db7b-2864-5af5-496c" name="Panzer V &apos;Panther&apos;" hidden="true" collective="false" import="true" targetId="8c3c-14dd-1183-dc9c" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="cdd7-311e-bfc8-b534" name="New CategoryLink" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="dfbe-9b84-ce2b-9bd8" name="StuG III F, G, H and IV" hidden="true" collective="false" import="true" targetId="1be5-8983-358f-809b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3845-6a8d-3fb9-3765" name="New CategoryLink" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="5da5-9bc9-68db-9a5f" name="Late War Infantry Section" hidden="true" collective="false" import="true" targetId="56cd9b98-b69a-3e20-0e08-1c01ef086fbc" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="ab76-6d8f-3e65-7870" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="cdaa-a199-3eee-d927" name="Motorized Infantry Section" hidden="true" collective="false" import="true" targetId="0876bd40-9d8e-bacb-aeb9-dc3b97d2a1e5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a77-6c42-18aa-6b15" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="6fa6-12e4-61b0-f13b" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="9b00-6ebb-3e1d-63a6" name="Early War Infantry Section" hidden="true" collective="false" import="true" targetId="1b511cbb-964e-25c5-d8e8-81dd7b6c0969" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fa93-774b-e139-b805" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94a4-c690-6ba4-cc1e" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3de5-5672-5143-913b" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -3339,9 +3600,9 @@
     </selectionEntry>
     <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Platoon Commander" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="minInForce" value="1">
+        <modifier type="set" field="minInForce" value="1.0">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a5dc-f938-7e74-6281" type="instanceOf"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6168-399f-3500-0c3e" type="instanceOf"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4296,6 +4557,623 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="2afd-6910-b69c-bd63" name="SdKfz 222 Light Armoured Car" page="0" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="5709-c68d-b921-a066" name="SdKfz 222 Light Armoured Car" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Wheeled Vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Armoured Car 7+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="18cb-e403-6160-bf0f" hidden="false" targetId="1de066aa-d93f-6d01-3b14-d420ce7c11cf" type="rule"/>
+        <infoLink id="7b07-3d6e-1a9e-bfd1" hidden="false" targetId="a194d545-a4c7-b609-5e9a-2e82339215e9" type="rule"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="53fd-df8a-4d70-e65c" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e56a-8be2-c5c7-0acb" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cc6b-1de7-cf7b-a1fa" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="e6e1-07e0-571d-5472" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0a33-77b6-c225-c34a" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="8188-4e94-37dc-654d" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="76.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d7b2-120c-fdb8-2278" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b55f-7b99-6a7c-0cff" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="ceca-5250-f59f-5dc2" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="95.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="67e4-f507-88b0-825b" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b9fd-f693-884d-6d72" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="1603-9d36-ef0d-929f" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="114.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="8125-0f66-4765-a664" name="Variant" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7abb-b556-9fd9-c4a7" type="max"/>
+            <constraint field="points" scope="parent" value="-21.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c8da-7672-9f42-6d21" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="782c-3e41-5bbf-8168" name="Command Vehicle (Sdkfz 223)" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="82c3-c34e-4e33-4bf2" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="dbfb-2f2f-cc61-8716" hidden="false" targetId="6d02f741-ba61-cfa5-c5df-3cb7684a5c0a" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="6c6a-ae5e-8d0e-5664" hidden="false" collective="false" import="true" targetId="eb35-b1d4-b01c-0bae" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0b25-6c1c-61fa-68a9" name="SDKFZ 221" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="points" scope="parent" value="-22.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e158-47b6-23e6-c52a" type="min"/>
+              </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="3cbb-001a-b295-9fb7" name="Weapon" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7479-6649-670f-7d5c" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ae2f-c1da-be8f-c2ca" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="7c23-39de-c1bb-c668" name="Turret-mounted MMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2714-3323-7b5a-c6b8" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="1b40-f893-04d3-ca50" hidden="false" targetId="5cf77de7-0fc3-71a8-4933-70b4a81ad0cb" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="3581-1dff-6ac1-cd9b" name="Turret Mounted Anti-Tank Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5965-36f3-29e3-9c02" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="c780-2ce5-d222-ea62" hidden="false" targetId="2ed110db-2472-cc19-4b18-9c68c1bcbac2" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="points" value="-21.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8ae5-97d4-9b34-67d0" name="Turret-mounted Light Autocannon" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2937-7d18-5a5c-6c38" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="a121-2790-5b6a-2275" hidden="false" targetId="86ea648a-76f6-6a59-222d-dc0c52581b36" type="profile"/>
+                <infoLink id="faa5-f4fe-7e6c-b91a" hidden="false" targetId="d0ac4e22-11f9-bb8e-09a3-b269adde7366" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="faad-e44f-9848-831b" hidden="false" collective="false" import="true" targetId="7f4c-ca9b-8522-ccfc" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0578-f5f1-6eb1-add1" name="Panzer 35(T)" page="0" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="9665-cc12-03f5-0fde" name="Panzer 35(T)" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Tracked vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Light Tank 8+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b650-a07e-b284-ffda" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="debe-a85b-8c13-e2f0" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d80d-ad87-667f-ca7b" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="8798-1dbf-a436-f76c" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="68cd-a50b-1518-40a9" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="cf70-9365-400c-03d6" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="162.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="caec-9d47-13dc-182c" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e773-73c4-ec16-e724" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="18fd-68e4-36e4-cea8" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="135.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="893f-aaf7-df88-00d4" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7398-4b5d-0816-7622" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="8c31-1d12-0151-3c75" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="108.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="f125-bbbd-d248-7ff9" hidden="false" collective="false" import="true" targetId="3503-6634-ff60-05d8" type="selectionEntry"/>
+        <entryLink id="58d6-9ed6-d811-66d2" hidden="false" collective="false" import="true" targetId="7f4c-ca9b-8522-ccfc" type="selectionEntry"/>
+        <entryLink id="0edc-c457-f9a4-0dc0" hidden="false" collective="false" import="true" targetId="0d98-6c24-5cd9-1c6c" type="selectionEntry"/>
+        <entryLink id="847f-2572-d9f1-3739" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="618c-1c19-2be7-2778" name="Panzer 38(T)" page="0" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="720d-141b-769e-9381" name="Panzer 38(T)" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Tracked vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Light Tank 8+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="cbee-2ca1-ec53-d708" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9072-c8b9-82d6-f9d3" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="af97-d632-e068-90fc" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="b27e-caf5-624f-a759" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="64c5-e926-0bd2-82e5" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="06f5-4b54-69e1-074c" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="162.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c49e-fa8f-db06-57e4" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6b08-f248-793d-3218" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="b8a3-7011-758b-c438" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="135.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2ca6-5940-b8a4-c879" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9168-5d37-51f1-b0e0" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="d549-ea3a-bc55-42cf" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="108.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="5dd1-12bb-6ed3-30a1" hidden="false" collective="false" import="true" targetId="3503-6634-ff60-05d8" type="selectionEntry"/>
+        <entryLink id="412a-4c60-0cb4-e11f" hidden="false" collective="false" import="true" targetId="7f4c-ca9b-8522-ccfc" type="selectionEntry"/>
+        <entryLink id="9b6b-0e90-e58d-8003" hidden="false" collective="false" import="true" targetId="0d98-6c24-5cd9-1c6c" type="selectionEntry"/>
+        <entryLink id="1a0a-f69a-3757-c462" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5f98-51ae-c46b-3216" name="Panzer III Ausf N" page="0" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="c7f3-fb3d-1a86-5e23" name="Panzer III Ausf N" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Tracked Vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Medium Tank 9+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="88b4-fed7-3f7b-5417" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0da3-a22f-11d7-4f9c" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9d5e-8be0-5057-c239" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="d17f-f126-07e5-05b8" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bf89-bd46-ce7a-2037" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="074e-d3ec-3662-dbbf" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="175.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8009-19fe-e309-e870" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4a04-30b7-8af7-528e" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="6ebd-83d8-7c1c-ccaa" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="210.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="7871-d70a-3cab-f698" hidden="false" collective="false" import="true" targetId="9d7e-e48b-dfb8-e769" type="selectionEntry"/>
+        <entryLink id="fa89-26e7-0ce3-33c6" hidden="false" collective="false" import="true" targetId="7f4c-ca9b-8522-ccfc" type="selectionEntry"/>
+        <entryLink id="9293-e1bb-1ad8-e313" hidden="false" collective="false" import="true" targetId="0d98-6c24-5cd9-1c6c" type="selectionEntry"/>
+        <entryLink id="93b9-00b6-7950-f803" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="28dc-d6fc-83d3-6d1b" name="Panzer IV AUSF B, C, D, E, F" page="0" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="0a98-d64c-8505-a98e" name="Panzer IV AUSF B, C, D, E, F" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Tracked Vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Medium Tank 9+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="e9b3-8b84-bed0-65a5" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d336-8e41-7ebe-8189" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3cfa-9054-a9c1-8d80" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="2eb7-8a68-2a76-e1c6" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6867-bc93-4911-4ad7" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="39af-cac7-1df7-b5da" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="210.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6af4-3786-cc93-6be2" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8653-59ed-dc9e-4a46" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="98b3-40b1-0a0e-c6b4" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="175.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3887-c0d9-007b-36de" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="03cf-d68c-431e-d267" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="9123-0705-a818-c9ac" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="140.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="ea8b-4668-496e-ea05" hidden="false" collective="false" import="true" targetId="9d7e-e48b-dfb8-e769" type="selectionEntry"/>
+        <entryLink id="74dd-1143-3192-f7f2" hidden="false" collective="false" import="true" targetId="7f4c-ca9b-8522-ccfc" type="selectionEntry"/>
+        <entryLink id="b576-a270-b982-c5eb" hidden="false" collective="false" import="true" targetId="0d98-6c24-5cd9-1c6c" type="selectionEntry"/>
+        <entryLink id="c2be-0882-04cf-3b0f" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8c3c-14dd-1183-dc9c" name="Panzer V &apos;Panther&apos;" page="0" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="3d1c-cfac-cff7-e761" name="Panzer V &apos;Panther&apos;" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Tracked Vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Medium Tank 9+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="2aba-09c2-ded6-c829" name="Heavy Frontal Armour" page="0" hidden="false">
+          <description>The Panther&apos;s heavy frontal armourr has a rating of +1, giving it the same frontal value of a heavy tank (10+)</description>
+        </rule>
+      </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5f61-762c-227c-7b75" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6b47-3317-1a65-81a9" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ba3a-02d7-c45c-1e17" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="ee4c-7ce3-10e7-4071" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="56e4-e938-8069-020f" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="62b0-219e-e195-0f04" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="284.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="31ad-f98a-59ba-aea4" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="35a2-3141-b306-b3db" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="12ee-a1da-4d96-3c36" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="355.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="dbc4-0789-3b3a-608f" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ed11-e517-d47f-6c7a" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="78d6-6071-1cf2-b602" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="426.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="6d57-830a-4e2a-2631" hidden="false" collective="false" import="true" targetId="2ece-a485-a963-8c18" type="selectionEntry"/>
+        <entryLink id="664c-f3e6-e9f4-108a" hidden="false" collective="false" import="true" targetId="7f4c-ca9b-8522-ccfc" type="selectionEntry"/>
+        <entryLink id="9c88-6a8a-6588-446e" hidden="false" collective="false" import="true" targetId="0d98-6c24-5cd9-1c6c" type="selectionEntry"/>
+        <entryLink id="fc78-c42c-4ecf-bb40" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="43ba-b55b-4337-d9b5" name="Panzer IV AUSF G, H, J" page="0" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="0d3a-948f-0a3a-9df5" name="Panzer IV AUSF G, H, J" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Tracked Vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Medium Tank 9+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry id="48c8-1b7f-15f1-ff87" name="Shurzen armour skirts" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b252-5037-d733-3571" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="5d42-0205-11da-0b35" hidden="false" targetId="5649d58f-f002-adfb-882b-a5e39e5a7811" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="10.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="6cca-835e-5e59-29f5" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="29dd-078f-88be-8904" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1621-6b24-984b-a437" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="97ab-370c-26a5-aef1" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cf15-8ac6-c7f7-953a" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="f7a9-d776-af4d-10b3" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="282.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="eb46-2701-5911-81c7" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="906f-258a-d265-3ec4" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="d414-82d0-7c3b-066a" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="235.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8906-22c5-cdaa-a281" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0061-3ae5-4f90-3532" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="3f30-0b20-9d37-59be" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="188.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="6a21-a77b-bf7e-2293" hidden="false" collective="false" import="true" targetId="00cf-cb22-d6f8-46f0" type="selectionEntry"/>
+        <entryLink id="d6af-f14f-6baa-0c53" hidden="false" collective="false" import="true" targetId="7f4c-ca9b-8522-ccfc" type="selectionEntry"/>
+        <entryLink id="5deb-be66-1148-7338" hidden="false" collective="false" import="true" targetId="0d98-6c24-5cd9-1c6c" type="selectionEntry"/>
+        <entryLink id="3652-778c-ccf3-b67e" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1be5-8983-358f-809b" name="StuG III F, G, H and IV" page="0" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="b6d0-9926-0fe5-2b25" name="StuG III F, G, H and IV" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Tracked Vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Medium Tank 9+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry id="84c1-e7eb-96a0-b6a2" name=" MMG with 360 degree arc of fire" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7ec6-ff5e-9bec-a150" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f8b7-fa89-1394-20ba" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="e64f-6a4b-e17a-f868" name="Medium Machine Gun (MMG)" hidden="false" targetId="5cf77de7-0fc3-71a8-4933-70b4a81ad0cb" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a199-4eef-3e65-b913" name="Shurzen armour skirts (G,H)" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4412-4cd6-dd03-7f11" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="9c79-95a0-c079-f0f7" hidden="false" targetId="5649d58f-f002-adfb-882b-a5e39e5a7811" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="10.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="34c8-d8fb-8daf-f0a9" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="da7d-7316-fe6b-156f" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c583-5fe5-0a0b-0dd1" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="1be0-c53e-b0f1-a7a4" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e840-179e-0e61-ac77" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="1b2b-8938-2e38-7cb4" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="184.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4196-0e4e-f987-5c46" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="da35-6792-8c10-7ce3" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="ad83-515f-2e47-c490" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="230.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="056f-cf46-98c5-2666" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d09e-14f0-b8b6-b0f1" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="8d87-723c-e577-8c2f" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="276.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="aa46-f66a-e80e-5a54" hidden="false" collective="false" import="true" targetId="5646-6b95-4c6b-4647" type="selectionEntry"/>
+        <entryLink id="ea70-e813-c255-6575" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="bff9-0a52-9305-29fd" name="Threatre Selector" hidden="false" collective="false" import="true">
@@ -4312,6 +5190,8 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="94a4-c690-6ba4-cc1e" name="1941-43: Onward to the Caucasus!" hidden="false" collective="false" import="true" type="upgrade"/>
+        <selectionEntry id="7a77-6c42-18aa-6b15" name="1943-44: War in Romania" hidden="false" collective="false" import="true" type="upgrade"/>
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
