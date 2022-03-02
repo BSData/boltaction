@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="d373-d979-116c-5487" name="Bolt Action 2.0" revision="3" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="d373-d979-116c-5487" name="Bolt Action 2.0" revision="4" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d373-d979-pubN70886" name="Tank War"/>
     <publication id="d373-d979-pubN74158" name="Tank Wars"/>
@@ -1482,6 +1482,9 @@ Ignores the Gun Shield rule</description>
     </rule>
     <rule id="a52c-ff9f-bb1c-b2be" name="Vulnerable" page="0" hidden="false">
       <description>All shots to side and rear +1 penetration modifier.</description>
+    </rule>
+    <rule id="78b5-ee95-a088-c13b" name="Gyro-stabilisers" page="0" hidden="false">
+      <description>A veteran vehicle ignore -1 penalty to shoot when issued an Advance order.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
