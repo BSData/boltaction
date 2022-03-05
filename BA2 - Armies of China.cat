@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3372-f291-2f57-233c" name="Armies of China" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3372-f291-2f57-233c" name="Armies of China" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="3372-f291-pubN106008" name="Tank War"/>
     <publication id="3372-f291-pubN116346" name="Tank Wars"/>
@@ -152,49 +152,6 @@
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry id="b04d-02ce-39e1-f565" name="Type of Chinese Force" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-      </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="dae6-0d74-fb61-4922" name="Force" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="8b21-05d3-5f13-932b" name="Nationalist" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0e2c-2180-ba05-5d5b" name="Communist" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="866c-a27a-be74-6fa8" name="Warlord" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="4864-655f-fd2f-f9ea" name="Theatre Selector" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a85b-ea6c-fcee-eb1d" type="min"/>
@@ -216,6 +173,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -225,17 +184,55 @@
         <categoryLink id="e286-c59f-b075-6e7d-0fcbe145-b362-4be0-2491-dbf2db078475" hidden="false" targetId="0fcbe145-b362-4be0-2491-dbf2db078475" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="803f-2cc9-f041-b5bb" hidden="false" collective="false" import="true" targetId="bb56a3e3-56d5-9861-b869-ade27c221a4d" type="selectionEntry">
+    <entryLink id="803f-2cc9-f041-b5bb" name="Forward Observer" hidden="true" collective="false" import="true" targetId="bb56a3e3-56d5-9861-b869-ade27c221a4d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="803f-2cc9-f041-b5bb-481abf13-c03e-0dd0-d520-9f9837253cbe" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="5b5c-bf75-7ec9-5dd1" hidden="false" collective="false" import="true" targetId="43c73365-6371-6d90-dca2-d04f0ccca3d1" type="selectionEntry">
+    <entryLink id="5b5c-bf75-7ec9-5dd1" name="High Ranking Officer" hidden="true" collective="false" import="true" targetId="43c73365-6371-6d90-dca2-d04f0ccca3d1" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="5b5c-bf75-7ec9-5dd1-481abf13-c03e-0dd0-d520-9f9837253cbe" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="8b07-d2d6-982d-e7dc" hidden="false" collective="false" import="true" targetId="3f594e6a-25eb-4dbf-73d5-47c5a9648f2d" type="selectionEntry">
+    <entryLink id="8b07-d2d6-982d-e7dc" name="Medic Team" hidden="true" collective="false" import="true" targetId="3f594e6a-25eb-4dbf-73d5-47c5a9648f2d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="8b07-d2d6-982d-e7dc-481abf13-c03e-0dd0-d520-9f9837253cbe" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
@@ -246,6 +243,7 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -263,6 +261,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -279,6 +279,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -295,6 +297,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -311,6 +315,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -327,6 +333,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -343,6 +351,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -359,6 +369,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -375,6 +386,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -391,6 +403,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -423,6 +436,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -505,9 +519,20 @@
         <categoryLink id="13a0-f67a-d37e-79ae-5c47879b-41d0-1383-5fe5-a5989615db89" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="5589-ecf3-6df2-b5e9" hidden="false" collective="false" import="true" targetId="05f5-c14a-1c9d-7d99" type="selectionEntry">
+    <entryLink id="5589-ecf3-6df2-b5e9" name="Warlord" hidden="true" collective="false" import="true" targetId="05f5-c14a-1c9d-7d99" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
-        <categoryLink id="5589-ecf3-6df2-b5e9-481abf13-c03e-0dd0-d520-9f9837253cbe" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
+        <categoryLink id="7ac9-c236-0370-9f4c" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="7568-4100-3502-8831" name="Cavalry Troop" hidden="true" collective="false" import="true" targetId="60aa-25cd-b7f5-f972" type="selectionEntry">
@@ -517,6 +542,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -533,6 +560,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -542,17 +570,51 @@
         <categoryLink id="1568-be42-195d-0303" name="Compulsory " hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="64de-9dc9-f2d7-75b6" hidden="false" collective="false" import="true" targetId="3805-e64c-8a5f-8609" type="selectionEntry">
+    <entryLink id="64de-9dc9-f2d7-75b6" name="Type 41 75mm Mountain gun" hidden="true" collective="false" import="true" targetId="3805-e64c-8a5f-8609" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="64de-9dc9-f2d7-75b6-72807c5d-e370-9ddf-c2b7-de5d2797f24d" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="44a2-483e-0a3d-5be2" name="Captured Type 92 Hokoku-Go" hidden="false" collective="false" import="true" targetId="bded-5622-873d-b34e" type="selectionEntry">
+    <entryLink id="44a2-483e-0a3d-5be2" name="Captured Type 92 Hokoku-Go" hidden="true" collective="false" import="true" targetId="bded-5622-873d-b34e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="fad0-47b2-0aea-f9b5" name="Armoured Cars and Recce Vehicles" hidden="false" targetId="f2903219-8ebc-8034-37ec-78a7f9040c20" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="ebcf-5d83-2932-4dce" hidden="false" collective="false" import="true" targetId="59a7-a86d-9b6c-460b" type="selectionEntry">
+    <entryLink id="ebcf-5d83-2932-4dce" name="Citroen Kegresse B2 Armoured Half-Track Car" hidden="true" collective="false" import="true" targetId="59a7-a86d-9b6c-460b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="ebcf-5d83-2932-4dce-f2903219-8ebc-8034-37ec-78a7f9040c20" hidden="false" targetId="f2903219-8ebc-8034-37ec-78a7f9040c20" primary="true"/>
       </categoryLinks>
@@ -564,6 +626,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -580,6 +644,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -589,8 +655,35 @@
         <categoryLink id="bc24-50d9-0935-0d06" name="New CategoryLink" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="ed3e-5401-02e6-8342" name="Sutton Skunk Holt Armoured Tractor" hidden="false" collective="false" import="true" targetId="8b0d-72fc-2485-3dec" type="selectionEntry"/>
-    <entryLink id="205c-f3c3-f75e-9461" name="M2 Halftrack" hidden="false" collective="false" import="true" targetId="0077-fdb6-a672-c296" type="selectionEntry">
+    <entryLink id="ed3e-5401-02e6-8342" name="Sutton Skunk Holt Armoured Tractor" hidden="true" collective="false" import="true" targetId="8b0d-72fc-2485-3dec" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="5b88-5ed0-1048-3941" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="205c-f3c3-f75e-9461" name="M2 Halftrack" hidden="true" collective="false" import="true" targetId="0077-fdb6-a672-c296" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="205c-f3c3-f75e-9461-963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="true"/>
       </categoryLinks>
@@ -602,6 +695,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -618,6 +712,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -634,6 +730,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -650,6 +748,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -666,6 +766,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -682,6 +783,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -698,6 +800,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -714,6 +817,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -730,6 +835,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -746,6 +853,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -762,6 +870,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -771,12 +880,37 @@
         <categoryLink id="8c1d-e1a9-6d01-fdf5" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="2f94-3689-8214-276c" hidden="false" collective="false" import="true" targetId="475c-0798-785e-5b79" type="selectionEntry">
+    <entryLink id="2f94-3689-8214-276c" name="Buessing-NAG Truck" hidden="false" collective="false" import="true" targetId="475c-0798-785e-5b79" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="2f94-3689-8214-276c-963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="b596-b7c7-91a8-675b" hidden="false" collective="false" import="true" targetId="c574-f068-1060-6d4d" type="selectionEntry">
+    <entryLink id="b596-b7c7-91a8-675b" name="Morris 15CWT Truck" hidden="true" collective="false" import="true" targetId="c574-f068-1060-6d4d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="b596-b7c7-91a8-675b-963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="true"/>
       </categoryLinks>
@@ -813,9 +947,20 @@
         <categoryLink id="3932-2d46-9b13-bc2a" name="Compulsory " hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="e247-538a-f3ba-d4bf" hidden="false" collective="false" import="true" targetId="0631-008e-a7ac-a4d5" type="selectionEntry">
+    <entryLink id="e247-538a-f3ba-d4bf" name="Guerrilla Cell" hidden="true" collective="false" import="true" targetId="0631-008e-a7ac-a4d5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
-        <categoryLink id="e247-538a-f3ba-d4bf-5c47879b-41d0-1383-5fe5-a5989615db89" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
+        <categoryLink id="03df-c98c-9f21-9f91" name="Compulsory " hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="6317-6cb3-7065-6865" name="Merrill&apos;s Marauders" hidden="true" collective="false" import="true" targetId="f962-1a5d-d307-422e" type="selectionEntry">
@@ -846,6 +991,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -967,7 +1114,18 @@
         <categoryLink id="5466-c215-c2f9-0275" name="New CategoryLink" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="3034-21d1-6947-d113" name="Universal Carrier" hidden="false" collective="false" import="true" targetId="885b-1aa6-424a-9f29" type="selectionEntry">
+    <entryLink id="3034-21d1-6947-d113" name="Universal Carrier" hidden="true" collective="false" import="true" targetId="885b-1aa6-424a-9f29" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="3034-21d1-6947-d113-963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="true"/>
       </categoryLinks>
@@ -1084,7 +1242,18 @@
         <categoryLink id="e868-6f51-e1c1-89ef-72807c5d-e370-9ddf-c2b7-de5d2797f24d" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="8c14-5efb-27ec-c40f" hidden="false" collective="false" import="true" targetId="f0b8-e07c-91a9-ea4f" type="selectionEntry">
+    <entryLink id="8c14-5efb-27ec-c40f" name="ZIS-2 AT Gun" hidden="true" collective="false" import="true" targetId="f0b8-e07c-91a9-ea4f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="8c14-5efb-27ec-c40f-72807c5d-e370-9ddf-c2b7-de5d2797f24d" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="true"/>
       </categoryLinks>
@@ -1112,6 +1281,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1128,6 +1299,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1176,6 +1349,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1192,6 +1367,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1208,6 +1384,8 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1233,9 +1411,54 @@
         <categoryLink id="548f-c52b-30ff-70a4" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="2cc2-8544-0a93-38ea" name="M3 White Scout Car" hidden="false" collective="false" import="true" targetId="4c8c-7148-6e31-d66b" type="selectionEntry">
+    <entryLink id="2cc2-8544-0a93-38ea" name="M3 White Scout Car" hidden="true" collective="false" import="true" targetId="4c8c-7148-6e31-d66b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="83ac-81c6-f296-ed7c" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="107c-3631-ea00-e1ee" name="Guerrilla Cell" hidden="true" collective="false" import="true" targetId="0631-008e-a7ac-a4d5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="9f87-78e1-b67b-db10" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2631-cfbc-f4d7-7016" name="M3 White Scout Car (Mortar)" hidden="true" collective="false" import="true" targetId="e894-1f23-a23f-6c34" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d99-fa8a-0a6d-8392" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="dd76-6b11-b518-c05e" name="New CategoryLink" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -1257,7 +1480,7 @@ Inexperienced infantry units suffer D3 pinning markers
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e2c-2180-ba05-5d5b" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1273,7 +1496,7 @@ Inexperienced infantry units suffer D3 pinning markers
         </modifier>
       </modifiers>
     </infoLink>
-    <infoLink id="6079-742d-89e0-8864" hidden="false" targetId="3587-6dd5-a45d-4c06" type="rule">
+    <infoLink id="6079-742d-89e0-8864" name="ARVs and Force Selection" hidden="false" targetId="3587-6dd5-a45d-4c06" type="rule">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
@@ -1285,17 +1508,10 @@ Inexperienced infantry units suffer D3 pinning markers
   </infoLinks>
   <sharedSelectionEntries>
     <selectionEntry id="dd2a-1c98-f361-aa84" name="105mm M2A1 Medium Howitzer" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="9dde-e872-0187-eb39" hidden="false" targetId="6d4311a1-a9f2-8c5e-50e2-8b44447fa40c" type="rule"/>
         <infoLink id="b8a2-2025-5ad4-f6ed" hidden="false" targetId="75a15bd5-b7f9-eb24-bf97-f6517ea3b4b4" type="rule"/>
-        <infoLink id="f26f-4a86-7e7f-e8cd" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
+        <infoLink id="f26f-4a86-7e7f-e8cd" name="Team Weapon" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
         <infoLink id="8e10-789c-4f6d-c531" hidden="false" targetId="1e23b695-97f3-2125-d7bf-95a6f63eb66b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
@@ -1350,22 +1566,10 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="8d61-fd60-a511-8471" name="15cm sFH18 " page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="11b0-b697-5d7d-39fe" hidden="false" targetId="21b0888a-842c-ef83-916a-d4eae8748d97" type="rule"/>
         <infoLink id="4f50-942f-05df-34e3" hidden="false" targetId="75a15bd5-b7f9-eb24-bf97-f6517ea3b4b4" type="rule"/>
-        <infoLink id="5070-a7c8-7e04-4232" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
+        <infoLink id="5070-a7c8-7e04-4232" name="Team Weapon" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
         <infoLink id="b92d-eef4-7514-109a" hidden="false" targetId="ec07765d-5037-08c2-6533-9d99511f208d" type="rule"/>
         <infoLink id="d622-21b8-db3d-5603" hidden="false" targetId="c6d6d93d-f5ae-c280-4654-5029e535a569" type="rule"/>
       </infoLinks>
@@ -1418,21 +1622,9 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="7b5ec16b-a1cb-c127-0d1d-1560cadf38a7" name="20mm FLAK 38" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="6d8fb157-678f-e8a4-9225-12c4ebdc7fa8" hidden="false" targetId="ec07765d-5037-08c2-6533-9d99511f208d" type="rule"/>
-        <infoLink id="e5b0741a-3cb9-848d-a1b0-cc26401d9599" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
+        <infoLink id="e5b0741a-3cb9-848d-a1b0-cc26401d9599" name="Team Weapon" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
         <infoLink id="995f457b-3864-48fd-b439-7255a956c83e" hidden="false" targetId="75a15bd5-b7f9-eb24-bf97-f6517ea3b4b4" type="rule"/>
         <infoLink id="8a4dc66b-b120-f37e-070a-580678f3c1a9" hidden="false" targetId="f1b7e27d-d587-d97f-6c55-34713f1ff7ab" type="rule"/>
         <infoLink id="b3b19ef6-8408-7398-cb45-d0b4820b799f" hidden="false" targetId="d0ac4e22-11f9-bb8e-09a3-b269adde7366" type="rule"/>
@@ -1488,16 +1680,9 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="8424-79f0-a777-8a81" name="37MM  M3A1 AT-Gun" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="b285-aca3-ad6a-ff7e" hidden="false" targetId="ec07765d-5037-08c2-6533-9d99511f208d" type="rule"/>
-        <infoLink id="1729-3f37-a019-3be7" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
+        <infoLink id="1729-3f37-a019-3be7" name="Team Weapon" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
         <infoLink id="ac3d-0b30-d1fd-83ef" hidden="false" targetId="75a15bd5-b7f9-eb24-bf97-f6517ea3b4b4" type="rule"/>
         <infoLink id="d12b-7970-d4ee-ddab" hidden="false" targetId="f1b7e27d-d587-d97f-6c55-34713f1ff7ab" type="rule"/>
         <infoLink id="1b13-53e0-993b-db9a" hidden="false" targetId="017e-5b79-38c2-a06e" type="rule"/>
@@ -1553,20 +1738,8 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="65a1407d-70b0-e978-6038-e351f15de6be" name="37mm PAK 36" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <infoLinks>
-        <infoLink id="4142b085-32ac-f55f-dede-7a9c687c07c4" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
+        <infoLink id="4142b085-32ac-f55f-dede-7a9c687c07c4" name="Team Weapon" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
         <infoLink id="6bd7a5d1-e91c-a80c-c7d6-0ebfbc337a89" hidden="false" targetId="75a15bd5-b7f9-eb24-bf97-f6517ea3b4b4" type="rule"/>
         <infoLink id="03dbbb56-7231-e043-73ae-f01f98823347" hidden="false" targetId="f1b7e27d-d587-d97f-6c55-34713f1ff7ab" type="rule"/>
         <infoLink id="e4a1ced2-5685-62d4-af06-3aca2ff35525" hidden="false" targetId="ec07765d-5037-08c2-6533-9d99511f208d" type="rule"/>
@@ -1622,23 +1795,11 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="6220-6657-ccdd-5565" name="40MM Bofors L/60" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="9e83-ba52-fdd1-1ec7" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
+        <infoLink id="9e83-ba52-fdd1-1ec7" name="Team Weapon" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
         <infoLink id="97ae-c836-2c77-e866" hidden="false" targetId="75a15bd5-b7f9-eb24-bf97-f6517ea3b4b4" type="rule"/>
         <infoLink id="4267-6ff6-221d-1b69" hidden="false" targetId="1e23b695-97f3-2125-d7bf-95a6f63eb66b" type="rule"/>
         <infoLink id="96ba-ae3b-6646-306a" hidden="false" targetId="d0ac4e22-11f9-bb8e-09a3-b269adde7366" type="rule"/>
@@ -1694,22 +1855,10 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="a23e68d0-d9b4-8aee-177b-3efe0a5febe4" name="7.6cm IEFK16 Field Gun" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="fd986ef9-26c5-e9b8-3155-9e1b7965be69" hidden="false" targetId="c6525d18-7c6f-0691-32fa-1ab1ce62a970" type="rule"/>
         <infoLink id="87d9a458-9a34-b749-13d9-ad3c75957ebf" hidden="false" targetId="75a15bd5-b7f9-eb24-bf97-f6517ea3b4b4" type="rule"/>
-        <infoLink id="396a41d8-388b-4da4-425a-c0b5b62eaea1" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
+        <infoLink id="396a41d8-388b-4da4-425a-c0b5b62eaea1" name="Team Weapon" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
         <infoLink id="0cf27f74-50d3-3a30-2907-9d33fc330722" hidden="false" targetId="f1b7e27d-d587-d97f-6c55-34713f1ff7ab" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
@@ -1760,20 +1909,13 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="1f58-eeb2-9a43-5edf" name="75MM M1A1 Pack Howitzer" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <rules>
         <rule id="17f5-0a37-c38b-b07d" name="May use mule transport" hidden="false"/>
       </rules>
       <infoLinks>
         <infoLink id="fe13-eccd-6c2a-4e3c" hidden="false" targetId="c6525d18-7c6f-0691-32fa-1ab1ce62a970" type="rule"/>
         <infoLink id="0557-7964-b5cb-379a" hidden="false" targetId="75a15bd5-b7f9-eb24-bf97-f6517ea3b4b4" type="rule"/>
-        <infoLink id="f0fa-bded-7488-128c" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
+        <infoLink id="f0fa-bded-7488-128c" name="Team Weapon" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
         <infoLink id="60a7-cad2-62c2-e1c4" hidden="false" targetId="f1b7e27d-d587-d97f-6c55-34713f1ff7ab" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
@@ -1836,13 +1978,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="e065-f47c-0f3a-268b" name="BA-10" page="0" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="ce90-27e9-aa3b-800d" name="BA-10" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -1854,7 +1989,7 @@ Inexperienced infantry units suffer D3 pinning markers
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="ae0a-2933-6691-bc78" hidden="false" targetId="1de066aa-d93f-6d01-3b14-d420ce7c11cf" type="rule"/>
+        <infoLink id="ae0a-2933-6691-bc78" name="Recce" hidden="false" targetId="1de066aa-d93f-6d01-3b14-d420ce7c11cf" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e065-f47c-0f3a-268b-f2903219-8ebc-8034-37ec-78a7f9040c20" hidden="false" targetId="f2903219-8ebc-8034-37ec-78a7f9040c20" primary="true"/>
@@ -1912,18 +2047,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="f4a4-bae2-efec-c240" name="BA-20M" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="b71d-8803-92fd-d36e" name="BA-20M" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -1935,7 +2058,7 @@ Inexperienced infantry units suffer D3 pinning markers
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="f9c7-b4e2-4231-6ffa" hidden="false" targetId="1de066aa-d93f-6d01-3b14-d420ce7c11cf" type="rule"/>
+        <infoLink id="f9c7-b4e2-4231-6ffa" name="Recce" hidden="false" targetId="1de066aa-d93f-6d01-3b14-d420ce7c11cf" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f4a4-bae2-efec-c240-f2903219-8ebc-8034-37ec-78a7f9040c20" hidden="false" targetId="f2903219-8ebc-8034-37ec-78a7f9040c20" primary="true"/>
@@ -2030,16 +2153,9 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="5185-d004-bc4c-45b7" name="Big Sword Squad" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="6d6f-e07e-b026-8e29" hidden="false" targetId="20b6042c-51de-f02f-3031-adcac1fd8ab6" type="rule"/>
-        <infoLink id="b83b-6a85-62f6-9832" hidden="false" targetId="c796ce90-0986-8fdb-d620-86e9d808fe03" type="rule"/>
+        <infoLink id="b83b-6a85-62f6-9832" name="Tough Fighters" hidden="false" targetId="c796ce90-0986-8fdb-d620-86e9d808fe03" type="rule"/>
         <infoLink id="ec3b-6c89-7522-9c13" hidden="false" targetId="7ce8-65a7-e72c-61a2" type="rule"/>
       </infoLinks>
       <selectionEntries>
@@ -2250,26 +2366,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="475c-0798-785e-5b79" name="Buessing-NAG Truck" page="0" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e2c-2180-ba05-5d5b" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="49de-6271-8eb0-4d0e" name="Buessing-NAG Truck" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -2328,18 +2424,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="bded-5622-873d-b34e" name="Captured Type 92 Hokoku-Go" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e2c-2180-ba05-5d5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="0ee9-c609-b407-2993" name="Captured Type 92 Hokoku-Go" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -2555,13 +2639,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="65d0-8f30-0450-1078" name="Carden-Loyd Mk VI" page="0" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="02e5-1059-11a8-3d35" name="Carden-Loyd Mk VI" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -2573,7 +2650,7 @@ Inexperienced infantry units suffer D3 pinning markers
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="d961-a5de-3b2c-95c5" hidden="false" targetId="a194d545-a4c7-b609-5e9a-2e82339215e9" type="rule"/>
+        <infoLink id="d961-a5de-3b2c-95c5" name="Open Topped" hidden="false" targetId="a194d545-a4c7-b609-5e9a-2e82339215e9" type="rule"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry id="219d-1129-96e0-93a2" name="Forward-facing hull-mounted MMG" hidden="false" collective="false" import="true" type="upgrade">
@@ -2757,13 +2834,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="59a7-a86d-9b6c-460b" name="Citroen Kegresse B2 Armoured Half-Track Car" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="1875-8213-acf3-d669" name="Laffly S15T0E" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -2775,7 +2845,7 @@ Inexperienced infantry units suffer D3 pinning markers
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="03ea-4d98-5e21-16da" hidden="false" targetId="1de066aa-d93f-6d01-3b14-d420ce7c11cf" type="rule"/>
+        <infoLink id="03ea-4d98-5e21-16da" name="Recce" hidden="false" targetId="1de066aa-d93f-6d01-3b14-d420ce7c11cf" type="rule"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry id="6e18-6292-9dd3-ef2d" name="Turret-mounted LMG" hidden="false" collective="false" import="true" type="upgrade">
@@ -3090,18 +3160,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="8d47650b-07a5-826b-97b3-2ae4b6ef14f2" name="FT-17/18" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="1f6c0363-69df-ec52-62e5-0a7fe470bd89" name="FT-17/18" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -3118,7 +3176,7 @@ Inexperienced infantry units suffer D3 pinning markers
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="d7f0b566-a7a2-e110-46b8-c24f47ab6757" hidden="false" targetId="7ce3ee09-4d45-6b0c-6143-b3cdb53ba09a" type="rule"/>
+        <infoLink id="d7f0b566-a7a2-e110-46b8-c24f47ab6757" name="One-man turret" hidden="false" targetId="7ce3ee09-4d45-6b0c-6143-b3cdb53ba09a" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="16f3-8606-d8d3-b959" name="New CategoryLink" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
@@ -3205,15 +3263,8 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="2332-c826-2609-311a" name="German-trained Nationalist Squad" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <infoLinks>
-        <infoLink id="09db-8b11-7d51-f50f" hidden="false" targetId="b185-030a-da17-2c94" type="rule"/>
+        <infoLink id="09db-8b11-7d51-f50f" name="Initiative Training" hidden="false" targetId="b185-030a-da17-2c94" type="rule"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry id="493d-880a-572f-dd57" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
@@ -3331,18 +3382,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="0631-008e-a7ac-a4d5" name="Guerrilla Cell" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e2c-2180-ba05-5d5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <rules>
         <rule id="4b39-f151-e608-8d0d" name="Forward position" hidden="false">
           <description>Counts as Observers/Snipers for Set-Up purposes (see page 118 of the Bolt Action rulebook)</description>
@@ -3962,7 +4001,7 @@ Inexperienced infantry units suffer D3 pinning markers
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3982,7 +4021,7 @@ Inexperienced infantry units suffer D3 pinning markers
                   <modifiers>
                     <modifier type="set" field="hidden" value="false">
                       <conditions>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -4310,7 +4349,7 @@ Inexperienced infantry units suffer D3 pinning markers
                   <modifiers>
                     <modifier type="set" field="hidden" value="false">
                       <conditions>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6086-ce02-7f63-70f4" type="equalTo"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -4629,11 +4668,11 @@ Inexperienced infantry units suffer D3 pinning markers
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="b6fa-8486-96c4-dd8e" name="Political Officer" page="0" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="b6fa-8486-96c4-dd8e" name="Political Officer(Communist)" page="0" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e2c-2180-ba05-5d5b" type="equalTo"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -4832,13 +4871,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="c825-f051-27e6-28b8" name="Jeep" page="0" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="53d0-434e-7c2d-ec27" name="Jeep" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -4897,13 +4929,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="c3e2-2521-8ace-224a" name="L3/33" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="3b40-4fea-01d2-f37f" name="L3/33" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -5066,18 +5091,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="8d90-20a2-839a-0f87" name="M1931 Amphibiious Tank" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="073b-cfa4-a715-a331" name="M1931 Amphibiious Tank" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -5139,18 +5152,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="0077-fdb6-a672-c296" name="M2 Halftrack" page="0" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="e53f-59d2-6471-ad3d" name="M2 Halftrack" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -5162,7 +5163,7 @@ Inexperienced infantry units suffer D3 pinning markers
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="4d4d-4e31-10c1-e33f" hidden="false" targetId="a194d545-a4c7-b609-5e9a-2e82339215e9" type="rule"/>
+        <infoLink id="4d4d-4e31-10c1-e33f" name="Open Topped" hidden="false" targetId="a194d545-a4c7-b609-5e9a-2e82339215e9" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="ac3f-814a-f9bf-7b97" name="Rating" hidden="false" collective="false" import="true">
@@ -5212,18 +5213,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="4c8c-7148-6e31-d66b" name="M3 White Scout Car" page="0" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="3752-4981-1410-b7ef" name="M3 White Scout Car" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -5235,7 +5224,7 @@ Inexperienced infantry units suffer D3 pinning markers
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="d16d-31a6-9592-3553" hidden="false" targetId="a194d545-a4c7-b609-5e9a-2e82339215e9" type="rule"/>
+        <infoLink id="d16d-31a6-9592-3553" name="Open Topped" hidden="false" targetId="a194d545-a4c7-b609-5e9a-2e82339215e9" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="c945-abd5-cc6c-3092" name="Rating" hidden="false" collective="false" import="true">
@@ -5304,13 +5293,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="de0d-5c01-2c37-1a26" name="M3A3 Stuart V" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="bc39-a6d4-6aa1-d86d" name="M3A3 Stuart V" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -5374,13 +5356,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="eaff-78a5-76b1-15c0" name="M4 Sherman 75MM" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="136b-ecb5-f57b-440c" name="M4 Sherman 75MM" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -5397,7 +5372,7 @@ Inexperienced infantry units suffer D3 pinning markers
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="392c-6dad-ab31-b660" hidden="false" targetId="adda-c777-a9c4-1eca" type="rule"/>
+        <infoLink id="392c-6dad-ab31-b660" name="Easily Catches Fire" hidden="false" targetId="adda-c777-a9c4-1eca" type="rule"/>
         <infoLink id="7a26-627a-def4-c833" hidden="false" targetId="7813-951f-789d-c61b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
@@ -5758,13 +5733,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="f962-1a5d-d307-422e" name="Merrill&apos;s Marauders" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <selectionEntries>
         <selectionEntry id="4eb1-5bfd-8b4f-ac3f" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5894,17 +5862,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="e70e-b461-ee94-d32c" name="MG34 Machine Gun Team" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
@@ -5915,7 +5872,7 @@ Inexperienced infantry units suffer D3 pinning markers
       </rules>
       <infoLinks>
         <infoLink id="a04a-e3a4-afb2-fc25" hidden="false" targetId="75a15bd5-b7f9-eb24-bf97-f6517ea3b4b4" type="rule"/>
-        <infoLink id="c6b8-08ca-294c-b5c7" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
+        <infoLink id="c6b8-08ca-294c-b5c7" name="Team Weapon" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
         <infoLink id="c87f-277b-1ef8-032e" hidden="false" targetId="f1b7e27d-d587-d97f-6c55-34713f1ff7ab" type="rule"/>
         <infoLink id="8e03-add7-3999-0ff8" hidden="false" targetId="5cf77de7-0fc3-71a8-4933-70b4a81ad0cb" type="profile"/>
       </infoLinks>
@@ -5945,18 +5902,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="c574-f068-1060-6d4d" name="Morris 15CWT Truck" page="0" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="4e1e-9155-fc48-2a31" name="15CWT Truck" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -6304,13 +6249,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="40ef7ede-214b-a73a-06f4-0e47d3eee6fd" name="Panzer I" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="62938c4e-0224-bae0-b0ba-31a7902ff714" name="Panzer I" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -6386,20 +6324,7 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="d9e12e92-afa1-c662-73c5-f6ab4eb45314" name="Platoon Commander" page="0" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e2c-2180-ba05-5d5b" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
       <selectionEntryGroups>
@@ -7327,24 +7252,12 @@ Inexperienced infantry units suffer D3 pinning markers
               </costs>
             </selectionEntry>
             <selectionEntry id="bc77-03b4-6c9c-9da2" name="Cavalry" hidden="true" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e2c-2180-ba05-5d5b" type="equalTo"/>
-                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="7293-8b2b-ab9d-6d34" hidden="false" targetId="bf84f1c6-567d-e6bd-f1c1-7b336ff0e3da" type="rule"/>
+                <infoLink id="7293-8b2b-ab9d-6d34" name="Cavalry" hidden="false" targetId="bf84f1c6-567d-e6bd-f1c1-7b336ff0e3da" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="6.0"/>
@@ -7358,13 +7271,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="f1feae45-60ef-30a0-3963-4b19fbf0f6eb" name="SdKfz 221 Light Armoured Car" page="0" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="e6963dc1-a78a-722d-b53a-aba844180bca" name="SdKfz 221 Light Armoured Car" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -7376,7 +7282,7 @@ Inexperienced infantry units suffer D3 pinning markers
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="34fb82f3-fb19-0fcb-55e5-fdbbcc7cd16a" hidden="false" targetId="1de066aa-d93f-6d01-3b14-d420ce7c11cf" type="rule"/>
+        <infoLink id="34fb82f3-fb19-0fcb-55e5-fdbbcc7cd16a" name="Recce" hidden="false" targetId="1de066aa-d93f-6d01-3b14-d420ce7c11cf" type="rule"/>
         <infoLink id="5fc5011b-6173-5f2a-3787-2e22055b8b95" hidden="false" targetId="a194d545-a4c7-b609-5e9a-2e82339215e9" type="rule"/>
       </infoLinks>
       <selectionEntries>
@@ -7444,13 +7350,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="78db-1e07-2d12-82cf" name="SdKfz 222 Light Armoured Car" page="0" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="cc84-0b9b-d62e-9659" name="SdKfz 222 Light Armoured Car" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -7462,7 +7361,7 @@ Inexperienced infantry units suffer D3 pinning markers
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="ef86-4060-089f-57a8" hidden="false" targetId="1de066aa-d93f-6d01-3b14-d420ce7c11cf" type="rule"/>
+        <infoLink id="ef86-4060-089f-57a8" name="Recce" hidden="false" targetId="1de066aa-d93f-6d01-3b14-d420ce7c11cf" type="rule"/>
         <infoLink id="cc2c-66e8-f943-5ae6" hidden="false" targetId="a194d545-a4c7-b609-5e9a-2e82339215e9" type="rule"/>
         <infoLink id="c113-1acc-c5c5-f517" hidden="false" targetId="d0ac4e22-11f9-bb8e-09a3-b269adde7366" type="rule"/>
       </infoLinks>
@@ -7708,20 +7607,13 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="8b0d-72fc-2485-3dec" name="Sutton Skunk Holt Armoured Tractor" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <rules>
         <rule id="c188-dfe4-c72d-c53e" name="Undermanned" hidden="false">
           <description>Must be stationary to fire rear facing medium mortars. Also, when the mortars are fired the BARs cannot be fired.</description>
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="fd4e-e5bc-b1e1-5844" hidden="false" targetId="b9a80841-3557-df5c-d039-c9a665f4abc2" type="rule"/>
+        <infoLink id="fd4e-e5bc-b1e1-5844" name="Slow" hidden="false" targetId="b9a80841-3557-df5c-d039-c9a665f4abc2" type="rule"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry id="5c54-2855-b33e-370c" name="Forward-facing automatic rifle" hidden="false" collective="false" import="true" type="upgrade">
@@ -7797,13 +7689,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="660c-11d9-ea1c-d693" name="T-26 Model 1933" page="0" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="de4c-e722-d4e3-32a5" name="T-26  Model 1933" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -7927,25 +7812,13 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="3805-e64c-8a5f-8609" name="Type 41 75mm Mountain gun" page="0" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e2c-2180-ba05-5d5b" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <rules>
         <rule id="d36d-7586-2595-69e0" name="May use mule transport" hidden="false"/>
       </rules>
       <infoLinks>
         <infoLink id="0e4c-321f-ea05-4404" hidden="false" targetId="c6525d18-7c6f-0691-32fa-1ab1ce62a970" type="rule"/>
         <infoLink id="aaf0-4f51-de38-8197" hidden="false" targetId="75a15bd5-b7f9-eb24-bf97-f6517ea3b4b4" type="rule"/>
-        <infoLink id="a184-57a2-c58c-3df3" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
+        <infoLink id="a184-57a2-c58c-3df3" name="Team Weapon" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
         <infoLink id="a45f-d208-86a3-df69" hidden="false" targetId="f1b7e27d-d587-d97f-6c55-34713f1ff7ab" type="rule">
           <modifiers>
             <modifier type="set" field="name" value="Crew (4)">
@@ -8020,13 +7893,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="885b-1aa6-424a-9f29" name="Universal Carrier" page="0" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="aa14-2560-8f77-37f4" name="Universal Carrier" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <modifiers>
@@ -8050,7 +7916,7 @@ Inexperienced infantry units suffer D3 pinning markers
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="2a70-b5a7-9cfd-2878" hidden="false" targetId="a194d545-a4c7-b609-5e9a-2e82339215e9" type="rule"/>
+        <infoLink id="2a70-b5a7-9cfd-2878" name="Open Topped" hidden="false" targetId="a194d545-a4c7-b609-5e9a-2e82339215e9" type="rule"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry id="3b77-856b-6bd3-4632" name="Pintle-mounted LMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
@@ -8358,13 +8224,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="8db2-fe14-2a29-74b2" name="Vickers 6-Ton Light Tank" page="0" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="e684-4c55-1e9a-094e" name="Vickers 6-Ton Light Tank" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -8424,22 +8283,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="05f5-c14a-1c9d-7d99" name="Warlord" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="minInForce" value="1.0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="866c-a27a-be74-6fa8" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="minInForce" type="min"/>
@@ -8699,13 +8542,6 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="a2f8-6f41-3d63-86eb" name="X and Y Force Squad" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b21-05d3-5f13-932b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup id="1d4d-3830-6e34-3a52" name="Quality" hidden="false" collective="false" import="true">
           <constraints>
@@ -9205,18 +9041,11 @@ Inexperienced infantry units suffer D3 pinning markers
       </costs>
     </selectionEntry>
     <selectionEntry id="f0b8-e07c-91a9-ea4f" name="ZIS-2 AT Gun" page="0" hidden="true" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e2c-2180-ba05-5d5b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="8fbe-b0b8-ab52-3c71" hidden="false" targetId="f1b7e27d-d587-d97f-6c55-34713f1ff7ab" type="rule"/>
         <infoLink id="909a-b689-45f7-1984" hidden="false" targetId="ec07765d-5037-08c2-6533-9d99511f208d" type="rule"/>
         <infoLink id="f445-1841-a56d-0c25" hidden="false" targetId="75a15bd5-b7f9-eb24-bf97-f6517ea3b4b4" type="rule"/>
-        <infoLink id="e56f-971b-89e0-e583" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
+        <infoLink id="e56f-971b-89e0-e583" name="Team Weapon" hidden="false" targetId="127e3232-13b3-10fc-dd2b-d89cbf04c739" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="222b-5826-a14e-35ce" name="Rating" hidden="false" collective="false" import="true">
@@ -9263,6 +9092,89 @@ Inexperienced infantry units suffer D3 pinning markers
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="952f-55a8-7938-912e" name="Medium AT Gun" hidden="false" collective="false" import="true" targetId="0e55-0a6b-6abd-5d96" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e894-1f23-a23f-6c34" name="M3 White Scout Car (Mortar)" page="0" hidden="true" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="9333-2a94-572f-d2d6" name="M3 White Scout Car" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Half-tracked Vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Armoured Carrier 7+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">8</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">Light howitzer Light or medium AT gun Light AA gun</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="7c57-9e04-7a84-64e0" name="Open Topped" hidden="false" targetId="a194d545-a4c7-b609-5e9a-2e82339215e9" type="rule"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="00c9-1f87-44a5-1da0" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e231-cf67-56d2-3f02" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="18f4-7dba-8151-419b" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="aed7-8975-2452-bfb6" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d2ce-80ad-51f4-b51c" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="7676-f435-66fe-a33c" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="79.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="fcdd-494e-50ad-69c8" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cb71-2477-b690-9309" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="58d0-2f8d-e026-1972" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="96.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c484-fcd0-64e6-3566" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2e31-06ff-8b0d-ff34" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="3553-d636-0bd4-d609" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="113.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="03b2-1052-b36a-c159" name="Pintle mount" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7780-442e-c597-e365" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="d5c7-079f-0eb3-90eb" name="Pintle-Mounted MMG (forward arc)" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7db0-22b2-406f-8097" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="70a3-fdd2-6cb4-8bed" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="ed32-fe18-b30c-b829" hidden="false" targetId="5cf77de7-0fc3-71a8-4933-70b4a81ad0cb" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="8ae6-71a8-30a8-3fa0" name="Forward Facing Medium Mortar" hidden="false" collective="false" import="true" targetId="805f-60f8-9dc7-f4e9" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -9672,9 +9584,21 @@ Inexperienced infantry units suffer D3 pinning markers
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6086-ce02-7f63-70f4" name="Nationalist Reinforced Platoon" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="6a22-6d07-ad10-8446" name="Communist Reinforced Platoon" hidden="false" collective="false" import="true" type="upgrade"/>
-        <selectionEntry id="6d99-fa8a-0a6d-8392" name="Warlords Reinforced Platoon" hidden="false" collective="false" import="true" type="upgrade"/>
+        <selectionEntry id="6086-ce02-7f63-70f4" name="Nationalist Reinforced Platoon" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6a22-6d07-ad10-8446" name="Communist Reinforced Platoon" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6d99-fa8a-0a6d-8392" name="Warlords Reinforced Platoon" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
