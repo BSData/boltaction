@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fe01-7aad-b334-12c2" name="Partisans" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fe01-7aad-b334-12c2" name="Partisans" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="71dd-6d83-9af7-58dd" name="Free Units" hidden="false"/>
     <categoryEntry id="7e6f-a198-ef78-9fd8" name="Headquarters" hidden="false"/>
@@ -77,59 +77,80 @@
         <categoryLink id="977c-a166-1a1f-9af4" name="ARV" hidden="false" targetId="014468cf-931f-6d22-82c8-56acf4032768" primary="false"/>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="7836-bf6d-071e-4f7d" name="Generic Reinforced Platoon" hidden="false">
+    <forceEntry id="7cac-f94b-c9b4-d1bd" name="Generic Reinforced Platoon" hidden="false">
       <categoryLinks>
-        <categoryLink id="6dcf-48e7-52d4-53ac" name="Free Units" hidden="false" targetId="0fcbe145-b362-4be0-2491-dbf2db078475" primary="false"/>
-        <categoryLink id="3c9b-9b09-d825-66f0" name="Headquarters" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
-        <categoryLink id="a313-e15f-5a7a-2f8c" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="false">
+        <categoryLink id="1247-92ce-16dd-107f" name="Free Units" hidden="false" targetId="0fcbe145-b362-4be0-2491-dbf2db078475" primary="false"/>
+        <categoryLink id="d250-66fa-b6dd-8241" name="Compulsory " hidden="false" targetId="f543-f483-48ce-9b05" primary="false">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="94b8-8367-7424-a61a" type="min"/>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="4090-b5d1-2298-4866" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fded-b85d-4c72-a546" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58d5-36cf-a928-6b0f" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="b428-b52c-9e94-2e22" name="Infantry Support" hidden="false" targetId="a01f5f58-334c-8442-d861-15099ebdf5e5" primary="false"/>
-        <categoryLink id="6df2-7afa-83e1-30b9" name="Artillery" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="bb78-3869-ac8b-57f5" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="37c5-b758-e999-5735" name="Transports" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="false">
+        <categoryLink id="bb67-13c0-a07c-f8b6" name="Headquarters" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
+        <categoryLink id="4418-fd70-a897-1291" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="false">
           <modifiers>
-            <modifier type="increment" field="c549-8dd4-5df4-f4a1" value="1">
+            <modifier type="set" field="6ba9-0c29-0a15-d9a4" value="3.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdee-2f8d-b0b3-c457" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="6ba9-0c29-0a15-d9a4" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="dc30-2142-1c8b-2f8e" name="Infantry Support" hidden="false" targetId="a01f5f58-334c-8442-d861-15099ebdf5e5" primary="false"/>
+        <categoryLink id="889e-e9d6-9111-e637" name="Artillery" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="364c-c551-e4db-2494" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="8b90-0e58-3678-46e1" name="Armoured Cars  and Recce Vehicles" hidden="false" targetId="f2903219-8ebc-8034-37ec-78a7f9040c20" primary="false">
+          <constraints>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="2274-796b-36c7-2fb2" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="f4e6-6421-4516-0d89" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d29-7872-d2f0-27ab" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="814b-1510-71a1-49a9" name="Transports" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="false">
+          <modifiers>
+            <modifier type="increment" field="400f-9534-cfea-e8de" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="5c47879b-41d0-1383-5fe5-a5989615db89" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="c549-8dd4-5df4-f4a1" value="1">
+            <modifier type="increment" field="400f-9534-cfea-e8de" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01f5f58-334c-8442-d861-15099ebdf5e5" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="c549-8dd4-5df4-f4a1" value="1">
+            <modifier type="increment" field="400f-9534-cfea-e8de" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="481abf13-c03e-0dd0-d520-9f9837253cbe" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="c549-8dd4-5df4-f4a1" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="400f-9534-cfea-e8de" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="549b-0f67-30ac-0ff4" name="Tows" hidden="false" targetId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" primary="false">
+        <categoryLink id="089a-22d4-fc07-7f60" name="Tows" hidden="false" targetId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" primary="false">
           <modifiers>
-            <modifier type="increment" field="4143-b388-983e-c0d6" value="1">
+            <modifier type="increment" field="a113-f54d-631e-c5a4" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="4143-b388-983e-c0d6" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="f417-cf31-bd70-bd30" name="Armoured Cars  and Recce Vehicles" hidden="false" targetId="f2903219-8ebc-8034-37ec-78a7f9040c20" primary="false">
-          <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="abdb-ea51-0a98-455a" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="a113-f54d-631e-c5a4" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -175,7 +196,6 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdee-2f8d-b0b3-c457" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ed9-57a0-0b1f-d2d9" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="27d7-16e6-f0da-ea14" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -193,7 +213,6 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdee-2f8d-b0b3-c457" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ed9-57a0-0b1f-d2d9" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="27d7-16e6-f0da-ea14" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -231,7 +250,6 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdee-2f8d-b0b3-c457" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ed9-57a0-0b1f-d2d9" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="27d7-16e6-f0da-ea14" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -275,7 +293,21 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="334c-7740-1f74-43c4" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdee-2f8d-b0b3-c457" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ed9-57a0-0b1f-d2d9" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="27d7-16e6-f0da-ea14" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="334c-7740-1f74-43c4" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="2454-9d6b-2eb1-8d89" name="New CategoryLink" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
         <categoryLink id="96ba-316d-bd51-6944" name="New CategoryLink" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="false"/>
@@ -442,8 +474,7 @@
         </modifier>
       </modifiers>
       <categoryLinks>
-        <categoryLink id="711f-ce94-cdb3-0865" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
-        <categoryLink id="f78f-781f-bfe3-ade5" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
+        <categoryLink id="fb0f-2f5d-d5c8-349f" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="0259-7f9f-5f92-62fc" name="Partisan Squad (Early War)" hidden="true" collective="false" import="true" targetId="e90e-8286-1bf3-a83c" type="selectionEntry">
@@ -480,7 +511,6 @@
       <categoryLinks>
         <categoryLink id="bee2-1a45-32cf-8b28" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
         <categoryLink id="7730-1394-4563-85c0" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="false"/>
-        <categoryLink id="907c-656d-6ba6-9c8b" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="false"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="1329-aaa6-2a40-ab3a" name="Sniper Team" hidden="true" collective="false" import="true" targetId="8687-2a0f-b314-10f8" type="selectionEntry">
@@ -500,6 +530,59 @@
       <categoryLinks>
         <categoryLink id="c12b-a5d7-b554-3d6d" name="New CategoryLink" hidden="false" targetId="a01f5f58-334c-8442-d861-15099ebdf5e5" primary="true"/>
         <categoryLink id="86f1-bc7f-99ae-cde1" name="New CategoryLink" hidden="false" targetId="a01f5f58-334c-8442-d861-15099ebdf5e5" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="4bc8-60dd-c807-66d9" name="Partisan Squad (Early War)" hidden="true" collective="false" import="true" targetId="e90e-8286-1bf3-a83c" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdee-2f8d-b0b3-c457" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ed9-57a0-0b1f-d2d9" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="84db-3d27-a403-8ac3" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="ce8e-3f45-9203-01e1" name="Partisan Squad (Late War)" hidden="true" collective="false" import="true" targetId="d2f9-b587-995c-246a" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdee-2f8d-b0b3-c457" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="27d7-16e6-f0da-ea14" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="e402-83e7-998e-d893" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="ea24-0cdc-bccc-a89f" name="Inexperienced Partisan Sqaud" hidden="true" collective="false" import="true" targetId="6b8b-6057-bdad-ccae" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdee-2f8d-b0b3-c457" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ed9-57a0-0b1f-d2d9" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="27d7-16e6-f0da-ea14" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="df66-73fb-3832-5937" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="false"/>
+        <categoryLink id="120a-26a3-069b-809a" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -2396,17 +2479,11 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="5ed9-57a0-0b1f-d2d9" name="1939-41 Resistance" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78e3-57d7-85c7-7804" type="max"/>
-          </constraints>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="27d7-16e6-f0da-ea14" name="1942-45 Liberation" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f28-8b54-4fbd-0431" type="max"/>
-          </constraints>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
