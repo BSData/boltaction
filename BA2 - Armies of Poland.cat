@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a421-a776-f69a-decf" name="Armies of Poland" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a421-a776-f69a-decf" name="Armies of Poland" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="a421-a776-pubN91301" name="Tank War"/>
     <publication id="a421-a776-pubN94616" name="Tank Wars"/>
@@ -445,6 +445,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73a0-3108-8c97-9c39" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ce50-b838-3fad-f585" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -791,6 +792,23 @@
       <categoryLinks>
         <categoryLink id="aa6a-ee77-7c16-d33e" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="false"/>
         <categoryLink id="b743-18b4-05d6-064a" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="0893-d78c-7bec-2ad3" name="Motorbike Section" hidden="true" collective="false" import="true" targetId="6bd2-8127-246a-3307" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73a0-3108-8c97-9c39" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ce50-b838-3fad-f585" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="23f3-6e7e-ef23-e5ec" name="New CategoryLink" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -5221,6 +5239,224 @@
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="6bd2-8127-246a-3307" name="Motorbike Section" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="d81f-1069-820f-fdcd" name="Rating" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="1c48-d13a-2347-669b" name="Regular" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="132a-ffd5-421d-defe" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="949e-6110-44bf-df40" name="Motorcycles, and motorcycles with sidecars" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0b56-a1a6-afad-b0e6" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="63ae-b1f9-20b1-ce63" hidden="false" targetId="94655c27-bef6-e2a5-4288-094a4363c5d3" type="rule"/>
+                  </infoLinks>
+                  <selectionEntries>
+                    <selectionEntry id="9c7b-51b2-dd9e-c5c9" name="Motorcycles, and motorcycles with sidecars" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="5211-0cbd-775b-21bf" value="1.0">
+                          <repeats>
+                            <repeat field="selections" scope="1c48-d13a-2347-669b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c642-22f3-6713-670c" repeats="1" roundUp="false"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5211-0cbd-775b-21bf" type="min"/>
+                        <constraint field="selections" scope="parent" value="13.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5c39-5e97-6022-f454" type="max"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="c642-22f3-6713-670c" name="Squad Members" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c118-92c7-a370-479d" type="min"/>
+                    <constraint field="selections" scope="parent" value="13.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a069-0369-7cd2-0bb5" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="9e23-242c-f31e-a0c8" name="Regular NCO" page="0" hidden="false" collective="false" import="true" type="model">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7baa-3da0-ae56-757c" type="min"/>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2d4f-d9d8-c536-a554" type="max"/>
+                      </constraints>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup id="e89f-abe6-016f-8a6b" name="Weapon" hidden="false" collective="false" import="true">
+                          <constraints>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a56f-b3d7-ce48-cd3c" type="min"/>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d8ac-26d4-1633-adae" type="max"/>
+                          </constraints>
+                          <selectionEntries>
+                            <selectionEntry id="84f4-a86d-fd82-d9f4" name="Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d0c3-1d9a-5e46-8455" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="0879-82f2-4979-ea31" name="Rifle" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <costs>
+                        <cost name="pts" typeId="points" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="33e2-1963-5e72-59a0" name="Regular Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5fb0-4648-295e-410d" type="min"/>
+                        <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1ba5-389c-b640-92c0" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="ea11-c466-4e54-f61b" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                      </infoLinks>
+                      <entryLinks>
+                        <entryLink id="ed6e-a25a-bb6f-e756" name="Rifle" hidden="false" collective="false" import="true" targetId="bfef62a2-a2eb-900f-442d-91dc435968a3" type="selectionEntry"/>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="c117-03d2-26ec-1d47" name="Regular Soldier with LMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5b05-0d43-9166-c11a" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="19e8-9b06-350c-369a" name="Regular" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                      </infoLinks>
+                      <entryLinks>
+                        <entryLink id="c5ba-b8a5-c70f-3a70" hidden="false" collective="false" import="true" targetId="14a1-5df7-8293-36d8" type="selectionEntry"/>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry id="5999-4e3d-1644-467c" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30f0-97fc-a78d-9a37" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="f394-30a8-25cf-583e" name="Motorcycles, and motorcycles with sidecars" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5ecb-e90b-3d7e-6c60" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="f658-c96d-f284-d356" name="Motorbikes" hidden="false" targetId="94655c27-bef6-e2a5-4288-094a4363c5d3" type="rule"/>
+                  </infoLinks>
+                  <selectionEntries>
+                    <selectionEntry id="bc71-2895-d113-d757" name="Motorcycles, and motorcycles with sidecars" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="a624-c03a-9e7f-6cbe" value="1.0">
+                          <repeats>
+                            <repeat field="selections" scope="5999-4e3d-1644-467c" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6691-395b-d6ac-b01f" repeats="1" roundUp="false"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a624-c03a-9e7f-6cbe" type="min"/>
+                        <constraint field="selections" scope="parent" value="13.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="92ac-6cfc-7117-b78c" type="max"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="6691-395b-d6ac-b01f" name="Squad Members" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8035-fca0-30b7-2b6d" type="min"/>
+                    <constraint field="selections" scope="parent" value="13.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dd9a-be34-8508-c9fe" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="0ace-9eb8-dd3b-fe28" name="Veteran NCO" page="0" hidden="false" collective="false" import="true" type="model">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="21b1-2133-7bc9-870c" type="min"/>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9f67-e3b8-ddbc-4f5d" type="max"/>
+                      </constraints>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup id="b539-aea5-ca4c-8ef7" name="Weapon" hidden="false" collective="false" import="true">
+                          <constraints>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a305-f7b0-cfee-a938" type="min"/>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fc40-b972-1ef6-69df" type="max"/>
+                          </constraints>
+                          <selectionEntries>
+                            <selectionEntry id="de7c-b459-f769-abb1" name="Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c5b8-aa0c-ffa5-e8b8" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="ff64-f3aa-1f08-d0e3" name="Rifle" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <costs>
+                        <cost name="pts" typeId="points" value="13.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="b5a3-751c-905c-7a49" name="Veteran Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="20c4-972f-1e46-93bb" type="min"/>
+                        <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9d4-c6b5-1638-cf8d" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="4e52-5379-cebe-6f7b" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                      </infoLinks>
+                      <entryLinks>
+                        <entryLink id="7751-3e14-62f3-f39e" name="Rifle" hidden="false" collective="false" import="true" targetId="bfef62a2-a2eb-900f-442d-91dc435968a3" type="selectionEntry"/>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="13.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="bd50-1265-e02b-c3c3" name="Veteran Soldier with LMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2a69-cd46-db6a-a47f" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="066a-aa19-a38a-a61d" name="Regular" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                      </infoLinks>
+                      <entryLinks>
+                        <entryLink id="c80b-af22-d9f3-4b5e" hidden="false" collective="false" import="true" targetId="14a1-5df7-8293-36d8" type="selectionEntry"/>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="13.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
