@@ -1379,29 +1379,25 @@ on a roll of 5 or 6 the unit is immediately uprated to Regular for the rest of t
       <description>If fired at from the front, crew is 6+ to damage</description>
     </rule>
     <rule id="69eb-2439-fb8f-71e0" name="HE (1&quot;)" page="0" hidden="false">
-      <description>Use the appropriate template to determine how many
-models in the unit have been hit.
+      <description>Use the appropriate template to determine how many models in the unit have been hit.
 Hits against infantry that reacts going Down are halved rounding down
 If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded
 D2 Pin Markers, +1 PEN, Hits vs targets in buildings D3</description>
     </rule>
     <rule id="e1e9-8856-911c-2f9d" name="HE (2&quot;)" page="0" hidden="false">
-      <description>Use the appropriate template to determine how many
-models in the unit have been hit.
+      <description>Use the appropriate template to determine how many models in the unit have been hit.
 Hits against infantry that reacts going Down are halved rounding down
 If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded
 D3 Pin Markers, +2 PEN, Hits vs targets in buildings D6</description>
     </rule>
     <rule id="5a66-e1c5-fdff-a987" name="HE (3&quot;)" page="0" hidden="false">
-      <description>Use the appropriate template to determine how many
-models in the unit have been hit.
+      <description>Use the appropriate template to determine how many models in the unit have been hit.
 Hits against infantry that reacts going Down are halved rounding down
 If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded
 D3 Pin Markers, +3 PEN, Hits vs targets in buildings 2D6</description>
     </rule>
     <rule id="0be9-1aa0-98b3-16a8" name="HE (4&quot;)" page="0" hidden="false">
-      <description>Use the appropriate template to determine how many
-models in the unit have been hit.
+      <description>Use the appropriate template to determine how many models in the unit have been hit.
 Hits against infantry that reacts going Down are halved rounding down
 If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded
 D6 Pin Markers, +4 PEN, Hits vs targets in buildings 3D6</description>
