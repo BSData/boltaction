@@ -1506,6 +1506,11 @@ Ignores the Gun Shield rule</description>
     <rule id="78b5-ee95-a088-c13b" name="Gyro-stabilisers" page="0" hidden="false">
       <description>A veteran vehicle ignore -1 penalty to shoot when issued an Advance order.</description>
     </rule>
+    <rule id="b95a-e4b0-410d-9b83" name="Crew (2)" page="0" hidden="false"/>
+    <rule id="8394-5203-991b-d571" name="Crew (3)" page="0" hidden="false"/>
+    <rule id="a42c-6515-f0a1-7896" name="Crew (4)" page="0" hidden="false"/>
+    <rule id="9f8b-3bbb-6206-06ec" name="Crew (5)" page="0" hidden="false"/>
+    <rule id="b6ca-d3d0-aa8e-ac61" name="Crew (7)" page="0" hidden="false"/>
   </sharedRules>
   <sharedProfiles>
     <profile id="12a3-5bb9-da85-827e" name="Anti-tank rifle" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
