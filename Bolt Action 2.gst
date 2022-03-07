@@ -1280,7 +1280,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="548c-1420-8361-9361" name="Flamethrower (infantry)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="548c-1420-8361-9361" name="Flamethrower (infantry)" hidden="false" collective="true" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2449-3092-131e-5820" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a9c8-7242-e914-6e51" type="max"/>
@@ -1288,6 +1288,8 @@
       <infoLinks>
         <infoLink id="5a6b-4d84-7f2a-a92f" name="Flamethrower (Infantry)" hidden="false" targetId="1020-e405-c2e5-1bde" type="profile"/>
         <infoLink id="74b4-fb68-7c37-9e91" name="Flamethrower" hidden="false" targetId="0bda-9822-e9eb-f62b" type="rule"/>
+        <infoLink id="d844-7a70-d695-d0a0" name="Flamethrower Assistant " hidden="false" targetId="b09c-ee66-8b9a-ff42" type="rule"/>
+        <infoLink id="0eb2-1abe-1dad-6810" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="20.0"/>
@@ -1339,6 +1341,19 @@
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="76ff-3e89-643f-519e" name="Fanatics" hidden="false" collective="true" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="8531-91b9-44ee-b4f7" name="Fanatics" hidden="false" targetId="210a-fd8c-dd39-5e36" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="3.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3b46-a0be-c914-e644" name="Shirkers" page="0" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="-3.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -1516,7 +1531,7 @@ Ignores the Gun Shield rule</description>
       <description>Yo may include up to one ARV in your army for every two non-ARV vehicles of damage value 8 or greater you have. </description>
     </rule>
     <rule id="4347-c6e1-c5ab-9232" name="Stubborn" page="0" hidden="false">
-      <description>If forced to take a morale check, they ignore negative morale modifiers from pin markers. Remember that order tests are not morale checks.</description>
+      <description>If forced to take a morale check, the unit ignore negative morale modifiers from pin markers. Remember that order tests are not morale checks.</description>
     </rule>
     <rule id="123f-ba11-633a-56ff" name="Tough Fighters" page="0" hidden="false">
       <description>When a model scores a casualty in close quarters against enemy infantry or artillery units, it can immediately make a second damage roll.</description>
@@ -1535,6 +1550,42 @@ Ignores the Gun Shield rule</description>
     <rule id="a42c-6515-f0a1-7896" name="Crew (4)" page="0" hidden="false"/>
     <rule id="9f8b-3bbb-6206-06ec" name="Crew (5)" page="0" hidden="false"/>
     <rule id="b6ca-d3d0-aa8e-ac61" name="Crew (7)" page="0" hidden="false"/>
+    <rule id="b09c-ee66-8b9a-ff42" name="Flamethrower Assistant " page="0" hidden="false">
+      <description>For every Flamethrower purchased for the squad, another member becomes the assistant. </description>
+    </rule>
+    <rule id="3188-3f62-e9e9-8595" name="Schurzen Armoured Skirts" page="0" hidden="false">
+      <description>Anti-tank rifles and shaped charges never recieve the +1 penetration bonus for hitting the vehicle in the side.</description>
+    </rule>
+    <rule id="2b6f-7a17-7237-5d48" name="Superior HE Rounds" hidden="false">
+      <description>Instead of using the relative template, use the next category one, eg: Medium AT-Gun HE(1&quot;) becomes HE(2&quot;).</description>
+    </rule>
+    <rule id="ef26-3f67-bf0d-8ef3" name="Behind Enemy Lines" page="0" hidden="false">
+      <description>When Outflanking infantry ignores the -1 modifier to the Order test for coming onto the table.</description>
+    </rule>
+    <rule id="6d73-3854-88b1-fe07" name="Easily Catches Fire" page="0" hidden="false">
+      <description>If a roll on the vehicle damage table results in the vehicle catching fire add D3 pin markers rather than just 1 before taking a morale test.</description>
+    </rule>
+    <rule id="de51-e3d0-1dde-0d42" name="Transport (10)" page="0" hidden="false"/>
+    <rule id="c4cf-ed5b-b71e-89f4" name="Transport (11)" page="0" hidden="false"/>
+    <rule id="01bd-0fd0-bece-dfae" name="Transport (12)" page="0" hidden="false"/>
+    <rule id="45f4-f2c2-bcea-c005" name="Transport (20)" page="0" hidden="false"/>
+    <rule id="b8b5-f43d-006d-17b4" name="Transport (24)" page="0" hidden="false"/>
+    <rule id="25bf-d36a-69f0-cb58" name="Transport (3)" page="0" hidden="false"/>
+    <rule id="cd8e-3bf5-4164-7ec0" name="Transport (5)" page="0" hidden="false"/>
+    <rule id="bf28-353c-b480-d2a2" name="Transport (6)" page="0" hidden="false"/>
+    <rule id="e9a1-04db-4212-8984" name="Transport (8)" page="0" hidden="false"/>
+    <rule id="c83b-f379-5e4b-18f0" name="Dog Mine" hidden="false">
+      <description>A dog mine is a one-shot weapon with a range of 18&quot;. Dog mines can only target stationary vehicles (i.e. any vehicle that is not sporting an order dice showing  Run or Advance order).  Dog mines are fired as normal, except instead of rolling a die to hit, you roll on the following chart. Note that if a Recce vehicle reacts to the dog mine attack by moving, the dog mine automatically scores a 2-3.
+
+1 The dog hits the closes friendly stationary vehicle within range instead of the target. Resolve as a hit 4-6 below. If no target presents, see 2-3 below. 
+
+2-3 The dog is either gunned down or bolts from the noise of battle and deserts, possibly lured by the smell of German sausages. The traitor will be shot on sight by political officers. 
+
+4-6 The dog scampers to the target, crawls underneat and explodes. The vehicle suffers a hit with a Pen of +5. (No Pen modifiers apply) </description>
+    </rule>
+    <rule id="21b8-f4c6-31e7-7a0f" name="Experimental" hidden="false">
+      <description>Unfamiliarity and teething problems mean that experimental tanks must pass an order test whenever they are given an order - even when they have no Pin markers on them!</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="12a3-5bb9-da85-827e" name="Anti-tank rifle" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
