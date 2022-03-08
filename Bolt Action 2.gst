@@ -2,7 +2,25 @@
 <gameSystem id="d373-d979-116c-5487" name="Bolt Action 2.0" revision="5" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d373-d979-pubN70886" name="Tank War"/>
-    <publication id="d373-d979-pubN74158" name="Tank Wars"/>
+    <publication id="a4ea-50a6-5c1c-0429" name="Battle of France"/>
+    <publication id="23ff-bf47-4781-28aa" name="Battleground Europe"/>
+    <publication id="466a-4fec-f9aa-0e81" name="D-Day: Overlord"/>
+    <publication id="ae1b-9fe2-38c5-199d" name="Duels in the Sun"/>
+    <publication id="e528-aeb2-633c-130e" name="Empires in Flames"/>
+    <publication id="b3e4-72d9-fa55-2045" name="Fortress Budapest"/>
+    <publication id="2b70-cdaa-e42f-24a2" name="Germany Strikes"/>
+    <publication id="f855-3e35-d406-1837" name="New Guinea"/>
+    <publication id="322c-9628-2a10-d4e6" name="Ostfront"/>
+    <publication id="d700-1d3b-b419-fe28" name="Sea Lion"/>
+    <publication id="422f-bd5a-861b-7fd5" name="The Road to Berlin"/>
+    <publication id="ba7c-664b-fc86-79b6" name="Western Desert"/>
+    <publication id="209e-18dc-48dd-9860" name="Battle of the Bulge"/>
+    <publication id="82cd-6228-6b00-ecb4" name="Italy: Soft Underbelly"/>
+    <publication id="00fe-4d4b-7e97-61dc" name="Market Garden"/>
+    <publication id="d4e7-6781-f1ff-5a93" name="D-Day: British &amp; Canadian Sectors"/>
+    <publication id="3eb0-b5eb-cc29-a210" name="Stalingrad"/>
+    <publication id="87c8-e7e4-263c-5eef" name="D-Day: US Sector"/>
+    <publication id="aee4-82a1-8db0-bfe7" name="Mariana &amp; Palau Islands"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
@@ -1059,7 +1077,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="66da-09b4-abe7-dbcd" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="0035-15d9-6955-27ac" hidden="false" targetId="b6b8-46bc-6ff6-38f8" type="profile"/>
+        <infoLink id="0035-15d9-6955-27ac" name="Medium AT Gun" hidden="false" targetId="b6b8-46bc-6ff6-38f8" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -1356,6 +1374,30 @@
         <cost name="pts" typeId="points" value="-3.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="d8be-08ac-6dbb-8b23" name="Low velocity light At Gun" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f9a0-1b9e-a3be-0e8c" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0bfa-00e1-522e-e178" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="4b52-df75-2ac1-bc22" name="Low velocity light AT gun" hidden="false" targetId="3248-f272-f352-5768" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5261-1ff2-20a0-f91d" name="Turret Mounted Low velocity light AT Gun" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0f41-f696-fac5-85e9" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fc52-309d-6ea1-468d" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="f6fd-e2c9-57f7-cb20" name="Low velocity light AT gun" hidden="false" targetId="3248-f272-f352-5768" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="1243-e8b7-ed01-2010" name="Amphibious" page="0" hidden="false">
@@ -1489,8 +1531,7 @@ If hit by indirect HE fire, add +1 to PEN AND +1 to damage rolls</description>
       <description>Counts hits against the rear armour as hits against the side armour (i.e. +1 penetration instead of +2 penetration)</description>
     </rule>
     <rule id="b959-3dd3-bc5c-d7d6" name="Shaped Charge" page="0" hidden="false">
-      <description>Suffers -1 on all rolls to hit
-Never suffer -1 penalty at penetration for firing at long range</description>
+      <description>Never suffer -1 penalty at penetration for firing at long range.</description>
     </rule>
     <rule id="df62-2282-8e14-569c" name="Shirkers" page="0" hidden="false">
       <description>Must always take an order test when given an order, even if not Pinned.
@@ -1527,7 +1568,7 @@ Ignores the Gun Shield rule</description>
     <rule id="1a7b-11ce-f15e-74eb" name="Armoured Platoon" hidden="true">
       <description>The Armoured Platoon must include enough transport vehicles and/or tows (either soft-skin or armoured) to transport all models in the infantry and artillery units in the platoon, up to a maximum of one transport vehicle per unit of Infantry and /or Artillery.  The only units that are an exception to this, and which cannot have a transport vehicle are mounted cavalry units and units on motorcycles. </description>
     </rule>
-    <rule id="237c-9f95-b56c-5449" name="ARVs and Force Selection" publicationId="d373-d979-pubN74158" page="80" hidden="true">
+    <rule id="237c-9f95-b56c-5449" name="ARVs and Force Selection" publicationId="d373-d979-pubN70886" page="80" hidden="true">
       <description>Yo may include up to one ARV in your army for every two non-ARV vehicles of damage value 8 or greater you have. </description>
     </rule>
     <rule id="4347-c6e1-c5ab-9232" name="Stubborn" page="0" hidden="false">
@@ -1585,6 +1626,16 @@ Ignores the Gun Shield rule</description>
     </rule>
     <rule id="21b8-f4c6-31e7-7a0f" name="Experimental" hidden="false">
       <description>Unfamiliarity and teething problems mean that experimental tanks must pass an order test whenever they are given an order - even when they have no Pin markers on them!</description>
+    </rule>
+    <rule id="d379-6c54-c4a1-0281" name="Get back in the fight!" hidden="false">
+      <description>Get back in the fight!: If any unit fails an attempt to rally it can immediately roll a second attempt if within 6” of a military police squad.</description>
+    </rule>
+    <rule id="7ecc-2b1a-61ad-d825" name="Traffic Direction" hidden="false">
+      <description>If your force includes a military police squad in reserve it does not suffer the -1 penalty for attempting to bring vehicles onto the table.
+</description>
+    </rule>
+    <rule id="d132-ebfb-a2a6-968a" name="AT Shell" page="0" hidden="false">
+      <description>Pen +4</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -1833,6 +1884,14 @@ Ignores the Gun Shield rule</description>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
         <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Indirect fire, HE(D2)</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="3248-f272-f352-5768" name="Low velocity light AT gun" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">48&quot;</characteristic>
+        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
+        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+3</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (1&quot;)</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
