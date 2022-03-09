@@ -1886,7 +1886,7 @@ Ignores the Gun Shield rule</description>
         <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Indirect fire, HE(D2)</characteristic>
       </characteristics>
     </profile>
-    <profile id="3248-f272-f352-5768" name="Low velocity light AT gun" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
+    <profile id="3248-f272-f352-5768" name="Low velocity light AT gun" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">48&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
