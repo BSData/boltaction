@@ -1462,11 +1462,21 @@
     </entryLink>
   </entryLinks>
   <rules>
-    <rule id="2ed57e2d-18f6-2b84-4c49-bffd5b408320" name="Avanti Savoia!" page="0" hidden="false"/>
-    <rule id="4d6db396-1389-600a-a31e-3e366f4120e1" name="Defensive Strategy" page="0" hidden="false"/>
+    <rule id="2ed57e2d-18f6-2b84-4c49-bffd5b408320" name="Avanti Savoia!" page="0" hidden="false">
+      <description>At the beginning of each turn, subtract the number of units lost by the Italian Army from the number of units lost by the enemy (keep track of the order dice lost during the fight) if the number is 3+ all friendly Italian units gain +2 morale. If the number is -3 all friendly Italian units have their basic morale reduced by 2.</description>
+    </rule>
+    <rule id="4d6db396-1389-600a-a31e-3e366f4120e1" name="Defensive Strategy" page="0" hidden="false">
+      <description>In scenarios with an attacker and a defender, first roll as normal to determine which side is going to be the defender. If the Italian player is not the defender, you must re-roll that dice, the second result stands. Note that in a Italian versus Italian battle neither player gets the re-roll.
+If the Italian army is the defender (including against Italian attackers), it gets the following advantages:
+•	During the first turn of the game, the enemy cannot order his units to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across the barbed wire.
+•	The player can re-roll the die on the Artillery Barrage and Smoke Barrage chart, the Italian artillery is already ranged in on no-man’s land.
+•	During set-up, any Italian unit starting the game as Hidden may start the game already in Ambush. If you decide to do so, place one of your Order Dice already in place next to them, as if you had ordered them to Ambush.
+•	After determining table edges, but before either side deploys any unit, roll a D3, the result is the number of emplacements available to the player. Each emplacements is made of three linear obstacle up 6in long and 1in tall representing hard cover. These are placed by the player so that thay are all completely within 12in of the table edge.
+</description>
+    </rule>
   </rules>
   <infoLinks>
-    <infoLink id="9e16eb1b-bf7e-2ca8-22bb-9081818abb67" hidden="false" targetId="1a7b-11ce-f15e-74eb" type="rule">
+    <infoLink id="9e16eb1b-bf7e-2ca8-22bb-9081818abb67" name="Armoured Platoon" hidden="false" targetId="1a7b-11ce-f15e-74eb" type="rule">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
@@ -2538,7 +2548,11 @@
         <infoLink id="c642ca81-4f23-0843-5d68-0d1bca302cd5" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
         <infoLink id="41dea1d8-ae11-0d8a-41d8-cae614fe2838" name="Fixed" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
         <infoLink id="f8ab954c-401b-6efa-54dc-93d056c6e1c8" hidden="false" targetId="690f-70e9-9ed0-6352" type="rule"/>
-        <infoLink id="997c-0c0b-286d-59f8" name="Crew (3)" hidden="false" targetId="273d-753f-31fa-4634" type="rule"/>
+        <infoLink id="997c-0c0b-286d-59f8" name="Crew" hidden="false" targetId="549b-7a6c-2710-5dfe" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(3)"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="552e2e23-912d-6e14-1708-165ffe317bf3" name="Rating" hidden="false" collective="false" import="true">
@@ -5347,8 +5361,8 @@
     </selectionEntry>
     <selectionEntry id="bd6c93b2-7f19-e9ae-e91d-6fbfb25c79e5" name="Medium Artillery" page="0" hidden="true" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="dec497d5-1163-44e4-129e-f82dc33cfcfe" hidden="false" targetId="69eb-2439-fb8f-71e0" type="rule"/>
-        <infoLink id="0a083376-2c42-6671-4c99-f25e16cefc30" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
+        <infoLink id="dec497d5-1163-44e4-129e-f82dc33cfcfe" name="HE (3&quot;)" hidden="false" targetId="5a66-e1c5-fdff-a987" type="rule"/>
+        <infoLink id="0a083376-2c42-6671-4c99-f25e16cefc30" name="Fixed" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
         <infoLink id="09650b5c-9f25-ac16-6c16-eb51ec85a9f6" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
         <infoLink id="b39a46cd-430d-7070-932a-8dd66128d777" hidden="false" targetId="95d0-d47a-8684-c817" type="rule"/>
         <infoLink id="ffa62e4a-0194-5f63-43b3-156d6f3437dc" hidden="false" targetId="549b-7a6c-2710-5dfe" type="rule">
@@ -5399,14 +5413,14 @@
     </selectionEntry>
     <selectionEntry id="08baaf3c-7619-992b-0e0f-b431e65ab8c6" name="Medium Machine Gun Team" page="0" hidden="true" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="8850e1d6-5424-0717-8817-a60b681597e9" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
-        <infoLink id="2e1cd640-171e-f279-7c99-e24ca4201f62" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
-        <infoLink id="248ce5d7-5312-9486-0747-b41928ebeec6" hidden="false" targetId="549b-7a6c-2710-5dfe" type="rule">
+        <infoLink id="8850e1d6-5424-0717-8817-a60b681597e9" name="Fixed" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
+        <infoLink id="2e1cd640-171e-f279-7c99-e24ca4201f62" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
+        <infoLink id="248ce5d7-5312-9486-0747-b41928ebeec6" name="Crew" hidden="false" targetId="549b-7a6c-2710-5dfe" type="rule">
           <modifiers>
             <modifier type="append" field="name" value=" (3)"/>
           </modifiers>
         </infoLink>
-        <infoLink id="4e23d454-657c-8bc2-b82f-23142dc2cbec" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
+        <infoLink id="4e23d454-657c-8bc2-b82f-23142dc2cbec" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="ab42c12b-875f-7b9b-b206-92c61f5d1d80" name="Rating" hidden="false" collective="false" import="true">
@@ -5727,7 +5741,7 @@
                 <infoLink id="45560cf5-f0ab-42a4-0a80-855c9835c6c6" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
               </infoLinks>
               <entryLinks>
-                <entryLink id="1e8f9a32-9fda-e9d8-bb71-e8e17e916215" hidden="false" collective="false" import="true" targetId="6bf2d0cc-b958-30b4-891b-dedf848e6ce6" type="selectionEntry"/>
+                <entryLink id="1e8f9a32-9fda-e9d8-bb71-e8e17e916215" name="SMG" hidden="false" collective="false" import="true" targetId="6bf2d0cc-b958-30b4-891b-dedf848e6ce6" type="selectionEntry"/>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="14.0"/>
@@ -6546,7 +6560,9 @@
     </selectionEntry>
     <selectionEntry id="a8e2b20f-7d48-ac46-5ce8-20b06521987c" name="San Marco (Marines) Infantry Section" page="0" hidden="true" collective="false" import="true" type="unit">
       <rules>
-        <rule id="cef61f75-0deb-bfc2-be92-5168005b4cfa" name="Behind Enemy Lines" page="0" hidden="false"/>
+        <rule id="7fa7-bcf7-4c2a-0498" name="Behind Enemy Lines" page="0" hidden="false">
+          <description>When Outflanking infantry ignores the -1 modifier to the Order test for coming onto the table.</description>
+        </rule>
       </rules>
       <selectionEntries>
         <selectionEntry id="f116ca77-4b20-98c1-1547-0fd57ee7df16" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
@@ -8279,8 +8295,10 @@
     </selectionEntry>
     <selectionEntry id="76b5-6fb2-f653-9dbb" name="X Arditi Section" hidden="false" collective="false" import="true" type="upgrade">
       <rules>
-        <rule id="fe00-b294-1c41-b069" name="Behind Enemy Lines" page="0" hidden="false"/>
         <rule id="f01b-3b14-f7a5-68f0" name="Forza D&apos;animo" hidden="false"/>
+        <rule id="e3fd-a170-9246-746b" name="Behind Enemy Lines" page="0" hidden="false">
+          <description>When Outflanking infantry ignores the -1 modifier to the Order test for coming onto the table.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="713e-2b6d-cd19-ee67" name="Tough Fighters" hidden="false" targetId="123f-ba11-633a-56ff" type="rule"/>
@@ -8383,7 +8401,7 @@
                         <infoLink id="1d44-1e2c-6b2a-e7f8" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
                       </infoLinks>
                       <costs>
-                        <cost name="pts" typeId="points" value="3.0"/>
+                        <cost name="pts" typeId="points" value="2.0"/>
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
@@ -8395,8 +8413,8 @@
             </selectionEntry>
             <selectionEntry id="d613-3918-9898-8f43" name="Veteran Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b502-db69-2a9f-e3c0" type="min"/>
-                <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="35dd-5572-3dc7-2440" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b502-db69-2a9f-e3c0" type="min"/>
+                <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="35dd-5572-3dc7-2440" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="5124-dde6-8b68-0874" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
@@ -8430,16 +8448,9 @@
               <infoLinks>
                 <infoLink id="fa11-2dab-5b11-15e8" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
               </infoLinks>
-              <selectionEntries>
-                <selectionEntry id="407f-8fa3-079b-a9a2" name="SMG" hidden="false" collective="false" import="true" type="upgrade">
-                  <infoLinks>
-                    <infoLink id="f804-7ef0-891b-4f3c" name="Submachine Gun (SMG)" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="2.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
+              <entryLinks>
+                <entryLink id="1585-1af7-24a6-52fa" name="SMG (Special Forces)" hidden="false" collective="false" import="true" targetId="744d-9864-7476-6092" type="selectionEntry"/>
+              </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="16.0"/>
               </costs>
@@ -8519,6 +8530,18 @@
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="744d-9864-7476-6092" name="SMG (Special Forces)" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5a0-481f-a1b0-5873" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d63-90b1-405b-c11e" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="e889-caa6-4cab-09d9" name="Submachine Gun (SMG)" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="2.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -8762,11 +8785,4 @@
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
-  <sharedRules>
-    <rule id="a5f3-7cbd-7478-98c6" name="Crew (2)" page="0" hidden="false"/>
-    <rule id="273d-753f-31fa-4634" name="Crew (3)" page="0" hidden="false"/>
-    <rule id="491d-512f-e720-3057" name="Crew (4)" page="0" hidden="false"/>
-    <rule id="71a0-ce95-05cf-8b58" name="Crew (5)" page="0" hidden="false"/>
-    <rule id="3e29-86da-7f06-9057" name="Crew (7)" page="0" hidden="false"/>
-  </sharedRules>
 </catalogue>
