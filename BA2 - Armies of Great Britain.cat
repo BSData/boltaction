@@ -15457,7 +15457,7 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5d29-38f1-1653-97f4" type="max"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="dae5-3b48-562e-10d9" hidden="false" targetId="8a586f8a-e228-4c31-1699-c8c837d2b0fd" type="rule"/>
+                    <infoLink id="dae5-3b48-562e-10d9" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
                   </infoLinks>
                   <selectionEntries>
                     <selectionEntry id="e363-7601-112f-fca7" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
@@ -15481,6 +15481,40 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                     <cost name="pts" typeId="points" value="0.0"/>
                   </costs>
                 </selectionEntry>
+                <selectionEntry id="240e-75cf-5c8d-a130" name="Bangalore Torpedoes" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="596f-9188-8d82-1887" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="10.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="4f5a-b91a-dcad-d22a" name="Demolition Charges" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3583-5712-bd43-bf13" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="af15-2327-f6a6-01f6" name="Demolition Charges" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="df0e-f64c-b6c5-8631" value="1.0">
+                          <repeats>
+                            <repeat field="selections" scope="d75f-0c5e-f054-d935" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d75f-0c5e-f054-d935" repeats="1" roundUp="false"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="df0e-f64c-b6c5-8631" type="min"/>
+                        <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="96bb-7d57-7646-7dea" type="max"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="3.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.0"/>
+                  </costs>
+                </selectionEntry>
               </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="c456-f643-1126-06e4" name="Squad Members" hidden="false" collective="false" import="true">
@@ -15491,8 +15525,8 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                   <selectionEntries>
                     <selectionEntry id="de90-c8b0-a42c-6e2f" name="Regular Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
                       <constraints>
-                        <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6155-e74c-1279-937b" type="min"/>
-                        <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="656e-a418-a715-21d1" type="max"/>
+                        <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6155-e74c-1279-937b" type="min"/>
+                        <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="656e-a418-a715-21d1" type="max"/>
                       </constraints>
                       <infoLinks>
                         <infoLink id="ff1e-a0fd-28db-edf1" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
@@ -15565,9 +15599,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
-              <costs>
-                <cost name="pts" typeId="points" value="88.0"/>
-              </costs>
             </selectionEntry>
             <selectionEntry id="0e6f-fdcf-39e4-6f33" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -15582,7 +15613,7 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6b23-ec20-f632-0980" type="max"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="6359-1405-5d26-f4f2" hidden="false" targetId="8a586f8a-e228-4c31-1699-c8c837d2b0fd" type="rule"/>
+                    <infoLink id="6359-1405-5d26-f4f2" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
                   </infoLinks>
                   <selectionEntries>
                     <selectionEntry id="548e-ec83-940f-27e0" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
@@ -15596,6 +15627,40 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                       <constraints>
                         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9204-ec01-470e-09a3" type="min"/>
                         <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9b5b-7714-7cf3-915e" type="max"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="2.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="c7e2-4179-e8e8-7750" name="Bangalore Torpedoes" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a78e-ea58-7b30-947f" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="10.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="a9fc-9375-3c09-865f" name="Demolition Charges" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cb35-0310-bec8-e0da" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="5401-a721-1d85-9c5b" name="Demolition Charges" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="40d5-3b3a-ea99-fd92" value="1.0">
+                          <repeats>
+                            <repeat field="selections" scope="0e6f-fdcf-39e4-6f33" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e6f-fdcf-39e4-6f33" repeats="1" roundUp="false"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="40d5-3b3a-ea99-fd92" type="min"/>
+                        <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="62ed-4c09-97cf-ea37" type="max"/>
                       </constraints>
                       <costs>
                         <cost name="pts" typeId="points" value="2.0"/>
@@ -15649,8 +15714,8 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                     </selectionEntry>
                     <selectionEntry id="cc55-c490-7f2a-e226" name="Veteran Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
                       <constraints>
-                        <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="325f-a132-3517-1a75" type="min"/>
-                        <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5671-9a93-cbe7-0b4f" type="max"/>
+                        <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="325f-a132-3517-1a75" type="min"/>
+                        <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5671-9a93-cbe7-0b4f" type="max"/>
                       </constraints>
                       <infoLinks>
                         <infoLink id="f35c-7e60-cb9c-04b7" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
@@ -15693,9 +15758,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
-              <costs>
-                <cost name="pts" typeId="points" value="106.0"/>
-              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
