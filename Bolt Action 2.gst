@@ -1398,6 +1398,18 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="fb8c-2a5f-ef7c-47f5" name="Platform-mounted Heavy AT gun with 360 defree arc of fire" page="0" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6c12-65cf-1152-2700" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f2ac-29a9-df50-0d56" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="d3cc-240e-c2c4-dfba" name="Heavy AT Gun" hidden="false" targetId="a60a-ff9c-e4d4-6328" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="1243-e8b7-ed01-2010" name="Amphibious" page="0" hidden="false">
@@ -1594,7 +1606,7 @@ Ignores the Gun Shield rule</description>
     <rule id="b09c-ee66-8b9a-ff42" name="Flamethrower Assistant " page="0" hidden="false">
       <description>For every Flamethrower purchased for the squad, another member becomes the assistant. </description>
     </rule>
-    <rule id="3188-3f62-e9e9-8595" name="Schurzen Armoured Skirts" page="0" hidden="false">
+    <rule id="3188-3f62-e9e9-8595" name="Armoured Skirts" page="0" hidden="false">
       <description>Anti-tank rifles and shaped charges never recieve the +1 penetration bonus for hitting the vehicle in the side.</description>
     </rule>
     <rule id="2b6f-7a17-7237-5d48" name="Superior HE Rounds" hidden="false">
@@ -1636,6 +1648,15 @@ Ignores the Gun Shield rule</description>
     </rule>
     <rule id="d132-ebfb-a2a6-968a" name="AT Shell" page="0" hidden="false">
       <description>Pen +4</description>
+    </rule>
+    <rule id="91e7-6aac-0b36-0f62" name="Mountaineers" hidden="false">
+      <description>This unit will treat all rough ground as open ground. The players should discuss and agree before the game if the gaming table includes some terrain that they think this rule should not apply to, like water features and other terrain elements that obviously mountain troops would have no advantage in crossing.</description>
+    </rule>
+    <rule id="6581-5db5-19fd-593a" name="Motivated Elite" hidden="false">
+      <description>This unit removes D2 pins rather than one for passing order tests.</description>
+    </rule>
+    <rule id="eea2-b73b-82f4-3088" name="Tough as old boots" hidden="false">
+      <description>This unit rolls bonus attack dice when fighting at close quarters. For every three men fighting in the combat roll one extra die - so seven men would roll two extra dice, and ten men would roll three extra, and so on. This extra attack can be assumed to come from any of the men fighting.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
