@@ -1598,11 +1598,6 @@ Ignores the Gun Shield rule</description>
     <rule id="78b5-ee95-a088-c13b" name="Gyro-stabilisers" page="0" hidden="false">
       <description>A veteran vehicle ignore -1 penalty to shoot when issued an Advance order.</description>
     </rule>
-    <rule id="b95a-e4b0-410d-9b83" name="Crew (2)" page="0" hidden="false"/>
-    <rule id="8394-5203-991b-d571" name="Crew (3)" page="0" hidden="false"/>
-    <rule id="a42c-6515-f0a1-7896" name="Crew (4)" page="0" hidden="false"/>
-    <rule id="9f8b-3bbb-6206-06ec" name="Crew (5)" page="0" hidden="false"/>
-    <rule id="b6ca-d3d0-aa8e-ac61" name="Crew (7)" page="0" hidden="false"/>
     <rule id="b09c-ee66-8b9a-ff42" name="Flamethrower Assistant " page="0" hidden="false">
       <description>For every Flamethrower purchased for the squad, another member becomes the assistant. </description>
     </rule>
@@ -1618,15 +1613,9 @@ Ignores the Gun Shield rule</description>
     <rule id="6d73-3854-88b1-fe07" name="Easily Catches Fire" page="0" hidden="false">
       <description>If a roll on the vehicle damage table results in the vehicle catching fire add D3 pin markers rather than just 1 before taking a morale test.</description>
     </rule>
-    <rule id="de51-e3d0-1dde-0d42" name="Transport (10)" page="0" hidden="false"/>
-    <rule id="c4cf-ed5b-b71e-89f4" name="Transport (11)" page="0" hidden="false"/>
-    <rule id="01bd-0fd0-bece-dfae" name="Transport (12)" page="0" hidden="false"/>
-    <rule id="45f4-f2c2-bcea-c005" name="Transport (20)" page="0" hidden="false"/>
-    <rule id="b8b5-f43d-006d-17b4" name="Transport (24)" page="0" hidden="false"/>
-    <rule id="25bf-d36a-69f0-cb58" name="Transport (3)" page="0" hidden="false"/>
-    <rule id="cd8e-3bf5-4164-7ec0" name="Transport (5)" page="0" hidden="false"/>
-    <rule id="bf28-353c-b480-d2a2" name="Transport (6)" page="0" hidden="false"/>
-    <rule id="e9a1-04db-4212-8984" name="Transport (8)" page="0" hidden="false"/>
+    <rule id="de51-e3d0-1dde-0d42" name="Transport" page="0" hidden="false">
+      <description>The vehicle can transport troops</description>
+    </rule>
     <rule id="c83b-f379-5e4b-18f0" name="Dog Mine" hidden="false">
       <description>A dog mine is a one-shot weapon with a range of 18&quot;. Dog mines can only target stationary vehicles (i.e. any vehicle that is not sporting an order dice showing  Run or Advance order).  Dog mines are fired as normal, except instead of rolling a die to hit, you roll on the following chart. Note that if a Recce vehicle reacts to the dog mine attack by moving, the dog mine automatically scores a 2-3.
 
