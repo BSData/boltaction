@@ -1446,21 +1446,16 @@ The crew can fire the LMG or the main gun, but not both at the same time</descri
       <description>When a fanatic unit loses half of its numbers from enemy fire it does not take a morale check. In close quarters fighting continue fighting until the fanatic unit wins, is completely wiped out or is defeated.</description>
     </rule>
     <rule id="eb72-b206-d3ef-e5bb" name="Fixed" page="0" hidden="false">
-      <description>Cannot be fired under an advance order
-Can only target units at leat partially in their front arc</description>
+      <description>Weapon can not fire with an advance order. Can only target units at leat partially in their front arc.</description>
     </rule>
     <rule id="690f-70e9-9ed0-6352" name="Flak" page="0" hidden="false">
-      <description>Can fire at strafing aircraft at -2 to hit</description>
+      <description>Roll a D6 for each flak unit. To successfully hold their fire inexperienced units must roll a 4+, regular units a 3+, and veteran units a 2+. Units that do not manage to hold their fire will shoot at the incoming aircraft as if it were an enemy.</description>
     </rule>
     <rule id="58f2-b4ad-cdee-3e57" name="Flame-throwing Vehicle" page="0" hidden="false">
       <description>Flame-throwing vehicles are more likely to be destroyed, as explained on page 51 of the rulebook. </description>
     </rule>
     <rule id="0bda-9822-e9eb-f62b" name="Flamethrower" page="0" hidden="false">
-      <description>Hits automatically ignoring any modifier.
-D6 hits for man portable flamethrowers, 2D6 hits for vehicle mounted ones
-Ignores the Gun Shield rule
-Ignores the Extra Protection rule in buildings
-Infantry takes D3+1 pin markers for being hit by a flamethrower</description>
+      <description>Hits automatically ignoring any modifier. D6 hits for man portable flamethrowers, D6+1 hits for vehicle mounted ones. Ignores cover bonuses. Ignores the Gun Shield rule. Ignores the Extra Protection rule in buildings Infantry takes D3+1 pin markers for being hit by a flamethrower</description>
     </rule>
     <rule id="c21d-d23f-d16a-bf33" name="Green" page="0" hidden="false">
       <description>Green Units are Inexperienced. When the unit suffers its first casualty roll a die: 
@@ -1469,7 +1464,7 @@ on a roll of 2,3 or 4 nothing happens;
 on a roll of 5 or 6 the unit is immediately uprated to Regular for the rest of the battle.</description>
     </rule>
     <rule id="95d0-d47a-8684-c817" name="Gun Shield" page="0" hidden="false">
-      <description>If fired at from the front, crew is 6+ to damage</description>
+      <description>If fired at from the front, crew is +1 to damage</description>
     </rule>
     <rule id="69eb-2439-fb8f-71e0" name="HE (1&quot;)" page="0" hidden="false">
       <description>Use the appropriate template to determine how many models in the unit have been hit.
@@ -1554,10 +1549,7 @@ When Pinned always count Pinned Markers as Double, ie one Pin Marker gives a -2 
     </rule>
     <rule id="6bcb-f463-20a7-0b4a" name="Sniper" page="0" hidden="false">
       <description>When firing under Fire or Ambush orders only:
-Range is 36&quot; and hits at +1
-Can target a specific model as per Exceptional Damage
-Ignores all penalties for cover
-Ignores the Gun Shield rule</description>
+Range is 36&quot;, minimum range is 12&quot;. Can target a specific model as per Exceptional Damage. Ignores all penalties for cover. Ignores the Gun Shield rule</description>
     </rule>
     <rule id="edfb-679f-a0a4-9c55" name="Squeeze Bore" page="0" hidden="false">
       <description>At ranges up to 12&quot;, it&apos;s base armour penetration is increased by 2, at over half range armour penetration is reduced by 2 instead of the normal 1.</description>
