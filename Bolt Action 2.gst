@@ -301,7 +301,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8bf9-b66b-b96a-7aaf" name="Forward facing hull-mounted light anti-tank gun" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="8bf9-b66b-b96a-7aaf" name="Hull-Mounted Forward Facing Light AT Gun" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="db79-f5e2-318c-03e7" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5132-2247-dc55-c5bc" type="max"/>
@@ -644,7 +644,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="14a1-5df7-8293-36d8" name="LMG" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="14a1-5df7-8293-36d8" name="LMG" hidden="false" collective="true" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bcc1-726f-6add-8061" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0c02-c9ef-e86e-ab0c" type="max"/>
@@ -1034,19 +1034,6 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="18b1-e108-3f9c-eb02" name="Turret-mounted low-velocity Light AT gun" page="0" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a74e-5036-1614-4ed3" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e778-40a2-9f0c-cdf0" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="1fb3-cee0-e846-f9dc" hidden="false" targetId="5a41-4320-a7f1-7a4b" type="profile"/>
-        <infoLink id="d9e3-8d37-d991-7b01" hidden="false" targetId="c54c-1ce5-54f0-1f19" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="eb35-b1d4-b01c-0bae" name="Turret-Mounted MMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="630f-3c41-0214-d2fd" type="min"/>
@@ -1370,6 +1357,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="3b46-a0be-c914-e644" name="Shirkers" page="0" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="b02e-2097-ed25-37b7" name="Shirkers" hidden="false" targetId="df62-2282-8e14-569c" type="rule"/>
+      </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="-3.0"/>
       </costs>
@@ -1409,6 +1399,36 @@
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="0a70-f999-820d-1986" name="Cavalry Carabine" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ed43-6926-b16d-5ce4" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="32f2-2fc7-4d99-f4a8" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="8d41-ba3d-f83f-f635" name="Cavalry Carabine" hidden="false" targetId="e7dc-cd7f-5d42-05c4" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="dc06-b16f-3839-aadd" name="Pistol" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="40d1-6b59-311f-4b97" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3e29-fc3e-9264-0aa0" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="7c0c-30b2-52f5-1734" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="-3.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3601-cb47-1b83-cbe2" name="Carabine" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9334-750c-99bb-d08f" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1e67-dbe7-b2f2-263d" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="5cd9-9813-5a1d-1889" name="Carabine" hidden="false" targetId="f119-ba99-75a4-9b4c" type="profile"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
@@ -1913,6 +1933,23 @@ Range is 36&quot;, minimum range is 12&quot;. Can target a specific model as per
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">5</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">n/a</characteristic>
         <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="e7dc-cd7f-5d42-05c4" name="Cavalry Carabine" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">On Foot 24&quot;
+Mounted 6&quot;</characteristic>
+        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
+        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">n/a</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Assault(mounted)</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="f119-ba99-75a4-9b4c" name="Carabine" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">24&quot;</characteristic>
+        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
+        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">n/a</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7"/>
       </characteristics>
     </profile>
   </sharedProfiles>
