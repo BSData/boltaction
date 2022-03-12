@@ -1621,7 +1621,7 @@ Range is 36&quot;, minimum range is 12&quot;. Can target a specific model as per
       <description>Unfamiliarity and teething problems mean that experimental tanks must pass an order test whenever they are given an order - even when they have no Pin markers on them!</description>
     </rule>
     <rule id="d379-6c54-c4a1-0281" name="Get back in the fight!" hidden="false">
-      <description>Get back in the fight!: If any unit fails an attempt to rally it can immediately roll a second attempt if within 6” of a military police squad.</description>
+      <description>If any unit fails an attempt to rally it can immediately roll a second attempt if within 6” of a military police squad.</description>
     </rule>
     <rule id="7ecc-2b1a-61ad-d825" name="Traffic Direction" hidden="false">
       <description>If your force includes a military police squad in reserve it does not suffer the -1 penalty for attempting to bring vehicles onto the table.
@@ -1638,6 +1638,9 @@ Range is 36&quot;, minimum range is 12&quot;. Can target a specific model as per
     </rule>
     <rule id="eea2-b73b-82f4-3088" name="Tough as old boots" hidden="false">
       <description>This unit rolls bonus attack dice when fighting at close quarters. For every three men fighting in the combat roll one extra die - so seven men would roll two extra dice, and ten men would roll three extra, and so on. This extra attack can be assumed to come from any of the men fighting.</description>
+    </rule>
+    <rule id="a494-d00a-3df1-aad8" name="Cavalry Carbines" page="0" hidden="false">
+      <description>These rifles count as pistols while mounted; and rifles when used on foot.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
