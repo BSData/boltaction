@@ -1408,6 +1408,9 @@
       <infoLinks>
         <infoLink id="8d41-ba3d-f83f-f635" name="Cavalry Carabine" hidden="false" targetId="e7dc-cd7f-5d42-05c4" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="dc06-b16f-3839-aadd" name="Pistol" hidden="false" collective="true" import="true" type="upgrade">
       <constraints>
@@ -1428,6 +1431,18 @@
       </constraints>
       <infoLinks>
         <infoLink id="5cd9-9813-5a1d-1889" name="Carabine" hidden="false" targetId="f119-ba99-75a4-9b4c" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b05d-2d90-f9d1-d62e" name="Turret Mounted AT Rifle" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e9b2-5aa6-48b8-a2ca" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a24d-0fd7-f820-72f7" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="b41a-403b-fca9-e5cc" name="Anti-tank rifle" hidden="false" targetId="12a3-5bb9-da85-827e" type="profile"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
