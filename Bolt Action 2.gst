@@ -50,9 +50,9 @@
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="0fcbe145-b362-4be0-2491-dbf2db078475" name="Free Units" hidden="false"/>
-    <categoryEntry id="f543-f483-48ce-9b05" name="Compulsory " hidden="false"/>
+    <categoryEntry id="f543-f483-48ce-9b05" name="Compulsory Infantry" hidden="false"/>
     <categoryEntry id="481abf13-c03e-0dd0-d520-9f9837253cbe" name="Headquarters" hidden="false"/>
-    <categoryEntry id="b3073f4b-f974-1603-e5ea-b2ec953e496a" name="Armoured Headquarters" hidden="false"/>
+    <categoryEntry id="b3073f4b-f974-1603-e5ea-b2ec953e496a" name="Compulsory Vehicles" hidden="false"/>
     <categoryEntry id="5c47879b-41d0-1383-5fe5-a5989615db89" name="Infantry" hidden="false"/>
     <categoryEntry id="a01f5f58-334c-8442-d861-15099ebdf5e5" name="Infantry Support" hidden="false"/>
     <categoryEntry id="72807c5d-e370-9ddf-c2b7-de5d2797f24d" name="Artillery" hidden="false"/>
@@ -1444,6 +1444,9 @@
       <infoLinks>
         <infoLink id="b41a-403b-fca9-e5cc" name="Anti-tank rifle" hidden="false" targetId="12a3-5bb9-da85-827e" type="profile"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
