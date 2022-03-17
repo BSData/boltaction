@@ -66,13 +66,16 @@
     <forceEntry id="efef-703c-d244-559f" name="Generic Reinforced Platoon" hidden="false">
       <categoryLinks>
         <categoryLink id="9f53-8b6b-351d-7dcd" name="Free Units" hidden="false" targetId="0fcbe145-b362-4be0-2491-dbf2db078475" primary="false"/>
-        <categoryLink id="30f6-fd54-50a8-f59f" name="Compulsory " hidden="false" targetId="f543-f483-48ce-9b05" primary="false">
+        <categoryLink id="30f6-fd54-50a8-f59f" name="Compulsory Infantry" hidden="false" targetId="f543-f483-48ce-9b05" primary="false">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5399-70e6-18af-8bf7" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ccc9-4084-8b9e-a883" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ccc9-4084-8b9e-a883" type="min"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="e759-0d46-9d73-d55d" name="Headquarters" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
+        <categoryLink id="e759-0d46-9d73-d55d" name="Headquarters" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3fbf-e843-fd58-07ec" type="min"/>
+          </constraints>
+        </categoryLink>
         <categoryLink id="69a9-aa8f-aa0d-4f8a" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="false">
           <constraints>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1d2-70e5-f548-577f" type="max"/>
