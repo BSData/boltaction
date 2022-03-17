@@ -1616,6 +1616,54 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="3fb3-d559-a4c0-d4f2" name="BAR" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6e20-dddb-aa25-319e" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f9c4-7ae0-0278-c26b" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="5ba3-62e6-8910-22aa" name="Automatic Rifle" hidden="false" targetId="0fdf-82ff-d2af-adbc" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="5.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c679-91d4-26ab-e96a" name="M1 Garand Rifle" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="18b2-a1cc-e6a2-ccda" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="666d-1768-6ac6-7a46" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="2811-c083-08bf-f8ff" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="875f-34d1-ac72-efb4" name="M1 Carbine" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a02b-370e-c12e-0d0c" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c779-369b-2477-21e0" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="f1ac-7a7f-da72-ad82" name="Carabine" hidden="false" targetId="f119-ba99-75a4-9b4c" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3b1f-a9d1-926d-f74f" name="Shotgun" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f41c-f13a-4319-9cb1" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a607-1358-56e0-43b3" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="89c5-48f0-32d6-f91b" name="Shotgun" hidden="false" targetId="9a86-0e97-423a-acda" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="3.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="1243-e8b7-ed01-2010" name="Amphibious" page="0" hidden="false">
