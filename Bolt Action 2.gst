@@ -1604,6 +1604,18 @@
         <cost name="pts" typeId="points" value="20.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="6334-8e45-7b7d-3338" name="Forward Facing Hull Mounted Light AT gun" page="0" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1142-cb92-7d41-9b51" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1a41-2e34-a4c0-5151" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="96ba-ec62-71a4-01b7" name="Light AT gun" hidden="false" targetId="5a41-4320-a7f1-7a4b" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="1243-e8b7-ed01-2010" name="Amphibious" page="0" hidden="false">
@@ -1838,6 +1850,12 @@ Range is 36&quot;, minimum range is 12&quot;. Can target a specific model as per
     </rule>
     <rule id="eb5a-5fc1-711b-87a2" name="LMG Loader" page="0" hidden="false">
       <description>For every LMG purchased for the squad, another member becomes the loader. </description>
+    </rule>
+    <rule id="97c7-5b55-8225-95ce" name="Unarmed" hidden="false">
+      <description>Unarmed men neither shoot nor attack in close quarters - their only value is as casualties. </description>
+    </rule>
+    <rule id="68ca-036e-6921-79c8" name="Slow Load" hidden="false">
+      <description>A vehicle can not be given an order until at least a unit on the same side has already been given orders.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -2126,6 +2144,14 @@ Mounted 6&quot;</characteristic>
         <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">24&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">n/a</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7"/>
+      </characteristics>
+    </profile>
+    <profile id="0666-0aab-0f65-995f" name="Small Vehicle Flamethrower" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">12&quot;</characteristic>
+        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">2D6-1</characteristic>
+        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">na</characteristic>
         <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7"/>
       </characteristics>
     </profile>
