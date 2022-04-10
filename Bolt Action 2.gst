@@ -1664,6 +1664,30 @@
         <cost name="pts" typeId="points" value="3.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="abac-2168-39fd-ca8f" name="Forward Facing Hull Mounted HMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b21-b69d-2406-c85c" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="583c-4e48-e5e0-ae10" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="e698-4759-96d6-43a2" name="Heavy Machine Gun (HMG)" hidden="false" targetId="3d54-049f-3e22-7b5f" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f627-50fd-7aa1-cc52" name="Turret-Mounted Rear-facing MMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="27ee-0d22-a27b-658e" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e7f9-52f1-0d6b-f13f" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="7501-444f-c001-5dd8" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="1243-e8b7-ed01-2010" name="Amphibious" page="0" hidden="false">
