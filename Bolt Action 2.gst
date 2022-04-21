@@ -1243,7 +1243,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b931-c7bf-2df5-066a" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="0ae8-3973-8130-fd6a" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+        <infoLink id="0ae8-3973-8130-fd6a" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="15.0"/>
@@ -1682,7 +1682,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e7f9-52f1-0d6b-f13f" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="7501-444f-c001-5dd8" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+        <infoLink id="7501-444f-c001-5dd8" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -1706,16 +1706,13 @@
       <description>A co-axial can be fired instead of the vehicle&apos;s main weapon, but not at the same time - the player must choose either to fire the main gun or it&apos;s co-axial weapon.</description>
     </rule>
     <rule id="f3b7-7c2b-d71f-b029" name="Command Vehicle" page="0" hidden="false">
-      <description>Command vehicles are equipped with two-way radios that enable them to direct squadrons of tanks, tank
-destroyers and other armoured vehicles into battle. The command vehicle adds a morale bonus of +1 to
-itself and to any other friendly armoured vehicle within 12” (but no Snap to action extra dice).</description>
+      <description>Command vehicles are equipped with two-way radios that enable them to direct squadrons of tanks, tank destroyers and other armoured vehicles into battle. The command vehicle adds a morale bonus of +1 to itself and to any other friendly armoured vehicle within 12” (but no Snap to action extra dice).</description>
     </rule>
     <rule id="549b-7a6c-2710-5dfe" name="Crew" page="0" hidden="false">
       <description>The unit is composed of various crewman.</description>
     </rule>
     <rule id="6551-e6ac-18b0-6f1f" name="Crew Carried MMG" page="0" hidden="false">
-      <description>360° arc of fire
-The crew can fire the LMG or the main gun, but not both at the same time</description>
+      <description>360° arc of fire, the crew can fire the LMG or the main gun, but not both at the same time.</description>
     </rule>
     <rule id="efb6-de6a-83a2-78d6" name="Dual Direction Steering" page="0" hidden="false">
       <description>The vehicle can reverse at their Run rate.</description>
@@ -1772,8 +1769,7 @@ D6 Pin Markers, +4 PEN, Hits vs targets in buildings 3D6</description>
       <description>All shots hitting the front of the vehicle counts it&apos;s damage value as +1</description>
     </rule>
     <rule id="c00e-1e20-9232-6489" name="Howitzer" page="0" hidden="false">
-      <description>When firing over open sights it has no minimum range
-When firing indirect, minimum range is 24&quot;</description>
+      <description>When firing over open sights it has no minimum range. When firing indirect, minimum range is 24&quot;</description>
     </rule>
     <rule id="f319-9266-b94b-8723" name="Indirect Fire" page="0" hidden="false">
       <description>Can target only units without minimum range
@@ -1784,7 +1780,7 @@ Cannot be given Ambush orders
 Can fire Smoke Screens</description>
     </rule>
     <rule id="c54c-1ce5-54f0-1f19" name="Low Velocity" page="0" hidden="false">
-      <description>Low velocity light AT-gun&apos;s armour penetration counts as +3 instead of +4</description>
+      <description>Low velocity light AT-gun&apos;s armour penetration counts as +3 instead of +4.</description>
     </rule>
     <rule id="409b-73cd-c33e-de6b" name="Massive shells" page="0" hidden="false">
       <description>Does not suffer -1 penetration penalty when shooting at targets at over half range.</description>
@@ -1805,9 +1801,7 @@ Can fire Smoke Screens</description>
       <description>The weapon can be shoot only once per game and also at a different target than the rest of the unit.</description>
     </rule>
     <rule id="1dd8-ce26-3022-96f5" name="Open Topped" page="0" hidden="false">
-      <description>Can be Pinned by small arms fire
-If damaged by assaulting infantry, open topped vehicle are Destroyed automatically
-If hit by indirect HE fire, add +1 to PEN AND +1 to damage rolls</description>
+      <description>Can be Pinned by small arms fire. If damaged by assaulting infantry, open topped vehicle are Destroyed automatically. If hit by indirect HE fire, add +1 to PEN AND +1 to damage rolls</description>
     </rule>
     <rule id="dd65-ec56-4aed-ad4f" name="Recce" page="0" hidden="false">
       <description>If fired at or assaulted can attempt to Escape</description>
@@ -1819,15 +1813,13 @@ If hit by indirect HE fire, add +1 to PEN AND +1 to damage rolls</description>
       <description>Never suffer -1 penalty at penetration for firing at long range.</description>
     </rule>
     <rule id="df62-2282-8e14-569c" name="Shirkers" page="0" hidden="false">
-      <description>Must always take an order test when given an order, even if not Pinned.
-When Pinned always count Pinned Markers as Double, ie one Pin Marker gives a -2 penalty, 2 is -4 etc.</description>
+      <description>Must always take an order test when given an order, even if not Pinned. When Pinned always count Pinned Markers as Double, ie one Pin Marker gives a -2 penalty, 2 is -4 etc.</description>
     </rule>
     <rule id="b6f6-40e0-0377-3e61" name="Slow" page="0" hidden="false">
       <description>Can only move 6&quot; when Advancing and 12&quot; when Running</description>
     </rule>
     <rule id="6bcb-f463-20a7-0b4a" name="Sniper" page="0" hidden="false">
-      <description>When firing under Fire or Ambush orders only:
-Range is 36&quot;, minimum range is 12&quot;. Can target a specific model as per Exceptional Damage. Ignores all penalties for cover. Ignores the Gun Shield rule</description>
+      <description>When firing under Fire or Ambush orders only: Range is 36&quot;, minimum range is 12&quot;. Can target a specific model as per Exceptional Damage. Ignores all penalties for cover. Ignores the Gun Shield rule</description>
     </rule>
     <rule id="edfb-679f-a0a4-9c55" name="Squeeze Bore" page="0" hidden="false">
       <description>At ranges up to 12&quot;, it&apos;s base armour penetration is increased by 2, at over half range armour penetration is reduced by 2 instead of the normal 1.</description>
@@ -2094,14 +2086,6 @@ Range is 36&quot;, minimum range is 12&quot;. Can target a specific model as per
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
         <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, Indirect fire, HE (2&quot;)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="e2bc-1c2a-46e7-d701" name="MMG" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">36&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">5</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">n/a</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7"/>
       </characteristics>
     </profile>
     <profile id="2321-e71f-a3cd-ea21" name="Panzerfaust" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
