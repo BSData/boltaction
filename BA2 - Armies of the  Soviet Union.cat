@@ -8358,25 +8358,48 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
-              <rules>
-                <rule id="99a06579-861e-ee94-9972-7c7008b3b5e6" name="Not one step back!" hidden="false"/>
-              </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup id="0f032bb7-7554-375b-20ad-6cacb200f6a7" name="Rating" hidden="false" collective="false" import="true" defaultSelectionEntryId="a2d707cb-96c1-b767-dc58-1874858e70ce">
+                <selectionEntryGroup id="0f032bb7-7554-375b-20ad-6cacb200f6a7" name="Type" hidden="false" collective="false" import="true" defaultSelectionEntryId="a2d707cb-96c1-b767-dc58-1874858e70ce">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                   </constraints>
                   <selectionEntries>
-                    <selectionEntry id="a2d707cb-96c1-b767-dc58-1874858e70ce" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                    <selectionEntry id="a2d707cb-96c1-b767-dc58-1874858e70ce" name="Commisar" page="0" hidden="false" collective="false" import="true" type="upgrade">
                       <constraints>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="98be0ac2-282c-5197-08e5-a0d162b03b04" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                        <infoLink id="98be0ac2-282c-5197-08e5-a0d162b03b04" name="Inexperienced" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                        <infoLink id="b3b5-15f4-b927-ec87" name="Not One Step Back!" hidden="false" targetId="ecf5-baad-e8a9-8a64" type="rule"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="15.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="9461-a54f-bb3d-3532" name="Politruk Commissar" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1f54-1c73-7dbf-2d9e" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="ddb4-0e24-095c-b876" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+                        <infoLink id="effa-1ec3-057b-b171" name="Inspiring Rhetoric" hidden="false" targetId="0071-9dad-3b6f-0224" type="rule"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="30.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="a86a-aaf0-1c2b-b5c1" name="Frontnik Commissar" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="354c-877c-c915-fe80" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="c680-e7b6-80e7-cab2" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+                        <infoLink id="8d2d-0572-6ac2-2cc5" name="Not One Step Back!" hidden="false" targetId="ecf5-baad-e8a9-8a64" type="rule"/>
+                        <infoLink id="ddeb-5cf2-a5cd-419d" name="Inspiring Rhetoric" hidden="false" targetId="0071-9dad-3b6f-0224" type="rule"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="40.0"/>
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
@@ -8419,6 +8442,18 @@
                   </constraints>
                   <selectionEntries>
                     <selectionEntry id="d74e4028-7daf-5e91-2511-23a28e050d6c" name="Inexperienced Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition field="selections" scope="00ca0152-aec6-97b1-db86-ece6fb0dfb87" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a86a-aaf0-1c2b-b5c1" type="greaterThan"/>
+                                <condition field="selections" scope="00ca0152-aec6-97b1-db86-ece6fb0dfb87" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9461-a54f-bb3d-3532" type="greaterThan"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
@@ -8467,6 +8502,68 @@
                       </selectionEntryGroups>
                       <costs>
                         <cost name="pts" typeId="points" value="7.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="20d5-3115-b646-c1a7" name="Regular Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition field="selections" scope="00ca0152-aec6-97b1-db86-ece6fb0dfb87" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a2d707cb-96c1-b767-dc58-1874858e70ce" type="greaterThan"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8e96-cc9e-9d2f-aa7c" type="max"/>
+                      </constraints>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup id="d84b-4e54-d4e5-1c37" name="Weapon" hidden="false" collective="false" import="true">
+                          <constraints>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a724-2f23-7854-4e7d" type="min"/>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b8f9-63e5-4f70-e66d" type="max"/>
+                          </constraints>
+                          <selectionEntries>
+                            <selectionEntry id="94de-8581-0907-651b" name="Pistol" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ffff-47e2-65bc-0361" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="886f-d574-a2d0-f2c8" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                            <selectionEntry id="e50d-2ff9-c1bc-d30b" name="SMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9921-4525-11a6-c188" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="e0c3-b19e-dc29-0900" name="Submachine Gun (SMG)" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                            <selectionEntry id="cbd5-6676-e573-05c4" name="Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0172-6f5d-d327-01e3" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="98fb-c9fa-ab9d-67a4" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <costs>
+                        <cost name="pts" typeId="points" value="10.0"/>
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
@@ -17318,6 +17415,12 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
     </rule>
     <rule id="3898-e95d-6bf8-3496" name="Versatile" publicationId="b9e1-9f12-pubN72112" page="41" hidden="false">
       <description>Can also fire as a light howitzer.</description>
+    </rule>
+    <rule id="0071-9dad-3b6f-0224" name="Inspiring Rhetoric" hidden="false">
+      <description>Inexperienced squads within 6&quot; do not suffer the -1 to hit penalty for being Inexperienced.</description>
+    </rule>
+    <rule id="ecf5-baad-e8a9-8a64" name="Not One Step Back!" hidden="false">
+      <description>Political officers don’t confer any Morale bonus to nearby troops. However, whenever a friendly unit fails a Morale check or an Order test within 12&quot; of a political officer, remove one model from the unit and re-roll the dice. The second result stands, as normal. This rule has no effect on vehicles and units that are reduced to one or two models.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
