@@ -1136,7 +1136,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2854-3f72-298c-0c40" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="7cbf-176c-4e8c-f93d" hidden="false" targetId="d212-a1ee-dc9d-27c3" type="profile"/>
+        <infoLink id="7cbf-176c-4e8c-f93d" name="Light howitzer" hidden="false" targetId="d212-a1ee-dc9d-27c3" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -1697,10 +1697,10 @@
       <description>No modifiers apply for penetration when shooting at sides, rear or from above.</description>
     </rule>
     <rule id="8a7d-230c-d090-127b" name="Bicycles" page="0" hidden="false">
-      <description>Bicycle mounted infantry follow the same rules as infantry, except when mving entirely on a road, in which case they double their Run move to 24&quot;.  (This move cannot be used to Assault). In addition, the first time they receive any order other than Run, or if they receive a pinning marker, they dismount and abandon their bycycles for the rest of the game - replace the models with models on foot. </description>
+      <description>Bicycle mounted infantry follow the same rules as infantry, except when mving entirely on a road, in which case they double their RUN move to 24&quot;.  (This move cannot be used to Assault). In addition, the first time they receive any order other than RUN, or if they receive a pinning marker, they dismount and abandon their bycycles for the rest of the game - replace the models with models on foot. </description>
     </rule>
     <rule id="525c-47c4-f59c-5c9a" name="Cavalry" page="0" hidden="false">
-      <description>Cavalry can dismount and fight on foot. A cavalry unit moves at 9” at an Advance and 18” at a Run. While mounted, cavalry units have the tough fighters. Cavalry are allowed to roll 2D6 when they make their regroup move </description>
+      <description>Cavalry can dismount and fight on foot. A cavalry unit moves at 9” at an ADVANCE and 18” at a RUN. While mounted, cavalry units have the tough fighters. Cavalry are allowed to roll 2D6 when they make their regroup move </description>
     </rule>
     <rule id="a216-de3b-eb7f-51f1" name="Co-axial Weapon" page="0" hidden="false">
       <description>A co-axial can be fired instead of the vehicle&apos;s main weapon, but not at the same time - the player must choose either to fire the main gun or it&apos;s co-axial weapon.</description>
@@ -1715,7 +1715,7 @@
       <description>360° arc of fire, the crew can fire the LMG or the main gun, but not both at the same time.</description>
     </rule>
     <rule id="efb6-de6a-83a2-78d6" name="Dual Direction Steering" page="0" hidden="false">
-      <description>The vehicle can reverse at their Run rate.</description>
+      <description>The vehicle can reverse at their RUN rate.</description>
     </rule>
     <rule id="210a-fd8c-dd39-5e36" name="Fanatics" page="0" hidden="false">
       <description>When a fanatic unit loses half of its numbers from enemy fire it does not take a morale check. In close quarters fighting continue fighting until the fanatic unit wins, is completely wiped out or is defeated.</description>
@@ -1742,42 +1742,25 @@ on a roll of 5 or 6 the unit is immediately uprated to Regular for the rest of t
       <description>If fired at from the front, crew is +1 to damage</description>
     </rule>
     <rule id="69eb-2439-fb8f-71e0" name="HE (1&quot;)" page="0" hidden="false">
-      <description>Use the appropriate template to determine how many models in the unit have been hit.
-Hits against infantry that reacts going Down are halved rounding down
-If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded
-D2 Pin Markers, +1 PEN, Hits vs targets in buildings D3</description>
+      <description>Use the appropriate template to determine how many models in the unit have been hit. Hits against infantry that reacts going Down are halved rounding down. If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded. D2 Pin Markers, +1 PEN, Hits vs targets in buildings D3</description>
     </rule>
     <rule id="e1e9-8856-911c-2f9d" name="HE (2&quot;)" page="0" hidden="false">
-      <description>Use the appropriate template to determine how many models in the unit have been hit.
-Hits against infantry that reacts going Down are halved rounding down
-If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded
-D3 Pin Markers, +2 PEN, Hits vs targets in buildings D6</description>
+      <description>Use the appropriate template to determine how many models in the unit have been hit. Hits against infantry that reacts going Down are halved rounding down. If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded. D3 Pin Markers, +2 PEN, Hits vs targets in buildings D6</description>
     </rule>
     <rule id="5a66-e1c5-fdff-a987" name="HE (3&quot;)" page="0" hidden="false">
-      <description>Use the appropriate template to determine how many models in the unit have been hit.
-Hits against infantry that reacts going Down are halved rounding down
-If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded
-D3 Pin Markers, +3 PEN, Hits vs targets in buildings 2D6</description>
+      <description>Use the appropriate template to determine how many models in the unit have been hit. Hits against infantry that reacts going Down are halved rounding down. If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded. D3 Pin Markers, +3 PEN, Hits vs targets in buildings 2D6</description>
     </rule>
     <rule id="0be9-1aa0-98b3-16a8" name="HE (4&quot;)" page="0" hidden="false">
-      <description>Use the appropriate template to determine how many models in the unit have been hit.
-Hits against infantry that reacts going Down are halved rounding down
-If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded
-D6 Pin Markers, +4 PEN, Hits vs targets in buildings 3D6</description>
+      <description>Use the appropriate template to determine how many models in the unit have been hit. Hits against infantry that reacts going Down are halved rounding down. If able to fire both HE and Anti-tank, when firing from Ambush, must specify which round is loaded. D6 Pin Markers, +4 PEN, Hits vs targets in buildings 3D6</description>
     </rule>
     <rule id="9277-5d46-b738-5ced" name="Heavy Frontal Armour" page="0" hidden="false">
-      <description>All shots hitting the front of the vehicle counts it&apos;s damage value as +1</description>
+      <description>All shots hitting the front of the vehicle counts it&apos;s damage value as +1.</description>
     </rule>
     <rule id="c00e-1e20-9232-6489" name="Howitzer" page="0" hidden="false">
-      <description>When firing over open sights it has no minimum range. When firing indirect, minimum range is 24&quot;</description>
+      <description>When firing over open sights it has no minimum range. When firing indirect, it have a minimum range.</description>
     </rule>
     <rule id="f319-9266-b94b-8723" name="Indirect Fire" page="0" hidden="false">
-      <description>Can target only units without minimum range
-Requires 6 to hit on first attempt: -1 for each successive attempt if firer and target have not moved. If a hit is scored, all further attempts are at 2+
-Can target enemy units even if friends are in the way, as long as it has line of sight
-When firing at vehicles hits top armour and adds +1 PEN and +1 to Damage Rolls
-Cannot be given Ambush orders
-Can fire Smoke Screens</description>
+      <description>Can target only units without minimum range. Requires 6 to hit on first attempt: -1 for each successive attempt if firer and target have not moved. If a hit is scored, all further attempts are at 2+. Can target enemy units even if friends are in the way, as long as it has line of sight. When firing at vehicles hits top armour and adds +1 PEN and +1 to Damage Rolls. Cannot be given Ambush orders. Can fire Smoke Screens.</description>
     </rule>
     <rule id="c54c-1ce5-54f0-1f19" name="Low Velocity" page="0" hidden="false">
       <description>Low velocity light AT-gun&apos;s armour penetration counts as +3 instead of +4.</description>
@@ -1789,7 +1772,7 @@ Can fire Smoke Screens</description>
       <description>Being in proximity of an ambulance means that any wounded soldiers neaby hae a chance of being treated by a medic or stretcher bearer from amongst the crew of the ambulance. All infantry and artillery units within 6&quot; of the vehicle count as within 6&quot; of a medic.</description>
     </rule>
     <rule id="a9e6-1bf4-b097-df12" name="Motorbikes" page="0" hidden="false">
-      <description>A motorbike unit moves at 12” at an Advance and 24” at a Run. Bike riders can carry infantry small-arms but cannot shoot whilst moving. Can regroup with 2D6”.</description>
+      <description>A motorbike unit moves at 12” at an ADVNCE and 24” at a RUN. Bike riders can carry infantry small-arms but cannot shoot whilst moving. Can regroup with 2D6”.</description>
     </rule>
     <rule id="1fd2-c465-d4c6-d2b6" name="Multiple Launcher" page="0" hidden="false">
       <description>A multiple launcher counts as a heavy mortar, but it&apos;s chance of hitting never gets any better than a 6.However, because of the extensive blast area all units (friend or foe) within 6&quot; of the nominated target and not entirely within the weapon&apos;s minimum range can be hit. Roll a die to hit for the target plus every unit within 6&quot; of it. Note that units that lie beyond the weapon&apos;s maximum range can also be hit in this way - although the target unit itself must be withiin range. </description>
@@ -1801,10 +1784,10 @@ Can fire Smoke Screens</description>
       <description>The weapon can be shoot only once per game and also at a different target than the rest of the unit.</description>
     </rule>
     <rule id="1dd8-ce26-3022-96f5" name="Open Topped" page="0" hidden="false">
-      <description>Can be Pinned by small arms fire. If damaged by assaulting infantry, open topped vehicle are Destroyed automatically. If hit by indirect HE fire, add +1 to PEN AND +1 to damage rolls</description>
+      <description>Can be Pinned by small arms fire. If damaged by assaulting infantry, open topped vehicle are Destroyed automatically. If hit by indirect HE fire, add +1 to PEN and +1 to damage rolls.</description>
     </rule>
     <rule id="dd65-ec56-4aed-ad4f" name="Recce" page="0" hidden="false">
-      <description>If fired at or assaulted can attempt to Escape</description>
+      <description>The vehicle can reverse at their full ADVANCE rate. If fired at or assaulted and it has not taken action can attempt to Escape with a movement up full ADVANCE rate away from the enemy.</description>
     </rule>
     <rule id="e717-570c-94c2-e9e5" name="Reinforced Rear Armour" page="0" hidden="false">
       <description>Counts hits against the rear armour as hits against the side armour (i.e. +1 penetration instead of +2 penetration)</description>
@@ -1819,19 +1802,19 @@ Can fire Smoke Screens</description>
       <description>Can only move 6&quot; when Advancing and 12&quot; when Running</description>
     </rule>
     <rule id="6bcb-f463-20a7-0b4a" name="Sniper" page="0" hidden="false">
-      <description>When firing under Fire or Ambush orders only: Range is 36&quot;, minimum range is 12&quot;. Can target a specific model as per Exceptional Damage. Ignores all penalties for cover. Ignores the Gun Shield rule</description>
+      <description>When firing under Fire or Ambush orders only: Range is 36&quot;, minimum range is 12&quot;. Can target a specific model as per Exceptional Damage. Ignores all penalties for cover. Ignores the Gun Shield rule.</description>
     </rule>
     <rule id="edfb-679f-a0a4-9c55" name="Squeeze Bore" page="0" hidden="false">
       <description>At ranges up to 12&quot;, it&apos;s base armour penetration is increased by 2, at over half range armour penetration is reduced by 2 instead of the normal 1.</description>
     </rule>
     <rule id="3b00-5743-842c-4640" name="Tank Hunters" page="0" hidden="false">
-      <description>No Tank Fear test when assaulting Tanks if Anti-tank Grenades have been taken</description>
+      <description>No Tank Fear test when assaulting Tanks if Anti-tank Grenades have been taken.</description>
     </rule>
     <rule id="df4d-b32b-09f4-9323" name="Team Weapon" page="0" hidden="false">
-      <description>A minimum of two crew is required to fire at full effect. If only one crew is left, fires at -1 to hit and has -1 morale</description>
+      <description>A minimum of two crew is required to fire at full effect. If only one crew is left, fires at -1 to hit and has -1 morale.</description>
     </rule>
     <rule id="d74c-188c-4251-2ab0" name="Turn on the spot" page="0" hidden="false">
-      <description>Can execute a full speed run rate &apos;reverse&apos;, finishing the move facing in the direction of travel.</description>
+      <description>Can execute a full speed RUN rate &apos;reverse&apos;, finishing the move facing in the direction of travel.</description>
     </rule>
     <rule id="b1fd-afcf-5e8c-d75a" name="Unreliable" page="0" hidden="false">
       <description>If this vehicle suffers one or more pin markers as a result of an enemy attack it automatically suffers one further pin marker in addition.</description>
@@ -1920,6 +1903,9 @@ Can fire Smoke Screens</description>
     </rule>
     <rule id="68ca-036e-6921-79c8" name="Slow Load" hidden="false">
       <description>A vehicle can not be given an order until at least a unit on the same side has already been given orders.</description>
+    </rule>
+    <rule id="0241-4581-64b2-7385" name="75MM AT-gun" page="0" hidden="false">
+      <description>HE: Instead of causing HE(1&quot;) hits, HE shell causes HE(2&quot;) hits. </description>
     </rule>
   </sharedRules>
   <sharedProfiles>
