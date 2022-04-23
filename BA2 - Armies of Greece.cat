@@ -53,7 +53,7 @@
         <categoryLink id="dbe0b275-7193-b92a-d167-8abb08c21be7-481abf13-c03e-0dd0-d520-9f9837253cbe" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="c112419b-2857-346b-12c8-09cde56ec618" name="Medic" hidden="true" collective="false" import="true" targetId="42c61ab4-be14-9ac0-4696-a0421404015d" type="selectionEntry">
+    <entryLink id="c112419b-2857-346b-12c8-09cde56ec618" name="Medic Team" hidden="true" collective="false" import="true" targetId="42c61ab4-be14-9ac0-4696-a0421404015d" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -441,23 +441,6 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink id="d3d6-9582-215c-5e29" name="88mm FLAK 36 Dual Purpose AA/AT Gun" hidden="true" collective="false" import="true" targetId="f618-f733-bd2e-b353" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="787c-3232-a6e8-7be8" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4aa9-61ce-b959-a1c7" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="8126-7bae-f72b-8f4e" name="New CategoryLink" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="true"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink id="0446-df98-65c1-eab8" name="Cavalry Troop" hidden="true" collective="false" import="true" targetId="6ce3-c0e7-b2a7-7ac8" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
@@ -577,27 +560,16 @@
   </entryLinks>
   <rules>
     <rule id="8b9f-81ea-b728-39b3" name="Communication Breakdown" page="0" hidden="false">
-      <description>In the first turn of the game, if the first Order Die drawn from the cup is one of yours, the enemy can decide that the dice is put back into the cup and a new Order Die is drawn instead. </description>
+      <description>In the first turn of the game, if the first Order Die drawn from the cup is one of yours, the enemy can decide that the dice is put back into the cup and a new Order Die is drawn instead.</description>
     </rule>
     <rule id="0eef-effb-535f-f341" name="Fieldcraft" hidden="false">
-      <description>Any Greek unit starting the game as Hidden may already be in Ambush; place an order die. In addition, in the first turn of the game all Greek units treat Rough Ground as Open for purposes of movement</description>
+      <description>Any Greek unit starting the game as Hidden may already be in Ambush; place an order die. In addition, in the first turn of the game all Greek units treat Rough Ground as Open for purposes of movement.</description>
     </rule>
     <rule id="18f5-ca9e-0627-acd5" name="Infiltration" hidden="false">
-      <description>When Outflanking, Greek units ignore the -1 modifier to the Order test for coming onto the table. </description>
+      <description>When Outflanking, Greek units ignore the -1 modifier to the Order test for coming onto the table.</description>
     </rule>
   </rules>
   <sharedSelectionEntries>
-    <selectionEntry id="94a12669-3c5f-be6a-ba3f-9dcff83d42bc" name="Anti-tank Grenades" page="0" hidden="false" collective="true" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="4a5d310e-6dc7-1df1-a115-0b34f9cd8b47" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="2.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="266df1a1-a121-16fb-afb6-853c71c90b6f" name="Forward Observer" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
@@ -626,7 +598,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="09adc631-5d46-f8a9-9465-fce3ac8f5a03" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                        <infoLink id="09adc631-5d46-f8a9-9465-fce3ac8f5a03" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="100.0"/>
@@ -637,7 +609,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="de557209-d98c-0a8d-d169-e2b17cea6948" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                        <infoLink id="de557209-d98c-0a8d-d169-e2b17cea6948" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="115.0"/>
@@ -653,7 +625,7 @@
                   <selectionEntries>
                     <selectionEntry id="3032970e-cdd1-c35f-1b9f-e1478fe66fe0" name="Pistol" page="0" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
-                        <infoLink id="41a1c442-7984-e1e5-0049-d6dda7629b2d" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                        <infoLink id="41a1c442-7984-e1e5-0049-d6dda7629b2d" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
@@ -669,7 +641,7 @@
                     </selectionEntry>
                     <selectionEntry id="fce86902-4694-a961-228a-dba7441af249" name="Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
-                        <infoLink id="854d8572-fd81-d52c-2fe7-47667ac98dd9" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                        <infoLink id="854d8572-fd81-d52c-2fe7-47667ac98dd9" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
@@ -709,7 +681,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="378803d7-7354-2deb-6fe1-99cbb2e7716d" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="378803d7-7354-2deb-6fe1-99cbb2e7716d" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -731,7 +703,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="c2fc67e7-3a80-1ac3-e6ef-a600a7295844" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                                <infoLink id="c2fc67e7-3a80-1ac3-e6ef-a600a7295844" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -771,7 +743,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="673ad83b-6ccb-99ef-b654-8f6930701f61" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="673ad83b-6ccb-99ef-b654-8f6930701f61" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -793,7 +765,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="876d74c2-1d55-948d-7667-146a13b2d5a1" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                                <infoLink id="876d74c2-1d55-948d-7667-146a13b2d5a1" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -820,18 +792,6 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b9c47993-5e5c-a1dd-98f8-059be3c4e79c" name="Heavy Howitzer" page="0" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="7fbf2491-5973-9c04-3f58-0d36c91b0f15" hidden="false" targetId="36738176-9761-24c3-70d8-c89c90de2375" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="01937da2-b36e-e36d-6466-bd24ea8048af" name="High Ranking Officer" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntryGroups>
         <selectionEntryGroup id="41476a34-3d7f-f47d-0c35-5c1943979f9e" name="Rank" hidden="false" collective="false" import="true">
@@ -853,7 +813,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="620eae53-85e2-dc3e-1191-02202867aa5d" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                        <infoLink id="620eae53-85e2-dc3e-1191-02202867aa5d" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="165.0"/>
@@ -864,7 +824,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="62f6dfd5-851d-e185-8f4c-c6b95218511e" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                        <infoLink id="62f6dfd5-851d-e185-8f4c-c6b95218511e" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="150.0"/>
@@ -875,7 +835,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="293e0f3d-d67c-7b8e-73d8-abe9ffc5a5dd" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                        <infoLink id="293e0f3d-d67c-7b8e-73d8-abe9ffc5a5dd" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="135.0"/>
@@ -891,7 +851,7 @@
                   <selectionEntries>
                     <selectionEntry id="cfb10923-bed5-bff9-9344-3061a1694b11" name="Pistol" page="0" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
-                        <infoLink id="8236d547-816e-be95-12af-4baf87ca4d2f" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                        <infoLink id="8236d547-816e-be95-12af-4baf87ca4d2f" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
@@ -907,7 +867,7 @@
                     </selectionEntry>
                     <selectionEntry id="69c6b186-fab8-809b-2981-6f4f595cd357" name="Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
-                        <infoLink id="701d9508-5b61-59e1-f387-36faa97368b6" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                        <infoLink id="701d9508-5b61-59e1-f387-36faa97368b6" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
@@ -948,7 +908,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="49db32bb-6453-0df9-638a-315c87b4659d" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="49db32bb-6453-0df9-638a-315c87b4659d" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -970,7 +930,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="ed428489-1778-fdf6-53b3-246f22ec0810" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                                <infoLink id="ed428489-1778-fdf6-53b3-246f22ec0810" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -1011,7 +971,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="55e8b0c3-c5fc-b7b3-18c3-3b8c48d0456f" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="55e8b0c3-c5fc-b7b3-18c3-3b8c48d0456f" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -1033,7 +993,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="1841dddd-80c9-0b57-5d5c-84a0ad1cec9d" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                                <infoLink id="1841dddd-80c9-0b57-5d5c-84a0ad1cec9d" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -1074,7 +1034,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="2363c790-39ad-ee8f-5744-875c9cf09e83" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="2363c790-39ad-ee8f-5744-875c9cf09e83" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -1096,7 +1056,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="490c86d8-cb59-c489-4f65-0d3506d1160c" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                                <infoLink id="490c86d8-cb59-c489-4f65-0d3506d1160c" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -1129,7 +1089,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="81c1f120-a727-df43-254c-69565155140c" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                        <infoLink id="81c1f120-a727-df43-254c-69565155140c" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="95.0"/>
@@ -1140,7 +1100,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="23450589-344e-14a3-6604-f67a408a7687" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                        <infoLink id="23450589-344e-14a3-6604-f67a408a7687" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="110.0"/>
@@ -1151,7 +1111,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="6f01baa9-45f7-1c58-0041-a2dd790dc095" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                        <infoLink id="6f01baa9-45f7-1c58-0041-a2dd790dc095" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="125.0"/>
@@ -1167,7 +1127,7 @@
                   <selectionEntries>
                     <selectionEntry id="7639890d-247d-7b08-da8e-c3585f3d3b8c" name="Pistol" page="0" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
-                        <infoLink id="0a326387-4489-8215-e36e-35d9efc4e00e" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                        <infoLink id="0a326387-4489-8215-e36e-35d9efc4e00e" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
@@ -1183,7 +1143,7 @@
                     </selectionEntry>
                     <selectionEntry id="1c733c6f-e8ba-fe15-e0e5-def57aa7e676" name="Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
-                        <infoLink id="4479a247-11b4-c86e-6c3f-ae9cecadb80d" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                        <infoLink id="4479a247-11b4-c86e-6c3f-ae9cecadb80d" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
@@ -1224,7 +1184,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="cd95e943-bcb1-8d13-b1fb-fa95cd3373bb" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="cd95e943-bcb1-8d13-b1fb-fa95cd3373bb" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -1246,7 +1206,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="969cf967-500d-56db-72dc-744f31f22dfe" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                                <infoLink id="969cf967-500d-56db-72dc-744f31f22dfe" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -1287,7 +1247,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="22a22e09-b827-7ff9-0474-3350e1901052" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="22a22e09-b827-7ff9-0474-3350e1901052" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -1309,7 +1269,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="acdcbc01-d4ec-e93a-4ca8-3c69bb4deabf" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                                <infoLink id="acdcbc01-d4ec-e93a-4ca8-3c69bb4deabf" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -1350,7 +1310,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="9328756d-af2e-20ec-8481-162f7fcce74f" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="9328756d-af2e-20ec-8481-162f7fcce74f" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -1372,7 +1332,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="de0591ac-80a3-aae3-c02f-90f9d916d214" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                                <infoLink id="de0591ac-80a3-aae3-c02f-90f9d916d214" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -1413,7 +1373,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="a5631a99-aa2a-7b6f-4d38-5c6e82efbe35" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                <infoLink id="a5631a99-aa2a-7b6f-4d38-5c6e82efbe35" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup id="048113dd-1382-d01d-0df7-fc572195d034" name="Weapon" hidden="false" collective="false" import="true">
@@ -1436,7 +1396,7 @@
                 <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="761e443d-f9a3-2c6d-12f4-ca9e750c9bb4" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                <infoLink id="761e443d-f9a3-2c6d-12f4-ca9e750c9bb4" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <entryLinks>
                 <entryLink id="23fa01b9-9111-3437-3274-fd567310682b" hidden="false" collective="false" import="true" targetId="4be14028-60f3-ea49-dc9e-9f829ec122cf" type="selectionEntry"/>
@@ -1450,7 +1410,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="eab8f636-58b0-7298-f9f6-c86b36fde099" name="Inexperienced" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                <infoLink id="eab8f636-58b0-7298-f9f6-c86b36fde099" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <entryLinks>
                 <entryLink id="2f95c10d-94d1-6799-82f6-4053172fd9c7" name="LMG" hidden="false" collective="false" import="true" targetId="14a1-5df7-8293-36d8" type="selectionEntry"/>
@@ -1464,7 +1424,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3346-b62b-cc2d-5d6b" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="70e3-46da-1382-5375" name="Inexperienced" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                <infoLink id="70e3-46da-1382-5375" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <entryLinks>
                 <entryLink id="58bc-0919-cb07-ea3d" name="VB Launcher" hidden="false" collective="false" import="true" targetId="9fb1-8c56-0bd3-7bc8" type="selectionEntry"/>
@@ -1504,7 +1464,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="98b1ec2a-b139-ec25-ef29-44a3198f59eb" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                <infoLink id="98b1ec2a-b139-ec25-ef29-44a3198f59eb" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="50.0"/>
@@ -1515,7 +1475,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="391a10e5-cb1d-8932-2de7-2e0a531ae0f0" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                <infoLink id="391a10e5-cb1d-8932-2de7-2e0a531ae0f0" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="60.0"/>
@@ -1543,7 +1503,7 @@
             <modifier type="append" field="name" value="(3)"/>
           </modifiers>
         </infoLink>
-        <infoLink id="768e7dc9-353a-b1fc-8501-2be1bb032f76" name="Medium Machine Gun (MMG)" hidden="false" targetId="5cf77de7-0fc3-71a8-4933-70b4a81ad0cb" type="profile"/>
+        <infoLink id="768e7dc9-353a-b1fc-8501-2be1bb032f76" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="ab42c12b-875f-7b9b-b206-92c61f5d1d80" name="Rating" hidden="false" collective="false" import="true">
@@ -1557,7 +1517,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="07cc17c1-cbea-19db-afb4-5de747bbc8e1" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                <infoLink id="07cc17c1-cbea-19db-afb4-5de747bbc8e1" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="65.0"/>
@@ -1568,7 +1528,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="feefc2b0-e0d2-6e05-48e5-9c3f19d17b52" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                <infoLink id="feefc2b0-e0d2-6e05-48e5-9c3f19d17b52" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="50.0"/>
@@ -1579,7 +1539,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="4bea2114-1504-360f-249d-be7afac87cc6" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                <infoLink id="4bea2114-1504-360f-249d-be7afac87cc6" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="35.0"/>
@@ -1631,7 +1591,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="30bc9da1-7325-784c-7f44-1ea5c73ab985" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                        <infoLink id="30bc9da1-7325-784c-7f44-1ea5c73ab985" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="50.0"/>
@@ -1642,7 +1602,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="a0a42bd1-277a-39c4-3c3b-1c547ba861af" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                        <infoLink id="a0a42bd1-277a-39c4-3c3b-1c547ba861af" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="60.0"/>
@@ -1671,7 +1631,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="c045a52b-b7d2-194c-0efc-bbfb67fa054c" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                        <infoLink id="c045a52b-b7d2-194c-0efc-bbfb67fa054c" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="30.0"/>
@@ -1687,7 +1647,7 @@
                   <selectionEntries>
                     <selectionEntry id="a3aedbad-80a7-411f-c105-e013821b06d1" name="Pistol" page="0" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
-                        <infoLink id="18a1ae8c-3f31-ad0d-f38b-9dd69ddd811c" name="Pistol" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                        <infoLink id="18a1ae8c-3f31-ad0d-f38b-9dd69ddd811c" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
@@ -1721,7 +1681,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="a2e8a692-0dfe-4311-25a1-f9acbf3c38ca" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="a2e8a692-0dfe-4311-25a1-f9acbf3c38ca" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -1780,7 +1740,7 @@
                     <modifier type="append" field="name" value="(2)"/>
                   </modifiers>
                 </infoLink>
-                <infoLink id="97a8354d-4859-bd89-d597-f1fd7f6cbc2b" name="Light mortar" hidden="false" targetId="da71d317-6dfa-4a95-241e-bf93e30454d1" type="profile"/>
+                <infoLink id="97a8354d-4859-bd89-d597-f1fd7f6cbc2b" name="Light mortar" hidden="false" targetId="4678-11f2-04c8-1ad8" type="profile"/>
               </infoLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup id="28b20b97-7771-e802-d8aa-82cc82084b51" name="Rating" hidden="false" collective="false" import="true">
@@ -1794,7 +1754,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="a2c68764-0596-13db-9651-571b1cd47617" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                        <infoLink id="a2c68764-0596-13db-9651-571b1cd47617" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="46.0"/>
@@ -1805,7 +1765,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="c728d59d-ee1e-3a53-d4ae-e17858c8d419" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                        <infoLink id="c728d59d-ee1e-3a53-d4ae-e17858c8d419" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="35.0"/>
@@ -1816,7 +1776,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="a1d41b88-fb89-971d-4a77-dc58fa7720ff" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                        <infoLink id="a1d41b88-fb89-971d-4a77-dc58fa7720ff" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="24.0"/>
@@ -1843,7 +1803,7 @@
                     <modifier type="append" field="name" value="(3)"/>
                   </modifiers>
                 </infoLink>
-                <infoLink id="6e2c2e9f-7eab-6dce-3d6f-01736bc43098" hidden="false" targetId="934cfbcc-6d53-854d-7a31-1f27560f0c50" type="profile"/>
+                <infoLink id="6e2c2e9f-7eab-6dce-3d6f-01736bc43098" name="Medium Mortar" hidden="false" targetId="63b2-46a0-9b84-7e57" type="profile"/>
               </infoLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup id="e20871f1-6aa5-506e-8e72-2718b0084c53" name="Rating" hidden="false" collective="false" import="true">
@@ -1857,7 +1817,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="7abb74e1-fd87-3a95-dd43-eff0aa74cee2" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                        <infoLink id="7abb74e1-fd87-3a95-dd43-eff0aa74cee2" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="65.0"/>
@@ -1868,7 +1828,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="1192a34e-bb0b-0228-3b68-0d44d3f2d68e" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                        <infoLink id="1192a34e-bb0b-0228-3b68-0d44d3f2d68e" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="50.0"/>
@@ -1879,7 +1839,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="de88bf7e-fdb5-d077-e704-3c9632d3ccf6" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                        <infoLink id="de88bf7e-fdb5-d077-e704-3c9632d3ccf6" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="35.0"/>
@@ -1923,7 +1883,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="5e48a507-71ba-3987-af91-4f8214a9f813" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                        <infoLink id="5e48a507-71ba-3987-af91-4f8214a9f813" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="60.0"/>
@@ -1934,7 +1894,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="9ef99e24-c87b-9de6-db6a-787cc25174e4" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                        <infoLink id="9ef99e24-c87b-9de6-db6a-787cc25174e4" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="90.0"/>
@@ -1945,7 +1905,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="b6c933a3-f381-e705-8772-bf800cea1fc5" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                        <infoLink id="b6c933a3-f381-e705-8772-bf800cea1fc5" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="75.0"/>
@@ -1961,7 +1921,7 @@
                   <selectionEntries>
                     <selectionEntry id="53951821-3f51-579b-b64f-ea777f285b21" name="Pistol" page="0" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
-                        <infoLink id="e7aa75ff-f520-a00c-c60d-dc52cf563445" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                        <infoLink id="e7aa75ff-f520-a00c-c60d-dc52cf563445" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
@@ -1977,7 +1937,7 @@
                     </selectionEntry>
                     <selectionEntry id="e1c9d315-8462-6a77-0825-c9317e169351" name="Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
-                        <infoLink id="cf05ca2d-bde6-303f-dd71-67e54d406b02" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                        <infoLink id="cf05ca2d-bde6-303f-dd71-67e54d406b02" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
@@ -2006,7 +1966,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="d6ccc44c-6b91-74f6-f89c-3f045bac3725" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="d6ccc44c-6b91-74f6-f89c-3f045bac3725" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -2028,7 +1988,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="ce551e2f-0b4a-92d9-816c-bd7be1fe038c" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                                <infoLink id="ce551e2f-0b4a-92d9-816c-bd7be1fe038c" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -2057,7 +2017,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="429991fb-00fe-53a0-3aa9-55aae459b276" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="429991fb-00fe-53a0-3aa9-55aae459b276" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -2079,7 +2039,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="5b0338a8-f884-6ead-f95e-84f24fd955f2" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                                <infoLink id="5b0338a8-f884-6ead-f95e-84f24fd955f2" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -2108,7 +2068,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="20a21f73-759a-0fe9-84b8-817581fc0113" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="20a21f73-759a-0fe9-84b8-817581fc0113" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -2130,7 +2090,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="06280fdb-dbe2-1fbd-1e07-021c50a70ff1" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                                <infoLink id="06280fdb-dbe2-1fbd-1e07-021c50a70ff1" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -2163,7 +2123,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="28cb72dc-d9a7-ac65-cf3a-22697abc1a50" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                        <infoLink id="28cb72dc-d9a7-ac65-cf3a-22697abc1a50" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="65.0"/>
@@ -2174,7 +2134,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="ea735a7a-f09b-dc0c-d63d-916db23cce5c" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                        <infoLink id="ea735a7a-f09b-dc0c-d63d-916db23cce5c" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="50.0"/>
@@ -2185,7 +2145,7 @@
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="e658b06a-b1cb-1348-74cd-fdb8bff93910" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                        <infoLink id="e658b06a-b1cb-1348-74cd-fdb8bff93910" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="35.0"/>
@@ -2201,7 +2161,7 @@
                   <selectionEntries>
                     <selectionEntry id="e2958847-d993-01c5-2d38-4059924123f1" name="Pistol" page="0" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
-                        <infoLink id="c6c16f6c-e959-a1a5-0bfd-c67f57f0f2ac" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                        <infoLink id="c6c16f6c-e959-a1a5-0bfd-c67f57f0f2ac" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
@@ -2217,7 +2177,7 @@
                     </selectionEntry>
                     <selectionEntry id="88b0d221-b816-eb64-7b6d-df15af39d7b6" name="Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
-                        <infoLink id="f4cfe647-5355-c4bc-b6f9-a4d0250506f4" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                        <infoLink id="f4cfe647-5355-c4bc-b6f9-a4d0250506f4" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
@@ -2246,7 +2206,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="e66b3b4c-0d19-e345-a5de-df73486d144c" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="e66b3b4c-0d19-e345-a5de-df73486d144c" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -2268,7 +2228,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="a9f0134f-d927-2453-f30b-1f02fd4d8f20" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                                <infoLink id="a9f0134f-d927-2453-f30b-1f02fd4d8f20" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -2297,7 +2257,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="c3fc1cb4-5042-fb8d-926e-ec7ce02cc59c" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="c3fc1cb4-5042-fb8d-926e-ec7ce02cc59c" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -2319,7 +2279,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="6a1fb4d3-f942-d94f-f666-a4530b521878" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                                <infoLink id="6a1fb4d3-f942-d94f-f666-a4530b521878" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -2348,7 +2308,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="f68fa84b-a5e1-cd7b-2675-36bcdc6c7472" hidden="false" targetId="18df8f68-5653-c8c0-ddc4-6162eaec59ce" type="profile"/>
+                                <infoLink id="f68fa84b-a5e1-cd7b-2675-36bcdc6c7472" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -2370,7 +2330,7 @@
                                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                               </constraints>
                               <infoLinks>
-                                <infoLink id="7023fafb-7abe-cf73-4743-efb2fc8b9a4b" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+                                <infoLink id="7023fafb-7abe-cf73-4743-efb2fc8b9a4b" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
                               </infoLinks>
                               <costs>
                                 <cost name="pts" typeId="points" value="0.0"/>
@@ -2411,7 +2371,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="973f3552-03b7-8c1f-5207-34d5be341136" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                <infoLink id="973f3552-03b7-8c1f-5207-34d5be341136" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup id="e9456e21-08a8-a1ec-78be-b682588a83e8" name="Weapon" hidden="false" collective="false" import="true">
@@ -2434,7 +2394,7 @@
                 <constraint field="selections" scope="parent" value="11.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="1a723297-086a-1c5f-794b-6a8a3a866f5e" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                <infoLink id="1a723297-086a-1c5f-794b-6a8a3a866f5e" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <entryLinks>
                 <entryLink id="673dc8ab-05d1-6bba-def4-08be1490e6ac" hidden="false" collective="false" import="true" targetId="4be14028-60f3-ea49-dc9e-9f829ec122cf" type="selectionEntry"/>
@@ -2478,7 +2438,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="0a92c91d-eec5-b372-d593-051a0f547624" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+        <infoLink id="0a92c91d-eec5-b372-d593-051a0f547624" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -2513,7 +2473,7 @@
             <modifier type="append" field="name" value="(2)"/>
           </modifiers>
         </infoLink>
-        <infoLink id="db2333f6-75e6-ad4c-60b4-d718d7b25df1" name="Rifle" hidden="false" targetId="d10b9427-70b3-2959-561d-6546fd4788cc" type="profile"/>
+        <infoLink id="db2333f6-75e6-ad4c-60b4-d718d7b25df1" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
         <infoLink id="a147-e270-ff9a-4ebb" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
@@ -2528,7 +2488,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="0efd7d17-5a3d-a0bc-8b62-10eb8a23a7c0" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                <infoLink id="0efd7d17-5a3d-a0bc-8b62-10eb8a23a7c0" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="65.0"/>
@@ -2539,7 +2499,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="f66e5680-d20f-2153-4986-1a18a7588906" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                <infoLink id="f66e5680-d20f-2153-4986-1a18a7588906" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="50.0"/>
@@ -2586,7 +2546,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="f535222f-b3c9-c05d-2efc-aaa5630c10b2" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                <infoLink id="f535222f-b3c9-c05d-2efc-aaa5630c10b2" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="10.0"/>
@@ -2597,7 +2557,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="52bf6377-176d-f41e-e0f9-bf1fc94d8da3" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                <infoLink id="52bf6377-176d-f41e-e0f9-bf1fc94d8da3" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="12.0"/>
@@ -2608,7 +2568,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="da097ff1-1e1c-6450-fbc0-2cf4a1a1ef68" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                <infoLink id="da097ff1-1e1c-6450-fbc0-2cf4a1a1ef68" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="14.0"/>
@@ -2644,7 +2604,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="062234d7-9ee2-9587-4424-e4a4c9272a3f" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                <infoLink id="062234d7-9ee2-9587-4424-e4a4c9272a3f" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="47.0"/>
@@ -2655,7 +2615,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="e3989dc2-21ff-af43-967e-c0914f324bb1" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                <infoLink id="e3989dc2-21ff-af43-967e-c0914f324bb1" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="39.0"/>
@@ -2666,7 +2626,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="c499d612-f64e-2889-50ce-00d17907853f" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                <infoLink id="c499d612-f64e-2889-50ce-00d17907853f" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="31.0"/>
@@ -2708,7 +2668,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ecb9-c85e-96aa-c67d" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="6ef7-9f36-de1a-8ac8" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                <infoLink id="6ef7-9f36-de1a-8ac8" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup id="a172-fe89-b9f3-13bc" name="Weapon" hidden="false" collective="false" import="true">
@@ -2731,7 +2691,7 @@
                 <constraint field="selections" scope="parent" value="11.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0b3e-6ff0-4ffc-4331" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="b122-47f8-79bb-324e" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                <infoLink id="b122-47f8-79bb-324e" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <entryLinks>
                 <entryLink id="db86-b2c2-937c-e4f2" hidden="false" collective="false" import="true" targetId="4be14028-60f3-ea49-dc9e-9f829ec122cf" type="selectionEntry"/>
@@ -3009,7 +2969,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d27f-4b88-3be6-d576" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="3ede-1d37-001d-ef18" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                <infoLink id="3ede-1d37-001d-ef18" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="55.0"/>
@@ -3020,7 +2980,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f46f-021c-8474-e51f" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="7d70-f8f0-12e0-db7b" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                <infoLink id="7d70-f8f0-12e0-db7b" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="44.0"/>
@@ -3061,7 +3021,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d73a-673a-a3ad-403a" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="e987-8087-351b-0b60" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                <infoLink id="e987-8087-351b-0b60" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="138.0"/>
@@ -3072,7 +3032,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0b57-6fad-84cc-8c7c" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="0829-def6-3d70-4be5" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                <infoLink id="0829-def6-3d70-4be5" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="115.0"/>
@@ -3082,7 +3042,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="b4f8-da84-893d-2e71" name="Heavy Howitzer" hidden="false" collective="false" import="true" targetId="b9c47993-5e5c-a1dd-98f8-059be3c4e79c" type="selectionEntry"/>
+        <entryLink id="b4f8-da84-893d-2e71" name="Heavy Howitzer" hidden="false" collective="false" import="true" targetId="740e-9740-94c8-e100" type="selectionEntry"/>
         <entryLink id="4eaf-4d72-8df0-2d8d" name="Spotter" hidden="false" collective="false" import="true" targetId="4d689097-aa6a-73eb-2559-c513a839fb79" type="selectionEntry"/>
       </entryLinks>
       <costs>
@@ -3109,7 +3069,7 @@
           <selectionEntries>
             <selectionEntry id="2b80-de94-bf27-e5eb" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
-                <infoLink id="27d0-c794-0c71-c459" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                <infoLink id="27d0-c794-0c71-c459" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="56.0"/>
@@ -3120,7 +3080,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c04b-29cd-b554-e8b1" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="abae-d2e3-a1a9-f214" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                <infoLink id="abae-d2e3-a1a9-f214" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="70.0"/>
@@ -3145,7 +3105,7 @@
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="18ef-ea85-7ba1-00ee" type="max"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="b532-0dd9-c0e4-d13b" hidden="false" targetId="5cf77de7-0fc3-71a8-4933-70b4a81ad0cb" type="profile"/>
+                    <infoLink id="b532-0dd9-c0e4-d13b" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="0.0"/>
@@ -3157,7 +3117,7 @@
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6a6e-4459-a1dc-e48c" type="max"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="9882-e9e0-655b-1482" hidden="false" targetId="5cf77de7-0fc3-71a8-4933-70b4a81ad0cb" type="profile"/>
+                    <infoLink id="9882-e9e0-655b-1482" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="0.0"/>
@@ -3173,7 +3133,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="83be-ea0c-21f1-9d46" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="f939-3a97-9963-e158" name="Light AT gun" hidden="false" targetId="3609b806-cc2d-9f71-2ccb-58d3e8d02723" type="profile"/>
+                <infoLink id="f939-3a97-9963-e158" name="Light AT gun" hidden="false" targetId="5a41-4320-a7f1-7a4b" type="profile"/>
               </infoLinks>
               <entryLinks>
                 <entryLink id="ae7e-c4d7-bc17-0f6f" name="Coaxial MMG" hidden="false" collective="false" import="true" targetId="7f4c-ca9b-8522-ccfc" type="selectionEntry"/>
@@ -3365,7 +3325,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="46ce-f79a-ff6a-a17b" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="8987-558d-8cae-3d21" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                <infoLink id="8987-558d-8cae-3d21" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="72.0"/>
@@ -3376,7 +3336,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="833f-923b-ea56-ca23" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="0c99-612c-2dcb-eb16" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                <infoLink id="0c99-612c-2dcb-eb16" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="60.0"/>
@@ -3387,7 +3347,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a7b1-d52f-9f83-9167" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="88f1-57ac-0b60-e3b7" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                <infoLink id="88f1-57ac-0b60-e3b7" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="48.0"/>
@@ -3398,74 +3358,6 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="8a60-c310-e8be-df44" hidden="false" collective="false" import="true" targetId="557f-08eb-3ff4-f93b" type="selectionEntry"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="f618-f733-bd2e-b353" name="88mm FLAK 36 Dual Purpose AA/AT Gun" page="0" hidden="false" collective="false" import="true" type="unit">
-      <rules>
-        <rule id="81cf-0d6a-56bb-0e8b" name="Versatile" page="0" hidden="false">
-          <description>This weapon can also be fired as a light howitzer.</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="ef36-e846-ce4a-4e3d" name="Gun Shield" hidden="false" targetId="95d0-d47a-8684-c817" type="rule"/>
-        <infoLink id="14f5-8946-efab-fe82" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
-        <infoLink id="cf33-5068-d129-7487" name="Fixed" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
-        <infoLink id="c371-38fb-6504-6fcf" name="Flak" hidden="false" targetId="690f-70e9-9ed0-6352" type="rule"/>
-        <infoLink id="d1d8-d1e7-d5e4-fbc9" name="Crew" hidden="false" targetId="549b-7a6c-2710-5dfe" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value="(7)"/>
-          </modifiers>
-        </infoLink>
-        <infoLink id="dcc9-23b3-1ddc-9a41" hidden="false" targetId="1884d00f-327b-d79f-ef80-999cb5287a1c" type="profile"/>
-      </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="51b7-a657-e2a4-ac32" name="Rating" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9bf8-6a87-b324-3a47" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9d70-6802-16d7-8cc7" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="2239-9a7d-d8ea-5c1f" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="65ff-fbba-cbe9-f3f9" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="836d-20ef-38e6-1b14" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="128.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="92f9-169d-e379-660d" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5595-360d-3401-435b" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="3cda-edba-b843-4703" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="160.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1c3b-878a-d9a3-4560" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a8e8-b7ba-d438-a9ed" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="77ca-6bb5-a4ed-3195" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="192.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="6530-cae2-a38b-13ee" hidden="false" collective="false" import="true" targetId="0699-b226-f83a-e647" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -3543,7 +3435,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb1e-a875-e4b9-766e" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="ee03-0212-a394-9cc4" hidden="false" targetId="7ee66867-b66c-5d46-8043-73765ad07f96" type="profile"/>
+            <infoLink id="ee03-0212-a394-9cc4" name="Light Machine Gun (LMG)" hidden="false" targetId="7533-d12d-21e3-496b" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="10.0"/>
@@ -3562,7 +3454,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ec15-a854-6960-4262" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="d4c8-2fd9-d26e-d2f4" hidden="false" targetId="109d237f-140f-68df-f0a5-d09ffa18e6b6" type="profile"/>
+                <infoLink id="d4c8-2fd9-d26e-d2f4" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="48.0"/>
@@ -3573,7 +3465,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c1d3-f43f-f63f-0a93" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="546b-c4a9-0a54-ee65" hidden="false" targetId="84ac532d-2657-cb2d-c314-9ef981f39bc9" type="profile"/>
+                <infoLink id="546b-c4a9-0a54-ee65" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="60.0"/>
@@ -3584,7 +3476,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="356e-f409-d352-f5f8" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="21aa-3b9a-3671-bc07" hidden="false" targetId="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" type="profile"/>
+                <infoLink id="21aa-3b9a-3671-bc07" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="72.0"/>
@@ -3603,7 +3495,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9868-affe-4f6b-b233" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="919b-b923-17b9-a985" hidden="false" targetId="7ee66867-b66c-5d46-8043-73765ad07f96" type="profile"/>
+                <infoLink id="919b-b923-17b9-a985" name="Light Machine Gun (LMG)" hidden="false" targetId="7533-d12d-21e3-496b" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -3614,7 +3506,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7499-cd14-f461-2011" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="6681-9296-9b8f-dbbf" hidden="false" targetId="2ed110db-2472-cc19-4b18-9c68c1bcbac2" type="profile"/>
+                <infoLink id="6681-9296-9b8f-dbbf" name="Anti-tank rifle" hidden="false" targetId="12a3-5bb9-da85-827e" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="10.0"/>
@@ -3757,235 +3649,4 @@
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
-  <sharedRules>
-    <rule id="fc4146e8-7da6-e7af-9ba1-e8897dc61393" name="Armoured Platoon" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true"/>
-      </modifiers>
-      <description>The Armoured Platoon must include enough transport vehicles and/or tows (either soft-skin or armoured) to transport all models in the infantry and artillery units in the platoon, up to a maximum of one transport vehicle per unit of Infantry and /or Artillery.  The only units that are an exception to this, and which cannot have a transport vehicle are mounted cavalry units and units on motorcycles. </description>
-    </rule>
-    <rule id="4626-540c-fed5-92d1" name="ARVs and Force Selection" publicationId="8eae-8494-pubN94538" page="80" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true"/>
-      </modifiers>
-      <description>Yo may include up to one ARV in your army for every two non-ARV vehicles of damage value 8 or greater you have. </description>
-    </rule>
-  </sharedRules>
-  <sharedProfiles>
-    <profile id="2ed110db-2472-cc19-4b18-9c68c1bcbac2" name="Anti-tank rifle" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">36&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+2</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="197b969b-2664-028a-a420-027f35efa890" name="Assault Rifle" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">24&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">2</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">n/a</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Assault</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="38aab885-176f-3bd6-df14-b6d7b83edd2b" name="Automatic Rifle" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">30&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">2</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">n/a</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">-</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c8884076-7751-e71a-dd66-622d7cbea2ee" name="Bazooka" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">24&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+5</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Shaped Charge</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="be1b99c6-2ede-c8ec-f101-5deced71a400" name="Flamethrower (Infantry)" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">6&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">D6</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+2</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Flamethrower</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="2b905c71-6ad1-3538-08a6-5cd28e730189" name="Flamethrower (Vehicle)" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">18&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">2D6</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+3</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Flamethrower</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="aec76f7b-8a18-deaa-2bf8-48ff69e239a1" name="Heavy AT Gun" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">72&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+6</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (D3)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="9301039a-b7fc-ab81-887f-330c400d543d" name="Heavy automatic cannon" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">72&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">2</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+3</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (D2)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="36738176-9761-24c3-70d8-c89c90de2375" name="Heavy Howitzer" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">(0/24&quot;) - 72&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, Howitzer, HE (3D6)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="a28fc6be-65f0-d015-c528-15adca14d14a" name="Heavy Machine Gun (HMG)" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">36&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">3</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+1</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="1c03f8cb-54b2-df28-dab7-30ed4eecbf50" name="Heavy Mortar" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">16&quot; - 72&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7"> Team, Fixed, Indirect fire, HE (2D6)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="109d237f-140f-68df-f0a5-d09ffa18e6b6" name="Inexperienced" page="0" hidden="false" typeId="2824ab73-d5bb-a968-a566-19371da1c5e4" typeName="Troop Quality">
-      <characteristics>
-        <characteristic name="Morale" typeId="cd18296c-c82a-5671-d4f4-db025626d4e9">8</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="3609b806-cc2d-9f71-2ccb-58d3e8d02723" name="Light AT gun" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">48&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+4</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (D2)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="86ea648a-76f6-6a59-222d-dc0c52581b36" name="Light automatic cannon" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">48&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">2</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+2</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed,  HE (D2)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="1884d00f-327b-d79f-ef80-999cb5287a1c" name="Light howitzer" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">(0/24&quot;) - 48&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, Howitzer, HE (D6)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="7ee66867-b66c-5d46-8043-73765ad07f96" name="Light Machine Gun (LMG)" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">30&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">3</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">n/a</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="da71d317-6dfa-4a95-241e-bf93e30454d1" name="Light mortar" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">12&quot;-24&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Indirect Fire, HE (D3)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="165b4d03-63e5-283d-910e-9f727fcb8e54" name="Medium AT Gun" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">60&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+5</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (D2)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="aaabede5-9ca6-1173-3f42-8f7ba6a51ac6" name="Medium Howitzer" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">(0/24&quot;) - 60&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, Howitzer, HE (2D6)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="5cf77de7-0fc3-71a8-4933-70b4a81ad0cb" name="Medium Machine Gun (MMG)" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">36&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">4</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">n/a</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="934cfbcc-6d53-854d-7a31-1f27560f0c50" name="Medium Mortar" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">18&quot; - 60&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, Indirect fire, HE (D6)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="73e55b0d-0f9e-7272-d257-b4b32242b1d5" name="Panzerfaust" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">12&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+6</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">One-shot, Shaped Charge</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="81b10e16-71eb-01f4-16e4-ee6e2cdcff44" name="Panzerschreck" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">24&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+6</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Shaped Charge</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="ff5db803-b7fc-25a0-366e-ed11775fc017" name="PIAT" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">12&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+5</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Shaped Charge</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="18df8f68-5653-c8c0-ddc4-6162eaec59ce" name="Pistol" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">6&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">n/a</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Assault</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="84ac532d-2657-cb2d-c314-9ef981f39bc9" name="Regular" page="0" hidden="false" typeId="2824ab73-d5bb-a968-a566-19371da1c5e4" typeName="Troop Quality">
-      <characteristics>
-        <characteristic name="Morale" typeId="cd18296c-c82a-5671-d4f4-db025626d4e9">9</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="d10b9427-70b3-2959-561d-6546fd4788cc" name="Rifle" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">24&quot;</characteristic>
-        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
-        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">n/a</characteristic>
-        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">-</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="3ffe9a5e-48cc-2400-5d45-7526a1e19df7" name="Veteran" page="0" hidden="false" typeId="2824ab73-d5bb-a968-a566-19371da1c5e4" typeName="Troop Quality">
-      <characteristics>
-        <characteristic name="Morale" typeId="cd18296c-c82a-5671-d4f4-db025626d4e9">10</characteristic>
-      </characteristics>
-    </profile>
-  </sharedProfiles>
 </catalogue>
