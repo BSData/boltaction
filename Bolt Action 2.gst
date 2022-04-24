@@ -1877,8 +1877,7 @@ on a roll of 5 or 6 the unit is immediately uprated to Regular for the rest of t
       <description>If any unit fails an attempt to rally it can immediately roll a second attempt if within 6” of a military police squad.</description>
     </rule>
     <rule id="7ecc-2b1a-61ad-d825" name="Traffic Direction" hidden="false">
-      <description>If your force includes a military police squad in reserve it does not suffer the -1 penalty for attempting to bring vehicles onto the table.
-</description>
+      <description>If your force includes a military police squad in reserve it does not suffer the -1 penalty for attempting to bring vehicles onto the table.</description>
     </rule>
     <rule id="d132-ebfb-a2a6-968a" name="AT Shell" page="0" hidden="false">
       <description>Pen +4</description>
