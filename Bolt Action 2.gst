@@ -1906,6 +1906,12 @@ on a roll of 5 or 6 the unit is immediately uprated to Regular for the rest of t
     <rule id="0241-4581-64b2-7385" name="75MM AT-gun" page="0" hidden="false">
       <description>HE: Instead of causing HE(1&quot;) hits, HE shell causes HE(2&quot;) hits. </description>
     </rule>
+    <rule id="d8a8-37d9-d3a3-367a" name="Bangalore Torpedoes" hidden="false">
+      <description>To use bangalore torpedoes the unit must start the turn within 2&quot; to the target then Advance 2&quot; further away from it. Roll 2D6, with 6 or more hits the obstacle is destroyed.</description>
+    </rule>
+    <rule id="baf9-4a70-990c-98b0" name="Demolition Chargers" hidden="false">
+      <description>To use demolition charges the unit must start the turn adiacent to the target then Advance 4&quot; avay from it. All units in a 4&quot; radius(bukers and dug in units 2&quot;) are hit with a +4 pen. (HE 4&quot;), 3D6 to blow up buildings.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="12a3-5bb9-da85-827e" name="Anti-tank rifle" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
