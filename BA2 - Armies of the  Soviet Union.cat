@@ -2212,7 +2212,7 @@
         <categoryLink id="e95c-5f60-a707-f130-b3073f4b-f974-1603-e5ea-b2ec953e496a" hidden="false" targetId="b3073f4b-f974-1603-e5ea-b2ec953e496a" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="cf21-c6e7-ea89-daf7" name="SMK/T-100 Experimental Heavy Tank" hidden="false" collective="false" import="true" targetId="7baa-51ee-75a9-fe7a" type="selectionEntry">
+    <entryLink id="cf21-c6e7-ea89-daf7" name="SMK/T-100 Experimental Heavy Tank" hidden="true" collective="false" import="true" targetId="7baa-51ee-75a9-fe7a" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -2527,7 +2527,7 @@
         <categoryLink id="5529-927e-55d8-1ab4" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="ab0b-dd9c-4955-7a41" name="Ski Troops Squad (Regular)" hidden="true" collective="false" import="true" targetId="31ac4bbc-d38d-8970-c8d3-4570292f76f3" type="selectionEntry">
+    <entryLink id="ab0b-dd9c-4955-7a41" name="Ski Troops Squad" hidden="true" collective="false" import="true" targetId="31ac4bbc-d38d-8970-c8d3-4570292f76f3" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -7619,7 +7619,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="2a58a580-f645-e9cc-2c55-071cd4f92156" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+            <infoLink id="2a58a580-f645-e9cc-2c55-071cd4f92156" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="10.0"/>
@@ -8897,7 +8897,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="ce4032f3-ccc7-5a31-40bd-2ee64f0ef1f9" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+            <infoLink id="ce4032f3-ccc7-5a31-40bd-2ee64f0ef1f9" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -9119,7 +9119,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="c916fa2b-fde6-4f1e-6abf-b32ef50004a0" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+                <infoLink id="c916fa2b-fde6-4f1e-6abf-b32ef50004a0" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
                 <infoLink id="a24f7def-3221-42ed-30d2-00a0d8f7cc3e" name="Co-axial Weapon" hidden="false" targetId="a216-de3b-eb7f-51f1" type="rule"/>
               </infoLinks>
               <costs>
@@ -10119,7 +10119,7 @@
             <modifier type="append" field="name" value="(3)"/>
           </modifiers>
         </infoLink>
-        <infoLink id="01d006d1-0303-df30-73de-40b037007e7f" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+        <infoLink id="01d006d1-0303-df30-73de-40b037007e7f" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry id="5c84f96a-297c-bca2-6c83-f1a82866f197" name="Gun Shield" page="0" hidden="false" collective="false" import="true" type="upgrade">
@@ -10835,33 +10835,23 @@
     </selectionEntry>
     <selectionEntry id="6098b7c7-a087-3773-98e2-eec181525877" name="NKVD Squad" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
-        <selectionEntry id="e86fcfb7-1a6a-f346-8b9f-245281f55692" name="Fanatics" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2bc6-ad9a-5549-1702" name="Fanatics" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="points" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="6098b7c7-a087-3773-98e2-eec181525877" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41f3e0f4-2fcf-7a3f-876c-4517db4ba9bb" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ba12-d1e5-7bd1-2156" type="min"/>
+            <constraint field="selections" scope="parent" value="11.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0414-631a-556d-0edb" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="361f3ca5-44e6-9206-0b54-ec407fbcea39" name="Fanatics" hidden="false" targetId="210a-fd8c-dd39-5e36" type="rule"/>
+            <infoLink id="35f0-04e6-e9d0-a93d" name="Fanatics" hidden="false" targetId="210a-fd8c-dd39-5e36" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="7da6e166-493a-85b4-8a4f-672d40c72f0f" name="Fanatics" page="0" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="minSelections" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="6098b7c7-a087-3773-98e2-eec181525877" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41f3e0f4-2fcf-7a3f-876c-4517db4ba9bb" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="11.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="3.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="3.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -12257,33 +12247,23 @@
     </selectionEntry>
     <selectionEntry id="8cf95f5f-0aa2-8789-d046-9238feab978a" name="Shtrafbat Squad" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
-        <selectionEntry id="7c9770e9-6008-b4b7-ec13-42f43f245f3a" name="Shirkers" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="6a71-b053-740c-19d5" name="Shirkers" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="6cb6-c312-f695-333c" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="8cf95f5f-0aa2-8789-d046-9238feab978a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c50ae70-3409-58ca-6f20-9e1bdd2355bc" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6cb6-c312-f695-333c" type="min"/>
+            <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="be65-b8e0-e9d6-1d5c" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="826087a1-912b-99fe-f138-e581133e1c80" name="Shirkers" hidden="false" targetId="df62-2282-8e14-569c" type="rule"/>
+            <infoLink id="3c8e-61a0-54fd-41c8" name="Shirkers" hidden="false" targetId="df62-2282-8e14-569c" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="b7f0c39b-46af-9647-9088-04718d00ef56" name="Shirkers" page="0" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="minSelections" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="8cf95f5f-0aa2-8789-d046-9238feab978a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c50ae70-3409-58ca-6f20-9e1bdd2355bc" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="-3.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="-3.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -12372,35 +12352,6 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e50a-abee-89f5-736a" type="max"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="1975-896e-7c64-6e30" name="Tough Fighters" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="87b3-7839-61b7-9b5d" type="max"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="b2d1-e06a-8e04-3564" name="Tough Fighters" page="0" hidden="false" collective="true" import="true" type="upgrade">
-                      <modifiers>
-                        <modifier type="increment" field="5ea9-54ab-0936-2ee0" value="1.0">
-                          <repeats>
-                            <repeat field="selections" scope="60ed-b067-363e-2f74" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c617-b970-3acd-30f9" repeats="1" roundUp="false"/>
-                          </repeats>
-                        </modifier>
-                      </modifiers>
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5ea9-54ab-0936-2ee0" type="min"/>
-                        <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e80f-fe47-ef79-d336" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="ece6-443c-421c-ff7b" name="Tough Fighters" hidden="false" targetId="123f-ba11-633a-56ff" type="rule"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="1.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0.0"/>
-                  </costs>
-                </selectionEntry>
                 <selectionEntry id="3f9a-dd24-c148-793e" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4ad0-61fd-bbb8-80ea" type="max"/>
@@ -12428,6 +12379,25 @@
                   </selectionEntries>
                   <costs>
                     <cost name="pts" typeId="points" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="e9fe-c8cf-32df-8c2a" name="Tough Fighters" page="0" hidden="false" collective="true" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="09a0-e5b3-12e2-6025" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="60ed-b067-363e-2f74" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c617-b970-3acd-30f9" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="09a0-e5b3-12e2-6025" type="min"/>
+                    <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c8da-8534-3bff-9852" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="e40e-4a21-0d9a-c0b7" name="Tough Fighters" hidden="false" targetId="123f-ba11-633a-56ff" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="1.0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
@@ -12562,33 +12532,23 @@
                     <cost name="pts" typeId="points" value="0.0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="f65a-00af-62fd-ec1f" name="Tough Fighters" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="f290-f05c-21c1-6b14" name="Tough Fighters" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="78b7-e4c5-57f1-3468" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="aa64-5c98-b64e-10e8" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fd77-abfc-9d2a-c8c4" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7e4f-608a-b866-fa3f" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="78b7-e4c5-57f1-3468" type="min"/>
+                    <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ffec-d8c3-24e8-24e1" type="max"/>
                   </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="ec75-b78f-5897-a8f5" name="Tough Fighters" page="0" hidden="false" collective="false" import="true" type="upgrade">
-                      <modifiers>
-                        <modifier type="increment" field="c231-bed1-138d-e626" value="1.0">
-                          <repeats>
-                            <repeat field="selections" scope="aa64-5c98-b64e-10e8" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fd77-abfc-9d2a-c8c4" repeats="1" roundUp="false"/>
-                          </repeats>
-                        </modifier>
-                      </modifiers>
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c231-bed1-138d-e626" type="min"/>
-                        <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8214-08ee-52f3-fce9" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="18fc-2254-d5f9-5f30" name="Tough Fighters" hidden="false" targetId="123f-ba11-633a-56ff" type="rule"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="1.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
+                  <infoLinks>
+                    <infoLink id="a660-2b01-adf0-830f" name="Tough Fighters" hidden="false" targetId="123f-ba11-633a-56ff" type="rule"/>
+                  </infoLinks>
                   <costs>
-                    <cost name="pts" typeId="points" value="0.0"/>
+                    <cost name="pts" typeId="points" value="1.0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
@@ -12980,7 +12940,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7baa-51ee-75a9-fe7a" name="SMK/T-100 Experimental Heavy Tank" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="7baa-51ee-75a9-fe7a" name="SMK/T-100 Experimental Heavy Tank" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="c726-6f63-d6e9-7641" name="SMK/T-100 Experimental Heavy Tank" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -13002,7 +12962,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="39ca-18e4-f191-8fd7" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+            <infoLink id="39ca-18e4-f191-8fd7" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -14010,7 +13970,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="bf457d0b-db0e-9775-d05a-3d3aee6f7d40" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+            <infoLink id="bf457d0b-db0e-9775-d05a-3d3aee6f7d40" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -14022,7 +13982,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="f5f7f7e8-e66e-ad76-9610-fd1b55687607" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+            <infoLink id="f5f7f7e8-e66e-ad76-9610-fd1b55687607" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -14034,7 +13994,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="b01fae4f-4299-7c4d-2d1a-56bc33d4eb79" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+            <infoLink id="b01fae4f-4299-7c4d-2d1a-56bc33d4eb79" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -14194,7 +14154,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="bad0322f-a58e-f981-df1f-123a96012d45" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+                <infoLink id="bad0322f-a58e-f981-df1f-123a96012d45" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -14290,7 +14250,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="176f9a6d-64ae-1ab8-a3e2-73536b053665" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+                <infoLink id="176f9a6d-64ae-1ab8-a3e2-73536b053665" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -14329,7 +14289,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="0fc54098-23d4-2256-0d91-c42d68732d04" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+            <infoLink id="0fc54098-23d4-2256-0d91-c42d68732d04" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -14341,7 +14301,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="eccd5a88-1eca-40d6-8a84-be9c8cc1a9c5" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+            <infoLink id="eccd5a88-1eca-40d6-8a84-be9c8cc1a9c5" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -14353,7 +14313,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="0fef5f63-c60b-c899-9668-61b9b08ed0c2" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+            <infoLink id="0fef5f63-c60b-c899-9668-61b9b08ed0c2" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -14785,7 +14745,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="8c8ab06d-b3c5-0afb-1107-548db57be3b2" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+            <infoLink id="8c8ab06d-b3c5-0afb-1107-548db57be3b2" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -15224,7 +15184,7 @@
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="ae5ac43c-26b7-da8c-2718-8f47fd73e350" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+            <infoLink id="ae5ac43c-26b7-da8c-2718-8f47fd73e350" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -16390,7 +16350,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bfa7-1d52-3728-9892" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="687e-db38-336e-85d2" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+                <infoLink id="687e-db38-336e-85d2" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="15.0"/>
@@ -16401,7 +16361,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9c34-66f1-137a-0ebd" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="f03c-7bf6-d32d-93b8" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+                <infoLink id="f03c-7bf6-d32d-93b8" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="15.0"/>
@@ -16502,7 +16462,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0aa7-89bc-36ae-bf7f" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="532c-9889-219f-70ad" name="MMG" hidden="false" targetId="e2bc-1c2a-46e7-d701" type="profile"/>
+            <infoLink id="532c-9889-219f-70ad" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
