@@ -7650,14 +7650,6 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bfd56332-99b5-6c9e-2800-d5ba02c84643" name="Fanatics" page="0" hidden="false" collective="true" import="true" type="upgrade">
-      <infoLinks>
-        <infoLink id="380ad9a1-73b2-c60d-de06-53afdee23d08" name="Fanatics" hidden="false" targetId="210a-fd8c-dd39-5e36" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="3.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="14d677d7-044b-a98d-00e6-77449ef15414" name="Flamethrower Team" page="0" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
@@ -15611,11 +15603,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5887cddf-e219-4c1c-d3cc-d6bab44a14e9" name="Shirkers" page="0" hidden="false" collective="false" import="true" type="upgrade">
-      <costs>
-        <cost name="pts" typeId="points" value="-3.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="12864fb9-fa92-2a22-fba8-403ddceb1361" name="Sniper Team" page="0" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
@@ -16532,67 +16519,53 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                 <infoLink id="358c-49d7-7321-29a8" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="8111-a5e0-ffa3-ef65" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5d29-38f1-1653-97f4" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="dae5-3b48-562e-10d9" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
-                  </infoLinks>
-                  <selectionEntries>
-                    <selectionEntry id="e363-7601-112f-fca7" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
-                      <modifiers>
-                        <modifier type="increment" field="8a5d-cb3d-9e9e-38bf" value="1.0">
-                          <repeats>
-                            <repeat field="selections" scope="d75f-0c5e-f054-d935" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d75f-0c5e-f054-d935" repeats="1" roundUp="false"/>
-                          </repeats>
-                        </modifier>
-                      </modifiers>
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8a5d-cb3d-9e9e-38bf" type="min"/>
-                        <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e63e-8f5d-1ccd-4eed" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="pts" typeId="points" value="2.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0.0"/>
-                  </costs>
-                </selectionEntry>
                 <selectionEntry id="240e-75cf-5c8d-a130" name="Bangalore Torpedoes" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="596f-9188-8d82-1887" type="max"/>
                   </constraints>
+                  <infoLinks>
+                    <infoLink id="0755-58f1-9e89-e537" name="Bangalore Torpedoes" hidden="false" targetId="d8a8-37d9-d3a3-367a" type="rule"/>
+                  </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="10.0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="4f5a-b91a-dcad-d22a" name="Demolition Charges" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="7841-d16c-5d1b-ee33" name="Demolition Charges" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="5d6c-bf00-fe56-62f6" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="d75f-0c5e-f054-d935" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d75f-0c5e-f054-d935" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3583-5712-bd43-bf13" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5d6c-bf00-fe56-62f6" type="min"/>
+                    <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="20fe-387e-0471-787e" type="max"/>
                   </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="af15-2327-f6a6-01f6" name="Demolition Charges" hidden="false" collective="false" import="true" type="upgrade">
-                      <modifiers>
-                        <modifier type="increment" field="df0e-f64c-b6c5-8631" value="1.0">
-                          <repeats>
-                            <repeat field="selections" scope="d75f-0c5e-f054-d935" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d75f-0c5e-f054-d935" repeats="1" roundUp="false"/>
-                          </repeats>
-                        </modifier>
-                      </modifiers>
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="df0e-f64c-b6c5-8631" type="min"/>
-                        <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="96bb-7d57-7646-7dea" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="pts" typeId="points" value="3.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
+                  <infoLinks>
+                    <infoLink id="60bb-72dd-bbba-29fc" name="Demolition Chargers" hidden="false" targetId="baf9-4a70-990c-98b0" type="rule"/>
+                  </infoLinks>
                   <costs>
-                    <cost name="pts" typeId="points" value="0.0"/>
+                    <cost name="pts" typeId="points" value="3.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="51db-990f-8279-3922" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="0dc8-5297-7a58-3ae0" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="d75f-0c5e-f054-d935" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d75f-0c5e-f054-d935" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0dc8-5297-7a58-3ae0" type="min"/>
+                    <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="091c-2f8a-9a45-7e0c" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="162b-cdba-f918-8819" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="2.0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
@@ -16691,67 +16664,53 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                 <infoLink id="4a06-87ff-b69e-09dd" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="330b-3356-cd34-5959" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6b23-ec20-f632-0980" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="6359-1405-5d26-f4f2" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
-                  </infoLinks>
-                  <selectionEntries>
-                    <selectionEntry id="548e-ec83-940f-27e0" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
-                      <modifiers>
-                        <modifier type="increment" field="9204-ec01-470e-09a3" value="1.0">
-                          <repeats>
-                            <repeat field="selections" scope="0e6f-fdcf-39e4-6f33" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e6f-fdcf-39e4-6f33" repeats="1" roundUp="false"/>
-                          </repeats>
-                        </modifier>
-                      </modifiers>
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9204-ec01-470e-09a3" type="min"/>
-                        <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9b5b-7714-7cf3-915e" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="pts" typeId="points" value="2.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0.0"/>
-                  </costs>
-                </selectionEntry>
                 <selectionEntry id="c7e2-4179-e8e8-7750" name="Bangalore Torpedoes" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a78e-ea58-7b30-947f" type="max"/>
                   </constraints>
+                  <infoLinks>
+                    <infoLink id="0743-61b5-c408-59d9" name="Bangalore Torpedoes" hidden="false" targetId="d8a8-37d9-d3a3-367a" type="rule"/>
+                  </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="10.0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="a9fc-9375-3c09-865f" name="Demolition Charges" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="39f9-dfb3-e8ed-71a2" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="95ce-91c3-f1d4-a8ba" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="0e6f-fdcf-39e4-6f33" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e6f-fdcf-39e4-6f33" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cb35-0310-bec8-e0da" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="95ce-91c3-f1d4-a8ba" type="min"/>
+                    <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67b6-6020-e970-ef1b" type="max"/>
                   </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="5401-a721-1d85-9c5b" name="Demolition Charges" hidden="false" collective="false" import="true" type="upgrade">
-                      <modifiers>
-                        <modifier type="increment" field="40d5-3b3a-ea99-fd92" value="1.0">
-                          <repeats>
-                            <repeat field="selections" scope="0e6f-fdcf-39e4-6f33" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e6f-fdcf-39e4-6f33" repeats="1" roundUp="false"/>
-                          </repeats>
-                        </modifier>
-                      </modifiers>
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="40d5-3b3a-ea99-fd92" type="min"/>
-                        <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="62ed-4c09-97cf-ea37" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="pts" typeId="points" value="2.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
+                  <infoLinks>
+                    <infoLink id="45e4-cb3c-abc3-5b49" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
+                  </infoLinks>
                   <costs>
-                    <cost name="pts" typeId="points" value="0.0"/>
+                    <cost name="pts" typeId="points" value="2.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="dd65-ddf8-4a9d-7782" name="Demolition Charges" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="0c43-d837-1582-e0a3" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="0e6f-fdcf-39e4-6f33" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e6f-fdcf-39e4-6f33" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0c43-d837-1582-e0a3" type="min"/>
+                    <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b67-5d86-1172-dff0" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="bbc7-0e70-2969-f06b" name="Demolition Chargers" hidden="false" targetId="baf9-4a70-990c-98b0" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="2.0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
