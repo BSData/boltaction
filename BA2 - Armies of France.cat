@@ -9720,37 +9720,6 @@
         <infoLink id="3d74-da8a-b2c5-2897" name="Recce" hidden="false" targetId="dd65-ec56-4aed-ad4f" type="rule"/>
         <infoLink id="e519-87de-3688-1f4a" name="Turn on the spot" hidden="false" targetId="d74c-188c-4251-2ab0" type="rule"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry id="0b7c-a3d2-0ea0-9b93" name="Variants" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b210-9d27-5e3c-6630" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f25-4731-3498-a1ac" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="1aec-457c-8482-7f13" name="SMG" hidden="false" collective="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="points" value="-10.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="66e8-20f9-86c3-fe8b" name="VB Launcher" hidden="false" collective="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <entryLinks>
-            <entryLink id="2f7a-0bab-ba77-7f42" name="Forward-facing LMG" hidden="false" collective="false" import="true" targetId="9d97-4ba1-1989-ee14" type="selectionEntry"/>
-            <entryLink id="8cd9-b26f-1761-7a90" name="Forward Facing Anti-tank rifle" hidden="false" collective="false" import="true" targetId="3aef-3ed2-fbe1-02f6" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="4b64-96f9-1859-5948" name="Rating" hidden="false" collective="false" import="true">
           <constraints>
@@ -9763,7 +9732,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1a46-d909-a0ba-03bf" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="4e06-883d-cd44-22f6" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
+                <infoLink id="4e06-883d-cd44-22f6" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="35.0"/>
@@ -9774,7 +9743,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ebe7-2ce4-1b33-2145" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="fb20-379a-93b2-e744" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
+                <infoLink id="fb20-379a-93b2-e744" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="27.0"/>
@@ -9782,7 +9751,83 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="9f04-2810-0fb1-9b55" name="Variants" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="55da-fdfe-6faf-e78c" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b19-2b3d-a137-7442" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="b158-f5d5-136d-69d3" name="Rifle" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2051-16e2-6452-c8a3" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d884-09a6-8148-3aca" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="a1d1-ad75-f10b-52a4" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="-10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9016-3fe2-7e17-5705" name="VB Launcher" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be48-da94-bfea-c764" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cd4-d68a-86bc-2ad0" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="7330-986a-bfa0-0de6" name="VB Launcher" hidden="false" targetId="dab9-9e30-dd75-ee1a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="eb87-8eff-dcb9-a4f2" name="Light Mortar" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c62-e9ba-5cc6-8abc" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1843-9cb0-7340-9779" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="01d6-b4c0-30ff-722b" name="Light mortar" hidden="false" targetId="4678-11f2-04c8-1ad8" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="b1da-3e9e-f37c-1fea" name="SMG" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cec-2791-fd71-46fb" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc6c-1240-18e8-981b" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="0b86-73d3-dc5d-25b4" name="Submachine Gun (SMG)" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="-10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c24b-28eb-ba44-cc64" name="Forward facing Anti-tank Rifle" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="775f-2daa-264a-5cf6" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e07e-f791-2047-b970" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="8b0f-d7f0-79d6-1d0f" name="Anti-tank rifle" hidden="false" targetId="12a3-5bb9-da85-827e" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="ac09-225c-798e-d9ea" name="Forward-facing LMG" hidden="false" collective="false" import="true" targetId="9d97-4ba1-1989-ee14" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="5474-e2f4-a9e9-8a8f" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9f04-2810-0fb1-9b55" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
