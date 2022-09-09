@@ -894,11 +894,32 @@
     <entryLink id="bd465fba-296e-e9b8-3e86-bd3b042c1496" name="National Characteristic" hidden="true" collective="false" import="true" targetId="746e98f2-b067-0b0c-c1bb-f4e479949ba9" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="afcd-a068-7378-4f89" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="61ed-e84a-f16d-adae" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538f-0de1-01ad-28d3" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df57-31bd-9234-c1cd" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6db5-65a8-6088-ccdb" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b1e2-9e76-65aa-2ab8" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="98ac-76c6-0d36-82f8" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="afcd-a068-7378-4f89" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50ee-cfff-112d-7405" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc6b-b315-37cf-5c57" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eac1-f99c-aade-1353" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="90cd-5310-3255-a3da" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="81ed-c5b0-eddc-1155" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c89c-02b7-3bc0-fe60" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f419-24d2-07df-c5c6" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="949c-462f-ad4c-240e" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
+      <categoryLinks>
+        <categoryLink id="68e4-d8ad-c78b-57a8" name="New CategoryLink" hidden="false" targetId="2ddc-c371-7e08-928b" primary="true"/>
+      </categoryLinks>
     </entryLink>
     <entryLink id="6c410a7e-c351-980b-5153-3b679d790d2a" name="Artillery Forward Observer" hidden="true" collective="false" import="true" targetId="762a3231-0b30-406f-a496-884544174816" type="selectionEntry">
       <modifiers>
@@ -6175,12 +6196,26 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="aec9d70e-7cc4-a46a-4176-3d9524d0371a" name="Chindit Section" page="0" hidden="false" collective="false" import="true" type="unit">
-      <rules>
-        <rule id="cc153a0e-d0f4-d5dc-152b-eda4f0bb905d" name="Fire &amp; Manoeuvre" page="0" hidden="false"/>
-      </rules>
-      <infoLinks>
-        <infoLink id="fc24ddd5-b364-8aac-fb52-82c596b577e3" name="Behind Enemy Lines" hidden="false" targetId="ef26-3f67-bf0d-8ef3" type="rule"/>
-      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="27bb-e482-def6-3cdf" name="Behind Enemy Lines" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca5a-bbb4-468c-520e" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85ad-21ea-4953-3a04" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="f00e-b37d-ac4d-2d77" name="Behind Enemy Lines" hidden="false" targetId="ef26-3f67-bf0d-8ef3" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="a956-9cc6-68ae-b133" name="Fire &amp; Manoeuvre" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8da-9e14-e06a-04a7" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3edf-0305-51b6-0909" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="3157-58cd-aa7e-ade5" name="Fire &amp; Manoeuvre" hidden="false" targetId="58ca-137f-a472-efd6" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="7a2e1bef-2bf9-2c94-762e-fd5fd48c4631" name="Squad Members" hidden="false" collective="false" import="true">
           <constraints>
@@ -6472,39 +6507,43 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="5bf60ba5-32fb-b2f9-6de0-f39bd58624c2" name="Commando Section" page="0" hidden="false" collective="false" import="true" type="unit">
-      <infoLinks>
-        <infoLink id="8531f813-1a63-50b9-9cd7-dc375ac2e61e" name="Behind Enemy Lines" hidden="false" targetId="ef26-3f67-bf0d-8ef3" type="rule"/>
-        <infoLink id="088567f9-f456-e469-bdde-ee9959d302ad" name="Tough Fighters" hidden="false" targetId="123f-ba11-633a-56ff" type="rule"/>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="d342e906-70ec-992b-3fcf-fe05dddff911" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="decrement" field="points" value="2.0">
+              <conditions>
+                <condition field="selections" scope="5bf60ba5-32fb-b2f9-6de0-f39bd58624c2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d342e906-70ec-992b-3fcf-fe05dddff911" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69fa-f5cd-14f7-5264" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="68deb41f-f4d1-407a-d587-0d12577526bb" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="e28f949c-6d87-ff56-924d-d1e779ef45a9" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="minSelections" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="5bf60ba5-32fb-b2f9-6de0-f39bd58624c2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="08de1c84-232e-11ad-94a2-9825776a5795" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="2.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="f8d1-c822-1dd1-589e" name="Tough Fighters" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="02d4-5e2f-4117-eb46" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f96d-1755-6e51-31a6" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="5ac6-c802-05d0-e555" name="Tough Fighters" hidden="false" targetId="123f-ba11-633a-56ff" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="075c-27fe-81ab-b45e" name="Behind Enemy Lines" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c9e-aff4-0ae8-a75e" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4495-e10b-f654-19fc" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="cd50-419a-beaa-1c90" name="Behind Enemy Lines" hidden="false" targetId="ef26-3f67-bf0d-8ef3" type="rule"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -6515,6 +6554,13 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="2c8340d0-9397-c21e-260c-21cd56596bd9" name="Veteran NCO" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="5bf60ba5-32fb-b2f9-6de0-f39bd58624c2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d342e906-70ec-992b-3fcf-fe05dddff911" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -6556,6 +6602,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="f2dd905b-61cf-ddfe-bb41-2a0f4ecea9f3" name="Veteran Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="5bf60ba5-32fb-b2f9-6de0-f39bd58624c2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d342e906-70ec-992b-3fcf-fe05dddff911" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -6567,6 +6620,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="efc32f6d-b188-bcef-f146-ff2005b1c816" name="Veteran Soldier with SMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="5bf60ba5-32fb-b2f9-6de0-f39bd58624c2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d342e906-70ec-992b-3fcf-fe05dddff911" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -6581,6 +6641,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="0f3d4c6f-9406-a6d2-b2b8-dda1dfcec759" name="Veteran Soldier with LMG" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="5bf60ba5-32fb-b2f9-6de0-f39bd58624c2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d342e906-70ec-992b-3fcf-fe05dddff911" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -8136,12 +8203,26 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="43f92c65-3912-1f3a-e5f9-ce5d9809cd6b" name="Gurkha Section" page="0" hidden="false" collective="false" import="true" type="unit">
-      <rules>
-        <rule id="921a174b-20cf-7255-079b-485083bffe84" name="Scary Blighters" page="0" hidden="false"/>
-      </rules>
-      <infoLinks>
-        <infoLink id="70601fd4-00ee-fd64-c8eb-f2fcbdd829bf" name="Tough Fighters" hidden="false" targetId="123f-ba11-633a-56ff" type="rule"/>
-      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="ab57-3834-d30e-f5aa" name="Scary Blighters" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4c5-5c76-50b8-169b" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6d8-6fd2-6269-b323" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="3720-08dc-3667-80fc" name="Scary Blighters" hidden="false" targetId="1e66-a034-2bba-6a37" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="7071-fc35-7658-dd03" name="Tough Fighters" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="611e-3198-254a-1aff" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8937-94d3-d055-31c8" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="6dde-97da-6178-7730" name="Tough Fighters" hidden="false" targetId="123f-ba11-633a-56ff" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="1c10a4d7-50bb-dac8-84fa-e3627a847106" name="Squad Members" hidden="false" collective="false" import="true">
           <constraints>
@@ -8401,32 +8482,31 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="ddc8a7ca-b4a5-884f-88a4-bf4dc9dbdb43" name="Home Guard Section" page="0" hidden="false" collective="false" import="true" type="unit">
-      <infoLinks>
-        <infoLink id="fdc84eec-fefd-f453-c296-dfb38ab4fa32" name="Green" hidden="false" targetId="c21d-d23f-d16a-bf33" type="rule"/>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="3ad69b47-e80a-9028-e0fa-37959b119602" name="Anti-tank Grenades/ Molotov Cocktails" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="decrement" field="points" value="2.0">
+              <conditions>
+                <condition field="selections" scope="ddc8a7ca-b4a5-884f-88a4-bf4dc9dbdb43" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ad69b47-e80a-9028-e0fa-37959b119602" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1a20-0d79-cb77-f3ff" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="0fda7890-8702-ccbc-7c8c-65e2104fe779" name="Anti-tank Grenades/ Molotov Cocktails" page="0" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="minSelections" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="ddc8a7ca-b4a5-884f-88a4-bf4dc9dbdb43" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2abc1ebc-7962-fd1c-7507-835f77ced9ce" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="points" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7686-6250-b748-0df0" name="Green" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1d3c-3174-4d85-6d1e" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="61c1-7b5a-663f-10fb" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="37a9-8276-d0de-6863" name="Green" hidden="false" targetId="c21d-d23f-d16a-bf33" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -8440,6 +8520,13 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="7c5c5d3c-f4d1-7ae2-2486-0ed0dbf8bd2f" name="Inexperienced NCO" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="ddc8a7ca-b4a5-884f-88a4-bf4dc9dbdb43" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ad69b47-e80a-9028-e0fa-37959b119602" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -8492,6 +8579,11 @@
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="ddc8a7ca-b4a5-884f-88a4-bf4dc9dbdb43" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ad69b47-e80a-9028-e0fa-37959b119602" type="greaterThan"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
@@ -8525,6 +8617,11 @@
                     <condition field="selections" scope="ddc8a7ca-b4a5-884f-88a4-bf4dc9dbdb43" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d4cc0066-6d21-74e2-f6f8-a773334915f6" type="greaterThan"/>
                   </conditions>
                 </modifier>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="ddc8a7ca-b4a5-884f-88a4-bf4dc9dbdb43" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ad69b47-e80a-9028-e0fa-37959b119602" type="greaterThan"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -8540,6 +8637,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="9b436cbf-8ff4-768f-5b74-e4bfbcdf046e" name="Inexperienced Soldier with Shotgun" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="ddc8a7ca-b4a5-884f-88a4-bf4dc9dbdb43" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ad69b47-e80a-9028-e0fa-37959b119602" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -8554,6 +8658,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="d4cc0066-6d21-74e2-f6f8-a773334915f6" name="Inexperienced Soldier with LMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="ddc8a7ca-b4a5-884f-88a4-bf4dc9dbdb43" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ad69b47-e80a-9028-e0fa-37959b119602" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -8567,7 +8678,14 @@
                 <cost name="pts" typeId="points" value="4.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="d1d3735b-9488-c484-94f7-b58bb4eee3fc" name="Inexperienced Soldier - unarmed" page="0" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="d1d3735b-9488-c484-94f7-b58bb4eee3fc" name="Inexperienced Soldier - Unarmed" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="ddc8a7ca-b4a5-884f-88a4-bf4dc9dbdb43" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ad69b47-e80a-9028-e0fa-37959b119602" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -8579,6 +8697,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="c831c03c-20af-1e45-d67f-b1fea85e020a" name="Inexperienced Soldier with Pistol" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="ddc8a7ca-b4a5-884f-88a4-bf4dc9dbdb43" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ad69b47-e80a-9028-e0fa-37959b119602" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -8959,30 +9084,20 @@
     <selectionEntry id="911880ec-5a7c-9107-8bd7-80fbf0ba190e" name="Inexperienced Infantry Section (Early War)" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="52c79f7e-3265-4e02-0827-7a7f38730c07" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="decrement" field="points" value="2.0">
+              <conditions>
+                <condition field="selections" scope="911880ec-5a7c-9107-8bd7-80fbf0ba190e" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52c79f7e-3265-4e02-0827-7a7f38730c07" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7d9a-fdd7-c76b-5594" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="191420ed-ed06-639e-570e-c637024803c8" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="184a27ae-f3aa-8bc8-3b54-9b1599781c78" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="minSelections" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="911880ec-5a7c-9107-8bd7-80fbf0ba190e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d01b3cf-8e90-f4ad-af25-2dae95899a1c" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -8996,6 +9111,13 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="9c44132a-3dbe-56fd-5a2a-2fffb0408d0d" name="Inexperienced NCO" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="911880ec-5a7c-9107-8bd7-80fbf0ba190e" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52c79f7e-3265-4e02-0827-7a7f38730c07" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -9008,6 +9130,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="1d2fcfd2-12c7-9613-0523-2487a432e7a5" name="Inexperienced Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="911880ec-5a7c-9107-8bd7-80fbf0ba190e" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52c79f7e-3265-4e02-0827-7a7f38730c07" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -9023,6 +9152,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="63fd000e-5a6e-55ab-b40e-faee7a7b082a" name="Inexperienced Soldier with LMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="911880ec-5a7c-9107-8bd7-80fbf0ba190e" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52c79f7e-3265-4e02-0827-7a7f38730c07" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -9046,30 +9182,20 @@
     <selectionEntry id="8e1afe00-442f-518f-72fb-ea379da8b731" name="Inexperienced Infantry Section (Mid-/ Late-War)" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="a202ccda-de8c-79b4-4238-24b0a0f8ad3e" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="decrement" field="points" value="2.0">
+              <conditions>
+                <condition field="selections" scope="8e1afe00-442f-518f-72fb-ea379da8b731" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a202ccda-de8c-79b4-4238-24b0a0f8ad3e" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9536-8929-753d-106c" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="e6e48710-8b78-73ed-a6ad-6f8ebb5d1499" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="6dd2f478-3e77-22e9-caeb-deb5469a0995" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="minSelections" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="8e1afe00-442f-518f-72fb-ea379da8b731" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="69fdcc3a-c4a1-2b1a-ac9c-828e9cdf1841" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -9083,6 +9209,13 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="a3472605-88b6-9767-8878-6c200188ec98" name="Inexperienced NCO" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="8e1afe00-442f-518f-72fb-ea379da8b731" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a202ccda-de8c-79b4-4238-24b0a0f8ad3e" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -9124,6 +9257,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="a37dbb75-e6b6-b0a5-bae9-f06136b8ed76" name="Inexperienced Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="8e1afe00-442f-518f-72fb-ea379da8b731" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a202ccda-de8c-79b4-4238-24b0a0f8ad3e" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -9139,6 +9279,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="a7b54709-b390-8128-f45d-f59b9c120e13" name="Inexperienced Soldier with LMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="8e1afe00-442f-518f-72fb-ea379da8b731" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a202ccda-de8c-79b4-4238-24b0a0f8ad3e" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -9153,6 +9300,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="6971be12-f15e-eb74-622e-fdedc18d7018" name="Inexperienced Soldier with SMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="8e1afe00-442f-518f-72fb-ea379da8b731" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a202ccda-de8c-79b4-4238-24b0a0f8ad3e" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -12944,64 +13098,53 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
       </costs>
     </selectionEntry>
     <selectionEntry id="cf6b58cf-785e-4841-76d6-7450caf34572" name="Paratroop Section" page="0" hidden="false" collective="false" import="true" type="unit">
-      <infoLinks>
-        <infoLink id="3c339f02-5a2f-7b66-30e0-1ac92e600abc" name="Stubborn" hidden="false" targetId="4347-c6e1-c5ab-9232" type="rule"/>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="ac98d4e5-dacd-4a07-29c0-7dc3d1b73a3a" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="decrement" field="points" value="2.0">
+              <conditions>
+                <condition field="selections" scope="cf6b58cf-785e-4841-76d6-7450caf34572" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac98d4e5-dacd-4a07-29c0-7dc3d1b73a3a" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4c88-f568-f3c7-f497" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="2770c65f-253a-8d34-ce44-477d3efd8e67" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="cda34b1e-5499-d9d2-7e2f-5056656de3f5" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="minSelections" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="cf6b58cf-785e-4841-76d6-7450caf34572" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6065e01b-d4d2-7216-1db3-f066a17a8a16" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="2.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c5628b0f-29ee-3571-d76b-140c780d3812" name="Bicycles/Wetbikes" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="decrement" field="points" value="1.0">
+              <conditions>
+                <condition field="selections" scope="cf6b58cf-785e-4841-76d6-7450caf34572" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c5628b0f-29ee-3571-d76b-140c780d3812" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f0c7-e7d5-6b56-2341" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="0094421e-d0e2-6d7c-92f2-fc119a6eb423" name="Bicycles/Wetbikes" page="0" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="minSelections" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="cf6b58cf-785e-4841-76d6-7450caf34572" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6065e01b-d4d2-7216-1db3-f066a17a8a16" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="49b4c034-e56f-8394-c241-fd5d0c092e11" name="Bicycles" hidden="false" targetId="8a7d-230c-d090-127b" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="1.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+          <infoLinks>
+            <infoLink id="5227-1ab7-ee57-22ea" name="Bicycles" hidden="false" targetId="8a7d-230c-d090-127b" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f5dd-448b-712c-0c42" name="Stubborn" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ef2-cc95-821f-3790" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="094e-5e18-c958-2f52" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="94b9-8a15-3561-80be" name="Stubborn" hidden="false" targetId="4347-c6e1-c5ab-9232" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -13015,6 +13158,18 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           </constraints>
           <selectionEntries>
             <selectionEntry id="bcff3dc3-e750-8d8d-f820-ff1a1f24b259" name="Veteran NCO" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="cf6b58cf-785e-4841-76d6-7450caf34572" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac98d4e5-dacd-4a07-29c0-7dc3d1b73a3a" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="points" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="cf6b58cf-785e-4841-76d6-7450caf34572" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c5628b0f-29ee-3571-d76b-140c780d3812" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -13056,6 +13211,18 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="5165eb9c-892d-ab6a-27b9-43edcf4bb59e" name="Veteran Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="cf6b58cf-785e-4841-76d6-7450caf34572" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac98d4e5-dacd-4a07-29c0-7dc3d1b73a3a" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="points" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="cf6b58cf-785e-4841-76d6-7450caf34572" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c5628b0f-29ee-3571-d76b-140c780d3812" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -13070,6 +13237,18 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="ec3c187a-cb40-c38a-fe35-18bcf3a7d106" name="Veteran Soldier with LMG" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="cf6b58cf-785e-4841-76d6-7450caf34572" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac98d4e5-dacd-4a07-29c0-7dc3d1b73a3a" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="points" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="cf6b58cf-785e-4841-76d6-7450caf34572" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c5628b0f-29ee-3571-d76b-140c780d3812" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -13084,6 +13263,18 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="c268a247-1489-302a-de98-7ce09e43668b" name="Veteran Soldier with SMG" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="cf6b58cf-785e-4841-76d6-7450caf34572" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac98d4e5-dacd-4a07-29c0-7dc3d1b73a3a" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="points" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="cf6b58cf-785e-4841-76d6-7450caf34572" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c5628b0f-29ee-3571-d76b-140c780d3812" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -14302,32 +14493,22 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
     <selectionEntry id="35f6122c-b71b-ce05-b3d0-5a92dd3d371a" name="Regular Infantry Section (Early War)" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="91e36a1b-f48f-fee0-f63e-9a270aab7ea7" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="decrement" field="points" value="2.0">
+              <conditions>
+                <condition field="selections" scope="35f6122c-b71b-ce05-b3d0-5a92dd3d371a" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="91e36a1b-f48f-fee0-f63e-9a270aab7ea7" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1382-93a0-0603-5ce1" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="b0c2a3e1-69bf-f6f3-4eb7-0bbb21a7c832" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="6846dc3d-24e9-c9de-af36-24b5f910025b" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="minSelections" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="35f6122c-b71b-ce05-b3d0-5a92dd3d371a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="120a2372-d653-b579-7afa-6743055df99d" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="2.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -14339,6 +14520,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           </constraints>
           <selectionEntries>
             <selectionEntry id="51a22bf3-cc44-88a3-5367-837a845998bd" name="Regular NCO" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="35f6122c-b71b-ce05-b3d0-5a92dd3d371a" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="91e36a1b-f48f-fee0-f63e-9a270aab7ea7" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -14369,6 +14557,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="134a6331-4291-2268-6b1d-79a29f5e07e7" name="Regular Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="35f6122c-b71b-ce05-b3d0-5a92dd3d371a" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="91e36a1b-f48f-fee0-f63e-9a270aab7ea7" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -14384,6 +14579,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="ba4fb163-8e1d-9907-ee78-01b840397101" name="Regular Soldier with LMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="35f6122c-b71b-ce05-b3d0-5a92dd3d371a" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="91e36a1b-f48f-fee0-f63e-9a270aab7ea7" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -14407,30 +14609,20 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
     <selectionEntry id="559b917e-f4d1-5c55-536f-94bd8a2962f1" name="Regular Infantry Section (Mid-/ Late-War)" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="2bc098ef-29e2-2580-e0a7-5b668e06742a" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="decrement" field="points" value="2.0">
+              <conditions>
+                <condition field="selections" scope="559b917e-f4d1-5c55-536f-94bd8a2962f1" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2bc098ef-29e2-2580-e0a7-5b668e06742a" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2762-0038-422b-27d6" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="2b872e01-97d4-4754-2eee-715b4cb3ec8c" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="6c8daa26-5e40-3aa1-f11f-0ccc9701c526" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="minSelections" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="559b917e-f4d1-5c55-536f-94bd8a2962f1" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fdc6d7de-6a65-06b1-c34e-dabca2e44de0" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -14444,6 +14636,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           </constraints>
           <selectionEntries>
             <selectionEntry id="d32bc858-ad3c-94a5-c1ab-1dc94dc62c02" name="Regular NCO" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="559b917e-f4d1-5c55-536f-94bd8a2962f1" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2bc098ef-29e2-2580-e0a7-5b668e06742a" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -14485,6 +14684,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="a287d333-7900-9583-bc04-2ffc8a33d15a" name="Regular Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="559b917e-f4d1-5c55-536f-94bd8a2962f1" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2bc098ef-29e2-2580-e0a7-5b668e06742a" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -14500,6 +14706,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="41eeec8c-f92c-3f38-2641-b0dacc5751db" name="Regular Soldier with LMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="559b917e-f4d1-5c55-536f-94bd8a2962f1" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2bc098ef-29e2-2580-e0a7-5b668e06742a" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -14514,6 +14727,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="3802aed5-be87-ddfd-cb69-35e7e1b62cb3" name="Regular Soldier with SMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="559b917e-f4d1-5c55-536f-94bd8a2962f1" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2bc098ef-29e2-2580-e0a7-5b668e06742a" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -14631,40 +14851,46 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
       </costs>
     </selectionEntry>
     <selectionEntry id="86521027-a425-e7dc-5ff0-15e28e5b4439" name="SAS Infantry Section" page="0" hidden="false" collective="false" import="true" type="unit">
-      <rules>
-        <rule id="7d4c-b1a9-8bed-c7c0" name="&apos;Who dares win&apos;!" hidden="false">
-          <description>To represent their special training and motivation, SAS units have the fanatics special rule.</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="82df7149-09bc-8b4b-f108-1fd7e297a2ac" name="Behind Enemy Lines" hidden="false" targetId="ef26-3f67-bf0d-8ef3" type="rule"/>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="434d-b2d4-6d54-82a0" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="decrement" field="points" value="2.0">
+              <conditions>
+                <condition field="selections" scope="86521027-a425-e7dc-5ff0-15e28e5b4439" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="434d-b2d4-6d54-82a0" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6fb-facc-ac52-24ae" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="ce91-5b94-438a-17ce" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="8bed-e320-79c8-6bf8" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="minSelections" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="86521027-a425-e7dc-5ff0-15e28e5b4439" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f2cb36e0-2774-6239-4d19-29d84e15136a" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="points" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4c8c-cf54-29d4-c771" name="&apos;Who dares win&apos;!" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c115-5f7d-2e42-c3dd" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe60-3477-898c-1a3b" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="aee2-24ab-5cef-b85a" name="&apos;Who dares win&apos;!" hidden="false" targetId="6800-412d-b894-6f5e" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5af9-2c13-466d-c027" name="Behind Enemy Lines" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c47-6041-933f-c553" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e84-246f-ec0d-56f2" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="4f76-1d8d-32fb-8d2f" name="Behind Enemy Lines" hidden="false" targetId="ef26-3f67-bf0d-8ef3" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -14678,6 +14904,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           </constraints>
           <selectionEntries>
             <selectionEntry id="ab7d9e8d-9283-2bc5-2cab-2e1c4cef175b" name="Veteran NCO" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="86521027-a425-e7dc-5ff0-15e28e5b4439" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="434d-b2d4-6d54-82a0" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -14721,6 +14954,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="f931d148-dd77-dacf-c92b-1da2d92dc606" name="Veteran Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="86521027-a425-e7dc-5ff0-15e28e5b4439" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="434d-b2d4-6d54-82a0" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -14749,6 +14989,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="3dcf28de-727d-a37e-5d03-a8aa6ca99d47" name="Veteran Soldier with LMG" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="86521027-a425-e7dc-5ff0-15e28e5b4439" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="434d-b2d4-6d54-82a0" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -14804,6 +15051,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="46a24bab-a7cd-e490-61eb-5912d78755ef" name="Veteran Soldier with SMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="86521027-a425-e7dc-5ff0-15e28e5b4439" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="434d-b2d4-6d54-82a0" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -16030,32 +16284,22 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
     <selectionEntry id="d73c9ff4-0ca6-f6da-27f0-2467b9adb7a3" name="Veteran Infantry Section (Early /Mid-War)" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="9296-4b10-91cb-8541" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="decrement" field="points" value="2.0">
+              <conditions>
+                <condition field="selections" scope="d73c9ff4-0ca6-f6da-27f0-2467b9adb7a3" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9296-4b10-91cb-8541" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbec-d2f5-9e0e-b1a9" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="d04e-00a9-c340-2f0d" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="6d1a-75a5-9b38-bbb5" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="minSelections" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="d73c9ff4-0ca6-f6da-27f0-2467b9adb7a3" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0d7151e-4707-8521-755f-1172c24d4285" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="2.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -16067,6 +16311,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           </constraints>
           <selectionEntries>
             <selectionEntry id="bec9e509-c375-4f7e-0e8c-4624de30e8dd" name="Veteran NCO" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="d73c9ff4-0ca6-f6da-27f0-2467b9adb7a3" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9296-4b10-91cb-8541" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -16108,6 +16359,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="0a4ff9da-c30f-df23-0873-c20ca2193184" name="Veteran Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="d73c9ff4-0ca6-f6da-27f0-2467b9adb7a3" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9296-4b10-91cb-8541" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -16123,6 +16381,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="84dbe3ea-1bcb-845c-a6a2-1dfa3511e349" name="Veteran Soldier with LMG" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="d73c9ff4-0ca6-f6da-27f0-2467b9adb7a3" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9296-4b10-91cb-8541" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -16137,6 +16402,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="9bc0ae46-580c-6ca8-44da-1a927b46e6cb" name="Veteran Soldier with SMG" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="d73c9ff4-0ca6-f6da-27f0-2467b9adb7a3" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9296-4b10-91cb-8541" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -16160,30 +16432,20 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
     <selectionEntry id="719629a8-ebf4-40b9-733d-23e0662d5ef4" name="Veteran Infantry Section (Late-War)" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="f7f2-56a4-76e5-8302" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="decrement" field="points" value="2.0">
+              <conditions>
+                <condition field="selections" scope="719629a8-ebf4-40b9-733d-23e0662d5ef4" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f7f2-56a4-76e5-8302" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fde3-88ba-819a-bc52" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="b489-59ac-f231-4255" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="0107-4ac6-ad2c-563f" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="minSelections" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="719629a8-ebf4-40b9-733d-23e0662d5ef4" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a91f0341-f0fd-08ef-c22a-0a6cddd4c513" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -16197,6 +16459,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           </constraints>
           <selectionEntries>
             <selectionEntry id="f0011c57-34d9-7c9c-2b78-da393dfd2600" name="Veteran NCO" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="719629a8-ebf4-40b9-733d-23e0662d5ef4" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f7f2-56a4-76e5-8302" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -16238,6 +16507,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="f1e8abb8-32d9-1c27-4dd3-3f5bf7258687" name="Veteran Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="719629a8-ebf4-40b9-733d-23e0662d5ef4" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f7f2-56a4-76e5-8302" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -16252,6 +16528,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="49391144-a5f4-dbd8-c248-d7dd49829715" name="Veteran Soldier with LMG" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="719629a8-ebf4-40b9-733d-23e0662d5ef4" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f7f2-56a4-76e5-8302" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -16266,6 +16549,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="f861e8d3-0e2b-1723-1d94-fd973a7412c2" name="Veteran Soldier with SMG" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="719629a8-ebf4-40b9-733d-23e0662d5ef4" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f7f2-56a4-76e5-8302" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -16506,6 +16796,7 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                 <selectionEntry id="240e-75cf-5c8d-a130" name="Bangalore Torpedoes" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="596f-9188-8d82-1887" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3795-47f2-af6b-a8a4" type="min"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="0755-58f1-9e89-e537" name="Bangalore Torpedoes" hidden="false" targetId="d8a8-37d9-d3a3-367a" type="rule"/>
@@ -16516,15 +16807,15 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                 </selectionEntry>
                 <selectionEntry id="7841-d16c-5d1b-ee33" name="Demolition Charges" hidden="false" collective="false" import="true" type="upgrade">
                   <modifiers>
-                    <modifier type="increment" field="5d6c-bf00-fe56-62f6" value="1.0">
-                      <repeats>
-                        <repeat field="selections" scope="d75f-0c5e-f054-d935" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d75f-0c5e-f054-d935" repeats="1" roundUp="false"/>
-                      </repeats>
+                    <modifier type="decrement" field="points" value="3.0">
+                      <conditions>
+                        <condition field="selections" scope="d75f-0c5e-f054-d935" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7841-d16c-5d1b-ee33" type="greaterThan"/>
+                      </conditions>
                     </modifier>
                   </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5d6c-bf00-fe56-62f6" type="min"/>
-                    <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="20fe-387e-0471-787e" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="20fe-387e-0471-787e" type="max"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="60bb-72dd-bbba-29fc" name="Demolition Chargers" hidden="false" targetId="baf9-4a70-990c-98b0" type="rule"/>
@@ -16535,15 +16826,15 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                 </selectionEntry>
                 <selectionEntry id="51db-990f-8279-3922" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
                   <modifiers>
-                    <modifier type="increment" field="0dc8-5297-7a58-3ae0" value="1.0">
-                      <repeats>
-                        <repeat field="selections" scope="d75f-0c5e-f054-d935" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d75f-0c5e-f054-d935" repeats="1" roundUp="false"/>
-                      </repeats>
+                    <modifier type="decrement" field="points" value="2.0">
+                      <conditions>
+                        <condition field="selections" scope="d75f-0c5e-f054-d935" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="51db-990f-8279-3922" type="greaterThan"/>
+                      </conditions>
                     </modifier>
                   </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0dc8-5297-7a58-3ae0" type="min"/>
-                    <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="091c-2f8a-9a45-7e0c" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="091c-2f8a-9a45-7e0c" type="max"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="162b-cdba-f918-8819" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
@@ -16561,6 +16852,18 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                   </constraints>
                   <selectionEntries>
                     <selectionEntry id="de90-c8b0-a42c-6e2f" name="Regular Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="points" value="2.0">
+                          <conditions>
+                            <condition field="selections" scope="d75f-0c5e-f054-d935" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="51db-990f-8279-3922" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                        <modifier type="increment" field="points" value="3.0">
+                          <conditions>
+                            <condition field="selections" scope="d75f-0c5e-f054-d935" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7841-d16c-5d1b-ee33" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6155-e74c-1279-937b" type="min"/>
                         <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="656e-a418-a715-21d1" type="max"/>
@@ -16576,6 +16879,18 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="60d0-de07-85a8-56a9" name="Regular Soldier with Flamethrower" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="points" value="2.0">
+                          <conditions>
+                            <condition field="selections" scope="d75f-0c5e-f054-d935" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="51db-990f-8279-3922" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                        <modifier type="increment" field="points" value="3.0">
+                          <conditions>
+                            <condition field="selections" scope="d75f-0c5e-f054-d935" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7841-d16c-5d1b-ee33" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9bb-536b-9b5b-c0ff" type="max"/>
                       </constraints>
@@ -16590,6 +16905,18 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="2494-3aa4-773f-00ca" name="Regular NCO" page="0" hidden="false" collective="false" import="true" type="model">
+                      <modifiers>
+                        <modifier type="increment" field="points" value="2.0">
+                          <conditions>
+                            <condition field="selections" scope="d75f-0c5e-f054-d935" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="51db-990f-8279-3922" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                        <modifier type="increment" field="points" value="3.0">
+                          <conditions>
+                            <condition field="selections" scope="d75f-0c5e-f054-d935" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7841-d16c-5d1b-ee33" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="11cb-d974-6225-77fc" type="min"/>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f3a0-9e9d-ac0f-5835" type="max"/>
@@ -16620,6 +16947,18 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="ca4b-0359-3aa0-9556" name="Regular Soldier with LMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="points" value="2.0">
+                          <conditions>
+                            <condition field="selections" scope="d75f-0c5e-f054-d935" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="51db-990f-8279-3922" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                        <modifier type="increment" field="points" value="3.0">
+                          <conditions>
+                            <condition field="selections" scope="d75f-0c5e-f054-d935" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7841-d16c-5d1b-ee33" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ee79-b570-2cf5-f0cd" type="max"/>
                       </constraints>
@@ -16651,6 +16990,7 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                 <selectionEntry id="c7e2-4179-e8e8-7750" name="Bangalore Torpedoes" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a78e-ea58-7b30-947f" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e92f-a841-6925-5cde" type="min"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="0743-61b5-c408-59d9" name="Bangalore Torpedoes" hidden="false" targetId="d8a8-37d9-d3a3-367a" type="rule"/>
@@ -16661,15 +17001,15 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                 </selectionEntry>
                 <selectionEntry id="39f9-dfb3-e8ed-71a2" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
                   <modifiers>
-                    <modifier type="increment" field="95ce-91c3-f1d4-a8ba" value="1.0">
-                      <repeats>
-                        <repeat field="selections" scope="0e6f-fdcf-39e4-6f33" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e6f-fdcf-39e4-6f33" repeats="1" roundUp="false"/>
-                      </repeats>
+                    <modifier type="decrement" field="points" value="2.0">
+                      <conditions>
+                        <condition field="selections" scope="0e6f-fdcf-39e4-6f33" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="39f9-dfb3-e8ed-71a2" type="greaterThan"/>
+                      </conditions>
                     </modifier>
                   </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="95ce-91c3-f1d4-a8ba" type="min"/>
-                    <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67b6-6020-e970-ef1b" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67b6-6020-e970-ef1b" type="max"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="45e4-cb3c-abc3-5b49" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
@@ -16680,21 +17020,21 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                 </selectionEntry>
                 <selectionEntry id="dd65-ddf8-4a9d-7782" name="Demolition Charges" hidden="false" collective="false" import="true" type="upgrade">
                   <modifiers>
-                    <modifier type="increment" field="0c43-d837-1582-e0a3" value="1.0">
-                      <repeats>
-                        <repeat field="selections" scope="0e6f-fdcf-39e4-6f33" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e6f-fdcf-39e4-6f33" repeats="1" roundUp="false"/>
-                      </repeats>
+                    <modifier type="increment" field="points" value="3.0">
+                      <conditions>
+                        <condition field="selections" scope="0e6f-fdcf-39e4-6f33" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dd65-ddf8-4a9d-7782" type="greaterThan"/>
+                      </conditions>
                     </modifier>
                   </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0c43-d837-1582-e0a3" type="min"/>
-                    <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b67-5d86-1172-dff0" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b67-5d86-1172-dff0" type="max"/>
                   </constraints>
                   <infoLinks>
                     <infoLink id="bbc7-0e70-2969-f06b" name="Demolition Chargers" hidden="false" targetId="baf9-4a70-990c-98b0" type="rule"/>
                   </infoLinks>
                   <costs>
-                    <cost name="pts" typeId="points" value="2.0"/>
+                    <cost name="pts" typeId="points" value="3.0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
@@ -16706,6 +17046,18 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                   </constraints>
                   <selectionEntries>
                     <selectionEntry id="845f-a396-6cc4-d5c4" name="Veteran NCO" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="points" value="2.0">
+                          <conditions>
+                            <condition field="selections" scope="0e6f-fdcf-39e4-6f33" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="39f9-dfb3-e8ed-71a2" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                        <modifier type="increment" field="points" value="3.0">
+                          <conditions>
+                            <condition field="selections" scope="0e6f-fdcf-39e4-6f33" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dd65-ddf8-4a9d-7782" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f905-5960-35c0-01aa" type="min"/>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d23c-0bfa-5b7c-1b2b" type="max"/>
@@ -16739,6 +17091,18 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="cc55-c490-7f2a-e226" name="Veteran Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="points" value="2.0">
+                          <conditions>
+                            <condition field="selections" scope="0e6f-fdcf-39e4-6f33" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="39f9-dfb3-e8ed-71a2" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                        <modifier type="increment" field="points" value="3.0">
+                          <conditions>
+                            <condition field="selections" scope="0e6f-fdcf-39e4-6f33" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dd65-ddf8-4a9d-7782" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="325f-a132-3517-1a75" type="min"/>
                         <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5671-9a93-cbe7-0b4f" type="max"/>
@@ -16754,6 +17118,18 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="6d20-a7eb-7794-dc93" name="Veteran Soldier with Flamethrower" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="points" value="2.0">
+                          <conditions>
+                            <condition field="selections" scope="0e6f-fdcf-39e4-6f33" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="39f9-dfb3-e8ed-71a2" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                        <modifier type="increment" field="points" value="3.0">
+                          <conditions>
+                            <condition field="selections" scope="0e6f-fdcf-39e4-6f33" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dd65-ddf8-4a9d-7782" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d8e5-6e86-86d2-ae6f" type="max"/>
                       </constraints>
@@ -16768,6 +17144,18 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="e058-fddb-ae1b-9ca6" name="Veteran Soldier with LMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="points" value="2.0">
+                          <conditions>
+                            <condition field="selections" scope="0e6f-fdcf-39e4-6f33" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="39f9-dfb3-e8ed-71a2" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                        <modifier type="increment" field="points" value="3.0">
+                          <conditions>
+                            <condition field="selections" scope="0e6f-fdcf-39e4-6f33" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dd65-ddf8-4a9d-7782" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7826-483b-3b45-d35b" type="max"/>
                       </constraints>
@@ -16880,38 +17268,21 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="856d-067e-0ffe-071e" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="1b58-ad96-e467-5eb5" name="Get back in the fight!" hidden="false" targetId="d379-6c54-c4a1-0281" type="rule"/>
-        <infoLink id="ad6f-2797-e161-2a1f" name="Traffic Direction" hidden="false" targetId="7ecc-2b1a-61ad-d825" type="rule"/>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="91bf-6e8e-995d-d8e5" name="Motorcycles" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="decrement" field="points" value="5.0">
+              <conditions>
+                <condition field="selections" scope="f22f-fcd9-e852-8c6e" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="91bf-6e8e-995d-d8e5" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="52a4-f637-9e03-f60f" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5489-3287-5ef4-d6a4" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="fe4f-8192-616a-b52d" name="Motorcycles" page="0" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="382c-3223-84f6-7497" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="f22f-fcd9-e852-8c6e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9711-a4bd-748a-6a43" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="382c-3223-84f6-7497" type="min"/>
-                <constraint field="selections" scope="parent" value="11.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="adb9-6577-590e-1dae" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="ae5c-c158-e61d-5e75" name="Motorbikes" hidden="false" targetId="a9e6-1bf4-b097-df12" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="5.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="5.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0c49-e100-9fc4-b631" name="Pistols" hidden="false" collective="false" import="true" type="upgrade">
@@ -16940,6 +17311,30 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="47e7-aced-893d-aea5" name="Get back in the fight!" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1455-28f0-0f91-55ee" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f60f-9b38-4b25-dceb" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="1f87-6f9d-cade-1e1d" name="Get back in the fight!" hidden="false" targetId="d379-6c54-c4a1-0281" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="64e2-e56b-6ce5-f981" name="Traffic Direction" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5719-3ffc-c858-b529" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4d3f-0ed5-79f0-9775" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="43e5-ef00-9e07-03ab" name="Traffic Direction" hidden="false" targetId="7ecc-2b1a-61ad-d825" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="9711-a4bd-748a-6a43" name="Squad Members" hidden="false" collective="false" import="true">
@@ -16949,6 +17344,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           </constraints>
           <selectionEntries>
             <selectionEntry id="6381-04f7-3627-8f03" name="Inexperienced Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="5.0">
+                  <conditions>
+                    <condition field="selections" scope="f22f-fcd9-e852-8c6e" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="91bf-6e8e-995d-d8e5" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6152-042c-7408-6d1e" type="min"/>
                 <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3e35-9308-9469-672a" type="max"/>
@@ -16964,6 +17366,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="35e1-12d2-e872-ae2a" name="Inexperienced NCO" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="points" value="5.0">
+                  <conditions>
+                    <condition field="selections" scope="f22f-fcd9-e852-8c6e" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="91bf-6e8e-995d-d8e5" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ec5d-b285-33fd-bc24" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ba24-eedf-97a3-1fd6" type="max"/>
@@ -17368,6 +17777,9 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a742-d490-f56d-b45e" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="412f-194d-422c-b2c1" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="3cda-0042-3ded-b3f1" name="New CategoryLink" hidden="false" targetId="2ddc-c371-7e08-928b" primary="true"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="afcd-a068-7378-4f89" name="None" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
@@ -17450,6 +17862,15 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
   <sharedRules>
     <rule id="ff45bee4-6a2a-d7ab-0da6-487115a9a3ce" name="75MM AT-gun" page="0" hidden="false">
       <description>HE: Instead of causing D2 HE hits, an HE shell causes D6 hits. </description>
+    </rule>
+    <rule id="58ca-137f-a472-efd6" name="Fire &amp; Manoeuvre" page="0" hidden="false">
+      <description>The unit do not suffer the -1 to hit penality when making advance orders.</description>
+    </rule>
+    <rule id="1e66-a034-2bba-6a37" name="Scary Blighters" page="0" hidden="false">
+      <description>Any enemy unit fighting Ghurkas in close combat will halve its total number of attacks against the Ghurkas (rounding up).</description>
+    </rule>
+    <rule id="6800-412d-b894-6f5e" name="&apos;Who dares win&apos;!" hidden="false">
+      <description>To represent their special training and motivation, SAS units have the fanatics special rule.</description>
     </rule>
   </sharedRules>
 </catalogue>
