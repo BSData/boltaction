@@ -2260,32 +2260,22 @@
     <selectionEntry id="fe6bc7e4-e8e1-382e-8dff-f5d9ca21d4a3" name="Inexperienced Infantry Section" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="37dfbfa5-2923-8590-df64-755ccbf8bb8c" name="Shirkers" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="points" value="3.0">
+              <conditions>
+                <condition field="selections" scope="fe6bc7e4-e8e1-382e-8dff-f5d9ca21d4a3" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="37dfbfa5-2923-8590-df64-755ccbf8bb8c" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2104-abf7-0aef-02cd" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="47daed2b-29c3-66e8-0af8-91fe298ee751" name="Shirkers" page="0" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="minSelections" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="fe6bc7e4-e8e1-382e-8dff-f5d9ca21d4a3" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ed065f3d-559c-b3b8-aeee-c296e85f9ccb" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-                <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="114d18ce-5e8d-c5f5-064f-cb64d34f1a89" name="Shirkers" hidden="false" targetId="df62-2282-8e14-569c" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="-3.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+          <infoLinks>
+            <infoLink id="a99a-dd94-ef44-508b" name="Shirkers" hidden="false" targetId="df62-2282-8e14-569c" type="rule"/>
+          </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="-3.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2297,6 +2287,13 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="025ec102-e9a3-5cab-2d7b-f7a3c1cfa24d" name="Inexperienced NCO" page="0" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="decrement" field="points" value="3.0">
+                  <conditions>
+                    <condition field="selections" scope="fe6bc7e4-e8e1-382e-8dff-f5d9ca21d4a3" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="37dfbfa5-2923-8590-df64-755ccbf8bb8c" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -2341,6 +2338,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="83af8dc8-acb3-dfea-46cb-2cb75178f731" name="Inexperienced Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="decrement" field="points" value="3.0">
+                  <conditions>
+                    <condition field="selections" scope="fe6bc7e4-e8e1-382e-8dff-f5d9ca21d4a3" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="37dfbfa5-2923-8590-df64-755ccbf8bb8c" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
                 <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -2356,6 +2360,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="ce080ab2-44da-731d-9b7e-48abcf5d7518" name="Inexperienced Soldier with LMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="decrement" field="points" value="3.0">
+                  <conditions>
+                    <condition field="selections" scope="fe6bc7e4-e8e1-382e-8dff-f5d9ca21d4a3" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="37dfbfa5-2923-8590-df64-755ccbf8bb8c" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -2951,11 +2962,20 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="4d46ecca-8348-0633-6703-69b5c355ca39" name="Mounted Section" page="0" hidden="false" collective="false" import="true" type="unit">
-      <rules>
-        <rule id="41e0efb2-26ed-87a6-d91d-423d7d75250c" name="Bulgarian Calvary " page="0" hidden="false">
-          <description>Bulgarian calvary units may not move into contact with an enemy unit while mounted. On the other hand, Bulgarian cavalry sections do not suffer the -1 to their leadership roll to arrive from reserve.</description>
-        </rule>
-      </rules>
+      <selectionEntries>
+        <selectionEntry id="4c72-acf3-1cb8-db40" name="Bulgarian Calvary " hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="335a-78e9-0447-81f3" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b3b-747b-f72e-971a" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="710a-9216-bdab-4e43" name="Bulgarian Calvary " hidden="false" targetId="bf04-84e8-d20b-26cc" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="3f75e582-8b23-2d4f-362c-823f1f283ef4" name="Veteran Squad Members" hidden="false" collective="false" import="true">
           <constraints>
@@ -4769,6 +4789,9 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33b0-89cd-cd31-e9c7" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cdac-b7a4-c311-525a" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="be1b-1952-8bc2-4ad4" name="New CategoryLink" hidden="false" targetId="2ddc-c371-7e08-928b" primary="true"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="aba8-8b07-2d44-3578" name="None" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
@@ -4783,6 +4806,11 @@
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
+  <sharedRules>
+    <rule id="bf04-84e8-d20b-26cc" name="Bulgarian Calvary " page="0" hidden="false">
+      <description>Bulgarian calvary units may not move into contact with an enemy unit while mounted. On the other hand, Bulgarian cavalry sections do not suffer the -1 to their leadership roll to arrive from reserve.</description>
+    </rule>
+  </sharedRules>
   <sharedProfiles>
     <profile id="109d237f-140f-68df-f0a5-d09ffa18e6b6" name="Inexperienced" page="0" hidden="false" typeId="2824ab73-d5bb-a968-a566-19371da1c5e4" typeName="Troop Quality">
       <characteristics>

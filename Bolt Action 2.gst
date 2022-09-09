@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="d373-d979-116c-5487" name="Bolt Action 2.0" revision="5" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="d373-d979-116c-5487" name="Bolt Action 2.0" revision="6" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d373-d979-pubN70886" name="Tank War"/>
     <publication id="a4ea-50a6-5c1c-0429" name="Battle of France"/>
@@ -66,51 +66,52 @@
   <forceEntries>
     <forceEntry id="efef-703c-d244-559f" name="Generic Reinforced Platoon" hidden="false">
       <categoryLinks>
-        <categoryLink id="8a65-0e59-d1a8-dab2" name="Theatre Selector and Utility" hidden="false" targetId="2ddc-c371-7e08-928b" primary="false"/>
-        <categoryLink id="37f1-879a-34b6-e4b6" name="Compulsory Infantry" hidden="false" targetId="f543-f483-48ce-9b05" primary="false"/>
-        <categoryLink id="57d5-7acd-b2d8-48d7" name="Headquarters" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
-        <categoryLink id="51da-8bd8-f913-07a3" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="false"/>
-        <categoryLink id="db65-82a1-31c1-6bca" name="Infantry Support" hidden="false" targetId="a01f5f58-334c-8442-d861-15099ebdf5e5" primary="false"/>
-        <categoryLink id="053d-5734-81b2-3955" name="Artillery" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="false"/>
-        <categoryLink id="8981-76bf-6653-b6fd" name="Armoured Cars and Recce Vehicles" hidden="false" targetId="f2903219-8ebc-8034-37ec-78a7f9040c20" primary="false"/>
-        <categoryLink id="6b89-efd8-263b-3b90" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="false"/>
-        <categoryLink id="19dc-d16a-b15f-7654" name="Transports" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="false">
+        <categoryLink id="6e80-cfa4-2e34-a576" name="Theatre Selector and Utility" hidden="false" targetId="2ddc-c371-7e08-928b" primary="false"/>
+        <categoryLink id="865f-ce6c-c89c-f2de" name="Free Units" hidden="false" targetId="0fcbe145-b362-4be0-2491-dbf2db078475" primary="false"/>
+        <categoryLink id="4843-47a5-4b08-bcc6" name="Compulsory Infantry" hidden="false" targetId="f543-f483-48ce-9b05" primary="false"/>
+        <categoryLink id="4b50-fc7e-47af-c11c" name="Headquarters" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
+        <categoryLink id="b815-f6e6-7c7c-49de" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="false"/>
+        <categoryLink id="c300-7220-d19b-e345" name="Infantry Support" hidden="false" targetId="a01f5f58-334c-8442-d861-15099ebdf5e5" primary="false"/>
+        <categoryLink id="5b5c-8fab-577a-b60f" name="Artillery" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="false"/>
+        <categoryLink id="8568-c74f-c47d-7772" name="Armoured Cars and Recce Vehicles" hidden="false" targetId="f2903219-8ebc-8034-37ec-78a7f9040c20" primary="false"/>
+        <categoryLink id="c379-4700-0446-a712" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="75e6-a726-7549-c811" primary="false"/>
+        <categoryLink id="a00e-3a9f-3549-7b0b" name="Transports" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="false">
           <modifiers>
-            <modifier type="increment" field="7bcf-1ff0-9ca3-d1a4" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="5c47879b-41d0-1383-5fe5-a5989615db89" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" field="7bcf-1ff0-9ca3-d1a4" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="481abf13-c03e-0dd0-d520-9f9837253cbe" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" field="7bcf-1ff0-9ca3-d1a4" value="1.0">
+            <modifier type="increment" field="df9b-2562-5b4b-e544" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="a01f5f58-334c-8442-d861-15099ebdf5e5" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="7bcf-1ff0-9ca3-d1a4" value="1.0">
+            <modifier type="increment" field="df9b-2562-5b4b-e544" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="f543-f483-48ce-9b05" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="increment" field="df9b-2562-5b4b-e544" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="5c47879b-41d0-1383-5fe5-a5989615db89" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="df9b-2562-5b4b-e544" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="481abf13-c03e-0dd0-d520-9f9837253cbe" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="7bcf-1ff0-9ca3-d1a4" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="df9b-2562-5b4b-e544" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="d1cd-c01b-61ed-00c6" name="Tows" hidden="false" targetId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" primary="false">
+        <categoryLink id="c08f-65c4-d161-2fe9" name="Tows" hidden="false" targetId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" primary="false">
           <modifiers>
-            <modifier type="increment" field="cc9b-5ce5-adc7-7fb5" value="1.0">
+            <modifier type="increment" field="a8eb-0acc-f862-7b09" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="cc9b-5ce5-adc7-7fb5" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="a8eb-0acc-f862-7b09" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -1644,6 +1645,51 @@
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup id="ce88-220a-ecf0-d5c7" name="Command Vehicle Options" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="51cc-a692-5571-1b34" name="New CategoryLink" hidden="false" targetId="2ddc-c371-7e08-928b" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="7f54-dcd7-12e6-a8f7" name="Add Armoured Platoon Commander" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="points" value="5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="aa75-4f25-b040-03ab" name="Add Armoured Company Commander" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="points" value="15.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="072b-71fa-54b5-2b93" name="Add Armoured Battalion Commander" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="points" value="25.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1d34-e56c-8356-ea88" name="Reduce morale bonus distance from 12&quot; to 6&quot; (Lack of Radios) " hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="points" value="-5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3dca-3047-9a2f-26c3" name="None" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="1243-e8b7-ed01-2010" name="Amphibious" page="0" hidden="false">
       <description>Vehicle can move on impassable water at at half speed by means of an Advance action.</description>
