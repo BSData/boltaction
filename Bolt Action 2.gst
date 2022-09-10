@@ -64,7 +64,7 @@
     <categoryEntry id="2ddc-c371-7e08-928b" name="Theatre Selector and Utility" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="efef-703c-d244-559f" name="Generic Reinforced Platoon" hidden="false">
+    <forceEntry id="efef-703c-d244-559f" name="Reinforced Platoon" hidden="false">
       <categoryLinks>
         <categoryLink id="6e80-cfa4-2e34-a576" name="Theatre Selector and Utility" hidden="false" targetId="2ddc-c371-7e08-928b" primary="false"/>
         <categoryLink id="865f-ce6c-c89c-f2de" name="Free Units" hidden="false" targetId="0fcbe145-b362-4be0-2491-dbf2db078475" primary="false"/>

@@ -37,6 +37,9 @@
       <entryLinks>
         <entryLink id="a07e-1a81-700d-04a2" name="Command Vehicle Options" hidden="false" collective="false" import="true" targetId="ce88-220a-ecf0-d5c7" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -3384,9 +3387,20 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="4d46ecca-8348-0633-6703-69b5c355ca39" name="Cavalry Section" page="0" hidden="true" collective="false" import="true" type="unit">
-      <infoLinks>
-        <infoLink id="ba66-98aa-f56e-7668" name="Cavalry" hidden="false" targetId="525c-47c4-f59c-5c9a" type="rule"/>
-      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="05e8-aba0-298c-d705" name="Cavalry" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1b1-2423-1ffa-e43a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a170-b5dd-7d40-fc8d" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="7260-3e05-00cd-3ef8" name="Cavalry" hidden="false" targetId="525c-47c4-f59c-5c9a" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="3f75e582-8b23-2d4f-362c-823f1f283ef4" name="Squad Members" hidden="false" collective="false" import="true">
           <constraints>
@@ -6770,6 +6784,13 @@
     <selectionEntry id="58a76cdd-dcd9-58f2-1540-560bb6b83110" name="Regular Infantry Section" page="0" hidden="true" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="3d9e-ca40-7008-4121" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="decrement" field="points" value="2.0">
+              <conditions>
+                <condition field="selections" scope="58a76cdd-dcd9-58f2-1540-560bb6b83110" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3d9e-ca40-7008-4121" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a1cc-02b8-3eec-9410" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f1d0-660d-ef94-6428" type="max"/>
@@ -6871,7 +6892,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="796d39d8-66ba-6382-bce9-f19438d052f4" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+                <infoLink id="796d39d8-66ba-6382-bce9-f19438d052f4" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <entryLinks>
                 <entryLink id="fbc32807-74ee-bc2e-1846-755231ba58be" hidden="false" collective="false" import="true" targetId="14a1-5df7-8293-36d8" type="selectionEntry"/>
@@ -6977,7 +6998,7 @@
       <selectionEntries>
         <selectionEntry id="972d-fa29-e331-915e" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="increment" field="points" value="2.0">
+            <modifier type="decrement" field="points" value="2.0">
               <conditions>
                 <condition field="selections" scope="a8e2b20f-7d48-ac46-5ce8-20b06521987c" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="972d-fa29-e331-915e" type="greaterThan"/>
               </conditions>
@@ -9322,7 +9343,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2036-d7fd-6fa5-1900" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="cc44-d5cb-dc6d-d40f" name="None" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="cc44-d5cb-dc6d-d40f" name="Generic Reinforced Platoon" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
