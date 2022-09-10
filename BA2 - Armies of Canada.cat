@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2678-9000-b13e-ae14" name="Armies of Canada" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2678-9000-b13e-ae14" name="Armies of Canada" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <selectionEntries>
+    <selectionEntry id="300b-9240-5951-8bc7" name="Threatre Selector" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41c2-a00a-b9e7-7f07" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6de0-b785-f1b1-3273" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="91f2-3321-f89c-95f2" name="New CategoryLink" hidden="false" targetId="2ddc-c371-7e08-928b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="d825-3e91-b7d3-191f" name="Theatre Selector" hidden="false" collective="false" import="true" targetId="4222-c50d-d286-7885" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="134a-5f7c-bf17-9391" name="Command Vehicle Options" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3eae-1778-3e9e-19bb" name="New CategoryLink" hidden="false" targetId="2ddc-c371-7e08-928b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="6c9f-6e00-b432-f832" name="Command Vehicle Options" hidden="false" collective="false" import="true" targetId="ce88-220a-ecf0-d5c7" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntry>
+  </selectionEntries>
   <entryLinks>
     <entryLink id="911a-f270-0c29-749c" name="Platoon Commander" hidden="false" collective="false" import="true" targetId="d288-ab01-2d74-1b31" type="selectionEntry">
       <modifiers>
@@ -11934,7 +11967,7 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="4222-c50d-d286-7885" name="Threatre Selector" hidden="false" collective="false" import="true" defaultSelectionEntryId="4451-c206-5d31-f64d">
+    <selectionEntryGroup id="4222-c50d-d286-7885" name="Theatre Selector" hidden="false" collective="false" import="true" defaultSelectionEntryId="4451-c206-5d31-f64d">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8334-9604-9c15-4bdf" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b39-6fd6-ec7c-7002" type="max"/>

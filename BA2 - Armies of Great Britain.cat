@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b7ca-1350-985e-0bff" name="Armies of Great Britain" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b7ca-1350-985e-0bff" name="Armies of Great Britain" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="b7ca-1350-pubN86488" name="Tank War "/>
     <publication id="b7ca-1350-pubN87229" name="Tank War"/>
@@ -11,12 +11,34 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2fa-59dc-b1f9-fe63" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d2b-37bd-8b23-50b7" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="7e76-a6cf-9493-317b" name="New CategoryLink" hidden="false" targetId="2ddc-c371-7e08-928b" primary="true"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="220b-fe63-cb6d-8855" name="Threatre Selector" hidden="false" collective="false" import="true" targetId="f730-a0c0-eb12-0648" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="9b7b-28a4-343f-3aea" name="Command Vehicle Options" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="e589-4c48-3eaf-3573" name="New CategoryLink" hidden="false" targetId="2ddc-c371-7e08-928b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="6bd3-3b84-3e50-a22f" name="Command Vehicle Options" hidden="false" collective="false" import="true" targetId="ce88-220a-ecf0-d5c7" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -6205,6 +6227,9 @@
           <infoLinks>
             <infoLink id="f00e-b37d-ac4d-2d77" name="Behind Enemy Lines" hidden="false" targetId="ef26-3f67-bf0d-8ef3" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="a956-9cc6-68ae-b133" name="Fire &amp; Manoeuvre" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -6214,6 +6239,9 @@
           <infoLinks>
             <infoLink id="3157-58cd-aa7e-ade5" name="Fire &amp; Manoeuvre" hidden="false" targetId="58ca-137f-a472-efd6" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -6535,6 +6563,9 @@
           <infoLinks>
             <infoLink id="5ac6-c802-05d0-e555" name="Tough Fighters" hidden="false" targetId="123f-ba11-633a-56ff" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="075c-27fe-81ab-b45e" name="Behind Enemy Lines" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -6544,6 +6575,9 @@
           <infoLinks>
             <infoLink id="cd50-419a-beaa-1c90" name="Behind Enemy Lines" hidden="false" targetId="ef26-3f67-bf0d-8ef3" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -8212,6 +8246,9 @@
           <infoLinks>
             <infoLink id="3720-08dc-3667-80fc" name="Scary Blighters" hidden="false" targetId="1e66-a034-2bba-6a37" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="7071-fc35-7658-dd03" name="Tough Fighters" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -8221,6 +8258,9 @@
           <infoLinks>
             <infoLink id="6dde-97da-6178-7730" name="Tough Fighters" hidden="false" targetId="123f-ba11-633a-56ff" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>

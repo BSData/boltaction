@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="bf04-bfd9-246f-f2f2" name="Armies of France" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="bf04-bfd9-246f-f2f2" name="Armies of France" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="b822-b930-4744-7a95" name="Theatre Selector" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3884-fb41-683b-e1f4" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53a8-4c65-509c-a807" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="85a8-1ccb-97d8-c239" name="New CategoryLink" hidden="false" targetId="2ddc-c371-7e08-928b" primary="true"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="9625-65c2-dc02-5112" name="Threatre Selector" hidden="false" collective="false" import="true" targetId="3d80-6cd3-766d-d200" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="f4e0-642f-db0b-cbf3" name="Command Vehicle Options" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="7042-806c-330e-c22a" name="New CategoryLink" hidden="false" targetId="2ddc-c371-7e08-928b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="c670-fe85-8fe3-5328" name="Command Vehicle Options" hidden="false" collective="false" import="true" targetId="ce88-220a-ecf0-d5c7" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -10018,7 +10040,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="9f04-2810-0fb1-9b55" name="Variants" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="9f04-2810-0fb1-9b55" name="Variants" hidden="false" collective="false" import="true" defaultSelectionEntryId="c24b-28eb-ba44-cc64">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="55da-fdfe-6faf-e78c" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b19-2b3d-a137-7442" type="max"/>
@@ -14355,49 +14377,6 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="17f1-fb22-f75d-9ec6" name="1942-43: Free French in North Africa" hidden="false" collective="false" import="true" type="upgrade">
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="5260-dbad-5e54-7892" name="Command Vehicle Options" hidden="false" collective="false" import="true" defaultSelectionEntryId="f058-eefc-0012-0751">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="9926-4b9a-75cb-d31a" name="New CategoryLink" hidden="false" targetId="2ddc-c371-7e08-928b" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="bdb6-34f9-0f8c-486c" name="Add Armoured Platoon Commander" hidden="false" collective="false" import="true" type="upgrade">
-          <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e699-6062-dc2f-5245" name="Add Armoured Company Commander" hidden="false" collective="false" import="true" type="upgrade">
-          <costs>
-            <cost name="pts" typeId="points" value="15.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0dd4-ed95-dbb2-c371" name="Add Armoured Battalion Commander" hidden="false" collective="false" import="true" type="upgrade">
-          <costs>
-            <cost name="pts" typeId="points" value="25.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7d72-21f8-fc1b-0081" name="Reduce morale bonus distance from 12&quot; to 6&quot; (Lack of Radios) " hidden="false" collective="false" import="true" type="upgrade">
-          <costs>
-            <cost name="pts" typeId="points" value="-5.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f058-eefc-0012-0751" name="None" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

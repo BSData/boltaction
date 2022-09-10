@@ -1646,7 +1646,7 @@
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="ce88-220a-ecf0-d5c7" name="Command Vehicle Options" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="ce88-220a-ecf0-d5c7" name="Command Vehicle Options" hidden="false" collective="false" import="true" defaultSelectionEntryId="3dca-3047-9a2f-26c3">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -1663,26 +1663,46 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7f54-dcd7-12e6-a8f7" name="Add Armoured Platoon Commander" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b3d-fca6-4f11-1215" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="725e-b654-331a-5ba8" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="points" value="5.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="aa75-4f25-b040-03ab" name="Add Armoured Company Commander" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d4e-f792-807c-c34f" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b80f-d5b8-a887-9de7" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="points" value="15.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="072b-71fa-54b5-2b93" name="Add Armoured Battalion Commander" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d2b-216d-2956-a365" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f962-8b49-dea2-a1e7" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="points" value="25.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1d34-e56c-8356-ea88" name="Reduce morale bonus distance from 12&quot; to 6&quot; (Lack of Radios) " hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="036c-a7d9-0c60-9e01" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0da-6ed8-0b16-fa44" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="points" value="-5.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3dca-3047-9a2f-26c3" name="None" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7235-d1ee-320f-0fb7" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc66-4004-7f61-519b" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
