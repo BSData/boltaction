@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="d373-d979-116c-5487" name="Bolt Action 2.0" revision="6" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="d373-d979-116c-5487" name="Bolt Action 2.0" revision="7" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d373-d979-pubN70886" name="Tank War"/>
     <publication id="a4ea-50a6-5c1c-0429" name="Battle of France"/>
@@ -1926,6 +1926,12 @@
     </rule>
     <rule id="baf9-4a70-990c-98b0" name="Demolition Chargers" hidden="false">
       <description>To use demolition charges the unit must start the turn adiacent to the target then Advance at least 4&quot; avay from it. All units in a 4&quot; radius(bukers and dug in units 2&quot;) are hit with a +4 pen. (HE 4&quot;), 3D6 to blow up buildings.</description>
+    </rule>
+    <rule id="97de-516b-7917-40bf" name="Scouts" hidden="false">
+      <description>Scouts count as observers/snipers the set-up purpose.</description>
+    </rule>
+    <rule id="fcbb-6e65-7fd2-47b0" name="Lone Sniper" hidden="false">
+      <description>As it does not have the team weapon rule, the sniper does not suffer the -1 to hit for not having a spotter.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
