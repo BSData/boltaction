@@ -21,6 +21,13 @@
     <publication id="3eb0-b5eb-cc29-a210" name="Stalingrad"/>
     <publication id="87c8-e7e4-263c-5eef" name="D-Day: US Sector"/>
     <publication id="aee4-82a1-8db0-bfe7" name="Mariana &amp; Palau Islands"/>
+    <publication id="4274-48be-dba8-0ab6" name="Armies of Imperial Japan"/>
+    <publication id="069c-bdb6-04d3-7392" name="Armies of Germany V2"/>
+    <publication id="d919-e7ea-4680-bc56" name="Armies of the USA"/>
+    <publication id="6d66-3469-52ee-9d37" name="Armies of the Soviet Union"/>
+    <publication id="86aa-6664-9bc3-4e3e" name="Armies of Italy and the Axis"/>
+    <publication id="85bd-2d22-c454-2385" name="Armies of France and the Allies"/>
+    <publication id="bdcd-99cb-2408-c1c7" name="Armies of Great Britain"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
