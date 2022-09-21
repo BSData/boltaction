@@ -4414,6 +4414,23 @@
         <categoryLink id="fcc8-2aa4-ad40-0e9d" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="8c1f-b55b-cf72-7633" name="Land Mattres" hidden="true" collective="false" import="true" targetId="fa20-e962-fa18-6838" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c89c-02b7-3bc0-fe60" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="afcd-a068-7378-4f89" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="f938-fad5-504b-e613" name="New CategoryLink" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="89d97e79-cfe5-c413-05db-90a62f2dcb14" name="Bombardment" page="0" hidden="false">
@@ -17324,7 +17341,7 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f22f-fcd9-e852-8c6e" name="Corps of Military Police Section" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="f22f-fcd9-e852-8c6e" name="Corps of Military Police Section" publicationId="209e-18dc-48dd-9860" page="0" hidden="true" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="856d-067e-0ffe-071e" type="max"/>
       </constraints>
@@ -17347,28 +17364,14 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
         </selectionEntry>
         <selectionEntry id="0c49-e100-9fc4-b631" name="Pistols" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8219-7668-4f37-8456" type="max"/>
+            <constraint field="selections" scope="parent" value="11.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8219-7668-4f37-8456" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b65-d9f5-5f57-46a2" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="2722-bff0-0568-7522" name="Pistols" page="0" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="f2d4-dd79-397b-3d04" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="f22f-fcd9-e852-8c6e" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9711-a4bd-748a-6a43" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f2d4-dd79-397b-3d04" type="min"/>
-                <constraint field="selections" scope="parent" value="11.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7ece-9d88-1815-faa2" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+          <infoLinks>
+            <infoLink id="5d20-2aed-2f2c-5c3a" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
+          </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="1.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="47e7-aced-893d-aea5" name="Get back in the fight!" hidden="false" collective="false" import="true" type="upgrade">
@@ -17461,6 +17464,17 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                       </constraints>
                       <infoLinks>
                         <infoLink id="ca20-823a-1fa0-898d" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="2842-8e24-2d0f-0331" name="SMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="939c-4986-d1b7-a9b6" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="824f-fda1-4778-baa4" name="Submachine Gun (SMG)" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
@@ -17609,6 +17623,66 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="25.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fa20-e962-fa18-6838" name="Land Mattres" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="7b35-6196-bad0-c245" name="Crew" hidden="false" targetId="549b-7a6c-2710-5dfe" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(3)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="6683-26d5-20e0-ef19" name="HE (3&quot;)" hidden="false" targetId="5a66-e1c5-fdff-a987" type="rule"/>
+        <infoLink id="ae3a-4457-aa12-c28f" name="Indirect Fire" hidden="false" targetId="f319-9266-b94b-8723" type="rule"/>
+        <infoLink id="1e77-a537-0dd4-21ce" name="Multiple Launcher" hidden="false" targetId="1fd2-c465-d4c6-d2b6" type="rule"/>
+        <infoLink id="dce0-6887-9f14-8d9d" name="Fixed" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
+        <infoLink id="c371-f352-9d73-d1c9" name="Heavy Mortar" hidden="false" targetId="f95d-c544-2246-4333" type="profile"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9c13-85d2-3e3e-cf23" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2c68-c07a-3ea8-96b8" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cfce-abe1-55fe-1cb5" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="191c-8019-c28c-7d2b" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eaac-8b1c-34a8-0d78" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="7165-5e9d-737b-8051" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="60.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0bcc-7a61-8c49-08e6" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f83a-4cdd-223f-5120" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="89bd-e79b-5f60-f88d" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="72.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="fa26-a273-128d-3a4b" name="Inexperienced" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dd68-1026-0fcc-e9d7" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="e748-baa5-f228-a5d1" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="48.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
