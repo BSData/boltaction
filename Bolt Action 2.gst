@@ -77,7 +77,11 @@
       <categoryLinks>
         <categoryLink id="6e80-cfa4-2e34-a576" name="Theatre Selector and Utility" hidden="false" targetId="2ddc-c371-7e08-928b" primary="false"/>
         <categoryLink id="865f-ce6c-c89c-f2de" name="Free Units" hidden="false" targetId="0fcbe145-b362-4be0-2491-dbf2db078475" primary="false"/>
-        <categoryLink id="4843-47a5-4b08-bcc6" name="Compulsory Infantry" hidden="false" targetId="f543-f483-48ce-9b05" primary="false"/>
+        <categoryLink id="4843-47a5-4b08-bcc6" name="Compulsory Infantry" hidden="false" targetId="f543-f483-48ce-9b05" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3f9-6db8-93a2-285b" type="max"/>
+          </constraints>
+        </categoryLink>
         <categoryLink id="4b50-fc7e-47af-c11c" name="Headquarters" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
         <categoryLink id="b815-f6e6-7c7c-49de" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="false"/>
         <categoryLink id="c300-7220-d19b-e345" name="Infantry Support" hidden="false" targetId="a01f5f58-334c-8442-d861-15099ebdf5e5" primary="false"/>
