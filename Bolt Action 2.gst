@@ -29,6 +29,7 @@
     <publication id="85bd-2d22-c454-2385" name="Armies of France and the Allies"/>
     <publication id="bdcd-99cb-2408-c1c7" name="Armies of Great Britain"/>
     <publication id="352a-25fc-bef0-72ae" name="FAQ"/>
+    <publication id="d663-b67b-a1ca-59d4" name="Bolt Action Manual V2"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
