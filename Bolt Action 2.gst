@@ -1929,11 +1929,14 @@
     <rule id="baf9-4a70-990c-98b0" name="Demolition Chargers" hidden="false">
       <description>To use demolition charges the unit must start the turn adiacent to the target then Advance at least 4&quot; avay from it. All units in a 4&quot; radius(bukers and dug in units 2&quot;) are hit with a +4 pen. (HE 4&quot;), 3D6 to blow up buildings.</description>
     </rule>
-    <rule id="97de-516b-7917-40bf" name="Scouts" hidden="false">
-      <description>Scouts count as observers/snipers the set-up purpose.</description>
+    <rule id="97de-516b-7917-40bf" name="Forward Deploy" hidden="false">
+      <description>This unit count as observers/snipers the set-up purpose.</description>
     </rule>
     <rule id="fcbb-6e65-7fd2-47b0" name="Lone Sniper" hidden="false">
       <description>As it does not have the team weapon rule, the sniper does not suffer the -1 to hit for not having a spotter.</description>
+    </rule>
+    <rule id="cddd-3666-1f65-e463" name="Engineers" hidden="false">
+      <description>Count as engineers in scenarios where barbed wire and minefield special rules are used.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
