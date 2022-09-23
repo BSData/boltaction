@@ -5927,6 +5927,27 @@
         <categoryLink id="b219-937f-5730-be66" name="New CategoryLink" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="a986-78a2-4758-fea0" name="88mm Racktenwerfer 43 Puppchen" hidden="true" collective="false" import="true" targetId="7a88-e1ab-6405-41a3" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c323-eb9e-556b-b083" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e01d-f368-35c4-7129" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="437d-b323-0971-bc4d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="599b-4ea7-8db4-6c5a" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7896-a6d8-ae3b-9a57" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8ccc-1310-93d5-b3e8" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="b674-4244-0491-be64" name="New CategoryLink" hidden="false" targetId="72807c5d-e370-9ddf-c2b7-de5d2797f24d" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="03c86152-d769-5183-60a1-10009dcbf448" name="Initiative Training" page="0" hidden="false">
@@ -20508,6 +20529,61 @@ Dice	Effect
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="7a88-e1ab-6405-41a3" name="88mm Racktenwerfer 43 Puppchen" publicationId="82cd-6228-6b00-ecb4" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="8c16-7472-eee3-878b" name="88mm Racktenwerfer 43 Puppchen" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">30&quot;</characteristic>
+            <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
+            <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+6</characteristic>
+            <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Shaped Charge</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="1920-3a39-68db-3299" name="Crew" hidden="false" targetId="549b-7a6c-2710-5dfe" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(2)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="d1f2-1456-22ee-40ea" name="Fixed" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
+        <infoLink id="ed2b-03f9-a03e-8372" name="Gun Shield" hidden="false" targetId="95d0-d47a-8684-c817" type="rule"/>
+        <infoLink id="2aec-34fb-6715-7293" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
+        <infoLink id="d848-73ce-12c0-18fb" name="Shaped Charge" hidden="false" targetId="b959-3dd3-bc5c-d7d6" type="rule"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="f16a-f64e-7aed-6c41" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7188-d6e9-0185-d477" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d563-e953-b3f7-046d" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="47b1-04a4-62a3-8d44" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f767-a0f5-3e66-6176" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="e51b-6f4c-57e4-5f69" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="75.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="eee5-3563-bfeb-152b" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d582-a16f-92f9-af17" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="01dc-fd8e-9cfe-7a45" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="99.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
