@@ -580,6 +580,7 @@
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4b1a-340d-e46c-7c10" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8331-7adf-02b7-b1ff" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0dcf-5aa2-d41b-38c4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="27ad-f9b1-e2dd-4a22" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5964,6 +5965,13 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="4785c476-9773-832d-6ede-d88859b12fe0" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="points" value="90.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e1f2-1bc9-3005-956c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -5975,6 +5983,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="099d1061-752f-3c9b-132e-ccbfcc72f28b" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="points" value="75.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e1f2-1bc9-3005-956c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
@@ -5986,11 +6001,18 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="77b1152c-a866-9787-b720-73dbad679fdd" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="points" value="60.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e1f2-1bc9-3005-956c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="69a106fe-e0b5-9d09-7c11-66f9dcb0e76a" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
+                <infoLink id="69a106fe-e0b5-9d09-7c11-66f9dcb0e76a" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="48.0"/>

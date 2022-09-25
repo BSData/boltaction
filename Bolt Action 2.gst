@@ -51,9 +51,19 @@
         <characteristicType id="a20985c1-29eb-9dbc-db45-3d439b60eed7" name="Special Rules"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="2824ab73-d5bb-a968-a566-19371da1c5e4" name="Troop Quality">
+    <profileType id="2824ab73-d5bb-a968-a566-19371da1c5e4" name="Unit Quality">
       <characteristicTypes>
         <characteristicType id="cd18296c-c82a-5671-d4f4-db025626d4e9" name="Morale"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="29d7-8cbd-50b1-14d1" name="Reference Profile"/>
+    <profileType id="a98c-3c8f-7fdb-4208" name="Artillery">
+      <characteristicTypes>
+        <characteristicType id="a6b4-85b8-668d-f9c6" name="Range"/>
+        <characteristicType id="1f22-46ae-bfb8-6469" name="Shots"/>
+        <characteristicType id="42f7-8e6a-9ed7-88fe" name="Penetration"/>
+        <characteristicType id="a396-7699-0e3c-b13d" name="Crew"/>
+        <characteristicType id="2b15-f7b6-18dd-8cc2" name="Special Rules"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -2028,7 +2038,7 @@
         <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, Indirect fire, HE (3&quot;)</characteristic>
       </characteristics>
     </profile>
-    <profile id="c068-012d-776f-2bb9" name="Inexperienced" page="0" hidden="false" typeId="2824ab73-d5bb-a968-a566-19371da1c5e4" typeName="Troop Quality">
+    <profile id="c068-012d-776f-2bb9" name="Inexperienced" page="0" hidden="false" typeId="2824ab73-d5bb-a968-a566-19371da1c5e4" typeName="Unit Quality">
       <characteristics>
         <characteristic name="Morale" typeId="cd18296c-c82a-5671-d4f4-db025626d4e9">8</characteristic>
       </characteristics>
@@ -2137,7 +2147,7 @@
         <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Assault</characteristic>
       </characteristics>
     </profile>
-    <profile id="d57f-3e60-a0d9-ecda" name="Regular" page="0" hidden="false" typeId="2824ab73-d5bb-a968-a566-19371da1c5e4" typeName="Troop Quality">
+    <profile id="d57f-3e60-a0d9-ecda" name="Regular" page="0" hidden="false" typeId="2824ab73-d5bb-a968-a566-19371da1c5e4" typeName="Unit Quality">
       <characteristics>
         <characteristic name="Morale" typeId="cd18296c-c82a-5671-d4f4-db025626d4e9">9</characteristic>
       </characteristics>
@@ -2166,7 +2176,7 @@
         <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Fixed, HE (3&quot;)</characteristic>
       </characteristics>
     </profile>
-    <profile id="d35f-04c2-a7f3-288f" name="Veteran" page="0" hidden="false" typeId="2824ab73-d5bb-a968-a566-19371da1c5e4" typeName="Troop Quality">
+    <profile id="d35f-04c2-a7f3-288f" name="Veteran" page="0" hidden="false" typeId="2824ab73-d5bb-a968-a566-19371da1c5e4" typeName="Unit Quality">
       <characteristics>
         <characteristic name="Morale" typeId="cd18296c-c82a-5671-d4f4-db025626d4e9">10</characteristic>
       </characteristics>
