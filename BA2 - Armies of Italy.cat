@@ -128,7 +128,7 @@
         <categoryLink id="1c206194-735c-689f-13e1-708cb99595f9-481abf13-c03e-0dd0-d520-9f9837253cbe" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="8184f785-aa37-ed82-2bbd-e5b93fc6d5fc" name="Platoon Commander" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
+    <entryLink id="8184f785-aa37-ed82-2bbd-e5b93fc6d5fc" name="Officer" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -146,7 +146,19 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="1904-24e5-2538-c46a" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1904-24e5-2538-c46a" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="8014-60c8-8618-7055" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
@@ -7195,7 +7207,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Platoon Commander" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Officer" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink id="f8ef-157c-6aa5-f79d" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
       </categoryLinks>
@@ -11944,41 +11956,65 @@
       </constraints>
       <selectionEntries>
         <selectionEntry id="cc44-d5cb-dc6d-d40f" name="Generic Reinforced Platoon" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="2aec-0c68-036e-ed24" name="Generic Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8331-7adf-02b7-b1ff" name="1943: The Defence of Sicily" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="f071-cf23-3a14-470f" name="1943: The Defence of Sicily" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4b1a-340d-e46c-7c10" name="1941-43: The Eastern Front" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="5f55-8cbd-ef9a-2889" name="1941-43: The Eastern Front" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="a646-bc29-8689-2d43" name="1940-43: The War in Africa" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="f27c-bdd4-fe9e-0def" name="1940-43: The War in Africa" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6d93-7ade-17cd-bc30" name="1940-41: The Invasion of Greece" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="2fb8-4097-eecf-d64e" name="1940-41: The Invasion of Greece" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="27ad-f9b1-e2dd-4a22" name="1940-41: The War in Africa, East Africa" publicationId="ae1b-9fe2-38c5-199d" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="43bc-b3c7-0e6b-695b" name="1940-41: The War in Africa, East Africa" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="20dd-1a95-7cc5-942f" name="1940: Army Group West, Western Alps" publicationId="a4ea-50a6-5c1c-0429" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="5598-9789-eab7-c152" name="1940: Army Group West, Western Alps" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0dcf-5aa2-d41b-38c4" name="1940: The War in Africa, Egypt" publicationId="ae1b-9fe2-38c5-199d" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="2171-c88d-70c7-77a0" name="1940: The War in Africa, Egypt" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

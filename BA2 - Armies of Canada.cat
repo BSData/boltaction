@@ -43,7 +43,7 @@
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
-    <entryLink id="911a-f270-0c29-749c" name="Platoon Commander" hidden="false" collective="false" import="true" targetId="d288-ab01-2d74-1b31" type="selectionEntry">
+    <entryLink id="911a-f270-0c29-749c" name="Officer" hidden="false" collective="false" import="true" targetId="d288-ab01-2d74-1b31" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -60,7 +60,19 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="4030-d7e8-2c68-5398" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4030-d7e8-2c68-5398" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="65ca-b91b-3f37-6efc" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
@@ -3844,7 +3856,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d288-ab01-2d74-1b31" name="Platoon Commander" publicationId="d4e7-6781-f1ff-5a93" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="d288-ab01-2d74-1b31" name="Officer" publicationId="d4e7-6781-f1ff-5a93" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntryGroups>
         <selectionEntryGroup id="effc-06c2-525d-56e5" name="Rank" hidden="false" collective="false" import="true">
           <constraints>
@@ -14227,36 +14239,57 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="4451-c206-5d31-f64d" name="Generic Reinforced Platoon" publicationId="d4e7-6781-f1ff-5a93" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="d5bf-7e71-4f4f-e4d9" name="Generic Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="47db-3b83-2aa8-5d89" name="1942 - Dieppe Raid" publicationId="d4e7-6781-f1ff-5a93" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="47db-3b83-2aa8-5d89" name="1942: Dieppe Raid" publicationId="d4e7-6781-f1ff-5a93" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="f907-99ad-e8ee-0822" name="1942: Dieppe Raid" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="88a8-9cf9-2982-808b" name="1941 - Battle of Hong Kong" publicationId="d4e7-6781-f1ff-5a93" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="88a8-9cf9-2982-808b" name="1941: Battle of Hong Kong" publicationId="d4e7-6781-f1ff-5a93" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="e51f-72b6-456d-c024" name="1941: Battle of Hong Kong" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3ab0-75ac-2195-aaf2" name="1939-42 - Canadian Army" publicationId="d4e7-6781-f1ff-5a93" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3ab0-75ac-2195-aaf2" name="1939-42: Canadian Army" publicationId="d4e7-6781-f1ff-5a93" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="9792-07dc-a212-2315" name="1939-42: Canadian Army" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="537c-d5cd-8c98-ec8c" name="1943-44 - Canadian Airborne" publicationId="d4e7-6781-f1ff-5a93" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="537c-d5cd-8c98-ec8c" name="1943-44: Canadian Airborne" publicationId="d4e7-6781-f1ff-5a93" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="6e8e-81bf-054d-c26d" name="1943-44: Canadian Airborne" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b716-03ff-4441-4080" name="1943-44 - Canadian Infantry Division" publicationId="d4e7-6781-f1ff-5a93" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b716-03ff-4441-4080" name="1943-44: Canadian Infantry Division" publicationId="d4e7-6781-f1ff-5a93" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="ea84-6e93-1d74-3343" name="1943-44: Canadian Infantry Division" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5bb4-3401-e2d9-cbe1" name="1945 - Canadian Infantry Division" publicationId="d4e7-6781-f1ff-5a93" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5bb4-3401-e2d9-cbe1" name="1945: Canadian Infantry Division" publicationId="d4e7-6781-f1ff-5a93" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="58cd-fa9a-09c4-8542" name="1945: Canadian Infantry Division" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

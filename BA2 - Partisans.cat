@@ -627,7 +627,19 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="0db9-86a3-add6-c34b" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0db9-86a3-add6-c34b" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="de30-7685-a5e6-3914" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
@@ -851,62 +863,6 @@
     </rule>
     <rule id="df2df83d-6542-c0d9-58d9-4b712a89ae6e" name="Fieldcraft" page="0" hidden="false">
       <description>During set-up, any partisan unit starting the game Hidden may start the game already in Ambush. In addition, in the first turn of the game, all partisan infantry units treat all Rough Ground and Obstacles as Open Ground for the purposes of movement.</description>
-    </rule>
-    <rule id="47b9-ed01-343c-8ec2" name="SAS Support" hidden="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e4df-455c-be17-2f15" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <description>You may only include SAS jeeps or armoured jeeps if you take an SAS infantry section or weapons team. The Jedburgh team Supply Co-ordination rule only applies to the Partisan squads in this force and not the SAS.</description>
-    </rule>
-    <rule id="f006-3066-aa7a-61bd" name="Local Area Knowledge" hidden="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e4df-455c-be17-2f15" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <description>Units in this platoon do not suffer the -1 penalty for attempting to come onto the table as reserves.</description>
-    </rule>
-    <rule id="2216-596f-075b-0cd9" name="To the Barricades!" hidden="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="95fb-227d-2d68-5b4e" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <description>The partisan player using this platoon gets up to 100pts of barricades or barbed wire sections (page 151). These must be placed before any units are set up, but after players have chosen sides. They may be placed anywhere in that player&apos;s half, or on any road on the board regardless of whose side of the board it is on.</description>
-    </rule>
-    <rule id="79a0-8203-1e80-8a83" name="Captured and Recaptured" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="95fb-227d-2d68-5b4e" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <description>Any H39, R35, S-35, Flammpanzer B2(F), or FT17 may be taken at any troop quality (Inexperienced, Regular, or Veteran) and do not suffer from the Unreliable rule.</description>
     </rule>
   </rules>
   <sharedSelectionEntries>
@@ -5512,6 +5468,9 @@
                           </selectionEntries>
                         </selectionEntryGroup>
                       </selectionEntryGroups>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -5652,6 +5611,9 @@
                           </selectionEntries>
                         </selectionEntryGroup>
                       </selectionEntryGroups>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -5676,26 +5638,57 @@
       </constraints>
       <selectionEntries>
         <selectionEntry id="bdee-2f8d-b0b3-c457" name="Generic Reinforced Platoon" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="a4f9-eb8f-7d38-1cad" name="Generic Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5ed9-57a0-0b1f-d2d9" name="1939-41 Resistance" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="cddb-3f88-11e2-c9cd" name="1939-41 Resistance" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="27d7-16e6-f0da-ea14" name="1942-45 Liberation" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="bd6c-39a7-5fc3-9916" name="1942-45 Liberation" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e4df-455c-be17-2f15" name="Maquis Reinforced Platoon" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="a6a7-6c05-3d37-8011" name="Maquis Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
+          <rules>
+            <rule id="892f-1234-bd37-7671" name="To the Barricades!" hidden="true">
+              <description>The partisan player using this platoon gets up to 100pts of barricades or barbed wire sections (page 151). These must be placed before any units are set up, but after players have chosen sides. They may be placed anywhere in that player&apos;s half, or on any road on the board regardless of whose side of the board it is on.</description>
+            </rule>
+            <rule id="031a-7017-793c-2481" name="SAS Support" hidden="true">
+              <description>You may only include SAS jeeps or armoured jeeps if you take an SAS infantry section or weapons team. The Jedburgh team Supply Co-ordination rule only applies to the Partisan squads in this force and not the SAS.</description>
+            </rule>
+            <rule id="5009-e1a1-0930-1668" name="Local Area Knowledge" hidden="true">
+              <description>Units in this platoon do not suffer the -1 penalty for attempting to come onto the table as reserves.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="95fb-227d-2d68-5b4e" name="1944: Paris Uprising" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="bfc2-7ab6-21d9-9275" name="1944: Paris Uprising" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
+          <rules>
+            <rule id="3840-4880-912c-b114" name="Captured and Recaptured" hidden="false">
+              <description>Any H39, R35, S-35, Flammpanzer B2(F), or FT17 may be taken at any troop quality (Inexperienced, Regular, or Veteran) and do not suffer from the Unreliable rule.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

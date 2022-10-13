@@ -43,7 +43,7 @@
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
-    <entryLink id="3174-86c2-e5cb-3bff" name="Platoon Commander" hidden="true" collective="false" import="true" targetId="7d22-b343-0a9c-fd46" type="selectionEntry">
+    <entryLink id="3174-86c2-e5cb-3bff" name="Officer" hidden="true" collective="false" import="true" targetId="7d22-b343-0a9c-fd46" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -57,7 +57,19 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="0163-4f39-de1c-3d14" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0163-4f39-de1c-3d14" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="7815-224d-fc78-d2f5" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
@@ -3714,7 +3726,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7d22-b343-0a9c-fd46" name="Platoon Commander" publicationId="f855-3e35-d406-1837" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="7d22-b343-0a9c-fd46" name="Officer" publicationId="f855-3e35-d406-1837" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink id="717d-03e7-b706-26c7" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
       </categoryLinks>
@@ -7494,26 +7506,41 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="adc6-ddb4-949b-6a0a" name="1941-42: Mediterranean &amp; North Africa" publicationId="f855-3e35-d406-1837" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="8187-5b65-e9bf-0620" name="1941-42: Mediterranean &amp; North Africa" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="636a-1dbf-e390-23c3" name="Generic Reinforced Platoon" publicationId="f855-3e35-d406-1837" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="72ef-ee59-39aa-fe88" name="Generic Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="06bf-cf7d-2348-729f" name="1943-45: Australian Jungle Division" publicationId="f855-3e35-d406-1837" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="2a9f-2924-f38b-6d87" name="1943-45: Australian Jungle Division" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3a0d-8404-60d0-1984" name="1942: Kanga Force" publicationId="f855-3e35-d406-1837" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="7a17-6976-2959-b3d5" name="1942: Kanga Force" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="33d2-23eb-33ad-5b8c" name="1942: Australian Army" publicationId="f855-3e35-d406-1837" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="e05b-d46e-b29d-48fa" name="1942: Australian Army" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

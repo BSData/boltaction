@@ -163,7 +163,7 @@
         <categoryLink id="fe0a-1c94-553b-0dfc-481abf13-c03e-0dd0-d520-9f9837253cbe" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="ce29-4698-0728-2d93" name="Platoon Commander" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
+    <entryLink id="ce29-4698-0728-2d93" name="Officer" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -189,7 +189,19 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="62cf-dfc3-25b7-0c3f" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62cf-dfc3-25b7-0c3f" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="8c72-fb36-ec2d-3caf" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
@@ -6019,7 +6031,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Platoon Commander" publicationId="4274-48be-dba8-0ab6" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Officer" publicationId="4274-48be-dba8-0ab6" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink id="4cbe-9674-9305-7136" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
       </categoryLinks>
@@ -10706,81 +10718,129 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="62b1-a831-c705-4995" name="Generic Reinforced Platoon" publicationId="4274-48be-dba8-0ab6" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="97da-3976-dec9-6dc3" name="Generic Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3548-7b7a-5d21-7bae" name="1931-32: The Invasion of Manchuria" publicationId="4274-48be-dba8-0ab6" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="8ceb-fa9c-b0b4-e551" name="1931-32: The Invasion of Manchuria" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7d60-166c-2f90-20f6" name="1942: The Fall of Singapore" publicationId="4274-48be-dba8-0ab6" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="9814-6612-03b1-d17d" name="1942: The Fall of Singapore" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="bd20-bbe0-65fa-6ef1" name="1942: The Fall of Corregidor" publicationId="4274-48be-dba8-0ab6" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="8430-81a3-a6c4-c944" name="1942: The Fall of Corregidor" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c807-b3dc-4efc-c19f" name="1942: The Battle for Guadalcanal" publicationId="4274-48be-dba8-0ab6" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="a0be-b91c-597f-ba51" name="1942: The Battle for Guadalcanal" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f067-172a-d7ba-02e1" name="1942: 2nd Raiding Regiment at Palembang" publicationId="4274-48be-dba8-0ab6" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="39eb-6c47-8ef5-a042" name="1942: 2nd Raiding Regiment at Palembang" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="15d6-6171-4260-74da" name="1942: The Yokosuka 1st SNLF Paratroopers at Menado" publicationId="4274-48be-dba8-0ab6" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="0072-7bd7-1fae-b9e5" name="1942: The Yokosuka 1st SNLF Paratroopers at Menado" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7840-ba80-699a-0fdf" name="1943: The Battle for Tarawa" publicationId="4274-48be-dba8-0ab6" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="1de3-a77a-b4e2-f09f" name="1943: The Battle for Tarawa" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e0d8-540d-c8c4-6bc7" name="1944: Burma" publicationId="4274-48be-dba8-0ab6" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="6668-5a8a-e42d-5b7f" name="1944: Burma" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="31c3-7108-5e59-6bb5" name="1945: Iwo Jima" publicationId="4274-48be-dba8-0ab6" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="8630-a176-db34-4be2" name="1945: Iwo Jima" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e20c-cc37-c21b-f5dd" name="1945: Negros Island" publicationId="4274-48be-dba8-0ab6" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="e547-c546-9907-ae55" name="1945: Negros Island" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6b91-835e-7b1c-56d6" name="1945: Battle for Okinawa Sugar Loaf Hill" publicationId="4274-48be-dba8-0ab6" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="6cf3-1169-bf2c-c684" name="1945: Battle for Okinawa Sugar Loaf Hill" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="886a-f4a7-211e-bdcc" name="1945: General Amamiya&apos;s 24th Division Counter-Offensive" publicationId="4274-48be-dba8-0ab6" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="7502-1361-f7cd-5d99" name="1945: General Amamiya&apos;s 24th Division Counter-Offensive" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ef9e-c7bd-f10c-4d12" name="1943-45: New Guinea" publicationId="f855-3e35-d406-1837" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="6083-ee6b-80b5-ef59" name="1943-45: New Guinea" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="078b-c04e-6832-36d2" name="1945: IJA Kwantung Army" publicationId="e528-aeb2-633c-130e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="97be-5e6d-9382-213b" name="1945: IJA Kwantung Army" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="83c2-a6e7-3943-9869" name="1937: IJA Kwantung Army" publicationId="e528-aeb2-633c-130e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="99c2-111b-5fbd-1434" name="1937: IJA Kwantung Army" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

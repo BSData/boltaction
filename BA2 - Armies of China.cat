@@ -133,7 +133,7 @@
         <categoryLink id="8b07-d2d6-982d-e7dc-481abf13-c03e-0dd0-d520-9f9837253cbe" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="5e26-5f43-7201-1672" name="Platoon Commander" hidden="true" collective="false" import="true" targetId="d9e12e92-afa1-c662-73c5-f6ab4eb45314" type="selectionEntry">
+    <entryLink id="5e26-5f43-7201-1672" name="Officer" hidden="true" collective="false" import="true" targetId="d9e12e92-afa1-c662-73c5-f6ab4eb45314" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -150,7 +150,19 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="b6c5-8745-5e89-c305" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6c5-8745-5e89-c305" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="6905-8cf2-b4ba-7f74" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
@@ -2033,6 +2045,25 @@
       </modifiers>
       <categoryLinks>
         <categoryLink id="cfaf-aad1-a23d-4180" name="New CategoryLink" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="00f2-653b-f750-e185" name="Political Officer" hidden="true" collective="false" import="true" targetId="d96d-c461-66ae-aa4f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6a22-6d07-ad10-8446" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6bd3-2b35-5ed8-f9a7" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5e8d-7671-d933-1f94" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="e003-069e-02fc-1a9c" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
+        <categoryLink id="5b6e-190f-c0e9-a7ba" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -7384,7 +7415,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d9e12e92-afa1-c662-73c5-f6ab4eb45314" name="Platoon Commander" publicationId="e528-aeb2-633c-130e" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="d9e12e92-afa1-c662-73c5-f6ab4eb45314" name="Officer" publicationId="e528-aeb2-633c-130e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntryGroups>
         <selectionEntryGroup id="a7205aa3-ac2f-89ec-6e9c-1ff8d1d95e62" name="Rank" hidden="false" collective="false" import="true">
           <constraints>
@@ -10753,6 +10784,129 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="d96d-c461-66ae-aa4f" name="Political Officer" page="0" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3861-0554-58f0-be02" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2f90-da92-179b-d7e0" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="74f4-fd85-3d8d-41dd" name="Not One Step Back!" hidden="false" targetId="5dd3-e7b2-e23f-075e" type="rule"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="afbe-f31c-c270-0014" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="432d-350d-9620-3f9c" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="874b-29be-f63d-5e06" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="102a-ae57-c438-73c3" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a026-304a-067e-728e" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="90e2-36be-4a7f-e5f2" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="15.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3c22-ca29-108b-47ef" name="Weapon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cbf6-b538-8fdc-4f89" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1dfd-63b6-da7b-9ec6" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="e9a4-5eaa-a3dd-c42e" name="Pistol" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="f300-c951-0b37-1ca8" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="be13-dea0-ef1f-b4da" name="SMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="4ea5-e33d-a3da-7815" name="Submachine Gun (SMG)" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="09fd-c24b-d49e-5dcb" name="Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="af9e-24a4-d2af-a8a5" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="9f72-1fd1-4f61-eadb" name="Additional Men" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b41d-0d5e-3061-55ab" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="ea7e-f923-d43f-c51e" name="Inexperienced Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d949-b758-3824-189c" type="max"/>
+              </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="b7e3-c6d0-439a-4bb0" name="Weapon" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e033-e9a3-53fb-ac05" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7646-ec9b-835b-b117" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="38c5-94a1-2659-cad9" name="Pistol" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="986d-96b5-6d87-d5ba" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="a164-ebd4-d2c3-575e" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="3171-a3fb-1c37-bf31" name="SMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="805f-8b2f-e733-5c09" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="5e0c-ce87-3fd1-bb83" name="Submachine Gun (SMG)" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="5a54-3708-305d-9c0d" name="Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9060-3974-18c9-5698" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="2f1a-cf02-3317-b470" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="points" value="7.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="3959-c6d3-d159-78a9" name="Threatre Selector" hidden="false" collective="false" import="true" defaultSelectionEntryId="6bd3-2b35-5ed8-f9a7">
@@ -10762,41 +10916,65 @@
       </constraints>
       <selectionEntries>
         <selectionEntry id="6bd3-2b35-5ed8-f9a7" name="Generic Reinforced Platoon" publicationId="e528-aeb2-633c-130e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="88f5-b8a4-391c-23f3" name="Generic Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6086-ce02-7f63-70f4" name="Nationalist Reinforced Platoon" publicationId="e528-aeb2-633c-130e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="82fe-b5d2-63bc-a1f4" name="Nationalist Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6a22-6d07-ad10-8446" name="Communist Reinforced Platoon" publicationId="e528-aeb2-633c-130e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="85fa-c9d9-5d9a-adb8" name="Communist Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6d99-fa8a-0a6d-8392" name="Warlords Reinforced Platoon" publicationId="e528-aeb2-633c-130e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="9233-c094-d962-ca68" name="Warlords Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ef6d-6a51-1193-2137" name="1942-45: X and Y Force, Burma" publicationId="e528-aeb2-633c-130e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="4928-64e5-d140-a98b" name="1942-45: X and Y Force, Burma" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5e8d-7671-d933-1f94" name="1937-45: 8th Route Army" publicationId="e528-aeb2-633c-130e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="1b2a-d5f2-2f51-a5cb" name="1937-45: 8th Route Army" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9ed4-ffea-5331-9a55" name="1937: Battle of Shanghai" publicationId="e528-aeb2-633c-130e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="1cec-fadf-9e25-0ad9" name="1937: Battle of Shanghai" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4135-ca76-ed5d-cfa8" name="1938: Battle of Tai&apos;erzhuang" publicationId="e528-aeb2-633c-130e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="2351-4d9b-d16e-b11a" name="1938: Battle of Tai&apos;erzhuang" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -10825,6 +11003,9 @@ officer’s place. </description>
     </rule>
     <rule id="aa7e-e7b4-667d-c98a" name="Shen Fong" hidden="false">
       <description>If a Suicide Anti-Tank team assaults an enemy vehicle and moves into contact with the target vehicle, remove it and immediately resolve a hit against the vehicle with a penetration value of +8 (no other penetration modifiers apply).</description>
+    </rule>
+    <rule id="5dd3-e7b2-e23f-075e" name="Not One Step Back!" hidden="false">
+      <description>Political officers don’t confer any Morale bonus to nearby troops. However, whenever a friendly unit fails a Morale check or an Order test within 12&quot; of a political officer, remove one model from the unit and re-roll the dice. The second result stands, as normal. This rule has no effect on vehicles and units that are reduced to one or two models.</description>
     </rule>
   </sharedRules>
 </catalogue>

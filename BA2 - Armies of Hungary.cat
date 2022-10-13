@@ -103,7 +103,7 @@
         <categoryLink id="c112419b-2857-346b-12c8-09cde56ec618-481abf13-c03e-0dd0-d520-9f9837253cbe" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="735fc83c-a166-74be-bc3b-5967f697f1ea" name="Platoon Commander" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
+    <entryLink id="735fc83c-a166-74be-bc3b-5967f697f1ea" name="Officer" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -118,7 +118,19 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="4219-21d5-53f0-cc18" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4219-21d5-53f0-cc18" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="a1cc-eb29-99e2-e7ec" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
@@ -4294,7 +4306,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Platoon Commander" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Officer" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="5d04ed1c-09aa-ee77-7aeb-e43dbdd597fd" name="Fanatics" hidden="false" targetId="210a-fd8c-dd39-5e36" type="rule"/>
       </infoLinks>
@@ -8699,26 +8711,41 @@
       </constraints>
       <selectionEntries>
         <selectionEntry id="4aa9-61ce-b959-a1c7" name="Generic Reinforced Platoon" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="589d-1606-7b4b-097c" name="Generic Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b58f-5b31-4e94-7691" name="1941-42: War in the East" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="04d8-634c-c973-2164" name="1941-42: War in the East" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="787c-3232-a6e8-7be8" name="1943-44: A Red Storm Rising" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="6ecc-6d8f-e1a4-0b65" name="1943-44: A Red Storm Rising" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7a28-afc2-e5a2-e012" name="1944-45: Budapest Pocket Defenders" publicationId="b3e4-72d9-fa55-2045" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="e62a-8064-08f7-baf4" name="1944-45: Budapest Pocket Defenders" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4620-bce9-f8e5-626d" name="1944-45: Carpathian Mountains Border Guards" publicationId="b3e4-72d9-fa55-2045" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="09d6-08c9-7c67-be41" name="1944-45: Carpathian Mountains Border Guards" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

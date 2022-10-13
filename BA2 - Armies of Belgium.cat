@@ -128,7 +128,7 @@
         <categoryLink id="8fd6-ec98-4174-94e3-481abf13-c03e-0dd0-d520-9f9837253cbe" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="067d-c3de-7366-3a33" name="Platoon Commander" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
+    <entryLink id="067d-c3de-7366-3a33" name="Officer" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -140,7 +140,19 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="5562-6150-70bc-e502" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5562-6150-70bc-e502" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="3cd0-285d-ee0d-ced8" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
@@ -4992,7 +5004,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Platoon Commander" publicationId="85bd-2d22-c454-2385" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Officer" publicationId="85bd-2d22-c454-2385" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntryGroups>
         <selectionEntryGroup id="c976b356-c0b4-9e64-37e3-e50eb15ce5f4" name="Rank" hidden="false" collective="false" import="true">
           <constraints>
@@ -6395,11 +6407,17 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="db1a-6390-5db5-2dbf" name="Generic Reinforced Platoon" publicationId="85bd-2d22-c454-2385" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="eee3-f140-f627-3cc1" name="Generic Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0dee-8927-b82c-1981" name="1940: The Battle of Belgium" publicationId="85bd-2d22-c454-2385" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="b8bc-9b10-25b0-1a6f" name="1940: The Battle of Belgium" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

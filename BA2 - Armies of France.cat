@@ -152,7 +152,7 @@
         <categoryLink id="206cdf8f-833c-5cb1-9c48-51a55b005a47-481abf13-c03e-0dd0-d520-9f9837253cbe" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="fe4a97c7-a711-50ae-e818-3297d552fbd5" name="Platoon Commander" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
+    <entryLink id="fe4a97c7-a711-50ae-e818-3297d552fbd5" name="Officer" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -168,7 +168,19 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="7059-3304-bfbd-97d6" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7059-3304-bfbd-97d6" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="a728-80f0-e5d8-686a" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
@@ -8192,7 +8204,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Platoon Commander" publicationId="85bd-2d22-c454-2385" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Officer" publicationId="85bd-2d22-c454-2385" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntryGroups>
         <selectionEntryGroup id="c976b356-c0b4-9e64-37e3-e50eb15ce5f4" name="Rank" hidden="false" collective="false" import="true">
           <constraints>
@@ -15632,31 +15644,49 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="620b-38e1-a1cc-b393" name=" 1939-40: The Phoney War" publicationId="85bd-2d22-c454-2385" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="b2d1-c276-6fed-b67e" name=" 1939-40: The Phoney War" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="aee8-1a1d-462b-426e" name="1940: The Battle of France" publicationId="85bd-2d22-c454-2385" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="1064-93ec-5ccc-f994" name="1940: The Battle of France" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0236-5dd0-cd86-c454" name=" 1940-42: The Defence of Vichy " publicationId="85bd-2d22-c454-2385" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="0f83-1e33-24b2-adc7" name=" 1940-42: The Defence of Vichy " hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="740a-46af-93cb-dcd5" name="Generic Reinforced Platoon" publicationId="85bd-2d22-c454-2385" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="3932-bf6f-eea7-a5fe" name="Generic Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3171-d8b6-0a7a-9bbf" name="1944-45: Free French in Europe" publicationId="209e-18dc-48dd-9860" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="34e8-ba51-9b9a-6f0a" name="1944-45: Free French in Europe" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="17f1-fb22-f75d-9ec6" name="1942-43: Free French in North Africa" publicationId="ba7c-664b-fc86-79b6" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="627c-1f58-d30e-58a4" name="1942-43: Free French in North Africa" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

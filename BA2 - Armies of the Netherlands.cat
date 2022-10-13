@@ -102,7 +102,7 @@
         <categoryLink id="c112419b-2857-346b-12c8-09cde56ec618-481abf13-c03e-0dd0-d520-9f9837253cbe" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="735fc83c-a166-74be-bc3b-5967f697f1ea" name="Platoon Commander" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
+    <entryLink id="735fc83c-a166-74be-bc3b-5967f697f1ea" name="Officer" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -116,7 +116,19 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="33d9-92c4-2286-46ab" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33d9-92c4-2286-46ab" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="070f-4e98-065d-c54b" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
@@ -3251,7 +3263,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Platoon Commander" publicationId="85bd-2d22-c454-2385" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Officer" publicationId="85bd-2d22-c454-2385" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntryGroups>
         <selectionEntryGroup id="c976b356-c0b4-9e64-37e3-e50eb15ce5f4" name="Rank" hidden="false" collective="false" import="true">
           <constraints>
@@ -6444,21 +6456,33 @@
       </constraints>
       <selectionEntries>
         <selectionEntry id="4aa9-61ce-b959-a1c7" name="Generic Reinforced Platoon" publicationId="85bd-2d22-c454-2385" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="d44f-2211-241f-f9c1" name="Generic Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="787c-3232-a6e8-7be8" name="1940: Battle of The Netherlands" publicationId="85bd-2d22-c454-2385" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="3215-e827-8d53-cd43" name="1940: Battle of The Netherlands" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="85d5-c390-8d4a-ea12" name="1941-42: Dutch East Indies" publicationId="85bd-2d22-c454-2385" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="b404-1230-3577-d32f" name="1941-42: Dutch East Indies" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="a708-f7e1-2789-294c" name="1942-44:  KNIL Guerrillas" publicationId="f855-3e35-d406-1837" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="3b40-a1eb-2e20-e385" name="1942-44:  KNIL Guerrillas" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

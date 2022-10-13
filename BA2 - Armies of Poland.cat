@@ -568,7 +568,7 @@
         <categoryLink id="866fed29-1fd7-d57a-afd5-c5b8ae89342a-014468cf-931f-6d22-82c8-56acf4032768" hidden="false" targetId="014468cf-931f-6d22-82c8-56acf4032768" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="8ecc-ec3c-76d2-1389" name="Platoon Commander" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
+    <entryLink id="8ecc-ec3c-76d2-1389" name="Officer" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -581,7 +581,19 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="3774-2e44-dc09-8da2" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3774-2e44-dc09-8da2" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="26b2-b365-04b6-36d1" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
@@ -4399,7 +4411,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Platoon Commander" publicationId="85bd-2d22-c454-2385" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Officer" publicationId="85bd-2d22-c454-2385" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="cc5dd627-5be5-f4c5-d66f-6c987d6ecff8" name="Fanatics" hidden="false" targetId="210a-fd8c-dd39-5e36" type="rule"/>
       </infoLinks>
@@ -7356,16 +7368,25 @@
       </constraints>
       <selectionEntries>
         <selectionEntry id="73a0-3108-8c97-9c39" name="Generic Reinforced Platoon" publicationId="85bd-2d22-c454-2385" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="74a4-9ef3-a2f2-41db" name="Generic Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ce50-b838-3fad-f585" name="1939 The Battle of Poland" publicationId="85bd-2d22-c454-2385" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ce50-b838-3fad-f585" name="1939: The Battle of Poland" publicationId="85bd-2d22-c454-2385" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="4097-6611-b10f-c3a8" name="1939: The Battle of Poland" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cb75-b2dc-3da2-bea2" name="1944 Warsaw Uprising" publicationId="422f-bd5a-861b-7fd5" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="cb75-b2dc-3da2-bea2" name="1944: Warsaw Uprising" publicationId="422f-bd5a-861b-7fd5" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="1752-a6f2-df16-9f64" name="1944: Warsaw Uprising" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

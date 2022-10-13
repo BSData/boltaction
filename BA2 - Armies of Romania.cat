@@ -467,7 +467,7 @@
         <categoryLink id="aeb4-8976-f3e6-da86" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="9b00-b1dd-7136-ab08" name="Platoon Commander" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
+    <entryLink id="9b00-b1dd-7136-ab08" name="Officer" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -481,7 +481,19 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="0d45-b7dd-68a4-f93c" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d45-b7dd-68a4-f93c" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="c4bb-c253-e7c4-85ec" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
@@ -4777,7 +4789,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Platoon Commander" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Officer" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntryGroups>
         <selectionEntryGroup id="c976b356-c0b4-9e64-37e3-e50eb15ce5f4" name="Rank" hidden="false" collective="false" import="true">
           <constraints>
@@ -8368,21 +8380,33 @@
       </constraints>
       <selectionEntries>
         <selectionEntry id="fa93-774b-e139-b805" name="Generic Reinforced Platoon" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="5ca8-7970-e39f-a082" name="Generic Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="94a4-c690-6ba4-cc1e" name="1941-43: Onward to the Caucasus!" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="27de-b490-c02e-9722" name="1941-43: Onward to the Caucasus!" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7a77-6c42-18aa-6b15" name="1943-44: War in Romania" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="00c7-6051-6767-8591" name="1943-44: War in Romania" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="96b7-278c-fcb1-86ee" name="1944 Allied Romanian Infantry Division" publicationId="b3e4-72d9-fa55-2045" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="96b7-278c-fcb1-86ee" name="1944: Allied Romanian Infantry Division" publicationId="b3e4-72d9-fa55-2045" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="0e2b-93c0-b29f-9d6d" name="1944 Allied Romanian Infantry Division" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

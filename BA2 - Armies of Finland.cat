@@ -670,7 +670,7 @@
         <categoryLink id="2af5197a-5667-0c35-eba2-8f1c554f93be-014468cf-931f-6d22-82c8-56acf4032768" hidden="false" targetId="014468cf-931f-6d22-82c8-56acf4032768" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="18334a50-3ec2-553a-93aa-ffc998d628b9" name="Platoon Commander" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
+    <entryLink id="18334a50-3ec2-553a-93aa-ffc998d628b9" name="Officer" hidden="true" collective="false" import="true" targetId="c179b253-804c-db7d-50c4-0bfaac8aa7d9" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -685,7 +685,19 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="f054-3d50-ab94-d97c" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efef-703c-d244-559f" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f054-3d50-ab94-d97c" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="d396-5562-fec9-fbd2" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="true"/>
       </categoryLinks>
@@ -4548,7 +4560,7 @@ remaining models in that unit are automatically upgraded to higher quality- Inex
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Platoon Commander" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Officer" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntryGroups>
         <selectionEntryGroup id="c976b356-c0b4-9e64-37e3-e50eb15ce5f4" name="Rank" hidden="false" collective="false" import="true">
           <constraints>
@@ -6659,26 +6671,41 @@ remaining models in that unit are automatically upgraded to higher quality- Inex
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7bbe-89a0-ab53-2323" name="Generic Reinforced Platoon" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="a74b-4c8f-f13c-5969" name="Generic Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="34e9-e251-c441-2651" name="1944: The Defence of Karelia" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="57ea-6961-ba34-df86" name="1944: The Defence of Karelia" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0783-ab47-14cf-05bc" name="1941: The Continuation War" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="8f55-6beb-696f-a2e3" name="1941: The Continuation War" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="dedf-46d6-a0c1-8c51" name="1939-40: The Winter War" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="5351-2e7e-d77d-c23a" name="1939-40: The Winter War" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="05b6-e969-05c3-c910" name="1944-45: War in Lapland" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="2ab8-be59-4ef6-5355" name="1944-45: War in Lapland" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
