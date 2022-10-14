@@ -1667,6 +1667,19 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="36c6-1dcc-b2a8-0b0e" name="Lance" page="0" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7df7-6d1b-f5d6-2dbe" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="7b16-9e71-4eb6-d495" name="Lance" page="0" hidden="false">
+          <description>Units equipped with lances gain one aditional attack in close quarters, but may not fire their carbines while mounted. Lances are discarded if the unit dismounts.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="pts" typeId="points" value="1.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ce88-220a-ecf0-d5c7" name="Command Vehicle Options" hidden="false" collective="false" import="true">
