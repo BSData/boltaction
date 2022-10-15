@@ -1543,9 +1543,6 @@
       <infoLinks>
         <infoLink id="7c0c-30b2-52f5-1734" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
       </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="1.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="3601-cb47-1b83-cbe2" name="Carabine" hidden="false" collective="true" import="true" type="upgrade">
       <constraints>
@@ -1960,6 +1957,10 @@
     </rule>
     <rule id="cddd-3666-1f65-e463" name="Engineers" hidden="false">
       <description>Count as engineers in scenarios where barbed wire and minefield special rules are used.</description>
+    </rule>
+    <rule id="82d4-ceee-74f3-93e6" name="Motorised Infantry" hidden="false">
+      <description>The squad can re-roll any failed order test that is required to mount or dismount a transport vehicle.
+</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
