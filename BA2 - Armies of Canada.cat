@@ -2850,6 +2850,28 @@
         <categoryLink id="bd99-e459-9303-894f" name="New CategoryLink" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="00e9-78df-4fdb-78c4" name="Mule Team" hidden="true" collective="false" import="true" targetId="a75f-d39b-cc45-88de" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="537c-d5cd-8c98-ec8c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="47db-3b83-2aa8-5d89" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ab0-75ac-2195-aaf2" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b716-03ff-4441-4080" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88a8-9cf9-2982-808b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5bb4-3401-e2d9-cbe1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4451-c206-5d31-f64d" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="ac3a-321e-c764-14f5" name="New CategoryLink" hidden="false" targetId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="a53c-7afb-1ccf-d5de" name="Dogged" hidden="false">
@@ -6601,7 +6623,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d5ce-e3c1-75a3-c27a" name="40MM Bofors" publicationId="d4e7-6781-f1ff-5a93" page="0" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="d5ce-e3c1-75a3-c27a" name="40mm Bofors AA Gun" publicationId="d4e7-6781-f1ff-5a93" page="0" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f999-c738-ddc1-818d" type="max"/>
       </constraints>
@@ -10239,7 +10261,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="92ce-cf9e-433d-fa45" name="20MM Polsten Cannon" publicationId="d4e7-6781-f1ff-5a93" page="0" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="92ce-cf9e-433d-fa45" name="20mm Polsten Cannon" publicationId="d4e7-6781-f1ff-5a93" page="0" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="64c5-04cc-0f6b-3318" type="max"/>
       </constraints>
@@ -14029,13 +14051,13 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="021e-57d8-52bc-01ea" name="Horse-drawn Limber" publicationId="352a-25fc-bef0-72ae" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="021e-57d8-52bc-01ea" name="Horse-drawn Limber" publicationId="82cd-6228-6b00-ecb4" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="c82c-d670-68fc-56ab" name="Horse-drawn Limber" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
             <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Wheeled</characteristic>
             <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">3+ (literally soft skinned)</characteristic>
-            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86"/>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
             <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">Any gun or howitzer</characteristic>
           </characteristics>
         </profile>
@@ -14218,6 +14240,73 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="25.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a75f-d39b-cc45-88de" name="Mule Team" publicationId="82cd-6228-6b00-ecb4" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="cd4f-a226-4588-54f3" name="Mule team" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Infantry</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">3+ (literally soft skinned)</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">Any gun or light howitzer</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="e879-a953-e5b1-5542" name="Gun assembly" hidden="false">
+          <description>To simulate the fact that the gun was actually transported disassembled, when the gun is unlimbered the artillery unit suffers a pin. When the gun is limbered, the mule team (and consequently the transported artillery unit) suffers a pin.</description>
+        </rule>
+        <rule id="6bc5-892f-e653-464e" name="Stubborn (Mule)" hidden="false">
+          <description>When taking an order test and doubles are rolled, the mules become stubborn and refuse to cooperate even if the order test was passed. Place the order dice to Down and add 1 pin marker to th eteam. This rule does not apply if Fubar is rolled.
+</description>
+        </rule>
+      </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="0bc7-5848-e220-a6bd" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ea0d-6a3f-5754-167b" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d1b4-b991-7af1-08d5" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="4b77-1de8-3fef-0e60" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3ec2-10b2-e984-332f" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="fda2-38e3-7e60-8533" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="6.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0723-03aa-8259-771c" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0ea9-1e3f-269e-7ad6" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="43cf-137f-b4d5-6d37" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c536-b290-0919-a784" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="35d9-4101-109e-3ce2" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="b832-0e74-306b-de48" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="4.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="bf04-bfd9-246f-f2f2" name="Armies of France" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="bf04-bfd9-246f-f2f2" name="Armies of France" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="b822-b930-4744-7a95" name="Theatre Selector" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -2889,6 +2889,27 @@
         <categoryLink id="7bae-6eb2-a7d4-af7e" name="New CategoryLink" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="dbf0-16b2-8b18-6284" name="Mule Team" hidden="true" collective="false" import="true" targetId="c6d3-16eb-3bcc-754c" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="620b-38e1-a1cc-b393" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aee8-1a1d-462b-426e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0236-5dd0-cd86-c454" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="740a-46af-93cb-dcd5" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3171-d8b6-0a7a-9bbf" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="17f1-fb22-f75d-9ec6" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="0337-912e-2052-f4b9" name="New CategoryLink" hidden="false" targetId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="559b53bd-8042-ee2a-ffaa-0e786b44e1fb" name="Communication Breakdown" page="0" hidden="false">
@@ -4959,9 +4980,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="266df1a1-a121-16fb-afb6-853c71c90b6f" name="Forward Observer" publicationId="85bd-2d22-c454-2385" page="0" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
-      </constraints>
       <selectionEntryGroups>
         <selectionEntryGroup id="dbde714e-41af-5d7b-a0e1-92403eb58417" name="Observer" hidden="false" collective="false" import="true">
           <constraints>
@@ -4974,6 +4992,27 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                 <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
               </constraints>
+              <selectionEntries>
+                <selectionEntry id="4682-1f1b-6c06-b3df" name="Cavalry" hidden="true" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f00e24e0-f1e8-99f1-2b51-0f2618150ec0" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a26-3001-36ed-890b" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5be-af2e-3316-4b9a" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="f394-139c-e28b-7737" name="Cavalry" hidden="false" targetId="525c-47c4-f59c-5c9a" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="5.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="06adbcb2-3faa-0582-c21b-c56882dce385" name="Rating" hidden="false" collective="false" import="true">
                   <constraints>
@@ -5053,6 +5092,11 @@
                             </conditionGroup>
                           </conditionGroups>
                         </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="101cd533-083d-8325-5c25-20ac39c31180" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4682-1f1b-6c06-b3df" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
                       </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -5114,6 +5158,11 @@
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
+                        </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="101cd533-083d-8325-5c25-20ac39c31180" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4682-1f1b-6c06-b3df" type="greaterThan"/>
+                          </conditions>
                         </modifier>
                       </modifiers>
                       <constraints>
@@ -5178,6 +5227,27 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
                 <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
               </constraints>
+              <selectionEntries>
+                <selectionEntry id="73f7-2f9b-5179-eea2" name="Cavalry" hidden="true" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f00e24e0-f1e8-99f1-2b51-0f2618150ec0" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a0c-b607-04a5-73e4" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="155c-8265-5ed2-4bb2" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="73ca-d9dd-4b48-7f77" name="Cavalry" hidden="false" targetId="525c-47c4-f59c-5c9a" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="5.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="358178f5-12dd-612f-ae0c-88a01c558bcd" name="Rating" hidden="false" collective="false" import="true">
                   <constraints>
@@ -5257,6 +5327,11 @@
                             </conditionGroup>
                           </conditionGroups>
                         </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="53173e25-04e5-b8b9-28fe-f40a7e87c354" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="73f7-2f9b-5179-eea2" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
                       </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -5318,6 +5393,11 @@
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
+                        </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="53173e25-04e5-b8b9-28fe-f40a7e87c354" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="73f7-2f9b-5179-eea2" type="greaterThan"/>
+                          </conditions>
                         </modifier>
                       </modifiers>
                       <constraints>
@@ -5382,6 +5462,27 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="92b8-8c0f-9ebc-f174" type="max"/>
                 <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9d91-b3ac-45c9-713b" type="max"/>
               </constraints>
+              <selectionEntries>
+                <selectionEntry id="1623-9d18-6967-57b7" name="Cavalry" hidden="true" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f00e24e0-f1e8-99f1-2b51-0f2618150ec0" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e71-8fc9-226d-f443" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="624e-f826-a940-e89c" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="dfb3-9165-e0a3-ce03" name="Cavalry" hidden="false" targetId="525c-47c4-f59c-5c9a" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="5.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="346f-d396-296a-00e4" name="Rating" hidden="false" collective="false" import="true">
                   <constraints>
@@ -5461,6 +5562,11 @@
                             </conditionGroup>
                           </conditionGroups>
                         </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="783a-731e-3aa3-d6e0" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1623-9d18-6967-57b7" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
                       </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b941-2267-8ede-6c98" type="max"/>
@@ -5522,6 +5628,11 @@
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
+                        </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="783a-731e-3aa3-d6e0" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1623-9d18-6967-57b7" type="greaterThan"/>
+                          </conditions>
                         </modifier>
                       </modifiers>
                       <constraints>
@@ -5904,6 +6015,27 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="c3854eff-be87-4993-f425-e25909b953ea" name="Commandant (Major)" page="0" hidden="false" collective="false" import="true" type="unit">
+              <selectionEntries>
+                <selectionEntry id="25af-986f-2b50-c139" name="Cavalry" hidden="true" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f00e24e0-f1e8-99f1-2b51-0f2618150ec0" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed4d-5f53-4e9f-7781" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63a6-7717-b132-b5ed" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="b723-0c09-92cf-4741" name="Cavalry" hidden="false" targetId="525c-47c4-f59c-5c9a" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="5.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="7ffe9a30-34de-3ee9-480e-d35dfafd85e4" name="Rating" hidden="false" collective="false" import="true">
                   <constraints>
@@ -5995,6 +6127,11 @@
                             </conditionGroup>
                           </conditionGroups>
                         </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="c3854eff-be87-4993-f425-e25909b953ea" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="25af-986f-2b50-c139" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
                       </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -6057,6 +6194,11 @@
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
+                        </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="c3854eff-be87-4993-f425-e25909b953ea" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="25af-986f-2b50-c139" type="greaterThan"/>
+                          </conditions>
                         </modifier>
                       </modifiers>
                       <constraints>
@@ -6121,6 +6263,11 @@
                             </conditionGroup>
                           </conditionGroups>
                         </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="c3854eff-be87-4993-f425-e25909b953ea" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="25af-986f-2b50-c139" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
                       </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -6173,6 +6320,13 @@
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="99e9-6fd8-1fa5-a2ad" name="Intelligence Officer" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="c3854eff-be87-4993-f425-e25909b953ea" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="25af-986f-2b50-c139" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                       <constraints>
                         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c021-ba2f-f34f-8cad" type="max"/>
                       </constraints>
@@ -6304,6 +6458,27 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="dd47fc60-9578-a2ed-7e5c-bbe689a8eceb" name="Capitaine (Captain)" page="0" hidden="false" collective="false" import="true" type="unit">
+              <selectionEntries>
+                <selectionEntry id="4b59-7931-ef57-c1d5" name="Cavalry" hidden="true" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f00e24e0-f1e8-99f1-2b51-0f2618150ec0" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71fc-c6a8-fb0b-d4df" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9966-f445-9ddc-353a" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="776d-9978-00df-c9d3" name="Cavalry" hidden="false" targetId="525c-47c4-f59c-5c9a" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="5.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="760d7275-9062-22c1-a4a8-293759d574d4" name="Rating" hidden="false" collective="false" import="true">
                   <constraints>
@@ -6395,6 +6570,11 @@
                             </conditionGroup>
                           </conditionGroups>
                         </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="dd47fc60-9578-a2ed-7e5c-bbe689a8eceb" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b59-7931-ef57-c1d5" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
                       </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -6457,6 +6637,11 @@
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
+                        </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="dd47fc60-9578-a2ed-7e5c-bbe689a8eceb" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b59-7931-ef57-c1d5" type="greaterThan"/>
+                          </conditions>
                         </modifier>
                       </modifiers>
                       <constraints>
@@ -6521,6 +6706,11 @@
                             </conditionGroup>
                           </conditionGroups>
                         </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="dd47fc60-9578-a2ed-7e5c-bbe689a8eceb" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b59-7931-ef57-c1d5" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
                       </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -6573,6 +6763,13 @@
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="6c9a-654c-8e11-40bd" name="Intelligence Officer" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="dd47fc60-9578-a2ed-7e5c-bbe689a8eceb" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b59-7931-ef57-c1d5" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                       <constraints>
                         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7c6-645b-dc6e-22d0" type="max"/>
                       </constraints>
@@ -7597,6 +7794,27 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
+              <selectionEntries>
+                <selectionEntry id="9eb5-d65a-3705-c670" name="Cavalry" hidden="true" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f00e24e0-f1e8-99f1-2b51-0f2618150ec0" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71af-9a46-7b94-923f" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47d0-b6e3-3d1b-cfd7" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="9d90-6237-d791-047a" name="Cavalry" hidden="false" targetId="525c-47c4-f59c-5c9a" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="5.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="42a281a2-e2f8-9a6c-a2de-84f79c2a5e88" name="Rating" hidden="false" collective="false" import="true">
                   <constraints>
@@ -7665,6 +7883,11 @@
                             </conditionGroup>
                           </conditionGroups>
                         </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="d191424d-92b8-f4a8-410d-2558f00c8892" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9eb5-d65a-3705-c670" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
                       </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -7712,6 +7935,11 @@
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
+                        </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="d191424d-92b8-f4a8-410d-2558f00c8892" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9eb5-d65a-3705-c670" type="greaterThan"/>
+                          </conditions>
                         </modifier>
                       </modifiers>
                       <constraints>
@@ -8213,6 +8441,27 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="34d0d9dd-6fdb-3ff9-4c31-6556b4a40cc2" name="Lieutenant (First Lieutenant)" page="0" hidden="false" collective="false" import="true" type="unit">
+              <selectionEntries>
+                <selectionEntry id="6ff4-bfde-a89f-b75a" name="Cavalry" hidden="true" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f00e24e0-f1e8-99f1-2b51-0f2618150ec0" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12d5-7519-9ac3-a3cd" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b6f-6b48-0ce7-0a4f" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="c22d-e16e-9398-f2b6" name="Cavalry" hidden="false" targetId="525c-47c4-f59c-5c9a" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="5.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="d05cd0c8-95c0-9033-12b5-bde3ad2019a8" name="Rating" hidden="false" collective="false" import="true">
                   <constraints>
@@ -8304,6 +8553,11 @@
                             </conditionGroup>
                           </conditionGroups>
                         </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="34d0d9dd-6fdb-3ff9-4c31-6556b4a40cc2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6ff4-bfde-a89f-b75a" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
                       </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -8366,6 +8620,11 @@
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
+                        </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="34d0d9dd-6fdb-3ff9-4c31-6556b4a40cc2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6ff4-bfde-a89f-b75a" type="greaterThan"/>
+                          </conditions>
                         </modifier>
                       </modifiers>
                       <constraints>
@@ -8430,6 +8689,11 @@
                             </conditionGroup>
                           </conditionGroups>
                         </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="34d0d9dd-6fdb-3ff9-4c31-6556b4a40cc2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6ff4-bfde-a89f-b75a" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
                       </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -8482,6 +8746,13 @@
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="aade-f958-0e89-b7e1" name="Intelligence Officer" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="34d0d9dd-6fdb-3ff9-4c31-6556b4a40cc2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6ff4-bfde-a89f-b75a" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                       <constraints>
                         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fc5-e825-6ee1-8d37" type="max"/>
                       </constraints>
@@ -8613,6 +8884,27 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="a804f047-cbf6-c427-18d8-3e6e3cae86d8" name="Sous-lieutenant (Second Lieutenant)" page="0" hidden="false" collective="false" import="true" type="unit">
+              <selectionEntries>
+                <selectionEntry id="41ba-3648-87b9-faae" name="Cavalry" hidden="true" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="false">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f00e24e0-f1e8-99f1-2b51-0f2618150ec0" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fad-cac7-371c-a09d" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24e6-acaa-0d14-7282" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="6085-33a3-b4e7-0237" name="Cavalry" hidden="false" targetId="525c-47c4-f59c-5c9a" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="5.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="bfc0d11c-53f4-a5a0-69a7-012f6ba0efbf" name="Rating" hidden="false" collective="false" import="true">
                   <constraints>
@@ -8704,6 +8996,11 @@
                             </conditionGroup>
                           </conditionGroups>
                         </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="a804f047-cbf6-c427-18d8-3e6e3cae86d8" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41ba-3648-87b9-faae" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
                       </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -8766,6 +9063,11 @@
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
+                        </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="a804f047-cbf6-c427-18d8-3e6e3cae86d8" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41ba-3648-87b9-faae" type="greaterThan"/>
+                          </conditions>
                         </modifier>
                       </modifiers>
                       <constraints>
@@ -8830,6 +9132,11 @@
                             </conditionGroup>
                           </conditionGroups>
                         </modifier>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="a804f047-cbf6-c427-18d8-3e6e3cae86d8" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41ba-3648-87b9-faae" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
                       </modifiers>
                       <constraints>
                         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -8882,6 +9189,13 @@
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="0edd-b58c-6b6f-f586" name="Intelligence Officer" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="increment" field="points" value="5.0">
+                          <conditions>
+                            <condition field="selections" scope="a804f047-cbf6-c427-18d8-3e6e3cae86d8" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41ba-3648-87b9-faae" type="greaterThan"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                       <constraints>
                         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9af0-607c-2c2a-fa1d" type="max"/>
                       </constraints>
@@ -15174,7 +15488,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2aa0-0eb3-c785-04f5" name="57MM AT-Gun M1" publicationId="209e-18dc-48dd-9860" page="0" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="2aa0-0eb3-c785-04f5" name="57mm AT-Gun M1" publicationId="209e-18dc-48dd-9860" page="0" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="d0e1-6d4f-3373-85cc" name="Gun Shield" hidden="false" targetId="95d0-d47a-8684-c817" type="rule"/>
         <infoLink id="43d9-4aab-143a-fead" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
@@ -15237,11 +15551,11 @@
     </selectionEntry>
     <selectionEntry id="4b7f-a090-6783-38f7" name="Horse-drawn Limber" publicationId="352a-25fc-bef0-72ae" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="d91d-a9ea-e8bb-0a3d" name="Horse-drawn Limber" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+        <profile id="d91d-a9ea-e8bb-0a3d" name="Horse-drawn Limber" publicationId="82cd-6228-6b00-ecb4" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
             <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Wheeled</characteristic>
             <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">3+ (literally soft skinned)</characteristic>
-            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86"/>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
             <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">Any gun or howitzer</characteristic>
           </characteristics>
         </profile>
@@ -15323,6 +15637,25 @@
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="47ff-7ff0-8af7-fa36" name="Cavalry" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f00e24e0-f1e8-99f1-2b51-0f2618150ec0" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffeb-bea9-831e-5c7d" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="febf-8a08-625d-990d" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="60fe-81f6-f9b9-605c" name="Cavalry" hidden="false" targetId="525c-47c4-f59c-5c9a" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="5.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -15623,6 +15956,73 @@
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="7.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c6d3-16eb-3bcc-754c" name="Mule Team" publicationId="82cd-6228-6b00-ecb4" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="996b-ac83-fb6d-0244" name="Mule team" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Infantry</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">3+ (literally soft skinned)</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">Any gun or light howitzer</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="ef3f-e1a3-a493-9ec1" name="Gun assembly" hidden="false">
+          <description>To simulate the fact that the gun was actually transported disassembled, when the gun is unlimbered the artillery unit suffers a pin. When the gun is limbered, the mule team (and consequently the transported artillery unit) suffers a pin.</description>
+        </rule>
+        <rule id="1593-f096-b1b2-c36e" name="Stubborn (Mule)" hidden="false">
+          <description>When taking an order test and doubles are rolled, the mules become stubborn and refuse to cooperate even if the order test was passed. Place the order dice to Down and add 1 pin marker to th eteam. This rule does not apply if Fubar is rolled.
+</description>
+        </rule>
+      </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="fd69-8d89-eb83-850e" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="81cd-249a-ed75-72df" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7473-fb7d-899e-37d1" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9070-3c85-2b25-5b8a" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="672c-a94e-36c6-8452" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="fe36-51bc-05e7-12d7" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="6.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0a26-e008-8fca-3caf" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6336-374d-e854-20ad" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="a7f0-9ea4-1293-f929" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b195-0acb-08ec-29bd" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f8d7-4a87-7c40-a11b" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="c8a6-9a0f-7828-e944" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="4.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>

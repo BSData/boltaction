@@ -1119,6 +1119,25 @@
         <categoryLink id="dadd-0174-5b6d-8fa9" name="New CategoryLink" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="057b-b946-b228-d9a8" name="Mule Team" hidden="true" collective="false" import="true" targetId="5773-79bb-d445-2d17" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="06bf-cf7d-2348-729f" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="adc6-ddb4-949b-6a0a" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="636a-1dbf-e390-23c3" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="33d2-23eb-33ad-5b8c" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="2aa7-67e4-1b76-ef74" name="New CategoryLink" hidden="false" targetId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="da3a-370a-91bf-6337" name="Never Give Up!" hidden="false">
@@ -2617,7 +2636,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1ab0-a5b6-cc7c-5673" name="40MM Bofors" publicationId="f855-3e35-d406-1837" page="0" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="1ab0-a5b6-cc7c-5673" name="40mm Bofors AA Gun" publicationId="f855-3e35-d406-1837" page="0" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9f48-f01d-923c-839f" type="max"/>
       </constraints>
@@ -7011,11 +7030,11 @@
     </selectionEntry>
     <selectionEntry id="0ce1-e442-9395-aa82" name="Horse-drawn Limber" publicationId="352a-25fc-bef0-72ae" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="0151-060a-4db2-94fa" name="Horse-drawn Limber" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+        <profile id="0151-060a-4db2-94fa" name="Horse-drawn Limber" publicationId="82cd-6228-6b00-ecb4" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
             <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Wheeled vehicle</characteristic>
             <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">3+ (literally soft skinned)</characteristic>
-            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86"/>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
             <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">Any gun or howitzer</characteristic>
           </characteristics>
         </profile>
@@ -7485,6 +7504,73 @@
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="75.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5773-79bb-d445-2d17" name="Mule Team" publicationId="82cd-6228-6b00-ecb4" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="5761-9ab0-29e0-7078" name="Mule team" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Infantry</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">3+ (literally soft skinned)</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">Any gun or light howitzer</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="dddb-912e-0474-7c0e" name="Gun assembly" hidden="false">
+          <description>To simulate the fact that the gun was actually transported disassembled, when the gun is unlimbered the artillery unit suffers a pin. When the gun is limbered, the mule team (and consequently the transported artillery unit) suffers a pin.</description>
+        </rule>
+        <rule id="fde1-9290-5ff2-140f" name="Stubborn (Mule)" hidden="false">
+          <description>When taking an order test and doubles are rolled, the mules become stubborn and refuse to cooperate even if the order test was passed. Place the order dice to Down and add 1 pin marker to th eteam. This rule does not apply if Fubar is rolled.
+</description>
+        </rule>
+      </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8c56-6a5d-4bf3-c306" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7908-961d-5d61-cfc7" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="81da-88d0-5010-60a1" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6ff5-65b2-0bf5-c4a6" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bf1a-1398-bb3f-04cf" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="22b8-f77d-f71e-c675" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="6.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="435a-3981-d28c-8ce7" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7ddf-f2a3-a374-7995" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="9c89-7647-6d23-8ed9" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ed39-8046-31a1-0a1d" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bf82-0247-cbfd-d412" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="fdb9-a864-4ada-0a42" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="4.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
