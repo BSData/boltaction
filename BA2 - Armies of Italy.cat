@@ -2318,6 +2318,9 @@
           </conditionGroups>
         </modifier>
       </modifiers>
+      <categoryLinks>
+        <categoryLink id="2161-2a08-614a-1fa4" name="New CategoryLink" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
+      </categoryLinks>
     </entryLink>
     <entryLink id="b182-2f45-b447-b7af" name="Infantry Section (Mid-/ Late-War)" hidden="true" collective="false" import="true" targetId="2551-ec08-bd18-51c5" type="selectionEntry">
       <modifiers>
@@ -3253,12 +3256,41 @@
         <categoryLink id="1958-afe3-0900-ce71" name="New CategoryLink" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="43ee-94af-52e8-f830" name="Camicie Nere (Blackshirts) Militia Infantry Section" hidden="true" collective="false" import="true" targetId="886dee11-5454-5f85-dc2c-6084cfe53ecf" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cc44-d5cb-dc6d-d40f" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a17d-a265-2fa7-c96f" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="64bc-c5d5-a80d-af35" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="27ad-f9b1-e2dd-4a22" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64bc-c5d5-a80d-af35" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="cb97-b3d6-692d-e91c" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
-    <rule id="2ed57e2d-18f6-2b84-4c49-bffd5b408320" name="Avanti Savoia!" page="0" hidden="false">
+    <rule id="2ed57e2d-18f6-2b84-4c49-bffd5b408320" name="Avanti Savoia!" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false">
       <description>At the beginning of each turn, subtract the number of units lost by the Italian Army from the number of units lost by the enemy if the number is 3+ all friendly Italian units gain +2 morale. If the number is -3 all friendly Italian units have their basic morale reduced by 2.</description>
     </rule>
-    <rule id="4d6db396-1389-600a-a31e-3e366f4120e1" name="Defensive Strategy" page="0" hidden="false">
+    <rule id="4d6db396-1389-600a-a31e-3e366f4120e1" name="Defensive Strategy" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false">
       <description>In Attacker-Defender scenarios if the Italian side does not win the Attacker versus Defender die roll make the roll again and the second roll stands. If the Italian player is the Defender:
 •	During the first turn of the game the Attacker units may not Run as they are probing for mines.
 •	The Italian artillery is already ranged: the player can reroll the die on the Artillery Barrage or Smoke Barrage charts.
@@ -3267,7 +3299,7 @@
     </rule>
   </rules>
   <sharedSelectionEntries>
-    <selectionEntry id="ad120821-5861-9712-6c62-77f23d6256fc" name="100/17 on Lancia 3Ro" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="ad120821-5861-9712-6c62-77f23d6256fc" name="100/17 on Lancia 3Ro" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="49e2fbe2-3e45-1cbd-b40e-50302de6479c" name="100/17 on Lancia 3Ro" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -3343,7 +3375,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5aff5785-5884-e8af-5829-586d23ebe6f0" name="37/45 anti-tank gun" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="5aff5785-5884-e8af-5829-586d23ebe6f0" name="37/45 anti-tank gun" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="beedf52b-f306-d0c8-ca85-341f4ee4895c" hidden="false" targetId="95d0-d47a-8684-c817" type="rule"/>
         <infoLink id="8a3dc3fd-2363-3d37-2f29-9f6fd72ca528" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
@@ -3404,7 +3436,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8b5c897e-7563-5dbf-9a7b-6dbe62badb54" name="47/32 Elefantino" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="8b5c897e-7563-5dbf-9a7b-6dbe62badb54" name="47/32 Elefantino" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="78ad44f7-d80d-a857-8be1-bf26bf5a5777" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
         <infoLink id="2d2d9830-b7fe-482c-d642-bcf6bf65d059" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
@@ -3464,7 +3496,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="df098788-5df8-10dc-1658-ecafe00d8f8f" name="75/39 anti-tank gun" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="df098788-5df8-10dc-1658-ecafe00d8f8f" name="75/39 anti-tank gun" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="5fadd05f-eda8-ff86-10d8-22f7791e312a" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
         <infoLink id="4abd6b39-82a4-190c-0fa9-0ae98e295968" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
@@ -3525,7 +3557,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6f148ffd-6132-c1c8-1604-70ff2b1cf11a" name="75/46 Dual-Purpose AA Gun" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="6f148ffd-6132-c1c8-1604-70ff2b1cf11a" name="75/46 Dual-Purpose AA Gun" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="8db798c2-765b-9839-9740-e0b3ebdd9185" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
         <infoLink id="9db3af4a-f7ff-008b-cb8a-5e51b6e393a6" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
@@ -3586,7 +3618,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7e2a8810-f3a2-7763-3a60-4e678c2dfd6a" name="90/53 Dual-Purpose AA Gun" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="7e2a8810-f3a2-7763-3a60-4e678c2dfd6a" name="90/53 Dual-Purpose AA Gun" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="b75d529d-6531-6063-077a-69c3eb212879" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
         <infoLink id="d383414f-0105-c638-edc9-80bac854f620" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
@@ -3647,7 +3679,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="307282fa-eff5-01c3-abd4-d511491b5cf0" name="AA Truck" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="307282fa-eff5-01c3-abd4-d511491b5cf0" name="AA Truck" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="de4cdbca-cd90-9763-fd64-6add4fcc26bf" name="AA Truck" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -3746,7 +3778,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5823340e-d9fe-c491-0c5f-38044e4fed7c" name="Alpini Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="5823340e-d9fe-c491-0c5f-38044e4fed7c" name="Alpini Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="ea05-5f71-a30d-8123" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -3907,7 +3939,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="86e53915-34ff-b6b7-5648-201347d09ca6" name="Autoblinda 40 (AB40)" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="86e53915-34ff-b6b7-5648-201347d09ca6" name="Autoblinda 40 (AB40)" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="e3972754-cd6e-7b0b-63cd-47743f1b7726" name="Autoblinda 40 " page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -3974,7 +4006,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7252a3a7-1fe1-b1fc-884c-4eb3af10271c" name="Autoblinda 41 (AB41)" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="7252a3a7-1fe1-b1fc-884c-4eb3af10271c" name="Autoblinda 41 (AB41)" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="781a089a-6cff-4b5d-dd78-cf6caebf22c8" name="Autoblinda 41 (AB41)" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -4042,7 +4074,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8ff9df72-e926-fef5-4426-df1c101263e1" name="Autoblinda Lince" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="8ff9df72-e926-fef5-4426-df1c101263e1" name="Autoblinda Lince" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="c3dbb0d2-9cfe-f04e-54af-a4176927442c" name="Autoblinda Lince" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -4108,7 +4140,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="af98d181-fef5-ba9b-0553-2d1495659466" name="Autoprotetto S37" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="model">
+    <selectionEntry id="af98d181-fef5-ba9b-0553-2d1495659466" name="Autoprotetto S37" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="9c244278-cb13-826f-f74d-f4b890fc48f8" name="Autoprotetto S37" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -4182,7 +4214,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="73b27e77-7fc4-de43-b536-3270e22efc7a" name="Bersaglieri Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="73b27e77-7fc4-de43-b536-3270e22efc7a" name="Bersaglieri Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="2b3b-6a9e-3199-77bf" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -4346,7 +4378,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0b825121-dba6-2a11-0925-e40febcb9f77" name="Breda 20MM" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="0b825121-dba6-2a11-0925-e40febcb9f77" name="Breda 20MM" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="c642ca81-4f23-0843-5d68-0d1bca302cd5" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
         <infoLink id="41dea1d8-ae11-0d8a-41d8-cae614fe2838" name="Fixed" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
@@ -4407,7 +4439,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ced0340a-4b94-b697-87ac-ac05e333a9ed" name="Breda 61 Artillery Tractor" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="model">
+    <selectionEntry id="ced0340a-4b94-b697-87ac-ac05e333a9ed" name="Breda 61 Artillery Tractor" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="64581107-84bb-540b-272b-5324d1efb64a" name="Breda 61 Artillery Tractor" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -4465,7 +4497,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="886dee11-5454-5f85-dc2c-6084cfe53ecf" name="Camicie Nere (Blackshirts) Militia Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="886dee11-5454-5f85-dc2c-6084cfe53ecf" name="Camicie Nere (Blackshirts) Militia Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="50ff-e696-8703-ee20" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -4487,6 +4519,17 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="089a-848d-f1ab-53e3" name="Non Testati" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9385-3bcb-a2d9-0e70" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4e7-97dd-cc81-50f8" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d18-1316-1a94-fed6" type="min"/>
@@ -4648,7 +4691,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="13ba0b68-8ed6-c45f-82d0-d4d063f29d63" name="Captured Renault R35 or R40" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="13ba0b68-8ed6-c45f-82d0-d4d063f29d63" name="Captured Renault R35 or R40" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="d8ecfc5f-f995-4663-46e0-581754a21abf" name="Captured Renault R35 or R40" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -4746,7 +4789,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5d58b430-2ba4-cb2c-f66c-d3f1a72e3151" name="Carro Commando M41" publicationId="ba7c-664b-fc86-79b6" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="5d58b430-2ba4-cb2c-f66c-d3f1a72e3151" name="Carro Commando M41" publicationId="ba7c-664b-fc86-79b6" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="82bd93b6-9086-9be2-88e6-d0b2362aeeb3" name="Carro Commando M41" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -4853,7 +4896,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4d46ecca-8348-0633-6703-69b5c355ca39" name="Cavalry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="4d46ecca-8348-0633-6703-69b5c355ca39" name="Cavalry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="05e8-aba0-298c-d705" name="Cavalry" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4926,7 +4969,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="af695c24-4598-f286-e34b-cb9a17cd4de7" name="Colonial Troops Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="af695c24-4598-f286-e34b-cb9a17cd4de7" name="Colonial Troops Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntryGroups>
         <selectionEntryGroup id="c84e-c6c1-e459-79a2" name="Rating" hidden="false" collective="false" import="true">
           <constraints>
@@ -5247,7 +5290,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="12cce736-5dd8-93b5-f496-174ff8897156" name="Fiat 3000 (L5 Series)" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="12cce736-5dd8-93b5-f496-174ff8897156" name="Fiat 3000 (L5 Series)" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="1cbd4ece-be1c-3934-50ef-f994f2e3bb3f" name="Fiat 3000 (L5 Series)" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -5342,7 +5385,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="de2ccfe8-7309-7287-026a-695b08ec4edf" name="Fiat 508 CM" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="model">
+    <selectionEntry id="de2ccfe8-7309-7287-026a-695b08ec4edf" name="Fiat 508 CM" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="ba9b8bca-3a05-4b64-3abb-ff4e6477a10b" name="Fiat 508 CM" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -5400,7 +5443,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b047e930-9556-341b-f37c-125388cf5f43" name="Flamethrower Team" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="b047e930-9556-341b-f37c-125388cf5f43" name="Flamethrower Team" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
@@ -5449,7 +5492,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="266df1a1-a121-16fb-afb6-853c71c90b6f" name="Forward Observer" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="266df1a1-a121-16fb-afb6-853c71c90b6f" name="Forward Observer" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntryGroups>
         <selectionEntryGroup id="dbde714e-41af-5d7b-a0e1-92403eb58417" name="Observer" hidden="false" collective="false" import="true">
           <constraints>
@@ -6187,7 +6230,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="89f926e8-58c7-949f-ec7e-e31fa71fe153" name="Heavy Artillery" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="89f926e8-58c7-949f-ec7e-e31fa71fe153" name="Heavy Artillery" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="8f1c28a1-db7b-838e-18fb-0ed275874b99" name="HE (4&quot;)" hidden="false" targetId="0be9-1aa0-98b3-16a8" type="rule"/>
         <infoLink id="320f1189-4e27-a7ee-1a66-6fe2ebfaea57" hidden="false" targetId="c00e-1e20-9232-6489" type="rule"/>
@@ -6240,7 +6283,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="01937da2-b36e-e36d-6466-bd24ea8048af" name="High Ranking Officer" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="01937da2-b36e-e36d-6466-bd24ea8048af" name="High Ranking Officer" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntryGroups>
         <selectionEntryGroup id="41476a34-3d7f-f47d-0c35-5c1943979f9e" name="Rank" hidden="false" collective="false" import="true">
           <constraints>
@@ -7153,7 +7196,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fe6bc7e4-e8e1-382e-8dff-f5d9ca21d4a3" name="Inexperienced Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="fe6bc7e4-e8e1-382e-8dff-f5d9ca21d4a3" name="Inexperienced Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="2b7c9bb6-b4a9-f1b8-7511-5676744ba344" name="Green" page="0" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -7299,7 +7342,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5f9f0f6d-6b8d-d14e-7d32-f86110c107d3" name="L3/33 and L3/35 variants" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="5f9f0f6d-6b8d-d14e-7d32-f86110c107d3" name="L3/33 and L3/35 variants" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="676b6d78-5b5b-1e6e-a9ea-c4d0be460c00" name="L3/33 - L3/35" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -7480,7 +7523,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a5b3514f-fb1c-0761-06ee-2e597d73e28b" name="L6/40" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="a5b3514f-fb1c-0761-06ee-2e597d73e28b" name="L6/40" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="b7719ea8-5feb-2209-5a9d-851e65664607" name="L6/40" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -7591,7 +7634,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c1361a79-34d8-9120-b35d-f3f92970293d" name="Light Artillery" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="c1361a79-34d8-9120-b35d-f3f92970293d" name="Light Artillery" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="710b54cc-e480-9f95-9e2d-ff456022ca26" name="HE (2&quot;)" hidden="false" targetId="e1e9-8856-911c-2f9d" type="rule"/>
         <infoLink id="1ef6e4dd-7781-89fe-eae7-731a39ec0de2" hidden="false" targetId="c00e-1e20-9232-6489" type="rule"/>
@@ -7793,7 +7836,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="396e9b0c-743e-09ca-cbd6-cba5467dd039" name="M14/41 Medium Tank" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="396e9b0c-743e-09ca-cbd6-cba5467dd039" name="M14/41 Medium Tank" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="d8402c18-dff7-02af-0583-a2fab6bc2c15" name="M14/41 Medium Tank" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -7874,7 +7917,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bb663b45-a449-ca82-107a-0e1014efbd93" name="M15/42 Medium Tank" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="bb663b45-a449-ca82-107a-0e1014efbd93" name="M15/42 Medium Tank" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="1b3ae038-c98f-dea2-975e-3f56bd215c5f" name="M15/42 Medium Tank" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -7964,7 +8007,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="42c61ab4-be14-9ac0-4696-a0421404015d" name="Medic Team" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="42c61ab4-be14-9ac0-4696-a0421404015d" name="Medic Team" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntryGroups>
         <selectionEntryGroup id="0ec98451-2e74-b344-9447-a3a68ae56c4c" name="Team" hidden="false" collective="false" import="true">
           <constraints>
@@ -8165,7 +8208,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bd6c93b2-7f19-e9ae-e91d-6fbfb25c79e5" name="Medium Artillery" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="bd6c93b2-7f19-e9ae-e91d-6fbfb25c79e5" name="Medium Artillery" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="dec497d5-1163-44e4-129e-f82dc33cfcfe" name="HE (3&quot;)" hidden="false" targetId="5a66-e1c5-fdff-a987" type="rule"/>
         <infoLink id="0a083376-2c42-6671-4c99-f25e16cefc30" name="Fixed" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
@@ -8217,7 +8260,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="08baaf3c-7619-992b-0e0f-b431e65ab8c6" name="Medium Machine Gun Team" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="08baaf3c-7619-992b-0e0f-b431e65ab8c6" name="Medium Machine Gun Team" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="8850e1d6-5424-0717-8817-a60b681597e9" name="Fixed" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
         <infoLink id="2e1cd640-171e-f279-7c99-e24ca4201f62" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
@@ -8275,7 +8318,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b0b9720f-c3ec-ae03-b764-315549044d29" name="Mortar Team" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="b0b9720f-c3ec-ae03-b764-315549044d29" name="Mortar Team" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <selectionEntryGroups>
         <selectionEntryGroup id="ec9ba07e-1d55-8f04-c5e2-290cb8d04593" name="Mortar Type" hidden="false" collective="false" import="true">
           <constraints>
@@ -8418,7 +8461,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="38a0b04e-c164-f766-44e9-d21ba05ac847" name="Paracadutisti (Paratroopers) Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="38a0b04e-c164-f766-44e9-d21ba05ac847" name="Paracadutisti (Paratroopers) Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="cb2c-bf6c-2e57-06f4" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -8587,7 +8630,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Officer" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="c179b253-804c-db7d-50c4-0bfaac8aa7d9" name="Officer" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink id="f8ef-157c-6aa5-f79d" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
       </categoryLinks>
@@ -9519,7 +9562,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="58a76cdd-dcd9-58f2-1540-560bb6b83110" name="Regular Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="58a76cdd-dcd9-58f2-1540-560bb6b83110" name="Regular Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="3d9e-ca40-7008-4121" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -9646,7 +9689,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3e1c1047-6014-f6e4-7855-2dcccdcb4bd0" name="Sahariana SPA-Viberti AS42" publicationId="82cd-6228-6b00-ecb4" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="3e1c1047-6014-f6e4-7855-2dcccdcb4bd0" name="Sahariana SPA-Viberti AS42" publicationId="82cd-6228-6b00-ecb4" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="64332f33-546c-307e-14b0-8437d02678c4" name="Sahariana" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -9777,7 +9820,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a8e2b20f-7d48-ac46-5ce8-20b06521987c" name="San Marco Marines Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="a8e2b20f-7d48-ac46-5ce8-20b06521987c" name="San Marco Marines Infantry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="972d-fa29-e331-915e" name="Anti-tank Grenades" page="0" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -9930,7 +9973,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="128f4d54-4bc1-e081-0a2d-503412f248c6" name="Semovente 105/25" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="128f4d54-4bc1-e081-0a2d-503412f248c6" name="Semovente 105/25" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="73343745-fb20-9107-c1a8-8c74e2abfcd8" name="Semovente 105/25" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -9982,7 +10025,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="cd8f96fe-5dd1-d658-3ad9-f225882b533e" name="Semovente 47/32" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="cd8f96fe-5dd1-d658-3ad9-f225882b533e" name="Semovente 47/32" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="6d27964c-b90a-d700-a841-81505bd4e4fd" name="Semovente 47/32" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -10082,7 +10125,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="39aae554-d258-1aa2-5a1c-94833e635847" name="Semovente 75/18" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="39aae554-d258-1aa2-5a1c-94833e635847" name="Semovente 75/18" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="0750abd3-2681-2873-15f1-7e6ada939c0c" name="Semovente 75/18" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -10149,7 +10192,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0ae77c87-25c9-cee4-2a95-8e3485f9b5aa" name="Semovente 90/53" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="0ae77c87-25c9-cee4-2a95-8e3485f9b5aa" name="Semovente 90/53" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="d85a465e-e089-7136-6a53-02a8b6cfa2a4" name="Semovente 90/53" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -10204,7 +10247,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="049e620b-9a23-a73b-9466-1a6d364787e9" name="Sniper Team" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="049e620b-9a23-a73b-9466-1a6d364787e9" name="Sniper Team" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="ebafdac2-a2a5-cc21-fb5d-a8069195b73d" hidden="false" targetId="6bcb-f463-20a7-0b4a" type="rule"/>
         <infoLink id="d9dabca2-6f58-96d9-6f90-fef18adf9480" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
@@ -10250,7 +10293,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4a3df15d-963e-cbae-d4a8-c43ab86ef6d6" name="Solothurn 20mm Anti-tank Rifle" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="4a3df15d-963e-cbae-d4a8-c43ab86ef6d6" name="Solothurn 20mm Anti-tank Rifle" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="0f3ab781-ba1d-2baf-f44b-54e982751007" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
         <infoLink id="3e7452a8-99a9-f173-0001-4d669e2b78d8" hidden="false" targetId="549b-7a6c-2710-5dfe" type="rule">
@@ -10368,7 +10411,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="670b7265-b1c9-9181-dcb5-c2d7e06b58eb" name="Truck" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="model">
+    <selectionEntry id="670b7265-b1c9-9181-dcb5-c2d7e06b58eb" name="Truck" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="6b51cdf8-d576-7b98-4f3c-2905dd9380bd" name="Truck" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -10436,7 +10479,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="64b1f0a7-45bc-144c-7b7b-96209a83b6f2" name="Wheeled Artillery Tractors" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="true" collective="false" import="true" type="model">
+    <selectionEntry id="64b1f0a7-45bc-144c-7b7b-96209a83b6f2" name="Wheeled Artillery Tractors" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="5189e4d0-74cb-2def-e8a8-cb7f01f35367" name="Wheeled Artillery Tractors" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -10497,7 +10540,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="aef5-d336-7d9f-d88a" name="Semovente 75/34" publicationId="ae1b-9fe2-38c5-199d" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="aef5-d336-7d9f-d88a" name="Semovente 75/34" publicationId="ae1b-9fe2-38c5-199d" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="2d15-fb30-f2ab-2450" name="Semovente 75/18" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -10564,7 +10607,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4fe3-1df5-e1d7-b59d" name="Guastatori Section" publicationId="82cd-6228-6b00-ecb4" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="4fe3-1df5-e1d7-b59d" name="Guastatori Section" publicationId="82cd-6228-6b00-ecb4" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntryGroups>
         <selectionEntryGroup id="42c4-2009-7fab-129c" name="Section" hidden="false" collective="false" import="true">
           <constraints>
@@ -11177,7 +11220,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9e89-08bd-7c17-bbe5" name="Carabinieri Section" publicationId="82cd-6228-6b00-ecb4" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="9e89-08bd-7c17-bbe5" name="Carabinieri Section" publicationId="82cd-6228-6b00-ecb4" page="0" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="45f5-9635-df43-83ad" type="max"/>
       </constraints>
@@ -12403,7 +12446,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ddf0-07a1-1970-3d1a" name="Late War Paracadutisti (Paratroopers) Infantry Section" publicationId="352a-25fc-bef0-72ae" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="ddf0-07a1-1970-3d1a" name="Late War Paracadutisti (Paratroopers) Infantry Section" publicationId="352a-25fc-bef0-72ae" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="a59a-add8-a966-ac70" name="Fanatics" page="0" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -12797,7 +12840,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e2a6-a6d7-9999-d43a" name="Dubats Skirmishers Section" publicationId="ae1b-9fe2-38c5-199d" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="e2a6-a6d7-9999-d43a" name="Dubats Skirmishers Section" publicationId="ae1b-9fe2-38c5-199d" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntryGroups>
         <selectionEntryGroup id="0d5c-2a48-4cde-9d97" name="Rating" hidden="false" collective="false" import="true">
           <constraints>
@@ -13142,7 +13185,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="47b7-6031-13c0-00e1" name="Motociclisti Infantry Section" publicationId="82cd-6228-6b00-ecb4" page="0" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="47b7-6031-13c0-00e1" name="Motociclisti Infantry Section" publicationId="82cd-6228-6b00-ecb4" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntryGroups>
         <selectionEntryGroup id="fa25-99c8-472f-7bd8" name="Rating" hidden="false" collective="false" import="true">
           <constraints>
@@ -16653,7 +16696,7 @@
       <selectionEntries>
         <selectionEntry id="cc44-d5cb-dc6d-d40f" name="Generic Reinforced Platoon" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="2aec-0c68-036e-ed24" name="Generic Reinforced Platoon" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+            <profile id="2aec-0c68-036e-ed24" name="Generic Reinforced Platoon" publicationId="86aa-6664-9bc3-4e3e" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -16661,7 +16704,7 @@
         </selectionEntry>
         <selectionEntry id="8331-7adf-02b7-b1ff" name="1943: The Defence of Sicily" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="f071-cf23-3a14-470f" name="1943: The Defence of Sicily" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+            <profile id="f071-cf23-3a14-470f" name="1943: The Defence of Sicily" publicationId="86aa-6664-9bc3-4e3e" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -16669,7 +16712,7 @@
         </selectionEntry>
         <selectionEntry id="4b1a-340d-e46c-7c10" name="1941-43: The Eastern Front" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="5f55-8cbd-ef9a-2889" name="1941-43: The Eastern Front" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+            <profile id="5f55-8cbd-ef9a-2889" name="1941-43: The Eastern Front" publicationId="86aa-6664-9bc3-4e3e" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -16677,7 +16720,7 @@
         </selectionEntry>
         <selectionEntry id="a646-bc29-8689-2d43" name="1940-43: The War in Africa" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="f27c-bdd4-fe9e-0def" name="1940-43: The War in Africa" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+            <profile id="f27c-bdd4-fe9e-0def" name="1940-43: The War in Africa" publicationId="86aa-6664-9bc3-4e3e" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -16685,7 +16728,7 @@
         </selectionEntry>
         <selectionEntry id="6d93-7ade-17cd-bc30" name="1940-41: The Invasion of Greece" publicationId="86aa-6664-9bc3-4e3e" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="2fb8-4097-eecf-d64e" name="1940-41: The Invasion of Greece" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+            <profile id="2fb8-4097-eecf-d64e" name="1940-41: The Invasion of Greece" publicationId="86aa-6664-9bc3-4e3e" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -16693,7 +16736,7 @@
         </selectionEntry>
         <selectionEntry id="27ad-f9b1-e2dd-4a22" name="1940-41: The War in Africa, East Africa" publicationId="ae1b-9fe2-38c5-199d" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="43bc-b3c7-0e6b-695b" name="1940-41: The War in Africa, East Africa" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+            <profile id="43bc-b3c7-0e6b-695b" name="1940-41: The War in Africa, East Africa" publicationId="ae1b-9fe2-38c5-199d" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -16701,7 +16744,7 @@
         </selectionEntry>
         <selectionEntry id="20dd-1a95-7cc5-942f" name="1940: Army Group West, Western Alps" publicationId="a4ea-50a6-5c1c-0429" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="5598-9789-eab7-c152" name="1940: Army Group West, Western Alps" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+            <profile id="5598-9789-eab7-c152" name="1940: Army Group West, Western Alps" publicationId="a4ea-50a6-5c1c-0429" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -16709,7 +16752,7 @@
         </selectionEntry>
         <selectionEntry id="0dcf-5aa2-d41b-38c4" name="1940: The War in Africa, Egypt" publicationId="ae1b-9fe2-38c5-199d" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="2171-c88d-70c7-77a0" name="1940: The War in Africa, Egypt" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+            <profile id="2171-c88d-70c7-77a0" name="1940: The War in Africa, Egypt" publicationId="ae1b-9fe2-38c5-199d" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -16720,7 +16763,7 @@
             <profile id="4bb3-5b00-5e2c-5513" name="1944-45: Italian Co-Belligerent Army" publicationId="ae1b-9fe2-38c5-199d" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
           <rules>
-            <rule id="43ff-7af3-9e49-1ed6" name="Italian Co-Belligerent Army" hidden="false">
+            <rule id="43ff-7af3-9e49-1ed6" name="Italian Co-Belligerent Army" publicationId="ae1b-9fe2-38c5-199d" hidden="false">
               <description>Replace the National Rules with either Avanti Savoia special rule or Vengeance national characteristic from Armies of Britain book</description>
             </rule>
           </rules>
@@ -16730,10 +16773,10 @@
         </selectionEntry>
         <selectionEntry id="a17d-a265-2fa7-c96f" name="1944-45: Italian Social Republic" publicationId="ae1b-9fe2-38c5-199d" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
-            <profile id="bf97-98bb-8af2-428d" name="1944-45: Italian Social Republic" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
+            <profile id="bf97-98bb-8af2-428d" name="1944-45: Italian Social Republic" publicationId="ae1b-9fe2-38c5-199d" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
           <rules>
-            <rule id="187f-6bd3-d572-d8c1" name="Italian Social Republic" hidden="false">
+            <rule id="187f-6bd3-d572-d8c1" name="Italian Social Republic" publicationId="ae1b-9fe2-38c5-199d" hidden="false">
               <description>One unit of Blackshirts can replace the Non Testati special Rule with Fanatics special rule for +3pts per man.</description>
             </rule>
           </rules>
