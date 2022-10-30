@@ -2145,6 +2145,38 @@
         <categoryLink id="f479-fa3e-b117-9dfd" name="New CategoryLink" hidden="false" targetId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="191d-813a-c556-cfbd" name="Captured M3 Stuart Light Tank" hidden="true" collective="false" import="true" targetId="b4b3-f7b0-e77c-d63f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e0d8-540d-c8c4-6bc7" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="0cbb-4c1e-ac07-02a3" name="New CategoryLink" hidden="false" targetId="b3073f4b-f974-1603-e5ea-b2ec953e496a" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="71e5-087e-c290-cf15" name="Captured M3 Stuart Light Tank" hidden="true" collective="false" import="true" targetId="b4b3-f7b0-e77c-d63f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e0d8-540d-c8c4-6bc7" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="583d-abd6-7c40-e089" name="New CategoryLink" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="a47d1ec8-07e9-2bf0-7275-169d82b3a4c9" name="Banzai Charge" page="0" hidden="false">
@@ -2494,7 +2526,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="52c3771e-f6b1-c2c4-d33f-65edd45108fa" name="Armoured Railroad Car" page="0" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="52c3771e-f6b1-c2c4-d33f-65edd45108fa" name="Armoured Railroad Car (Type 91 So-Mo, Type 93 Sum-Ida)" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="b1458052-0c03-00da-78b1-4f64808a33d0" name="Armoured Railroad Car" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -11100,6 +11132,99 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="b4b3-f7b0-e77c-d63f" name="Captured M3 Stuart Light Tank" publicationId="d919-e7ea-4680-bc56" page="0" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="b31b-6ab3-9991-9c01" name="M3 Stuart Light Tank" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Tracked Vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Light Tank 8+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="dca2-845a-717a-2d47" name="Vulnerable" hidden="false" targetId="a52c-ff9f-bb1c-b2be" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="a330-40ac-0753-d3b7" name="Recce" page="0" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a21b-ad6f-7207-828f" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="5052-a1bf-649d-4ecd" name="Recce" hidden="false" targetId="dd65-ec56-4aed-ad4f" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7eeb-6cc5-9297-2a19" name="2 Hull-mounted forward-facing LMG" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4334-2dca-d7cb-63a8" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="d50c-4841-ce44-90ba" name="Light Machine Gun (LMG)" hidden="false" targetId="7533-d12d-21e3-496b" type="profile"/>
+            <infoLink id="ec8f-c7cf-3a9f-b6a9" name="M3 Stuart Forward Facing Hull Mounted LMG" hidden="false" targetId="738f-3f25-e26c-abd8" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="15.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="d7e5-bdca-ea34-ff4f" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="62f9-c0b6-3edf-857f" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="79d5-f989-00a3-478e" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="5ae5-3050-05dc-7093" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1b9c-53ed-8d55-9b83" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="0712-2e1c-8b2d-a4de" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="115.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0696-9f03-c75d-0544" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4efc-8990-3437-80c4" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="2ded-dd12-d984-7084" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="90.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="300a-17ea-af65-ceba" name="Pintle-mount" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4e34-948d-b7b7-fbf4" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="2d9e-abc6-0f26-78d1" name="Pintle-Mounted MMG (360)(15pts)" hidden="false" collective="false" import="true" targetId="f43c-6b8d-38d8-0520" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4608-97d3-e544-54ab" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="6b2d-5105-b605-287a" name="Coaxial MMG" hidden="false" collective="false" import="true" targetId="7f4c-ca9b-8522-ccfc" type="selectionEntry"/>
+        <entryLink id="6db4-c14b-7cdd-3207" name="Command vehicle" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+        <entryLink id="6b08-75b9-3a7f-9e08" name="Forward Facing Hull Mounted MMG" hidden="false" collective="false" import="true" targetId="0d98-6c24-5cd9-1c6c" type="selectionEntry"/>
+        <entryLink id="c6ed-d6c2-3094-a4b2" name="Turret Mounted Light AT Gun" hidden="false" collective="false" import="true" targetId="3503-6634-ff60-05d8" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="57bb-7ba1-5d2f-d997" name="Threatre Selector" hidden="false" collective="false" import="true" defaultSelectionEntryId="62b1-a831-c705-4995">
@@ -11264,6 +11389,9 @@
     </rule>
     <rule id="512f-c92a-340c-932d" name="Multiple flamethrowers" hidden="false">
       <description>May only use one flamethrower per turn. Upgrade to Bo type, This allows the flamethrower to fire into the rear arc of the tank </description>
+    </rule>
+    <rule id="738f-3f25-e26c-abd8" name="M3 Stuart Forward Facing Hull Mounted LMG" hidden="false">
+      <description>Note that these .30 cal machine guns are treated as LMGs rather than MMGs to represent the awkwardness of this weapon layout. In addition, these weapons must always be fired against the same target as the vehicle hull mounted MMG.</description>
     </rule>
   </sharedRules>
 </catalogue>

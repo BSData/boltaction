@@ -9590,6 +9590,17 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="c3854eff-be87-4993-f425-e25909b953ea" name="Major" page="0" hidden="false" collective="false" import="true" type="unit">
+              <selectionEntries>
+                <selectionEntry id="9cd6-616c-8cbd-434d" name="Highland Officer" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ad46-0867-22c7-1a04" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eef3-5eb7-d046-a2ba" type="min"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="63f1-2181-221a-841d" name="Bagpiper" hidden="false" targetId="a829-b820-687d-5cd3" type="rule"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="7ffe9a30-34de-3ee9-480e-d35dfafd85e4" name="Rating" hidden="false" collective="false" import="true">
                   <constraints>
@@ -9626,6 +9637,7 @@
                               <conditions>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df57-31bd-9234-c1cd" type="equalTo"/>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50ee-cfff-112d-7405" type="equalTo"/>
+                                <condition field="selections" scope="01937da2-b36e-e36d-6466-bd24ea8048af" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9cd6-616c-8cbd-434d" type="greaterThan"/>
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
@@ -9646,6 +9658,7 @@
                               <conditions>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df57-31bd-9234-c1cd" type="equalTo"/>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50ee-cfff-112d-7405" type="equalTo"/>
+                                <condition field="selections" scope="01937da2-b36e-e36d-6466-bd24ea8048af" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9cd6-616c-8cbd-434d" type="greaterThan"/>
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
@@ -9978,6 +9991,68 @@
                         <cost name="pts" typeId="points" value="0.0"/>
                       </costs>
                     </selectionEntry>
+                    <selectionEntry id="cb3e-51df-a39e-a793" name="Bagpiper" page="0" hidden="true" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="false">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition field="selections" scope="01937da2-b36e-e36d-6466-bd24ea8048af" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9cd6-616c-8cbd-434d" type="greaterThan"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a476-484c-50bf-1f8a" type="max"/>
+                      </constraints>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup id="686d-657b-ccb2-852c" name="Weapon" hidden="false" collective="false" import="true">
+                          <constraints>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="193a-310a-a650-1e4d" type="min"/>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d242-e2ff-ed9d-e4c0" type="max"/>
+                          </constraints>
+                          <selectionEntries>
+                            <selectionEntry id="cc2d-e7ad-f759-6930" name="Pistol" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8145-1b9d-fcd8-44df" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="9f4c-a1bb-3d2b-e3c0" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                            <selectionEntry id="0c14-0eaa-e1ec-6b72" name="SMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f4e6-93b5-8326-3017" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="2585-2010-2403-d5bb" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                            <selectionEntry id="65a8-82a6-a292-00d5" name="Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7a32-3f8d-28f0-69db" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="757b-7cb0-5b38-a407" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <costs>
+                        <cost name="pts" typeId="points" value="33.0"/>
+                      </costs>
+                    </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
                 <selectionEntryGroup id="4382-175c-3e14-9694" name="Weapon" hidden="false" collective="false" import="true">
@@ -10018,6 +10093,17 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="dd47fc60-9578-a2ed-7e5c-bbe689a8eceb" name="Captain" page="0" hidden="false" collective="false" import="true" type="unit">
+              <selectionEntries>
+                <selectionEntry id="3dbd-af1d-9428-dd36" name="Highland Officer" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ac68-493f-f00f-2e46" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d88-4d0e-62bc-fcfa" type="min"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="9a29-7c37-5b35-51e2" name="Bagpiper" hidden="false" targetId="a829-b820-687d-5cd3" type="rule"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="760d7275-9062-22c1-a4a8-293759d574d4" name="Rating" hidden="false" collective="false" import="true">
                   <constraints>
@@ -10033,6 +10119,7 @@
                               <conditions>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df57-31bd-9234-c1cd" type="equalTo"/>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50ee-cfff-112d-7405" type="equalTo"/>
+                                <condition field="selections" scope="01937da2-b36e-e36d-6466-bd24ea8048af" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3dbd-af1d-9428-dd36" type="greaterThan"/>
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
@@ -10053,6 +10140,7 @@
                               <conditions>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df57-31bd-9234-c1cd" type="equalTo"/>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50ee-cfff-112d-7405" type="equalTo"/>
+                                <condition field="selections" scope="01937da2-b36e-e36d-6466-bd24ea8048af" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3dbd-af1d-9428-dd36" type="greaterThan"/>
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
@@ -10404,6 +10492,68 @@
                       </selectionEntryGroups>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="bf40-bc27-20c8-68f8" name="Bagpiper" page="0" hidden="true" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="false">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition field="selections" scope="01937da2-b36e-e36d-6466-bd24ea8048af" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3dbd-af1d-9428-dd36" type="greaterThan"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="94ce-68d0-1030-eee7" type="max"/>
+                      </constraints>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup id="0fca-216d-0f2f-b554" name="Weapon" hidden="false" collective="false" import="true">
+                          <constraints>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8925-5aa8-a764-13f5" type="min"/>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="03df-ac71-8a9a-5aa5" type="max"/>
+                          </constraints>
+                          <selectionEntries>
+                            <selectionEntry id="5e15-8ee9-7182-cd2e" name="Pistol" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c0fb-ce4c-6f16-4a4b" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="4be1-c81a-276f-8f19" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                            <selectionEntry id="059b-a1ac-bf35-9733" name="SMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a324-f8a8-7028-2182" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="3917-8e2e-b96d-2abe" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                            <selectionEntry id="bb40-40fd-341b-c490" name="Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="790b-56b2-5789-240e" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="fa41-c3a4-6a30-e78e" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <costs>
+                        <cost name="pts" typeId="points" value="33.0"/>
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
@@ -15530,6 +15680,17 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           </constraints>
           <selectionEntries>
             <selectionEntry id="00a8-b8c9-4f72-030f" name="First Lieutenant" page="0" hidden="false" collective="false" import="true" type="unit">
+              <selectionEntries>
+                <selectionEntry id="0736-77bb-fc92-cdb0" name="Highland Officer" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="73b8-ddc5-2427-55e3" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="331d-fa34-f999-af20" type="min"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="1652-87eb-457d-1691" name="Bagpiper" hidden="false" targetId="a829-b820-687d-5cd3" type="rule"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="989b-c9f6-a669-26bf" name="Rating" hidden="false" collective="false" import="true">
                   <constraints>
@@ -15545,6 +15706,7 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                               <conditions>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df57-31bd-9234-c1cd" type="equalTo"/>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50ee-cfff-112d-7405" type="equalTo"/>
+                                <condition field="selections" scope="00a8-b8c9-4f72-030f" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0736-77bb-fc92-cdb0" type="greaterThan"/>
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
@@ -15592,6 +15754,7 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                               <conditions>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df57-31bd-9234-c1cd" type="equalTo"/>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50ee-cfff-112d-7405" type="equalTo"/>
+                                <condition field="selections" scope="00a8-b8c9-4f72-030f" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0736-77bb-fc92-cdb0" type="greaterThan"/>
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
@@ -15968,6 +16131,68 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                         <cost name="pts" typeId="points" value="0.0"/>
                       </costs>
                     </selectionEntry>
+                    <selectionEntry id="1516-aab8-0af9-5c06" name="Bagpiper" page="0" hidden="true" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="false">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition field="selections" scope="00a8-b8c9-4f72-030f" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0736-77bb-fc92-cdb0" type="greaterThan"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="61d4-9383-f237-9f9e" type="max"/>
+                      </constraints>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup id="45d4-2526-1f55-0cda" name="Weapon" hidden="false" collective="false" import="true">
+                          <constraints>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4305-c8d2-9049-63e8" type="min"/>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0e0a-9c08-29f6-c3ee" type="max"/>
+                          </constraints>
+                          <selectionEntries>
+                            <selectionEntry id="5ee2-dfbb-a068-0222" name="Pistol" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7b36-3255-cce6-1ca9" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="0b8e-4b6e-b934-e7fd" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                            <selectionEntry id="daed-6ec2-f190-869c" name="SMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7501-e6ad-cc9c-1ddf" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="e0f7-abab-aa9b-79ac" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                            <selectionEntry id="59c3-b025-e95b-1614" name="Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="374b-bc9c-b961-0389" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="c9da-29fd-c02b-c30e" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <costs>
+                        <cost name="pts" typeId="points" value="33.0"/>
+                      </costs>
+                    </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -15976,6 +16201,17 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
               </costs>
             </selectionEntry>
             <selectionEntry id="838c-e18d-1b00-7243" name="Second Lieutenant" page="0" hidden="false" collective="false" import="true" type="unit">
+              <selectionEntries>
+                <selectionEntry id="495b-6439-f61f-fa1e" name="Highland Officer" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ead7-00a6-690b-3278" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f7cd-25bb-c795-7105" type="min"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="6b87-f777-d52d-68af" name="Bagpiper" hidden="false" targetId="a829-b820-687d-5cd3" type="rule"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="dba5-0d98-cb85-8e06" name="Rating" hidden="false" collective="false" import="true">
                   <constraints>
@@ -16015,6 +16251,7 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                               <conditions>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df57-31bd-9234-c1cd" type="equalTo"/>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50ee-cfff-112d-7405" type="equalTo"/>
+                                <condition field="selections" scope="838c-e18d-1b00-7243" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="495b-6439-f61f-fa1e" type="greaterThan"/>
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
@@ -16038,6 +16275,7 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                               <conditions>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df57-31bd-9234-c1cd" type="equalTo"/>
                                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50ee-cfff-112d-7405" type="equalTo"/>
+                                <condition field="selections" scope="838c-e18d-1b00-7243" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="495b-6439-f61f-fa1e" type="greaterThan"/>
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
@@ -16412,6 +16650,68 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
                       </selectionEntryGroups>
                       <costs>
                         <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="b159-4548-b492-0506" name="Bagpiper" page="0" hidden="true" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="false">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition field="selections" scope="838c-e18d-1b00-7243" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="495b-6439-f61f-fa1e" type="greaterThan"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f014-9288-e9f5-e269" type="max"/>
+                      </constraints>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup id="4386-33d9-26eb-f61d" name="Weapon" hidden="false" collective="false" import="true">
+                          <constraints>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="090d-4633-996a-ae9a" type="min"/>
+                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6ed2-4ef4-3e08-4fbf" type="max"/>
+                          </constraints>
+                          <selectionEntries>
+                            <selectionEntry id="eead-bd17-77d0-b587" name="Pistol" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="07fe-cde3-caba-caad" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="09f5-c0cb-e9e9-6675" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                            <selectionEntry id="20b3-7fa8-657d-7b04" name="SMG" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1052-a95f-df3d-05fd" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="6078-1c08-82d2-703a" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                            <selectionEntry id="acde-aa9d-9b41-1af8" name="Rifle" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                              <constraints>
+                                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4a85-f7ba-24b7-e9ac" type="max"/>
+                              </constraints>
+                              <infoLinks>
+                                <infoLink id="1930-7cf4-9d06-139f" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
+                              </infoLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <costs>
+                        <cost name="pts" typeId="points" value="33.0"/>
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
@@ -23034,6 +23334,9 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
     </rule>
     <rule id="e663-8788-d59f-b91a" name="Formidable Figthers" hidden="false">
       <description>The Maori do not benefit from any New Zealand national characteristics; instead, they always have the ‘Blood curdling charge’, ‘Up and at ’em’ and ‘Tough as boots’ national characteristics.</description>
+    </rule>
+    <rule id="a829-b820-687d-5cd3" name="Bagpiper" hidden="false">
+      <description>The bagpiper effectively makes the platoon a Highland platoon. As long as the bagpiper is alive, Regular and Veteran Infantry sections in this platoon may reroll failed morale checks. FUBAR rolls cannot be rerolled.</description>
     </rule>
   </sharedRules>
 </catalogue>
