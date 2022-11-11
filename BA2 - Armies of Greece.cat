@@ -705,6 +705,23 @@
         <categoryLink id="5278-7d93-165f-43b1" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="ff93-b18e-8fde-8757" name="Artillery Tractor" hidden="true" collective="false" import="true" targetId="24c3-a4d0-1f01-66bf" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="787c-3232-a6e8-7be8" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4aa9-61ce-b959-a1c7" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="4e6f-b7be-a159-a582" name="New CategoryLink" hidden="false" targetId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="8b9f-81ea-b728-39b3" name="Communication Breakdown" page="0" hidden="false">
@@ -4984,6 +5001,64 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="4.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="24c3-a4d0-1f01-66bf" name="Artillery Tractor" publicationId="85bd-2d22-c454-2385" page="0" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="0ca4-8b59-ae4f-b671" name="Artillery Tractor" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Wheeled Vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Soft Skinned 6+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">Any AT Gun Any Howitzer Any AA Gun</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="76fc-beb2-4fde-94ae" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="612c-15ce-761e-46ac" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5d4c-c6a5-220e-3e76" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c992-23a6-deac-9851" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b181-3d0a-6f2d-1339" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="22ee-622c-bb80-a7cd" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="18.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d5dd-dcfe-79ad-9104" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7b9c-b4c1-294d-69be" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="1f33-a83b-0b4f-5fbd" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="15.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bbff-3256-117e-681a" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="96ba-515f-3149-b13b" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="4629-e85e-d9f6-2ad1" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="12.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>

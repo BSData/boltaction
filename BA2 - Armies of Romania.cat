@@ -2080,7 +2080,7 @@
     </selectionEntry>
     <selectionEntry id="4d46ecca-8348-0633-6703-69b5c355ca39" name="Cavalry Section" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
-        <selectionEntry id="a7eb5739-1e00-4388-7833-6d6848cf5f33" name="Panzerfaust" page="0" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a7eb5739-1e00-4388-7833-6d6848cf5f33" name="Panzerfaust (from1944)" page="0" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
           </constraints>
@@ -2090,7 +2090,6 @@
             </rule>
           </rules>
           <infoLinks>
-            <infoLink id="caae7fbc-eac0-46c5-6cc5-0afc28c9520e" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
             <infoLink id="fa61fa00-0b1d-ca00-cbf2-27fb072b62bd" name="Panzerfaust" hidden="false" targetId="2321-e71f-a3cd-ea21" type="profile"/>
             <infoLink id="ab0926cd-05b6-2933-4952-5dc78939a715" name="Shaped Charge" hidden="false" targetId="b959-3dd3-bc5c-d7d6" type="rule"/>
           </infoLinks>
@@ -2103,11 +2102,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="708d-dbc9-39cb-0194" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="671a-bc1e-aae5-d64c" type="max"/>
           </constraints>
-          <rules>
-            <rule id="13bd-3c0a-09e0-0c77" name="Romanian Calvary " page="0" hidden="false">
-              <description>Romanian calvary units may move not move into contact with an enemy unit while mounted. On the other hand, Romanian cavalry sections do not suffer the -1 to their leadership roll to arrive from reserve.</description>
-            </rule>
-          </rules>
+          <infoLinks>
+            <infoLink id="9d17-2655-0d62-4575" name="Romanian Calvary " hidden="false" targetId="2532-b1ba-e4eb-70f4" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -4206,7 +4203,6 @@
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d5a0-c638-98fe-a657" type="max"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="463b-65b4-9fe3-d34a" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
                     <infoLink id="56be-1b94-861d-a656" name="Panzerfaust" hidden="false" targetId="2321-e71f-a3cd-ea21" type="profile"/>
                     <infoLink id="b0f8-eab3-0d68-af4f" name="Shaped Charge" hidden="false" targetId="b959-3dd3-bc5c-d7d6" type="rule"/>
                   </infoLinks>
@@ -4386,7 +4382,6 @@
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d696-ff36-b846-e59c" type="max"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="ab5a-5a76-04d8-79aa" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
                     <infoLink id="44e9-307d-9278-f978" name="Panzerfaust" hidden="false" targetId="2321-e71f-a3cd-ea21" type="profile"/>
                     <infoLink id="aadd-dd4f-3246-de87" name="Shaped Charge" hidden="false" targetId="b959-3dd3-bc5c-d7d6" type="rule"/>
                   </infoLinks>
@@ -5091,6 +5086,72 @@
               </selectionEntryGroups>
               <entryLinks>
                 <entryLink id="ab34a114-4b54-2ace-7db4-dbd52258fd25" name="Spotter" hidden="false" collective="false" import="true" targetId="0d04-a42b-53b2-7003" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2171-55fa-ff52-1048" name="Heavy Mortar Team" page="0" hidden="false" collective="false" import="true" type="unit">
+              <constraints>
+                <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7719-cf69-99fb-cd0c" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="76ec-ac8c-fc8c-7a3d" name="Indirect Fire" hidden="false" targetId="f319-9266-b94b-8723" type="rule"/>
+                <infoLink id="3a77-d907-e2d3-c9d7" name="HE (3&quot;)" hidden="false" targetId="5a66-e1c5-fdff-a987" type="rule"/>
+                <infoLink id="b97e-b326-e56a-2ccb" name="Fixed" hidden="false" targetId="eb72-b206-d3ef-e5bb" type="rule"/>
+                <infoLink id="e64e-a319-7463-c7f4" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
+                <infoLink id="1882-7d2e-2e05-ed4d" name="Crew" hidden="false" targetId="549b-7a6c-2710-5dfe" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="(4)"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="38c8-2380-705f-e810" name="Heavy Mortar" hidden="false" targetId="f95d-c544-2246-4333" type="profile"/>
+              </infoLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="3047-18eb-ba85-6f52" name="Rating" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="abfc-fdef-cb94-6616" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="23a4-1f44-f828-c297" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="1d4f-e8e0-1d39-6e4f" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f669-bde1-ff85-a609" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="b10c-2205-02d5-2265" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="84.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="c59b-7ab2-9350-fee1" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2c6a-d7da-9e20-a511" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="66a4-072a-3521-bc36" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="65.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="702f-b949-3c80-605d" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2afd-38ba-7801-60a6" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="f6a2-4f8a-ca08-7fbf" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="46.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <entryLinks>
+                <entryLink id="01ed-a34a-2eba-44e2" name="Spotter" hidden="false" collective="false" import="true" targetId="0d04-a42b-53b2-7003" type="selectionEntry"/>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -6283,7 +6344,7 @@
     </selectionEntry>
     <selectionEntry id="87d4dc08-4f69-099e-da1f-dc07294b8e56" name="Renault R35 or R40" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
-        <profile id="a0df8fe9-9257-ce13-98f2-bde1477c6501" name="Captured Renault R35 or R40" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+        <profile id="a0df8fe9-9257-ce13-98f2-bde1477c6501" name="Renault R35 or R40" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
             <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Tracked Vehicle</characteristic>
             <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Medium Tank 9+</characteristic>
@@ -6312,7 +6373,7 @@
                 <infoLink id="c83fbfe6-75ec-41ff-203f-ff4def5638d3" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="144.0"/>
+                <cost name="pts" typeId="points" value="139.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="fcc43d75-4588-6f5b-3390-c441c26732c9" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
@@ -6323,7 +6384,7 @@
                 <infoLink id="05a16ffe-2b38-39f2-3451-9cad45f188e6" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="120.0"/>
+                <cost name="pts" typeId="points" value="115.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="bff8eda7-78e8-394b-7d73-2c606f3566f1" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
@@ -6334,7 +6395,7 @@
                 <infoLink id="025550bb-4a4b-0498-8769-de5f7a568fb0" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="96.0"/>
+                <cost name="pts" typeId="points" value="91.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -6371,8 +6432,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="5658ce57-72f7-b815-2627-69e505077920" name="Forward Facing Hull Mounted MMG" hidden="false" collective="false" import="true" targetId="0d98-6c24-5cd9-1c6c" type="selectionEntry"/>
-        <entryLink id="79f63856-00cf-6efa-216d-a3fbcdc0eabd" name="Command Vehicle" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+        <entryLink id="79f63856-00cf-6efa-216d-a3fbcdc0eabd" name="Command vehicle" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+        <entryLink id="25e7-e92e-6b46-cb5b" name="Coaxial MMG" hidden="false" collective="false" import="true" targetId="7f4c-ca9b-8522-ccfc" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -9414,6 +9475,9 @@
     </rule>
     <rule id="cf23-1a8f-cfd6-3b68" name="Overworked Driver" hidden="false">
       <description>The R-1 cannot fire the hull-mounted MMG if it has made a Run or Advance move this turn</description>
+    </rule>
+    <rule id="2532-b1ba-e4eb-70f4" name="Romanian Calvary " page="0" hidden="false">
+      <description>Romanian calvary units may move not move into contact with an enemy unit while mounted. On the other hand, Romanian cavalry sections do not suffer the -1 to their leadership roll to arrive from reserve.</description>
     </rule>
   </sharedRules>
 </catalogue>

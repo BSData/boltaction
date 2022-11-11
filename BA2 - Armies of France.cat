@@ -3551,7 +3551,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="3fd99dfe-ed00-ed09-76ac-d791631ea7be" name="Low velocity light At Gun" hidden="false" collective="false" import="true" targetId="d8be-08ac-6dbb-8b23" type="selectionEntry"/>
+        <entryLink id="3fd99dfe-ed00-ed09-76ac-d791631ea7be" name="Low velocity light At gun" hidden="false" collective="false" import="true" targetId="d8be-08ac-6dbb-8b23" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -4072,14 +4072,30 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa27-aac1-a096-fd7e" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd31-d8fd-9c92-f85b" type="min"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="1b49-bfe3-a858-97ad" name="Turret-mounted HMG" hidden="false" collective="false" import="true" targetId="e086-e792-f2b7-ea74" type="selectionEntry">
+          <selectionEntries>
+            <selectionEntry id="3ced-5045-3ef3-56bf" name="Turret-mounted HMG" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9e9-92b7-b363-e468" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="3c3f-aec6-0d2a-b69d" name="Turret-mounted HMG" hidden="false" collective="false" import="true" targetId="e086-e792-f2b7-ea74" type="selectionEntry"/>
+              </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="10.0"/>
               </costs>
-            </entryLink>
-            <entryLink id="ff9d-d3c9-e90c-cc9b" name="Turret-Mounted MMG" hidden="false" collective="false" import="true" targetId="eb35-b1d4-b01c-0bae" type="selectionEntry"/>
-          </entryLinks>
+            </selectionEntry>
+            <selectionEntry id="6d8f-2884-99bc-ecf7" name="Turret-mounted MMG" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92d0-2392-3d06-9658" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="89a9-3073-22c0-6539" name="Turret-mounted MMG" hidden="false" collective="false" import="true" targetId="eb35-b1d4-b01c-0bae" type="selectionEntry"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -4212,6 +4228,19 @@
           </characteristics>
         </profile>
       </profiles>
+      <selectionEntries>
+        <selectionEntry id="8660-bec2-4e6d-2a4d" name="Forward facing or rear facing hull-mounted light anti-tank gun" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfac-73f2-4398-2d10" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="329c-119e-2215-bc47" name="Light AT gun" hidden="false" targetId="5a41-4320-a7f1-7a4b" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="50.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="cfcb0fb2-b4a1-8ebd-4891-6cb1edff27e0" name="Rating" hidden="false" collective="false" import="true">
           <constraints>
@@ -7470,8 +7499,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="efb87871-aab0-3566-8fff-4d1faaab8c66" hidden="false" targetId="5a41-4320-a7f1-7a4b" type="profile"/>
-                <infoLink id="089d71d4-bea0-5863-4293-b83681c586b0" hidden="false" targetId="c54c-1ce5-54f0-1f19" type="rule"/>
+                <infoLink id="efb87871-aab0-3566-8fff-4d1faaab8c66" name="Low velocity light AT gun" hidden="false" targetId="3248-f272-f352-5768" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0.0"/>
@@ -7481,7 +7509,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="2610ce6a-42dd-ad94-9281-9bae193625eb" hidden="false" collective="false" import="true" targetId="7f4c-ca9b-8522-ccfc" type="selectionEntry"/>
+        <entryLink id="2610ce6a-42dd-ad94-9281-9bae193625eb" name="Coaxial MMG" hidden="false" collective="false" import="true" targetId="7f4c-ca9b-8522-ccfc" type="selectionEntry"/>
         <entryLink id="077d44f0-79c2-dbf4-631b-a85c02563db7" name="Command Vehicle" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
       </entryLinks>
       <costs>
@@ -7649,7 +7677,7 @@
       <profiles>
         <profile id="bd0b34dd-70f9-4171-3a48-b6419902f896" name="Laffly Heavy Tractor" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
-            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a"/>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Wheeled Vehicle</characteristic>
             <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Soft Skinned 6+</characteristic>
             <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
             <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">Any AT Gun Any Howitzer Any AA Gun</characteristic>
@@ -10327,7 +10355,7 @@
                 <infoLink id="9de33f27-d490-c323-0fb0-299b74090966" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="144.0"/>
+                <cost name="pts" typeId="points" value="139.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="3c7250a8-9bef-093c-e818-f8f1f227ba03" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
@@ -10338,7 +10366,7 @@
                 <infoLink id="580563cc-1e11-35d5-e7fc-2d977335bf8b" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="120.0"/>
+                <cost name="pts" typeId="points" value="115.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="68cd32d1-ded5-8d66-c593-cc74b1d31f23" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
@@ -10349,7 +10377,7 @@
                 <infoLink id="b9fd9cf3-f8e9-a09f-faae-550c94b5bd46" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="96.0"/>
+                <cost name="pts" typeId="points" value="91.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -10386,8 +10414,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="700d1aec-051f-e309-01b3-5fb567e9bebc" hidden="false" collective="false" import="true" targetId="0d98-6c24-5cd9-1c6c" type="selectionEntry"/>
-        <entryLink id="12d923c3-60e1-fa18-668f-9948fae06f7e" name="Command Vehicle" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+        <entryLink id="12d923c3-60e1-fa18-668f-9948fae06f7e" name="Command vehicle" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+        <entryLink id="9d0c-643c-41b9-705f" name="Coaxial MMG" hidden="false" collective="false" import="true" targetId="7f4c-ca9b-8522-ccfc" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -10730,8 +10758,8 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="2675bcd5-1043-1891-933e-a7c06e7f9f93" hidden="false" collective="false" import="true" targetId="7f4c-ca9b-8522-ccfc" type="selectionEntry"/>
-        <entryLink id="ebd10c01-7865-de5f-f749-5c33389e3c70" hidden="false" collective="false" import="true" targetId="3503-6634-ff60-05d8" type="selectionEntry"/>
-        <entryLink id="3bf675da-742e-6e4b-f8f6-a33e4acf549a" name="Command Vehicle" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+        <entryLink id="ebd10c01-7865-de5f-f749-5c33389e3c70" name="Turret-mounted light AT gun" hidden="false" collective="false" import="true" targetId="3503-6634-ff60-05d8" type="selectionEntry"/>
+        <entryLink id="3bf675da-742e-6e4b-f8f6-a33e4acf549a" name="Command vehicle" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -16221,7 +16249,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="86ec-fa5f-c0df-4054" name="Squad Members" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3670-e658-16fc-f053" type="min"/>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3670-e658-16fc-f053" type="min"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d593-e55a-1f89-7087" type="max"/>
           </constraints>
           <selectionEntries>
@@ -16640,6 +16668,9 @@
           <profiles>
             <profile id="5c19-a0d8-bada-501d" name="1940: Division Légères de Cavalerie" publicationId="2b70-cdaa-e42f-24a2" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
