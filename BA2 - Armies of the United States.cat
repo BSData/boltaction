@@ -4326,17 +4326,64 @@
     </entryLink>
   </entryLinks>
   <rules>
-    <rule id="89d97e79-cfe5-c413-05db-90a62f2dcb14" name="Gyro-stabilisers" page="0" hidden="false">
+    <rule id="89d97e79-cfe5-c413-05db-90a62f2dcb14" name="Gyro-stabilisers" publicationId="d919-e7ea-4680-bc56" page="0" hidden="false">
       <description>Veteran Crews do not suffer the -1 to hit when issued an Advance order, this do not apply to co-axial Machineguns.</description>
     </rule>
-    <rule id="2b9ec8ae-19b6-7bc7-db78-44f1edadd09e" name="Fire And Manoeuvre" page="0" hidden="false">
+    <rule id="2b9ec8ae-19b6-7bc7-db78-44f1edadd09e" name="Fire And Manoeuvre" publicationId="d919-e7ea-4680-bc56" page="0" hidden="false">
       <description>Models with M1 Garand rifles, carbines, and BARs do not suffer the -1 penalty to Advance and Fire.</description>
     </rule>
-    <rule id="069a0fff-b426-3887-c406-27fce07987c5" name="Air Superiority" page="0" hidden="false">
+    <rule id="069a0fff-b426-3887-c406-27fce07987c5" name="Air Superiority" publicationId="d919-e7ea-4680-bc56" page="0" hidden="false">
       <description>Forward Observers may call in two air strikes per game, one after the other if the scenario allows.</description>
     </rule>
-    <rule id="58d4-de10-fa2f-9e2b" name="Modern Comunication" hidden="false">
+    <rule id="58d4-de10-fa2f-9e2b" name="Modern Comunication" publicationId="d919-e7ea-4680-bc56" hidden="false">
       <description>US units do not apply the -1 to the order test to move onto the table; use basic morale instead.</description>
+    </rule>
+    <rule id="bfd8-c8d9-d638-b7fa" name="Baptism of Fire" publicationId="d919-e7ea-4680-bc56" hidden="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e362-8823-f4d7-5e1a" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fb3d-2110-553b-8e11" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77d7-389d-53b9-16f9" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="21d1-da44-3ed7-b7be" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca7b-8515-41d8-62d4" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <description>No US forces can be Veteran</description>
+    </rule>
+    <rule id="7f22-1f0d-21fa-e33c" name="Reinforcements" publicationId="d919-e7ea-4680-bc56" hidden="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ed7-55c8-4fb6-bc07" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77c2-b406-75cd-ac60" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <description>All vehicles, except for Jeeps, must be left in reserve and may only enter the game from the 3rd turn onwards to represent the arrival of reinforcements from behind the lines. In scenarios that do not allow reserves this rule has no effect. </description>
+    </rule>
+    <rule id="57f4-f2a6-68b4-ab18" name="Late Arrival" publicationId="d919-e7ea-4680-bc56" hidden="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8de5-d3db-0e20-4eb6" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <description>Shermans equipped with 76.2mm gun began to reach combat units in July. None were avviable for the initial invasion itself.</description>
     </rule>
   </rules>
   <sharedSelectionEntries>
@@ -19653,11 +19700,6 @@ Sherman Crocodile.</description>
           <profiles>
             <profile id="36b8-ad42-4163-dbd2" name="1943: Rommel&apos;s Defeat" publicationId="d919-e7ea-4680-bc56" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="f70d-058f-192a-4b20" name="Baptism of Fire" hidden="false">
-              <description>No US forces can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -19666,11 +19708,6 @@ Sherman Crocodile.</description>
           <profiles>
             <profile id="402c-feaf-55f1-e3bb" name="1943: Operation Market Garden" publicationId="d919-e7ea-4680-bc56" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="0b10-8293-4cc1-f090" name="Reinforcements" hidden="false">
-              <description>All vehicles, except for Jeeps, must be left in reserve and may only enter the game from the 3rd turn onwards to represent the arrival of reinforcements from behind the lines. In scenarios that do not allow reserves this rule has no effect. </description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -19695,11 +19732,6 @@ Sherman Crocodile.</description>
           <profiles>
             <profile id="9e37-52bf-985d-7985" name="1943: Kasserine Pass" publicationId="d919-e7ea-4680-bc56" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="3510-303e-e970-16de" name="Baptism of Fire" hidden="false">
-              <description>No US forces can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -19708,11 +19740,6 @@ Sherman Crocodile.</description>
           <profiles>
             <profile id="5a0c-4ea0-143e-1cbe" name="1943: El Guettar" publicationId="d919-e7ea-4680-bc56" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="5a0c-9a1e-22d3-c876" name="Baptism of Fire" hidden="false">
-              <description>No US forces can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -19721,11 +19748,6 @@ Sherman Crocodile.</description>
           <profiles>
             <profile id="9067-2b39-0584-a1b5" name="1942: Operation Torch" publicationId="d919-e7ea-4680-bc56" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="f3c6-8fe9-183c-7018" name="Baptism of Fire" hidden="false">
-              <description>No US forces can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -19758,11 +19780,6 @@ Sherman Crocodile.</description>
           <profiles>
             <profile id="c50f-a427-5f4d-9f71" name="1944: Normandy" publicationId="d919-e7ea-4680-bc56" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="e6a3-c0bb-4c2d-b734" name="Late Arrival" hidden="false">
-              <description>Shermans equipped with 76.2mm gun began to reach combat units in July. None were avviable for the initial invasion itself.</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -19779,11 +19796,6 @@ Sherman Crocodile.</description>
           <profiles>
             <profile id="3eac-8b70-13ea-acb3" name="1944: Bastogne" publicationId="d919-e7ea-4680-bc56" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="9e0a-f9c6-d445-9263" name="Reinforcements" hidden="false">
-              <description>All vehicles, except for Jeeps, must be left in reserve and may only enter the game from the 3rd turn onwards to represent the arrival of reinforcements from behind the lines. In scenarios that do not allow reserves this rule has no effect. </description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

@@ -5194,6 +5194,67 @@
     <rule id="092be3df-ce7a-1e24-da10-c6a00e05de71" name="Massed Batteries" publicationId="6d66-3469-52ee-9d37" page="0" hidden="false">
       <description>When rolling to determine a Fire for Effect radius, roll 2 dice and take the highest score.</description>
     </rule>
+    <rule id="2ca4-f09a-f9fd-664f" name="Baptism of Fire" publicationId="6d66-3469-52ee-9d37" hidden="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88e4-c556-8a54-a14d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56a4-7192-368a-afe1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6cd1-f4e9-e746-fb8e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="773f-01dc-c22d-a9f4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be25-1437-2ac9-1df5" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1410-a766-35f9-cb7c" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a03-249d-a5ba-a573" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="41ff-ad6c-be21-a013" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <description>No Soviet forces can be Veteran</description>
+    </rule>
+    <rule id="f85a-7345-3fec-2c25" name="Clapped Out" publicationId="6d66-3469-52ee-9d37" hidden="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dfed-c32c-8bde-da12" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f61c-cdf9-601c-c4aa" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <description>Only Soviet Headquarters, Infantry and Artillery units can be Veteran</description>
+    </rule>
+    <rule id="1aee-ac60-2be6-de81" name="Fanatical Defence" publicationId="6d66-3469-52ee-9d37" hidden="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="64e8-43a2-1429-56f9" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>An army chosen from this selector can make any infantry units apart from Shtrafbat squads Fanatics at an additional cost of +3pts per man</description>
+    </rule>
+    <rule id="2fc6-4b98-d682-d7e5" name="New Rule" hidden="false"/>
+    <rule id="31fb-e3d4-0599-f2f2" name="Battle Hardened" publicationId="6d66-3469-52ee-9d37" hidden="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="46ed-130e-6120-092d" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <description>Only Soviet Headquarters and infantry units can be Veteran</description>
+    </rule>
   </rules>
   <sharedSelectionEntries>
     <selectionEntry id="a19a2829-c7f7-3754-027a-6ba86eededc4" name="25mm72-K Model 1940" publicationId="6d66-3469-52ee-9d37" page="0" hidden="false" collective="false" import="true" type="unit">
@@ -21698,11 +21759,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           <profiles>
             <profile id="d0d9-5580-aa2a-7754" name="1941: Barbarossa" publicationId="6d66-3469-52ee-9d37" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="19f2-e519-0706-4674" name="Baptism of Fire" publicationId="6d66-3469-52ee-9d37" hidden="false">
-              <description>No Soviet forces can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -21711,11 +21767,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           <profiles>
             <profile id="bc26-7916-cd9b-f542" name="1941: Battle of Kiev" publicationId="6d66-3469-52ee-9d37" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="b200-cb8a-e2e3-da29" name="Baptism of Fire" publicationId="6d66-3469-52ee-9d37" hidden="false">
-              <description>No Soviet forces can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -21724,11 +21775,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           <profiles>
             <profile id="ee5b-a7eb-9d32-2e94" name="1941: Zhukov Takes Command" publicationId="6d66-3469-52ee-9d37" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="eaad-03c7-5102-1931" name="Baptism of Fire" publicationId="6d66-3469-52ee-9d37" hidden="false">
-              <description>No Soviet forces can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -21753,11 +21799,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           <profiles>
             <profile id="ff98-b8a8-83aa-dea1" name="1941 - 42: Siege of Sevastopol" publicationId="6d66-3469-52ee-9d37" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="cd77-eb3e-8f4f-2d62" name="Baptism of Fire" publicationId="6d66-3469-52ee-9d37" hidden="false">
-              <description>No Soviet forces can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -21766,11 +21807,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           <profiles>
             <profile id="8902-e897-5977-13ea" name="1941: Operation Typhoon" publicationId="6d66-3469-52ee-9d37" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="5b5b-4492-24b7-d72b" name="Battle Hardened" publicationId="6d66-3469-52ee-9d37" hidden="false">
-              <description>Only Soviet Headquarters and infantry units can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -21787,11 +21823,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           <profiles>
             <profile id="1d81-2d4a-f3c5-90ee" name="1941 - 42: Blitzfreeze" publicationId="6d66-3469-52ee-9d37" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="9adb-78b1-31e4-fa30" name="Clapped Out" publicationId="6d66-3469-52ee-9d37" hidden="false">
-              <description>Only Soviet Headquarters, Infantry and Artillery units can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -21800,11 +21831,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           <profiles>
             <profile id="ce07-422d-0a56-a156" name="1942: Rzhev -Vyazma" publicationId="6d66-3469-52ee-9d37" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="a6f6-1652-83d6-8200" name="Clapped Out" publicationId="6d66-3469-52ee-9d37" hidden="false">
-              <description>Only Soviet Headquarters, Infantry and Artillery units can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -21813,11 +21839,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           <profiles>
             <profile id="4bcc-660f-17ed-fc60" name="1942: Second Batlle of Kharkov" publicationId="6d66-3469-52ee-9d37" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="e29d-b077-1ab5-24f8" name="Baptism of Fire" publicationId="6d66-3469-52ee-9d37" hidden="false">
-              <description>No Soviet forces can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -21826,11 +21847,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           <profiles>
             <profile id="ef68-9b84-4b2b-2c49" name="1942: Battle of Voronezhv" publicationId="6d66-3469-52ee-9d37" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="b9cf-079f-efbc-8424" name="Baptism of Fire" publicationId="6d66-3469-52ee-9d37" hidden="false">
-              <description>No Soviet forces can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -21839,11 +21855,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           <profiles>
             <profile id="b462-be7f-65c3-5c35" name="1942: Battle of Stalingrad" publicationId="6d66-3469-52ee-9d37" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="9194-c31d-a065-12dc" name="Fanatical Defence" publicationId="6d66-3469-52ee-9d37" hidden="false">
-              <description>An army chosen from this selector can make any infantry units apart from Shtrafbat squads Fanatics at an additional cost of +3pts per man</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -21900,11 +21911,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           <profiles>
             <profile id="e83c-c528-9e4d-dc60" name="1939-40: Winter War" publicationId="322c-9628-2a10-d4e6" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="8d12-c1d3-afdd-7800" name="Baptism of Fire" publicationId="322c-9628-2a10-d4e6" hidden="false">
-              <description>No Soviet forces can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
@@ -21913,11 +21919,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
           <profiles>
             <profile id="f5e4-1544-5551-c545" name="1939: Trans-Baikal Military District" publicationId="322c-9628-2a10-d4e6" hidden="false" typeId="29d7-8cbd-50b1-14d1" typeName="Reference Profile"/>
           </profiles>
-          <rules>
-            <rule id="f9a4-f812-23ac-bc78" name="Border Guards" publicationId="322c-9628-2a10-d4e6" hidden="false">
-              <description>No Soviet forces can be Veteran</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>

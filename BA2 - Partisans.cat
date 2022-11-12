@@ -918,9 +918,26 @@
         <categoryLink id="49aa-b8e0-a08f-d71c" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="e3cf-c520-f3bf-a979" name="Captured Axis Vehicle" hidden="true" collective="false" import="true" targetId="031c-2500-ff27-c8c8" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdee-2f8d-b0b3-c457" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="27d7-16e6-f0da-ea14" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3339-62e1-b981-839b" name="New CategoryLink" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
-    <rule id="2ed57e2d-18f6-2b84-4c49-bffd5b408320" name="Infiltration" page="0" hidden="true">
+    <rule id="2ed57e2d-18f6-2b84-4c49-bffd5b408320" name="Infiltration" publicationId="85bd-2d22-c454-2385" page="0" hidden="true">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -936,7 +953,7 @@
       </modifiers>
       <description>When Outflanking, partisan units ignore the -1 modifier to the Order test foir coming onto the table.</description>
     </rule>
-    <rule id="4d6db396-1389-600a-a31e-3e366f4120e1" name="Hidden Bomb" page="0" hidden="true">
+    <rule id="4d6db396-1389-600a-a31e-3e366f4120e1" name="Hidden Bomb" publicationId="85bd-2d22-c454-2385" page="0" hidden="true">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -950,7 +967,7 @@
       </modifiers>
       <description>At the start of the game place three bomb markers anywhere outside the enemy deployment zone. The actual explosive device is not actually where the marker is located but is nearby. The first enemy unit to move within 6” of the marker must roll a die; on a result of 3 or less the bomb is revealed to be a dud, on a 4 or 5 nothing happens but the bomb remains active (roll again for the next enemy unit), on a 6 the bomb explodes, hitting the unit with a heavy howitzer effect.  After exploding the marker is removed. Bombs never affect Partisan units no matter how close they are to a marker.</description>
     </rule>
-    <rule id="df2df83d-6542-c0d9-58d9-4b712a89ae6e" name="Fieldcraft" page="0" hidden="true">
+    <rule id="df2df83d-6542-c0d9-58d9-4b712a89ae6e" name="Fieldcraft" publicationId="85bd-2d22-c454-2385" page="0" hidden="true">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -966,7 +983,7 @@
       </modifiers>
       <description>During set-up, any partisan unit starting the game Hidden may start the game already in Ambush. In addition, in the first turn of the game, all partisan infantry units treat all Rough Ground and Obstacles as Open Ground for the purposes of movement.</description>
     </rule>
-    <rule id="68f9-2b58-4482-63fc" name="Local Area Knowledge" hidden="true">
+    <rule id="68f9-2b58-4482-63fc" name="Local Area Knowledge" publicationId="87c8-e7e4-263c-5eef" hidden="true">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -980,7 +997,7 @@
       </modifiers>
       <description>Units in this platoon do not suffer the -1 penalty for attempting to come onto the table as reserves.</description>
     </rule>
-    <rule id="c564-6400-74cd-403b" name="SAS Support" hidden="true">
+    <rule id="c564-6400-74cd-403b" name="SAS Support" publicationId="87c8-e7e4-263c-5eef" hidden="true">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -994,7 +1011,7 @@
       </modifiers>
       <description>You may only include SAS jeeps or armoured jeeps if you take an SAS infantry section or weapons team. The Jedburgh team Supply Co-ordination rule only applies to the Partisan squads in this force and not the SAS.</description>
     </rule>
-    <rule id="5c78-4f6e-c3f2-afee" name="To the Barricades!" hidden="true">
+    <rule id="5c78-4f6e-c3f2-afee" name="To the Barricades!" publicationId="87c8-e7e4-263c-5eef" hidden="true">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -1009,7 +1026,7 @@
       </modifiers>
       <description>The partisan player using this platoon gets up to 100pts of barricades or barbed wire sections (page 151). These must be placed before any units are set up, but after players have chosen sides. They may be placed anywhere in that player&apos;s half, or on any road on the board regardless of whose side of the board it is on.</description>
     </rule>
-    <rule id="fb7e-4c9b-b03c-0797" name="Captured and Recaptured" hidden="false">
+    <rule id="fb7e-4c9b-b03c-0797" name="Captured and Recaptured" publicationId="87c8-e7e4-263c-5eef" hidden="false">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -5980,6 +5997,48 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="031c-2500-ff27-c8c8" name="Captured Axis Vehicle" page="0" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="a3fb-3c2c-783d-2582" name="Captured Axis Vehicle" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Tracked Vehicle/Wheelled Vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Armour ranging from: +6 to +9</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="20f5-7ec4-1146-07f9" name="Unreliable" hidden="false" targetId="b1fd-afcf-5e8c-d75a" type="rule"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="651e-da91-f08e-639e" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="21e3-bfb5-e1af-0917" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="39a6-23c4-8f87-8e34" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="e371-efa9-b791-f900" name="Inexperienced(set points)" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="300.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2a1f-b62b-2e04-693b" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="f50d-ff77-ff58-389d" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="1.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="ae23-aebd-7b1f-8f5b" name="Command vehicle" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
