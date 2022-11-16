@@ -291,7 +291,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b1bd-832a-a415-3f7e" name="3 Turret-ounted light autocannons with a 360° Arc" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="b1bd-832a-a415-3f7e" name="3 Turret-mounted light autocannons with a 360° Arc" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4377-32d5-3856-f9fd" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5ba3-5033-8270-d490" type="max"/>
@@ -315,7 +315,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="85b9-1905-74d0-d64d" name="4 Turret-ounted light autocannons with 360° arc" page="0" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="85b9-1905-74d0-d64d" name="4 Turret-mounted light autocannons with 360° arc" page="0" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2245-42e9-0caf-4d91" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3a11-2a2d-71a1-a5c4" type="max"/>
@@ -472,7 +472,8 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3814-9c61-d6dd-20a3" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="fa1b-ed27-e1ef-6236" hidden="false" targetId="e9b4-d507-8fd2-3de4" type="profile"/>
+        <infoLink id="fa1b-ed27-e1ef-6236" name="Flamethrower (Vehicle)" hidden="false" targetId="e9b4-d507-8fd2-3de4" type="profile"/>
+        <infoLink id="1894-325c-2e75-4922" name="Flamethrower" hidden="false" targetId="0bda-9822-e9eb-f62b" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -710,6 +711,9 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7c59-5725-4db5-57e5" type="max"/>
       </constraints>
+      <infoLinks>
+        <infoLink id="5f0e-4b2f-2600-b9f9" name="Spotter" hidden="false" targetId="be53-a340-bf2c-9a63" type="rule"/>
+      </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="10.0"/>
       </costs>
@@ -1226,6 +1230,7 @@
       </constraints>
       <infoLinks>
         <infoLink id="383c-032c-be23-423c" hidden="false" targetId="e9b4-d507-8fd2-3de4" type="profile"/>
+        <infoLink id="00f8-7e8f-0fa0-40e6" name="Flamethrower" hidden="false" targetId="0bda-9822-e9eb-f62b" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -1540,6 +1545,7 @@
       </constraints>
       <infoLinks>
         <infoLink id="937f-42ec-7103-702c" name="Submachine Gun (SMG)" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
+        <infoLink id="b86f-432e-8f86-9ace" name="Assault" hidden="false" targetId="3976-dcf1-d022-b7d1" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="3.0"/>
@@ -1552,6 +1558,7 @@
       </constraints>
       <infoLinks>
         <infoLink id="410c-e471-3eaf-0d1c" name="Submachine Gun (SMG)" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
+        <infoLink id="8e88-91c7-a86d-973b" name="Assault" hidden="false" targetId="3976-dcf1-d022-b7d1" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="2.0"/>
@@ -1628,6 +1635,7 @@
       </constraints>
       <infoLinks>
         <infoLink id="7c0c-30b2-52f5-1734" name="Pistol" hidden="false" targetId="8534-eabb-433f-12f1" type="profile"/>
+        <infoLink id="5514-7d55-6160-01f4" name="Assault" hidden="false" targetId="3976-dcf1-d022-b7d1" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -1766,6 +1774,25 @@
         <cost name="pts" typeId="points" value="1.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="05f9-5fa2-3986-0585" name="Medics" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="00e4-2c73-9f8a-b501" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0113-2d04-8578-438c" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="d034-a6e7-6f83-deb4" name="Medic" hidden="false" targetId="056f-5257-838a-d1e2" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="be59-4108-8971-127d" name="Medical vehicle" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="91c6-4d82-bb64-3ff5" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cc0e-057f-588d-2fb9" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="3465-e6a9-aa83-9704" name="Medical vehicle" hidden="false" targetId="6873-b80a-5f2f-c8ac" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="db2a-0f39-2503-9c40" name="Officers" hidden="false" collective="false" import="true" type="upgrade"/>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ce88-220a-ecf0-d5c7" name="Command Vehicle Options" hidden="false" collective="false" import="true">
@@ -1823,16 +1850,16 @@
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="1243-e8b7-ed01-2010" name="Amphibious" page="0" hidden="false">
-      <description>Vehicle can move on impassable water at at half speed by means of an Advance order.</description>
+      <description>Vehicle can move on impassable water at at half speed by means of an Advance order. Cannot make any other action whilst moving over water. A vehicle that is immobilised whilst in the water is sunk.</description>
     </rule>
     <rule id="b13a-05de-4473-34f1" name="Armoured all round" page="0" hidden="false">
       <description>No modifiers apply for penetration when shooting at sides, rear or from above.</description>
     </rule>
     <rule id="8a7d-230c-d090-127b" name="Bicycles" page="0" hidden="false">
-      <description>Bicycle mounted infantry follow the same rules as infantry, except when moving entirely on a road, in which case they double their RUN move to 24&quot;.  (This move cannot be used to Assault). In addition, the first time they receive any order other than RUN, or if they receive a pinning marker, they dismount and abandon their bycycles for the rest of the game - replace the models with models on foot. </description>
+      <description>Bicycle mounted infantry follow the same rules as infantry, except when moving entirely on a road, in which case they double their RUN move to 24&quot;.  (This move cannot be used to Assault). In addition, the first time they receive any order other than RUN, or if they receive a pinning marker, they dismount and abandon their bycycles for the rest of the game.</description>
     </rule>
     <rule id="525c-47c4-f59c-5c9a" name="Cavalry" page="0" hidden="false">
-      <description>Cavalry can dismount and fight on foot. A cavalry unit moves at 9” with Advance order and 18” with a Run order. While mounted, cavalry units have the Tough Fighters rule. Cavalry are allowed to roll 2D6 when they make their regroup move </description>
+      <description>Cavalry can dismount and fight on foot. A cavalry unit moves at 9” with Advance order and 18” with a Run order. While mounted, cavalry units have the Tough Fighters rule. Cavalry are allowed to roll 2D6 when they make their regroup move. Cavalry can react with a escape move.</description>
     </rule>
     <rule id="a216-de3b-eb7f-51f1" name="Co-axial Weapon" page="0" hidden="false">
       <description>A co-axial can be fired instead of the vehicle&apos;s main weapon, but not at the same time, the player must choose either to fire the main gun or it&apos;s co-axial weapon.</description>
@@ -1850,19 +1877,21 @@
       <description>The vehicle can reverse at their Run rate.</description>
     </rule>
     <rule id="210a-fd8c-dd39-5e36" name="Fanatics" page="0" hidden="false">
-      <description>When a fanatic unit loses half of its numbers from enemy fire it does not take a morale check. In close quarters fighting continue fighting until the fanatic unit wins, is completely wiped out or is defeated.</description>
+      <description>When a fanatic unit loses half of its numbers from enemy fire it does not take a morale check. In close quarters fighting continue fighting until the fanatic unit wins, is completely wiped out or is defeated. Fanatic units with at least two men left are not routed and destroyed when they have a number of pin
+markers equal to their morale value.</description>
     </rule>
     <rule id="eb72-b206-d3ef-e5bb" name="Fixed" page="0" hidden="false">
-      <description>Weapon can not fire with an Advance order. Can only target units at leat partially in their front arc.</description>
+      <description>When ordered to Fire, fixed weapons can only target an enemy unit that lies at least partially within their front arc. When ordered to Advance, fixed weapons do not move from their position, but can instead be rotated on
+the spot to face any direction, and can then fire suffering the normal –1 to hit.</description>
     </rule>
     <rule id="690f-70e9-9ed0-6352" name="Flak" page="0" hidden="false">
-      <description>Roll a D6 for each flak unit. To successfully hold their fire inexperienced units must roll a 4+, regular units a 3+, and veteran units a 2+. Units that do not manage to hold their fire will shoot at the incoming aircraft as if it were an enemy.</description>
+      <description>Roll a D6 for each flak unit. To successfully hold their fire inexperienced units must roll a 4+, regular units a 3+, and veteran units a 2+. Units that do not manage to hold their fire will shoot at the incoming aircraft as if it were an enemy. Shooting against aircraft always hit on 5 or 6, the only to hit modifier that applies are pin marker. For HE apply rules for units inside buildings. If the aircraft suffers 3 or more hist it has been shot down.</description>
     </rule>
     <rule id="58f2-b4ad-cdee-3e57" name="Flame-throwing Vehicle" page="0" hidden="false">
       <description>When rolling on the damage effects chart against a vehicle equipped with flamethrowers, add an extra +1 to the roll.</description>
     </rule>
     <rule id="0bda-9822-e9eb-f62b" name="Flamethrower" page="0" hidden="false">
-      <description>Hits automatically ignoring any modifier. D6 hits for man portable flamethrowers, D6+1 hits for vehicle mounted ones. Ignores cover bonuses. Ignores the Gun Shield rule. Ignores the Extra Protection rule in buildings. Infantry takes D3+1 pin markers for being hit by a flamethrower</description>
+      <description>Flamethrowers never suffer the to-hit penalties for cover, if the target is Down and for long range. D6 hits for man portable flamethrowers, D6+1 hits for vehicle mounted ones. Ignores cover bonuses. Ignores the Gun Shield rule. Ignores the Extra Protection rule in buildings. Flamethrowers always hits vehicles top armour. The target receive D3+1 pin markers for being hit by a flamethrower. After the hits check for morale.</description>
     </rule>
     <rule id="c21d-d23f-d16a-bf33" name="Green" page="0" hidden="false">
       <description>Green Units are Inexperienced. When the unit suffers its first casualty roll a die: on a roll of 1 the unit suffers an additional D6 Pin Markers and goes Down; on a roll of 2,3,4 nothing happens; on a roll of 5 or 6 the unit is immediately uprated to Regular for the rest of the battle.</description>
@@ -1901,10 +1930,11 @@
       <description>Being in proximity of an ambulance means that any wounded soldiers neaby hae a chance of being treated by a medic or stretcher bearer from amongst the crew of the ambulance. All infantry and artillery units within 6&quot; of the vehicle count as within 6&quot; of a medic.</description>
     </rule>
     <rule id="a9e6-1bf4-b097-df12" name="Motorbikes" page="0" hidden="false">
-      <description>A motorbike unit moves at 12” at an Advance and 24” at a Run. Bike riders can carry infantry small-arms but cannot shoot whilst moving. Can regroup with 2D6”.</description>
+      <description>A motorbike unit moves at 12” at an Advance and 24” at a Run. Troops cannot remount once dismounted. Bike riders can shoot only when stationary. Can regroup with a 2D6” move. Can react with an escape move.</description>
     </rule>
     <rule id="1fd2-c465-d4c6-d2b6" name="Multiple Launcher" page="0" hidden="false">
-      <description>A multiple launcher counts as a heavy mortar, but it&apos;s chance of hitting never gets any better than a 6.However, because of the extensive blast area all units (friend or foe) within 6&quot; of the nominated target and not entirely within the weapon&apos;s minimum range can be hit. Roll a die to hit for the target plus every unit within 6&quot; of it. Note that units that lie beyond the weapon&apos;s maximum range can also be hit in this way - although the target unit itself must be withiin range. </description>
+      <description>Counts as a heavy mortar, hits only with a 6 (no ranging in). Every time you fire it, pick the
+first target unit as normal and then check which other enemy units are within 6” of the original template, these are also targets. If there is a friendly unit within 6” of the original template, you cannot fire and the shot is wasted. Once the target units have been determined, check if any of these units are within the minimum range, these units are missed automatically. Then roll to hit for all remaining target units, one at a time in any order you prefer, hitting on 6. If you score one or more hits, work out the total of all of the hits inflicted by the salvo on target units, using the relevant templates, and then proceed to roll to damage.</description>
     </rule>
     <rule id="cd1a-40cd-89df-5e3e" name="One-man turret" page="0" hidden="false">
       <description>The vehicle needs to pass an order test when issued an Advance order.</description>
@@ -1931,7 +1961,7 @@
       <description>Can only move 6&quot; when Advancing and 12&quot; when Running</description>
     </rule>
     <rule id="6bcb-f463-20a7-0b4a" name="Sniper" page="0" hidden="false">
-      <description>When firing under Fire or Ambush orders only: Range is 36&quot;, minimum range is 12&quot;. Can target a specific model as per Exceptional Damage. Ignores all penalties for cover. Ignores the Gun Shield rule.</description>
+      <description>Only when firing under Fire or Ambush orders range is 36&quot;, minimum range is 12&quot;. Can target a specific model as per Exceptional Damage rule. Ignores negative to-hit modifiers exept pins and missing assisant.</description>
     </rule>
     <rule id="edfb-679f-a0a4-9c55" name="Squeeze Bore" page="0" hidden="false">
       <description>At ranges up to 12&quot;, it&apos;s base armour penetration is increased by 2, at over half range armour penetration is reduced by 2 instead of the normal 1.</description>
@@ -1940,7 +1970,7 @@
       <description>No Tank Fear test is required when assaulting tanks. If a tank hunter unit wins an assault and scores damage against an armoured vehicle, the effect is resolved on the damage result table as for a normal anti-tank penetration.</description>
     </rule>
     <rule id="df4d-b32b-09f4-9323" name="Team Weapon" page="0" hidden="false">
-      <description>A minimum of two crew is required to fire at full effect. If only one crew is left, fires at -1 to hit and has -1 morale.</description>
+      <description>A minimum of two crew is required to fire at full effect. If only one crew is left, fires at -1 to hit.</description>
     </rule>
     <rule id="d74c-188c-4251-2ab0" name="Turn on the spot" page="0" hidden="false">
       <description>Can execute a full speed Run rate &apos;reverse&apos;, finishing the move facing in the direction of travel.</description>
@@ -2050,6 +2080,18 @@
     <rule id="82d4-ceee-74f3-93e6" name="Motorised Infantry" hidden="false">
       <description>The squad can re-roll any failed order test that is required to mount or dismount a transport vehicle.
 </description>
+    </rule>
+    <rule id="3976-dcf1-d022-b7d1" name="Assault" hidden="false">
+      <description>This weapon suffers no penalty ‘to hit’ when moving and shooting. In addition, infantry models armed with an assault weapon count as tough fighters.</description>
+    </rule>
+    <rule id="be53-a340-bf2c-9a63" name="Spotter" hidden="false">
+      <description>The spotter forms part of the same unit as the weapon he is directing, no separate order die is provided for him. then the crew are assumed to be able to see whatever the spotter can see.</description>
+    </rule>
+    <rule id="056f-5257-838a-d1e2" name="Medics" hidden="false">
+      <description>If a friendly infantry or artillery unit that has a medic model within 6”, suffers damage from small-arms fire, one die is rolled for each point of damage caused. On a 6, that casualty is ignored.</description>
+    </rule>
+    <rule id="4029-07e2-6767-6e76" name="Officers" hidden="false">
+      <description>Officer model adds a morale bonus to all friendly units dependng on it&apos;s rank. When an officer receives an order successfully it can activate units depending on it&apos;s rank.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
