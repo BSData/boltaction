@@ -1732,6 +1732,7 @@
       </constraints>
       <infoLinks>
         <infoLink id="89c5-48f0-32d6-f91b" name="Shotgun" hidden="false" targetId="9a86-0e97-423a-acda" type="profile"/>
+        <infoLink id="4bb1-eca6-5a31-b24b" name="Assault" hidden="false" targetId="3976-dcf1-d022-b7d1" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="3.0"/>
@@ -1782,6 +1783,9 @@
       <infoLinks>
         <infoLink id="d034-a6e7-6f83-deb4" name="Medic" hidden="false" targetId="056f-5257-838a-d1e2" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="be59-4108-8971-127d" name="Medical vehicle" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1791,8 +1795,48 @@
       <infoLinks>
         <infoLink id="3465-e6a9-aa83-9704" name="Medical vehicle" hidden="false" targetId="6873-b80a-5f2f-c8ac" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
-    <selectionEntry id="db2a-0f39-2503-9c40" name="Officers" hidden="false" collective="false" import="true" type="upgrade"/>
+    <selectionEntry id="db2a-0f39-2503-9c40" name="Officers" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8369-89d3-6b4e-1d1d" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4385-a4c4-bf7d-4ed8" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="cef1-1a66-5a29-e1f6" name="You men snap into action" hidden="false" targetId="d82b-6e7c-b39f-879c" type="rule"/>
+        <infoLink id="7db6-44e8-529c-440e" name="Morale bonus" hidden="false" targetId="4029-07e2-6767-6e76" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c3a3-d02c-479b-07c0" name="Partisan Shotgun" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bd39-35bc-bcd0-bd77" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="39b6-1352-ec8f-b7c5" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="22ba-a7ea-2a33-cecc" name="Shotgun" hidden="false" targetId="9a86-0e97-423a-acda" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="-1.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8538-6abd-f581-0dbf" name="SMG (Officers)" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3199-9bf3-0f89-3fa7" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f169-7407-b201-e13a" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="bc73-f90c-d613-3ede" name="Submachine Gun (SMG)" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
+        <infoLink id="e813-9dc9-85f6-7b07" name="Assault" hidden="false" targetId="3976-dcf1-d022-b7d1" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="3.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ce88-220a-ecf0-d5c7" name="Command Vehicle Options" hidden="false" collective="false" import="true">
@@ -2090,8 +2134,11 @@ first target unit as normal and then check which other enemy units are within 6‚
     <rule id="056f-5257-838a-d1e2" name="Medics" hidden="false">
       <description>If a friendly infantry or artillery unit that has a medic model within 6‚Äù, suffers damage from small-arms fire, one die is rolled for each point of damage caused. On a 6, that casualty is ignored.</description>
     </rule>
-    <rule id="4029-07e2-6767-6e76" name="Officers" hidden="false">
-      <description>Officer model adds a morale bonus to all friendly units dependng on it&apos;s rank. When an officer receives an order successfully it can activate units depending on it&apos;s rank.</description>
+    <rule id="4029-07e2-6767-6e76" name="Morale bonus" hidden="false">
+      <description>Officer model adds a morale bonus to all friendly units dependng on it&apos;s rank.</description>
+    </rule>
+    <rule id="d82b-6e7c-b39f-879c" name="You men snap into action" hidden="false">
+      <description>When an officer receives an order successfully it can activate units depending on it&apos;s rank.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
