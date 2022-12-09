@@ -15799,6 +15799,89 @@ light/medium artillery unit</characteristic>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="bea9-9646-3c47-409d" name="Armoured Field Ambulance" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c62b-c9f6-4608-74e3" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="066a-5859-39aa-551b" name="Armoured Field Ambulance" publicationId="23ff-bf47-4781-28aa" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+                  <characteristics>
+                    <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Half-traked Vehicle</characteristic>
+                    <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Armoured Carrier 7+</characteristic>
+                    <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">None. Much like empty transports, ambulances are destroyed if they end their turn closer to enemy units than to friendly units.</characteristic>
+                    <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="c13a-cd75-6f36-e604" name="Medical Vehicle" hidden="false">
+                  <description>Being in proximity of an ambulance means that any wounded soldiers nearby have a chance of being treated by a medic or stretcher bearer from amongst the crew of the ambulance .All infantry and artillery units within 6&quot; of the vehicle count as within 6&quot; of a medic.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="d7c2-894e-108b-6363" name="Open Topped" hidden="false" targetId="1dd8-ce26-3022-96f5" type="rule"/>
+              </infoLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="5b82-dd08-aa2d-c4ec" name="Rating" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9d7-7503-7494-5899" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8bae-71b4-f50e-7a09" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="5a04-339f-5aee-2d11" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df57-31bd-9234-c1cd" type="equalTo"/>
+                                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50ee-cfff-112d-7405" type="equalTo"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eaa9-38e1-bc5d-36e3" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="b2b6-b394-55d6-e334" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="50.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="9344-9fd0-9291-3880" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="538f-0de1-01ad-28d3" type="equalTo"/>
+                                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b1e2-9e76-65aa-2ab8" type="equalTo"/>
+                                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="949c-462f-ad4c-240e" type="equalTo"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="813f-6965-3c63-0ab7" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="76bf-e715-024c-9204" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="60.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>

@@ -5427,6 +5427,9 @@
                       <entryLinks>
                         <entryLink id="49c2-399c-1e36-56da" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                       </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -5652,6 +5655,9 @@
                       <entryLinks>
                         <entryLink id="b736-22c5-d147-61d6" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                       </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -12523,6 +12529,75 @@ light/medium artillery unit</characteristic>
                 <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="a87c-c935-3ab5-6fcd" name="Armoured Field Ambulance" publicationId="23ff-bf47-4781-28aa" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="3af0-4cad-0e3f-7fc2" name="Armoured Field Ambulance" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+                  <characteristics>
+                    <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Half-tracked vehicle</characteristic>
+                    <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Armoured Carrier 7+</characteristic>
+                    <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">None. Much like empty transports, ambulances are destroyed if they end their turn closer to enemy units than to friendly units.</characteristic>
+                    <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="9fb1-57dd-3e6a-3e50" name="Medical Vehicle" hidden="false">
+                  <description>Being in proximity of an ambulance means that any wounded soldiers nearby have a chance of being treated by a medic or stretcher bearer from amongst the crew of the ambulance .All infantry and artillery units within 6&quot; of the vehicle count as within 6&quot; of a medic.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="16a9-b297-e646-f32d" name="Open Topped" hidden="false" targetId="1dd8-ce26-3022-96f5" type="rule"/>
+              </infoLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="eaee-e9f1-37c7-f134" name="Rating" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c2b4-806f-c281-d299" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a9cb-23cc-09e1-cc04" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="b6a3-0764-e4ee-437a" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a37f-de01-2974-3f89" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="22ad-c715-60ba-d58e" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="75.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="01ad-13c3-e03b-1209" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e362-8823-f4d7-5e1a" type="equalTo"/>
+                                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fb3d-2110-553b-8e11" type="equalTo"/>
+                                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77d7-389d-53b9-16f9" type="equalTo"/>
+                                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="21d1-da44-3ed7-b7be" type="equalTo"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ef59-3ec7-214e-c082" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="d55a-cc88-0d28-86cb" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="90.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -12993,6 +13068,9 @@ light/medium artillery unit</characteristic>
                       <entryLinks>
                         <entryLink id="74cd-eaca-e063-c38f" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                       </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -14101,6 +14179,9 @@ light/medium artillery unit</characteristic>
                       <entryLinks>
                         <entryLink id="7663-87c2-985f-088b" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                       </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -14304,6 +14385,9 @@ light/medium artillery unit</characteristic>
                               <entryLinks>
                                 <entryLink id="0c11-55c0-5f39-b6fd" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                               </entryLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
                             </selectionEntry>
                           </selectionEntries>
                         </selectionEntryGroup>
@@ -14699,6 +14783,9 @@ light/medium artillery unit</characteristic>
                               <entryLinks>
                                 <entryLink id="d438-b521-3e56-ce9d" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                               </entryLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
                             </selectionEntry>
                           </selectionEntries>
                         </selectionEntryGroup>
@@ -14842,6 +14929,9 @@ light/medium artillery unit</characteristic>
                               <entryLinks>
                                 <entryLink id="2960-a07e-17ce-b1a1" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                               </entryLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
                             </selectionEntry>
                           </selectionEntries>
                         </selectionEntryGroup>
@@ -15011,6 +15101,9 @@ light/medium artillery unit</characteristic>
                               <entryLinks>
                                 <entryLink id="7b16-2b57-3934-573f" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                               </entryLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
                             </selectionEntry>
                           </selectionEntries>
                         </selectionEntryGroup>
@@ -15215,6 +15308,9 @@ light/medium artillery unit</characteristic>
                               <entryLinks>
                                 <entryLink id="801f-1cc6-63f3-43ee" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                               </entryLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
                             </selectionEntry>
                           </selectionEntries>
                         </selectionEntryGroup>
@@ -15380,6 +15476,9 @@ light/medium artillery unit</characteristic>
                               <entryLinks>
                                 <entryLink id="0b33-522b-0a5d-6d8a" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                               </entryLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
                             </selectionEntry>
                           </selectionEntries>
                         </selectionEntryGroup>
@@ -15522,6 +15621,9 @@ light/medium artillery unit</characteristic>
                               <entryLinks>
                                 <entryLink id="b6b3-aff0-5261-f0a2" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                               </entryLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
                             </selectionEntry>
                           </selectionEntries>
                         </selectionEntryGroup>
@@ -15696,6 +15798,9 @@ light/medium artillery unit</characteristic>
                               <entryLinks>
                                 <entryLink id="a82f-3f57-2128-1bb0" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                               </entryLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
                             </selectionEntry>
                           </selectionEntries>
                         </selectionEntryGroup>
@@ -15919,6 +16024,9 @@ light/medium artillery unit</characteristic>
                               <entryLinks>
                                 <entryLink id="5762-a444-7273-9c70" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                               </entryLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
                             </selectionEntry>
                           </selectionEntries>
                         </selectionEntryGroup>
@@ -16317,6 +16425,9 @@ light/medium artillery unit</characteristic>
                       <entryLinks>
                         <entryLink id="82de-7bfa-1243-c5c9" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                       </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -16939,6 +17050,9 @@ Sherman Crocodile.</description>
                       <entryLinks>
                         <entryLink id="cc8d-cb4d-db57-de1d" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                       </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -17672,6 +17786,9 @@ Sherman Crocodile.</description>
                       <entryLinks>
                         <entryLink id="18f7-1b7d-4911-5f93" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                       </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -17918,6 +18035,9 @@ Sherman Crocodile.</description>
                       <entryLinks>
                         <entryLink id="1c40-0f88-94b6-dafe" name="SMG" hidden="false" collective="false" import="true" targetId="c0ab-2b01-53b6-5cbd" type="selectionEntry"/>
                       </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -18084,6 +18204,9 @@ Sherman Crocodile.</description>
                               <entryLinks>
                                 <entryLink id="6961-2186-d329-e4ec" name="SMG (Special Forces)" hidden="false" collective="false" import="true" targetId="fc9d-c29e-4ea9-ccaf" type="selectionEntry"/>
                               </entryLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="0.0"/>
+                              </costs>
                             </selectionEntry>
                           </selectionEntries>
                         </selectionEntryGroup>
