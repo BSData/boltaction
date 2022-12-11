@@ -2140,6 +2140,15 @@ first target unit as normal and then check which other enemy units are within 6‚
     <rule id="d82b-6e7c-b39f-879c" name="You men snap into action" hidden="false">
       <description>When an officer receives an order successfully it can activate units depending on it&apos;s rank.</description>
     </rule>
+    <rule id="8d65-c803-f1d5-768b" name="Frontal Armour" hidden="false">
+      <description>This vehicle cannot be damaged by small arms hits from the frontal arc but will still be pinned as normal.</description>
+    </rule>
+    <rule id="10b4-0069-2ed6-44b0" name="Rally to the Colours!" hidden="false">
+      <description>All friendly infantry and artillery units within 12‚Äù of the flag-bearing model can re-roll failed Order tests when ordered to Rally. In addition, if the Rally Order is successfully issued, the unit rolls two dice to determine how many pin markers are discarded and chooses the highest result. However, while the unit carry ing the flag has a Down or Ambush order dice on it, the flag is kept hidden and has no effect.</description>
+    </rule>
+    <rule id="7b3c-4ae0-5164-fbcb" name="Flags" hidden="false">
+      <description>Japanese and Soviet infantry squads (not teams!) in all theatres and periods have the following equipment option: One man can replace all of his weapons with a flag for +25pts, gaining the Rally to the Colours! special rule.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="12a3-5bb9-da85-827e" name="Anti-tank rifle" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
