@@ -95,7 +95,7 @@
         <categoryLink id="4b50-fc7e-47af-c11c" name="Headquarters" hidden="false" targetId="481abf13-c03e-0dd0-d520-9f9837253cbe" primary="false"/>
         <categoryLink id="b815-f6e6-7c7c-49de" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="false">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6192-a973-ecbc-fddb" type="max"/>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6192-a973-ecbc-fddb" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="c300-7220-d19b-e345" name="Infantry Support" hidden="false" targetId="a01f5f58-334c-8442-d861-15099ebdf5e5" primary="false"/>
@@ -2129,7 +2129,7 @@ first target unit as normal and then check which other enemy units are within 6‚
       <description>This weapon suffers no penalty ‚Äòto hit‚Äô when moving and shooting. In addition, infantry models armed with an assault weapon count as tough fighters.</description>
     </rule>
     <rule id="be53-a340-bf2c-9a63" name="Spotter" hidden="false">
-      <description>The spotter forms part of the same unit as the weapon he is directing, no separate order die is provided for him. then the crew are assumed to be able to see whatever the spotter can see.</description>
+      <description>The spotter forms part of the same unit as the weapon he is directing, no separate order die is provided for him. then the crew are assumed to be able to see whatever the spotter can see. Inexperienced spotters can not spot for the weapon they are attached to.</description>
     </rule>
     <rule id="056f-5257-838a-d1e2" name="Medics" hidden="false">
       <description>If a friendly infantry or artillery unit that has a medic model within 6‚Äù, suffers damage from small-arms fire, one die is rolled for each point of damage caused. On a 6, that casualty is ignored.</description>
@@ -2138,7 +2138,7 @@ first target unit as normal and then check which other enemy units are within 6‚
       <description>Officer model adds a morale bonus to all friendly units dependng on it&apos;s rank.</description>
     </rule>
     <rule id="d82b-6e7c-b39f-879c" name="You men snap into action" hidden="false">
-      <description>When an officer receives an order successfully it can activate units depending on it&apos;s rank.</description>
+      <description>When an officer receives an order successfully it can activate a number of units depending on it&apos;s rank.</description>
     </rule>
     <rule id="8d65-c803-f1d5-768b" name="Frontal Armour" hidden="false">
       <description>This vehicle cannot be damaged by small arms hits from the frontal arc but will still be pinned as normal.</description>
