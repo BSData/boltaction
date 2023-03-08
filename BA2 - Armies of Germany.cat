@@ -1,5 +1,145 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue id="6e9e-98ec-1dd4-a49c" name="Armies of Germany" revision="20" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <categoryEntries>
+    <categoryEntry id="a2dc-0151-d88f-9e27" name="Theatre Selector and Utility" hidden="false"/>
+    <categoryEntry id="e5ca-db22-9cc4-c7a1" name="Platoon Comander" hidden="false"/>
+    <categoryEntry id="ccb8-f762-eb3f-e972" name="Compulsory Units" hidden="false"/>
+    <categoryEntry id="1706-9bab-9979-6978" name="Infantry" hidden="false"/>
+    <categoryEntry id="4d43-98ae-81e3-c7f1" name="Headquarters" hidden="false"/>
+    <categoryEntry id="2f4b-d726-4a39-2f12" name="Medic" hidden="false"/>
+    <categoryEntry id="b8f2-cb83-ea7a-0171" name="Forward Observer" hidden="false"/>
+    <categoryEntry id="6ef3-1200-cb21-93a0" name="Machine gun team" hidden="false"/>
+    <categoryEntry id="f3d5-7e8d-4bcb-853e" name="Mortar team" hidden="false"/>
+    <categoryEntry id="13e7-f7f2-8aa6-cb44" name="Sniper team" hidden="false"/>
+    <categoryEntry id="d84b-2e55-c396-2ca6" name="Flamethrower team" hidden="false"/>
+    <categoryEntry id="d7ae-c2e3-61de-05a2" name="Anti-tank team" hidden="false"/>
+    <categoryEntry id="fffb-9b68-5a89-c200" name="Artillery" hidden="false"/>
+    <categoryEntry id="d32b-a8c5-ef4d-dc91" name="Armoured Cars and Recce Vehicles" hidden="false"/>
+    <categoryEntry id="6aec-5583-0b1d-dfa1" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false"/>
+    <categoryEntry id="2eeb-9166-e18d-fff0" name="Transports" hidden="false"/>
+    <categoryEntry id="a8c5-237d-dac5-6f92" name="Tows" hidden="false"/>
+  </categoryEntries>
+  <forceEntries>
+    <forceEntry id="334b-ac7e-853e-790a" name="Generic Reinforced Platoon" hidden="false">
+      <categoryLinks>
+        <categoryLink id="bfd5-7f98-1816-1116" name="Theatre Selector and Utility" hidden="false" targetId="a2dc-0151-d88f-9e27" primary="false"/>
+        <categoryLink id="4b54-ecb9-5a1d-b4ea" name="Platoon Comander" hidden="false" targetId="e5ca-db22-9cc4-c7a1" primary="false">
+          <modifiers>
+            <modifier type="append" field="name" value="(1)"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d025-406a-085f-1acd" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="d730-cb1e-b64c-97ef" name="Compulsory Units" hidden="false" targetId="ccb8-f762-eb3f-e972" primary="false">
+          <modifiers>
+            <modifier type="append" field="name" value="(2)"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63ad-8a47-de9e-2633" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="a418-f069-0b85-0785" name="Infantry" hidden="false" targetId="1706-9bab-9979-6978" primary="false">
+          <modifiers>
+            <modifier type="append" field="name" value="(0-3)"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff3c-d0ff-0747-48fc" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="ee8a-488b-8681-c5d7" name="Headquarters" hidden="false" targetId="4d43-98ae-81e3-c7f1" primary="false">
+          <modifiers>
+            <modifier type="append" field="name" value="(0-1)"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1168-f474-e21e-3741" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="361b-0adc-eb43-101f" name="Medic" hidden="false" targetId="2f4b-d726-4a39-2f12" primary="false">
+          <modifiers>
+            <modifier type="append" field="name" value="(0-1)"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3849-3d05-5687-0c2d" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="622a-4489-00a5-92ff" name="Forward Observer" hidden="false" targetId="b8f2-cb83-ea7a-0171" primary="false">
+          <modifiers>
+            <modifier type="append" field="name" value="(0-1)"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a357-95b9-490e-44f5" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="ace7-6b43-d9bc-1e26" name="Machine gun team" hidden="false" targetId="6ef3-1200-cb21-93a0" primary="false">
+          <modifiers>
+            <modifier type="append" field="name" value="(0-1)"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c96a-7be0-4d7d-63b6" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="4af2-46b2-d583-4e55" name="Mortar team" hidden="false" targetId="f3d5-7e8d-4bcb-853e" primary="false">
+          <modifiers>
+            <modifier type="append" field="name" value="(0-1)"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="041f-172e-7bdd-66c0" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="488c-5694-67f4-4336" name="Sniper team" hidden="false" targetId="13e7-f7f2-8aa6-cb44" primary="false">
+          <modifiers>
+            <modifier type="append" field="name" value="(0-1)"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3731-047a-b014-8051" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="f93c-2726-05a1-e33d" name="Flamethrower team" hidden="false" targetId="d84b-2e55-c396-2ca6" primary="false">
+          <modifiers>
+            <modifier type="append" field="name" value="(0-1)"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c80d-78ab-4624-2f56" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="dd03-b655-3adc-c0cb" name="Anti-tank team" hidden="false" targetId="d7ae-c2e3-61de-05a2" primary="false">
+          <modifiers>
+            <modifier type="append" field="name" value="(0-1)"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a7f-48b5-d394-5e47" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="effe-8603-d486-9efc" name="Artillery" hidden="false" targetId="fffb-9b68-5a89-c200" primary="false">
+          <modifiers>
+            <modifier type="append" field="name" value="(0-1)"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e469-6154-0f0a-80d2" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="21b5-912e-b028-2289" name="Armoured Cars and Recce Vehicles" hidden="false" targetId="d32b-a8c5-ef4d-dc91" primary="false">
+          <modifiers>
+            <modifier type="append" field="name" value="(0-1)"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a635-dd68-aafe-e9c7" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="e1f6-9ed6-15eb-099a" name="Tanks, Tank Destroyers, Self-propelled Artillery and Anti-Aircraft Vehicles" hidden="false" targetId="6aec-5583-0b1d-dfa1" primary="false">
+          <modifiers>
+            <modifier type="append" field="name" value="(0-1)"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfac-bc43-a9e1-10a3" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="bcd1-5c96-973f-856d" name="Transports" hidden="false" targetId="2eeb-9166-e18d-fff0" primary="false"/>
+        <categoryLink id="5f7a-f81a-22d2-077c" name="Tows" hidden="false" targetId="a8c5-237d-dac5-6f92" primary="false"/>
+      </categoryLinks>
+    </forceEntry>
+  </forceEntries>
   <selectionEntries>
     <selectionEntry id="42f1-7e3a-5696-b995" name="Theatre Selector" hidden="false" collective="false" import="true" type="unit">
       <constraints>
