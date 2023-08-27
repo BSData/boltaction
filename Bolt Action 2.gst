@@ -1833,9 +1833,6 @@
         <infoLink id="bc73-f90c-d613-3ede" name="Submachine Gun (SMG)" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
         <infoLink id="e813-9dc9-85f6-7b07" name="Assault" hidden="false" targetId="3976-dcf1-d022-b7d1" type="rule"/>
       </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="3.0"/>
-      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
