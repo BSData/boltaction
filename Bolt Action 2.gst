@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="d373-d979-116c-5487" name="Bolt Action 2.0" revision="8" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="d373-d979-116c-5487" name="Bolt Action 2.0" revision="9" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d373-d979-pubN70886" name="Tank War"/>
     <publication id="a4ea-50a6-5c1c-0429" name="Battle of France"/>
@@ -30,6 +30,8 @@
     <publication id="bdcd-99cb-2408-c1c7" name="Armies of Great Britain"/>
     <publication id="352a-25fc-bef0-72ae" name="Website/Faq"/>
     <publication id="d663-b67b-a1ca-59d4" name="Bolt Action Manual V2"/>
+    <publication id="ea85-7ebc-82ed-cb78" name="Case Blue"/>
+    <publication id="baf7-af41-00ad-59ed" name="Italy: Tough Gut"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0.0" hidden="false"/>
@@ -1833,6 +1835,9 @@
         <infoLink id="bc73-f90c-d613-3ede" name="Submachine Gun (SMG)" hidden="false" targetId="d96f-07e6-9c33-c3b6" type="profile"/>
         <infoLink id="e813-9dc9-85f6-7b07" name="Assault" hidden="false" targetId="3976-dcf1-d022-b7d1" type="rule"/>
       </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
