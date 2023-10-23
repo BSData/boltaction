@@ -1839,6 +1839,20 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="5980-efc4-0cec-65b9" name="Light Mortar" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="73c1-dc8b-e549-5133" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5dca-54cb-d455-cfe5" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="b70b-e2ef-90b6-9cfd" name="Light mortar" hidden="false" targetId="4678-11f2-04c8-1ad8" type="profile"/>
+        <infoLink id="7837-0893-0219-e74c" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
+        <infoLink id="d519-21d6-4ea4-ecad" name="LMG Loader" hidden="false" targetId="eb5a-5fc1-711b-87a2" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="20.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ce88-220a-ecf0-d5c7" name="Command Vehicle Options" hidden="false" collective="false" import="true">
