@@ -2165,6 +2165,12 @@ first target unit as normal and then check which other enemy units are within 6â
     <rule id="7b3c-4ae0-5164-fbcb" name="Flags" hidden="false">
       <description>Japanese and Soviet infantry squads (not teams!) in all theatres and periods have the following equipment option: One man can replace all of his weapons with a flag for +25pts, gaining the Rally to the Colours! special rule.</description>
     </rule>
+    <rule id="fe94-8f53-1e26-450a" name="Tough Tank Hunters" page="0" hidden="false">
+      <description>Tough tank hunters have all the usual rules for Tank Hunters, and in addition double their attaks in close combat against vehicles (i.e., each solidier makes two attaks)</description>
+    </rule>
+    <rule id="a39b-edd6-301a-ee84" name="Versatile (Light Howitzer)" publicationId="6d66-3469-52ee-9d37" page="" hidden="false">
+      <description>Can also fire as a light howitzer.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="12a3-5bb9-da85-827e" name="Anti-tank rifle" page="0" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
