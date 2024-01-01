@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2678-9000-b13e-ae14" name="Armies of Canada" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2678-9000-b13e-ae14" name="Armies of Canada" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="300b-9240-5951-8bc7" name="Threatre Selector" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -41,6 +41,17 @@
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="efdb-bb5a-0f13-0a2f" name="Points Adjuster" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="682b-4d6e-e4f5-2523" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="ed03-7b60-191a-6213" name="New CategoryLink" hidden="false" targetId="2ddc-c371-7e08-928b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="24bc-e18f-b0be-0067" name="Points Adjuster" hidden="false" collective="false" import="true" targetId="5718-ab8e-baa0-3fba" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -12102,7 +12113,7 @@
     </selectionEntry>
     <selectionEntry id="fda0-74df-e108-ec38" name="Armoured Car Support/Assault Section" publicationId="d4e7-6781-f1ff-5a93" page="0" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="d1f3-a3ca-bfde-aeae" name="Recon Troops" hidden="false" targetId="25d6-cd89-f4fb-91bd" type="rule"/>
+        <infoLink id="d1f3-a3ca-bfde-aeae" name="Recon Troops" hidden="false" targetId="e97e-51d8-15ff-4349" type="rule"/>
         <infoLink id="f302-8221-c6ad-2e70" name="Armoured Recon" hidden="false" targetId="c934-1a0b-1e88-a4ea" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
@@ -14085,7 +14096,7 @@
           </modifiers>
         </infoLink>
         <infoLink id="11b4-9027-2966-e741" name="Behind Enemy Lines" hidden="false" targetId="ef26-3f67-bf0d-8ef3" type="rule"/>
-        <infoLink id="7209-2221-e568-a78e" name="Recon Troops" hidden="false" targetId="25d6-cd89-f4fb-91bd" type="rule"/>
+        <infoLink id="7209-2221-e568-a78e" name="Recon Troops" hidden="false" targetId="e97e-51d8-15ff-4349" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="2485-0fc6-ea40-6616" name="Team Members" hidden="false" collective="false" import="true">
@@ -15883,9 +15894,6 @@ If you roll a 1 (before modification) when you are rolling to hit then it has br
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="25d6-cd89-f4fb-91bd" name="Recon Troops" hidden="false">
-      <description>The unit will spot hidden enemy units at 18&quot; rather than the normal 12&quot;.</description>
-    </rule>
     <rule id="c934-1a0b-1e88-a4ea" name="Armoured Recon" hidden="false">
       <description>The squad must have one of the following vehicles purchased as a transport: M5 Half Track, M3 White Scout Car, or C15TA Armoured Truck.</description>
     </rule>

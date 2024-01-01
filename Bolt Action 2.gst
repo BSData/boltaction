@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="d373-d979-116c-5487" name="Bolt Action 2.0" revision="9" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="d373-d979-116c-5487" name="Bolt Action 2.0" revision="10" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d373-d979-pubN70886" name="Tank War"/>
     <publication id="a4ea-50a6-5c1c-0429" name="Battle of France"/>
@@ -1907,6 +1907,26 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
+    <selectionEntryGroup id="5718-ab8e-baa0-3fba" name="Points Adjuster" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="2b07-8181-05e5-070f" name="Remove Points" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0404-d22d-d548-3ae3" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="-1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9b9b-8833-3b37-cd08" name="Add Points" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c52e-edda-9bb0-bf65" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="1.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="1243-e8b7-ed01-2010" name="Amphibious" page="0" hidden="false">
@@ -2170,6 +2190,12 @@ first target unit as normal and then check which other enemy units are within 6â
     </rule>
     <rule id="a39b-edd6-301a-ee84" name="Versatile (Light Howitzer)" publicationId="6d66-3469-52ee-9d37" page="" hidden="false">
       <description>Can also fire as a light howitzer.</description>
+    </rule>
+    <rule id="2b2e-49e7-a51d-0e12" name="Mountain Warriors" hidden="false">
+      <description>An infantry section can scale mountainous of hilly impassable terrain. To do this they must start their turn adjacent to the impassable terrain piece. They are then given the Run order and the squad is polaced on top of the mountain or hill. If the terrain piece is higher than 6&quot; tall it takes the section two turns to scale it. At the end of the first turn of movement up the terrain piece, leave the unit&apos;s Order die next to them showing the Run order. At the start of the next turn(before Order dice are pulled) place the unit at the top, leaving the run order die next to them. In addition , Mountain Warriors may make a run move through rough ground. This run move is reduced to a maximum distance of 9&quot;.</description>
+    </rule>
+    <rule id="e97e-51d8-15ff-4349" name="Recon Troops" hidden="false">
+      <description>The unit will spot hidden enemy units at 18&quot; rather than the normal 12&quot;.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

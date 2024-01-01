@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6e9e-98ec-1dd4-a49c" name="Armies of Germany" revision="20" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6e9e-98ec-1dd4-a49c" name="Armies of Germany" revision="20" battleScribeVersion="2.03" library="false" gameSystemId="d373-d979-116c-5487" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="42f1-7e3a-5696-b995" name="Theatre Selector" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -37,6 +37,20 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="beaf-16d0-c20e-5659" name="Command Vehicle Options" hidden="false" collective="false" import="true" targetId="ce88-220a-ecf0-d5c7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="428b-67bb-2ce5-7b56" name="Points Adjuster" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea4d-0e78-ee9c-2fc0" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="73e7-b4b4-e3e0-ba0f" name="New CategoryLink" hidden="false" targetId="2ddc-c371-7e08-928b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a610-7e36-abd7-6ab4" name="Points Adjuster" hidden="false" collective="false" import="true" targetId="5718-ab8e-baa0-3fba" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
@@ -19678,16 +19692,6 @@ Dice	Effect
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="maxInForce" type="max"/>
       </constraints>
-      <infoLinks>
-        <infoLink id="5ea923db-ad60-6900-7bba-e3758bf15b35" name="Sniper" hidden="false" targetId="6bcb-f463-20a7-0b4a" type="rule"/>
-        <infoLink id="96b67754-9b67-c7b5-9b2b-e3f98e5ea7f1" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
-        <infoLink id="7f962535-a2d3-da0c-8f36-cadc26764430" name="Crew" hidden="false" targetId="549b-7a6c-2710-5dfe" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value="(2)"/>
-          </modifiers>
-        </infoLink>
-        <infoLink id="b3bce74c-5711-a478-ed8f-506fc79b1e41" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="e775-141d-5d43-1171" name="Fanatics" page="0" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -19714,33 +19718,134 @@ Dice	Effect
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="307c9ee1-be76-3b71-17e7-5d490dbc5bec" name="Rating" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="a0cf-b31e-0fbc-c2fe" name="Team" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73db-a772-bf5c-4b06" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="a3f987f7-a008-dda9-4573-5637714a6430" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="f24b-0ee8-6023-d578" name="Gewer 43 Sniper Team" publicationId="baf7-af41-00ad-59ed" page="104" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c323-eb9e-556b-b083" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="437d-b323-0971-bc4d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7896-a6d8-ae3b-9a57" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8ccc-1310-93d5-b3e8" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a576-fbad-3315-9dcc" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3dcf-12d9-b9b6-ea6c" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d256-0db4-5156-cf2a" type="equalTo"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eba6-bc72-6f43-976b" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="45a1-e139-b44e-266d" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="a06d638c-72ac-2ced-1159-1bbb006c2992" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+                <infoLink id="9729-ccbc-8b0f-afcb" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
+                <infoLink id="c2fa-1791-26ff-1a30" name="Crew" hidden="false" targetId="549b-7a6c-2710-5dfe" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="(2)"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="d0e1-7856-ea8f-d764" name="Sniper" hidden="false" targetId="6bcb-f463-20a7-0b4a" type="rule"/>
+                <infoLink id="1fb6-3ae8-434e-1789" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
+                <infoLink id="e2bf-bbd1-f8fb-7f18" name="Gewehr 43" hidden="false" targetId="1a9c-f45d-6cde-61d9" type="rule"/>
               </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="50.0"/>
-              </costs>
+              <selectionEntries>
+                <selectionEntry id="f2a0-acf0-be02-390d" name="Pistols" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a18b-ef66-0344-4732" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd5e-a165-0d2d-4488" type="min"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink id="2118-14bf-1598-60d5" name="Pistol" hidden="false" collective="false" import="true" targetId="dc06-b16f-3839-aadd" type="selectionEntry"/>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="a3fd-5011-06d1-b49b" name="Rating" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5465-039c-7ff4-d162" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="aaef-08c2-746b-80af" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="b704-ff8d-b44a-2780" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="993d-7f20-690c-7487" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="4e08-ef74-63dd-9014" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="55.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="11cf-a132-05ff-3b17" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="651b-f04d-69e0-011e" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="5a81-2dc4-42e1-19e1" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="70.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
-            <selectionEntry id="d4e29ddc-d0e4-170e-8ee9-79174152dc88" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c863-2b3f-841a-b1ad" name="Sniper Team" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fd9e-c85f-fc1a-dbbe" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="91ea35dd-f78c-15d3-89d8-71c30d3e3f66" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+                <infoLink id="aede-afd9-7eef-c6a8" name="Rifle" hidden="false" targetId="0caf-6e4d-d0b7-b6e4" type="profile"/>
+                <infoLink id="6bd0-bce8-8063-ba3f" name="Crew" hidden="false" targetId="549b-7a6c-2710-5dfe" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="(2)"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="9515-4403-629d-e3bc" name="Sniper" hidden="false" targetId="6bcb-f463-20a7-0b4a" type="rule"/>
+                <infoLink id="b92f-f147-66ee-81c9" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
               </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="65.0"/>
-              </costs>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="2185-a61b-8657-268a" name="Rating" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9cfa-a5b9-3af3-531c" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="867c-bdc9-46a8-3e3f" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="af19-9ea9-d27d-6cb3" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a700-60c6-4914-aaae" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="821b-e307-d56e-5b2e" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="50.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="a4c0-49e1-7872-d5dc" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3894-bb8a-2af7-74f4" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="8a80-5411-aa8b-eccc" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="65.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -25417,6 +25522,9 @@ Dice	Effect
     </rule>
     <rule id="abbc-9d57-5034-a39c" name="Götterdämmerung" hidden="false">
       <description>Roll a die every time the vehicle completes a move: 1:Broken down/out of fuel: The vehicle is immobilised for the rest of the game. 2 Breaking down/fuel low: The vehicle may make one more move after this one, then runs out of fuel and is immobilised. 3+: OK: Continue as normal, rolling again after next move.</description>
+    </rule>
+    <rule id="1a9c-f45d-6cde-61d9" name="Gewehr 43" hidden="false">
+      <description>The team does not suffer the -1 penality for advancing and shooting, also after resolving shooting roll a die, on a result of 4+ a Veteran sniper gets a second shot. On a roll of 5+ a Regular sniper gets a second shot. This second shot is taken at the same target.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
