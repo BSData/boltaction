@@ -1853,6 +1853,18 @@
         <cost name="pts" typeId="points" value="20.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="5f29-cc7a-a5c5-cde1" name="AT-Rifle" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f9b0-e903-46f2-d904" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="aac7-f4eb-491f-4431" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="a8dc-8507-745a-544f" name="Anti-tank rifle" hidden="false" targetId="12a3-5bb9-da85-827e" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="15.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ce88-220a-ecf0-d5c7" name="Command Vehicle Options" hidden="false" collective="false" import="true">
@@ -2196,6 +2208,9 @@ first target unit as normal and then check which other enemy units are within 6â
     </rule>
     <rule id="e97e-51d8-15ff-4349" name="Recon Troops" hidden="false">
       <description>The unit will spot hidden enemy units at 18&quot; rather than the normal 12&quot;.</description>
+    </rule>
+    <rule id="aa43-cce2-4cba-569b" name="Extra Selection" hidden="false">
+      <description>You may take up to 3 of this unit as 1 selection in each reinforced platoon.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
