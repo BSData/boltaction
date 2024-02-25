@@ -1865,6 +1865,20 @@
         <cost name="pts" typeId="points" value="15.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="56a4-42a2-547e-f498" name="Panzerfaust" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4214-56e3-342e-9da9" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e9b2-aaf9-1412-f40e" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="0b31-0232-cb6f-e37e" name="Shaped Charge" hidden="false" targetId="b959-3dd3-bc5c-d7d6" type="rule"/>
+        <infoLink id="c9d8-6c70-9dcd-764a" name="One-Shot Weapon" hidden="false" targetId="5837-ccfe-055e-5733" type="rule"/>
+        <infoLink id="2f63-7362-6f8e-0b60" name="Panzerfaust" hidden="false" targetId="2321-e71f-a3cd-ea21" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="5.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ce88-220a-ecf0-d5c7" name="Command Vehicle Options" hidden="false" collective="false" import="true">
