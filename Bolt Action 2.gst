@@ -1848,6 +1848,7 @@
         <infoLink id="b70b-e2ef-90b6-9cfd" name="Light mortar" hidden="false" targetId="4678-11f2-04c8-1ad8" type="profile"/>
         <infoLink id="7837-0893-0219-e74c" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
         <infoLink id="d519-21d6-4ea4-ecad" name="LMG Loader" hidden="false" targetId="eb5a-5fc1-711b-87a2" type="rule"/>
+        <infoLink id="1d3a-455b-1ee6-6909" name="Split fire" hidden="false" targetId="94cd-6c72-fdd2-7419" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="20.0"/>
@@ -1877,6 +1878,21 @@
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="5.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="85c2-9a8e-b70a-a0d4" name="Knee Mortar" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2551-7801-9f66-c20d" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b2b8-864e-c256-6103" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="d66b-ecdf-6d87-5f72" name="Light mortar" hidden="false" targetId="4678-11f2-04c8-1ad8" type="profile"/>
+        <infoLink id="6ebd-d53f-c9ab-bca8" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
+        <infoLink id="0f6a-db73-816e-abdd" name="LMG Loader" hidden="false" targetId="eb5a-5fc1-711b-87a2" type="rule"/>
+        <infoLink id="7c1c-5046-2f3a-891e" name="Split fire" hidden="false" targetId="94cd-6c72-fdd2-7419" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="25.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -2225,6 +2241,9 @@ first target unit as normal and then check which other enemy units are within 6â
     </rule>
     <rule id="aa43-cce2-4cba-569b" name="Extra Selection" hidden="false">
       <description>You may take up to 3 of this unit as 1 selection in each reinforced platoon.</description>
+    </rule>
+    <rule id="94cd-6c72-fdd2-7419" name="Split fire" hidden="false">
+      <description>This weapon can fire at a different target from the rest of the squad</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
