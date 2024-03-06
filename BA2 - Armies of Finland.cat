@@ -1246,6 +1246,26 @@
         <categoryLink id="58ef-a5ce-7821-cf3e" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="596b-7ec1-0d6c-27b4" name="Utility Car" hidden="true" collective="false" import="true" targetId="6596-5b97-4326-7eef" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dedf-46d6-a0c1-8c51" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7bbe-89a0-ab53-2323" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0783-ab47-14cf-05bc" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="05b6-e969-05c3-c910" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="34e9-e251-c441-2651" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="46ed-e5bc-96e3-360b" name="New CategoryLink" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="2ed57e2d-18f6-2b84-4c49-bffd5b408320" name="Sisu" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false">
@@ -6028,7 +6048,7 @@ remaining models in that unit are automatically upgraded to higher quality- Inex
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="670b7265-b1c9-9181-dcb5-c2d7e06b58eb" name="Truck" publicationId="86aa-6664-9bc3-4e3e" page="0" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="670b7265-b1c9-9181-dcb5-c2d7e06b58eb" name="Truck" publicationId="352a-25fc-bef0-72ae" page="0" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="6deee540-285f-ff3c-3440-519908e58c0b" name="Truck" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -6071,6 +6091,9 @@ remaining models in that unit are automatically upgraded to higher quality- Inex
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="8a67-d52c-efd8-5f51" name="Pintle-mounted MMG (Front Arc)(15pts)" hidden="false" collective="false" import="true" targetId="5747-9b9a-4d92-9c53" type="selectionEntry"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -6800,6 +6823,64 @@ remaining models in that unit are automatically upgraded to higher quality- Inex
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="4.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6596-5b97-4326-7eef" name="Utility Car" publicationId="352a-25fc-bef0-72ae" page="0" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="003d-7666-be6e-7e14" name="Utility Car" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Wheeled Vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Soft Skinned 6+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">(3)</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="00be-f75d-63e7-938f" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ce4b-3959-4c1d-7e9a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f699-f1c4-2041-2ae3" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="8028-7b23-fdf5-a0bc" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4244-391f-f71d-0826" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="a9c9-391a-82d3-08db" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6aa3-2afd-d5dc-19f8" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b664-f4eb-bbd8-72ea" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="c941-22f4-51b1-c6c0" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="21.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ed87-352a-0555-2980" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8376-c3ae-c95b-fec1" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="8595-ccde-3c38-87bc" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="17.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>

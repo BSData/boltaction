@@ -52,6 +52,9 @@
       <entryLinks>
         <entryLink id="4d75-5661-651e-28dd" name="Points Adjuster" hidden="false" collective="false" import="true" targetId="5718-ab8e-baa0-3fba" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -534,6 +537,11 @@
       </modifiers>
       <categoryLinks>
         <categoryLink id="0c9d-ceff-34ed-27ac" name="New CategoryLink" hidden="false" targetId="f543-f483-48ce-9b05" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="4e15-96fe-bb82-1772" name="Utility Car" hidden="true" collective="false" import="true" targetId="b031-cd08-b755-8ff7" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="8598-ba6e-b308-ace2" name="New CategoryLink" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="true"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -3785,7 +3793,7 @@
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fc32-b28d-d097-d531" name="Truck" publicationId="2b70-cdaa-e42f-24a2" page="0" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="fc32-b28d-d097-d531" name="Truck" publicationId="352a-25fc-bef0-72ae" page="0" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="5ac2-eed1-96bc-5b43" name="Truck" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
           <characteristics>
@@ -3828,6 +3836,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="548d-c251-37ab-be77" name="Pintle-mounted MMG (Front Arc)(15pts)" hidden="false" collective="false" import="true" targetId="5747-9b9a-4d92-9c53" type="selectionEntry"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -4047,6 +4058,64 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="4.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b031-cd08-b755-8ff7" name="Utility Car" publicationId="352a-25fc-bef0-72ae" page="0" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="facf-2a8b-e40f-faa7" name="Utility Car" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Wheeled Vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Soft Skinned 6+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">(3)</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="6166-cf44-5405-679f" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f81a-a135-51d7-bc36" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d0ea-032b-73f0-a982" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3b35-7620-f4df-d995" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f278-c0a1-81a2-39ac" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="334f-3105-60aa-0bd3" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="85b1-a48c-6850-c185" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b744-8e14-c827-94c1" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="36ee-6eca-853f-0bbe" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="21.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0baa-c26a-4152-d725" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9a47-bbbb-7708-fa29" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="8887-ccf3-75ae-b88c" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="17.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
