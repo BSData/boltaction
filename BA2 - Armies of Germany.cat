@@ -7175,6 +7175,22 @@
         <categoryLink id="2cc3-c820-0cf0-d2ca" name="Infantry" hidden="false" targetId="5c47879b-41d0-1383-5fe5-a5989615db89" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="da90-bc7a-e1f3-05d7" name="Sd.Kfz 250/4 (Alte) AA half-track" hidden="true" collective="false" import="true" targetId="de1f-effa-dce8-56e5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c323-eb9e-556b-b083" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="5b57-2d6e-4b1d-aead" name="New CategoryLink" hidden="false" targetId="75e6-a726-7549-c811" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="03c86152-d769-5183-60a1-10009dcbf448" name="Initiative Training" publicationId="069c-bdb6-04d3-7392" page="0" hidden="true">
@@ -25682,6 +25698,83 @@ Dice	Effect
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="de1f-effa-dce8-56e5" name="Sd.Kfz 250/4 (Alte) AA half-track" publicationId="352a-25fc-bef0-72ae" page="0" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="e8bb-e217-0b28-4a9a" name="Sd.Kfz 250/4 (Alte) AA half-track" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Wheeled Vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Armoured Carrier 7+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="5f64-712d-39aa-f1c9" name="Flak" hidden="false" targetId="690f-70e9-9ed0-6352" type="rule"/>
+        <infoLink id="672f-e102-bd79-3b29" name="Open Topped" hidden="false" targetId="1dd8-ce26-3022-96f5" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="bae8-43f2-adb4-11b6" name="2 Platform-mounted MMG with 360° arc of fire" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac16-cb45-2e19-dc08" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b5d-2667-f403-75f1" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="9ced-e6d3-57dd-48f7" name="Medium Machine Gun (MMG)" hidden="false" targetId="2f62-c9ad-30ac-07bb" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="e2d3-a68e-59cd-e9e6" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bf2e-753c-d6a8-fc15" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c9e2-e5dc-9abc-a09f" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="62b5-e1c7-2695-f0e2" name="Inexperienced" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1fe2-1e8f-7728-aa78" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="7471-082a-5aae-7771" name="Inexperienced" hidden="false" targetId="c068-012d-776f-2bb9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="60.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a75b-01e1-3679-02c0" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="36d4-c2aa-4c60-2605" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="703a-0f72-b7ea-fe1a" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="75.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a7a0-4b98-7921-16b4" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bf8a-f782-ec53-55e8" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="ecee-c363-3fea-05c8" name="Veteran" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="90.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="0ab6-f2dc-93c1-a811" name="Command vehicle" hidden="false" collective="false" import="true" targetId="fb5c-db81-7065-21ff" type="selectionEntry"/>
+        <entryLink id="bd95-59b8-f490-f4f5" name="Platform-mounted heavy autocannon with 360° arc of fire" hidden="false" collective="false" import="true" targetId="b7e6-8fe1-59e0-e9f4" type="selectionEntry"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
