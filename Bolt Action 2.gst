@@ -1673,7 +1673,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7587-3536-64d8-ce13" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="b760-42f4-b441-b5c5" hidden="false" targetId="dab9-9e30-dd75-ee1a" type="profile"/>
+        <infoLink id="b760-42f4-b441-b5c5" name="VB Launcher" hidden="false" targetId="dab9-9e30-dd75-ee1a" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="20.0"/>
@@ -1893,6 +1893,34 @@
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="25.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d25f-74e8-68cb-67f9" name="GrB-39 grenade launcher" page="0" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="83b2-7482-3058-a796" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6be2-802a-ae8d-2245" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="8f2e-1b4e-94aa-6c84" name="Shaped Charge" hidden="false" targetId="b959-3dd3-bc5c-d7d6" type="rule"/>
+        <infoLink id="24e5-9a62-f9bb-7688" name="GrB-39 grenade launcher Anti-personnel" hidden="false" targetId="d957-b88b-9cb9-92eb" type="profile"/>
+        <infoLink id="c8e4-aee4-6a9b-b7a9" name="GrB-39 grenade launcher Anti-tank" hidden="false" targetId="785a-bfd2-8114-29ed" type="profile"/>
+        <infoLink id="e26a-4ae3-a09b-a06d" name="LMG Loader" hidden="false" targetId="eb5a-5fc1-711b-87a2" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9c51-8b30-a548-a1bf" name="Sturmpistole" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4045-596b-ee3e-d7dd" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9923-ff88-4660-da20" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="f746-a111-e241-d550" name="Shaped Charge" hidden="false" targetId="b959-3dd3-bc5c-d7d6" type="rule"/>
+        <infoLink id="363a-87de-d2ca-923a" name="Sturmpistole" hidden="false" targetId="32df-3e35-81df-f731" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="5.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -2533,6 +2561,30 @@ Mounted 6&quot;</characteristic>
         <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">D6</characteristic>
         <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+3</characteristic>
         <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Flamethrower</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="d957-b88b-9cb9-92eb" name="GrB-39 grenade launcher Anti-personnel" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">6-24&quot;</characteristic>
+        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
+        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">HE</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Indirect Fire, HE(D2)</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="785a-bfd2-8114-29ed" name="GrB-39 grenade launcher Anti-tank" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">24&quot;</characteristic>
+        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
+        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+3</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Team, Shaped Charge</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="32df-3e35-81df-f731" name="Sturmpistole" publicationId="069c-bdb6-04d3-7392" page="35" hidden="false" typeId="58b84a31-b571-5b2b-0a61-a8b39a74f6eb" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="d527d332-6869-32b4-3a5a-13127d8e04c9">6&quot;</characteristic>
+        <characteristic name="Shots" typeId="4026822d-22f6-f9c5-1a3b-b8c72f88f7ef">1</characteristic>
+        <characteristic name="Penetration" typeId="a46d52c2-b1b5-dd31-879a-e64572cd9dc8">+3</characteristic>
+        <characteristic name="Special Rules" typeId="a20985c1-29eb-9dbc-db45-3d439b60eed7">Shaped Charge</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
