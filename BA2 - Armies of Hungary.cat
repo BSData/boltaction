@@ -8472,16 +8472,23 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="715d-8391-e429-f2a4" name="Tank Hunters" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="715d-8391-e429-f2a4" name="Anti-tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="decrement" field="points" value="2.0">
+              <conditions>
+                <condition field="selections" scope="9ca0-034b-45e3-8ffb" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="715d-8391-e429-f2a4" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4512-80fc-97b7-bda8" type="min"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4512-80fc-97b7-bda8" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3230-ed8d-9738-dc7b" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="40e1-45ab-8342-c1cc" name="Tank Hunters" hidden="false" targetId="3b00-5743-842c-4640" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="2.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -8493,6 +8500,13 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="c6a9-c437-3645-317e" name="Veteran NCO" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="9ca0-034b-45e3-8ffb" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="715d-8391-e429-f2a4" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="60e2-603e-7c15-cb3b" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="06e2-b3f4-40d5-d5fb" type="max"/>
@@ -8526,6 +8540,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="d36f-88fe-f79b-bdd2" name="Veteran Soldier" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="points" value="2.0">
+                  <conditions>
+                    <condition field="selections" scope="9ca0-034b-45e3-8ffb" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="715d-8391-e429-f2a4" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5346-90c7-f96b-1048" type="min"/>
                 <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8449-f0f5-8929-70e6" type="max"/>
