@@ -972,6 +972,23 @@
         <categoryLink id="b9d7-bdfc-e10a-2140" name="New CategoryLink" hidden="false" targetId="963d0e80-c58a-29e1-9b32-87e8ef7ebb0e" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="f613-87df-e5ae-1ca9" name="Artillery Tractor" hidden="true" collective="false" import="true" targetId="9d16-04f0-6b66-f3b2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="db1a-6390-5db5-2dbf" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0dee-8927-b82c-1981" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="01c4-3ee1-8ce5-2690" name="New CategoryLink" hidden="false" targetId="55a12a58-a9e0-3acc-260d-ed2e4bac108f" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="bfd3056e-a316-ba15-cc2b-6d55ca351404" name="Forward Artillery Doctrine" publicationId="85bd-2d22-c454-2385" page="0" hidden="false">
@@ -6709,6 +6726,53 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="17.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9d16-04f0-6b66-f3b2" name="Artillery Tractor" publicationId="352a-25fc-bef0-72ae" page="0" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="0db7-4f86-2f2c-b794" name="Artillery Tractor" page="0" hidden="false" typeId="aeeca1a9-3e42-7eda-24d1-e7e391c4cce9" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Type" typeId="883e2c25-e5fe-0035-c00b-88687cd7255a">Wheeled Vehicle</characteristic>
+            <characteristic name="Damage Value" typeId="449784a0-465a-7126-6bff-16d562020e3f">Soft Skinned 6+</characteristic>
+            <characteristic name="Transport" typeId="91faad33-21cf-8fdb-c3e5-ba1f63642d86">-</characteristic>
+            <characteristic name="Tow" typeId="9ab6259e-4164-c16c-f359-b48f300833cc">Any AT Gun Any Howitzer Any AA Gun</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="0a90-20b5-2d0e-3e92" name="Rating" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2ccd-4350-10ff-e581" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a5a9-7ce0-0b10-ebea" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="37fb-bd55-7c65-a768" name="Veteran" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1589-c0ec-ef86-0352" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="278e-65fd-2318-da97" hidden="false" targetId="d35f-04c2-a7f3-288f" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="18.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b65f-fd70-6230-26ec" name="Regular" page="0" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="888c-a0f6-c8d8-2f3b" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="4cde-3f17-0d83-f29a" name="Regular" hidden="false" targetId="d57f-3e60-a0d9-ecda" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="15.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
