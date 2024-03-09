@@ -1932,6 +1932,19 @@
         <cost name="pts" typeId="points" value="5.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="7897-f5ba-d9ff-22f5" name="PIAT" hidden="false" collective="true" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5f43-8ef4-221b-03f4" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="922d-24ea-54ef-2595" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="7775-78de-66e0-f68f" name="PIAT" hidden="false" targetId="037c-63f1-2dd2-5899" type="profile"/>
+        <infoLink id="0f2f-a232-5381-6ea5" name="LMG Loader" hidden="false" targetId="eb5a-5fc1-711b-87a2" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="15.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ce88-220a-ecf0-d5c7" name="Command Vehicle Options" hidden="false" collective="false" import="true">
