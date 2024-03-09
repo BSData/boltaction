@@ -1518,7 +1518,7 @@
       <infoLinks>
         <infoLink id="5a6b-4d84-7f2a-a92f" name="Flamethrower (Infantry)" hidden="false" targetId="1020-e405-c2e5-1bde" type="profile"/>
         <infoLink id="74b4-fb68-7c37-9e91" name="Flamethrower" hidden="false" targetId="0bda-9822-e9eb-f62b" type="rule"/>
-        <infoLink id="d844-7a70-d695-d0a0" name="Flamethrower Assistant " hidden="false" targetId="b09c-ee66-8b9a-ff42" type="rule"/>
+        <infoLink id="d844-7a70-d695-d0a0" name="Loader" hidden="false" targetId="eb5a-5fc1-711b-87a2" type="rule"/>
         <infoLink id="0eb2-1abe-1dad-6810" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
       </infoLinks>
       <costs>
@@ -1897,7 +1897,7 @@
       <infoLinks>
         <infoLink id="d66b-ecdf-6d87-5f72" name="Light mortar" hidden="false" targetId="4678-11f2-04c8-1ad8" type="profile"/>
         <infoLink id="6ebd-d53f-c9ab-bca8" name="Team Weapon" hidden="false" targetId="df4d-b32b-09f4-9323" type="rule"/>
-        <infoLink id="0f6a-db73-816e-abdd" name="LMG Loader" hidden="false" targetId="eb5a-5fc1-711b-87a2" type="rule"/>
+        <infoLink id="0f6a-db73-816e-abdd" name="Loader" hidden="false" targetId="eb5a-5fc1-711b-87a2" type="rule"/>
         <infoLink id="7c1c-5046-2f3a-891e" name="Split fire" hidden="false" targetId="94cd-6c72-fdd2-7419" type="rule"/>
       </infoLinks>
       <costs>
@@ -1913,7 +1913,7 @@
         <infoLink id="8f2e-1b4e-94aa-6c84" name="Shaped Charge" hidden="false" targetId="b959-3dd3-bc5c-d7d6" type="rule"/>
         <infoLink id="24e5-9a62-f9bb-7688" name="GrB-39 grenade launcher Anti-personnel" hidden="false" targetId="d957-b88b-9cb9-92eb" type="profile"/>
         <infoLink id="c8e4-aee4-6a9b-b7a9" name="GrB-39 grenade launcher Anti-tank" hidden="false" targetId="785a-bfd2-8114-29ed" type="profile"/>
-        <infoLink id="e26a-4ae3-a09b-a06d" name="LMG Loader" hidden="false" targetId="eb5a-5fc1-711b-87a2" type="rule"/>
+        <infoLink id="e26a-4ae3-a09b-a06d" name="Loader" hidden="false" targetId="eb5a-5fc1-711b-87a2" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="30.0"/>
@@ -2209,8 +2209,8 @@ first target unit as normal and then check which other enemy units are within 6â
     <rule id="a494-d00a-3df1-aad8" name="Cavalry Carbines" page="0" hidden="false">
       <description>These rifles count as pistols while mounted; and rifles when used on foot.</description>
     </rule>
-    <rule id="eb5a-5fc1-711b-87a2" name="LMG Loader" page="0" hidden="false">
-      <description>For every LMG purchased for the squad, another member becomes the loader. </description>
+    <rule id="eb5a-5fc1-711b-87a2" name="Loader" page="0" hidden="false">
+      <description>For every special weapon purchased for the squad (LMG, Mortar, Flamethrower, etc), another member becomes the loader. </description>
     </rule>
     <rule id="97c7-5b55-8225-95ce" name="Unarmed" hidden="false">
       <description>Unarmed men neither shoot nor attack in close quarters, their only value is as casualties. </description>
@@ -2281,6 +2281,9 @@ first target unit as normal and then check which other enemy units are within 6â
     </rule>
     <rule id="94cd-6c72-fdd2-7419" name="Split fire" hidden="false">
       <description>This weapon can fire at a different target from the rest of the squad</description>
+    </rule>
+    <rule id="b478-014e-bdb9-0108" name="Hitler&apos;s Buzzsaw" publicationId="069c-bdb6-04d3-7392" page="24" hidden="false">
+      <description>German-made machine guns, but in particular the lethal MG42, are vastly superior to their enemiesâ€™ and rightly feared by Allied infantrymen. German light and medium machine guns fire one extra shot. Note that this applies to all light and machine guns, both those carried by infantry units and vehiclemounted ones.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
