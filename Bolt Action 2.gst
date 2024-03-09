@@ -83,6 +83,15 @@
     <categoryEntry id="55a12a58-a9e0-3acc-260d-ed2e4bac108f" name="Tows" hidden="false"/>
     <categoryEntry id="014468cf-931f-6d22-82c8-56acf4032768" name="ARV" hidden="false"/>
     <categoryEntry id="2ddc-c371-7e08-928b" name="Theatre Selector and Utility" hidden="false"/>
+    <categoryEntry id="bcd8-1fd1-373f-37d1" name="Machine Gun Team" hidden="false"/>
+    <categoryEntry id="2957-796b-db83-d595" name="Mortar Team" hidden="false"/>
+    <categoryEntry id="00ea-f2f8-9413-2083" name="Sniper Team" hidden="false"/>
+    <categoryEntry id="2704-e742-9aea-0f8d" name="Flamethrower Team" hidden="false"/>
+    <categoryEntry id="8122-3fbb-965b-4613" name="Anti-tank Team" hidden="false"/>
+    <categoryEntry id="0138-624e-6767-d07b" name="Platoon Commander" hidden="false"/>
+    <categoryEntry id="2e7e-27c8-11de-d1b9" name="Forward Observer" hidden="false"/>
+    <categoryEntry id="5b02-bba0-c36a-f595" name="Medic" hidden="false"/>
+    <categoryEntry id="5f8d-037e-1c2f-2b4f" name="High-Ranking Officer" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="efef-703c-d244-559f" name="Reinforced Platoon" hidden="false">
